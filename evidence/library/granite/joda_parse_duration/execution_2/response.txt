@@ -1,0 +1,73 @@
+1. ```java
+@Test
+public void testParsePositiveDuration() {
+    String str = "PT12345.678S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT12345.678S", duration.toString());
+    assertEquals(1234567800000L, duration.getMillis());
+}
+```
+
+2. ```java
+@Test
+public void testParseZeroDuration() {
+    String str = "PT0S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT0S", duration.toString());
+    assertEquals(0L, duration.getMillis());
+}
+```
+
+3. ```java
+@Test
+public void testParseNegativeDuration() {
+    String str = "PT-12345.678S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT-12345.678S", duration.toString());
+    assertEquals(-1234567800000L, duration.getMillis());
+}
+```
+
+4. ```java
+@Test
+public void testParseMaxDuration() {
+    String str = "PT86399.999S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT86399.999S", duration.toString());
+    assertEquals(86399990000000L, duration.getMillis());
+}
+```
+
+5. ```java
+@Test
+public void testParseMinDuration() {
+    String str = "PT-86399.999S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT-86399.999S", duration.toString());
+    assertEquals(-86399990000000L, duration.getMillis());
+}
+```
+
+6. ```java
+@Test
+public void testParseOverflowDuration() {
+    String str = "PT-86400000000001S";
+    assertThrows(IllegalArgumentException.class, () -> Duration.parse(str));
+}
+```
+
+7. ```java
+@Test
+public void testParseUnderflowDuration() {
+    String str = "PT86400000000001S";
+    assertThrows(IllegalArgumentException.class, () -> Duration.parse(str));
+}
+```
+
+8. ```java
+@Test
+public void testParseInvalidDuration() {
+    String str = "PT12345X";
+    assertThrows(IllegalArgumentException.class, () -> Duration.parse(str));
+}
+```

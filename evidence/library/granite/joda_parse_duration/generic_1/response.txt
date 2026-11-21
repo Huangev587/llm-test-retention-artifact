@@ -1,0 +1,70 @@
+1. ```java
+@Test
+public void testParsePositiveDuration() {
+    Duration duration = Duration.parse("P1DT2H3M4S");
+    assertEquals("P1DT2H3M4S", duration.toString());
+    assertEquals(1, duration.getDays());
+    assertEquals(2, duration.getHours());
+    assertEquals(3, duration.getMinutes());
+    assertEquals(4, duration.getSeconds());
+}
+```
+
+2. ```java
+@Test
+public void testParseNegativeDuration() {
+    Duration duration = Duration.parse("PT-10S");
+    assertEquals("PT-10S", duration.toString());
+    assertEquals(-10, duration.getSeconds());
+}
+```
+
+3. ```java
+@Test
+public void testParseFractionalDuration() {
+    Duration duration = Duration.parse("PT3.5M");
+    assertEquals("PT3.5M", duration.toString());
+    assertEquals(3, duration.getMinutes());
+    assertEquals(5000, duration.getSeconds() - (3 * 60 * 1000));
+}
+```
+
+4. ```java
+@Test
+public void testParseMaxDuration() {
+    Duration duration = Duration.parse("P1234567890DT123456S");
+    assertEquals("P1234567890DT123456S", duration.toString());
+    assertEquals(1234567890, duration.getDays());
+    assertEquals(123456, duration.getSeconds() - (123456 * 60 * 60));
+}
+```
+
+5. ```java
+@Test
+public void testParseMinDuration() {
+    Duration duration = Duration.parse("PT-86400000000000S");
+    assertEquals("PT-86400000000000S", duration.toString());
+    assertEquals(-86400000000000, duration.getSeconds());
+}
+```
+
+6. ```java
+@Test
+public void testParseInvalidDuration() {
+    assertThrows(IllegalArgumentException.class, () -> Duration.parse("P123X"));
+}
+```
+
+7. ```java
+@Test
+public void testParseWhitespaceDuration() {
+    assertThrows(IllegalArgumentException.class, () -> Duration.parse(" PT1DT2H3M4S"));
+}
+```
+
+8. ```java
+@Test
+public void testParseLowercaseDuration() {
+    assertThrows(IllegalArgumentException.class, () -> Duration.parse("p1dt2h3m4s"));
+}
+```

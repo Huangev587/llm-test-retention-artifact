@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "b375cd5ea6cd478c8a58777674a1bff14b9efcaa31f20f9caae025f79ea4eecb",
+      "source": "@Test\npublic void testCountMatchesEmptyTextAndNonEmptyNeedle() throws Exception {\n    assertEquals(0, StringUtils.countMatches(\"\", \"abc\"));\n}",
+      "class_name": "entry.Case_b375cd5ea6cd478c8a587776",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8166fd37d58f1b683d6db79121390521670fe00840383bf365b2fde209a68601",
+      "index": 0
+    },
+    {
+      "compile_key": "6d16558b25bfe480db1bef3c8e05249c5c1afdac5fcfa8d3ed245880d87dd947",
+      "source": "@Test\npublic void testCountMatchesNonEmptyTextAndEmptyNeedle() throws Exception {\n    assertEquals(0, StringUtils.countMatches(\"abc\", \"\"));\n}",
+      "class_name": "entry.Case_6d16558b25bfe480db1bef3c",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "32d3e05869146e38a9c60c567790ee452e9d2c8eadfd192b6c7efd815f203dbb",
+      "index": 1
+    },
+    {
+      "compile_key": "7ae070b5a5a7730b26b04ac24a0aa7e6503b88f847c7aeb2e883a581dec784d0",
+      "source": "@Test\npublic void testCountMatchesSingleCharacterMatch() throws Exception {\n    assertEquals(1, StringUtils.countMatches(\"a\", \"a\"));\n}",
+      "class_name": "entry.Case_7ae070b5a5a7730b26b04ac2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "7a2d186396d2f900b9e1f65d5e8afa31fe035a6e1ae51e643495177c39d1d1bd",
+      "index": 2
+    },
+    {
+      "compile_key": "75983fed86db446c782a4dbaadb9a404a13e3358421c5163fa75c8fe6e6a38f7",
+      "source": "@Test\npublic void testCountMatchesMultipleCharacterMatch() throws Exception {\n    assertEquals(2, StringUtils.countMatches(\"aa\", \"a\"));\n}",
+      "class_name": "entry.Case_75983fed86db446c782a4dba",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "519616e6c2204d1faf97c4eee9f537bb6dc688ed746ac4af26f0017ff76a77d2",
+      "index": 3
+    },
+    {
+      "compile_key": "d2c986566063ef489ceb24c7734160912f6412dbb30de7fd227c998050d81481",
+      "source": "@Test\npublic void testCountMatchesNoMatch() throws Exception {\n    assertEquals(0, StringUtils.countMatches(\"abc\", \"d\"));\n}",
+      "class_name": "entry.Case_d2c986566063ef489ceb24c7",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "9ce51bc208e696f25f086a23078143617751b041c708c11874ceb9f764a5ca97",
+      "index": 4
+    },
+    {
+      "compile_key": "3354eca5b9d498013b1790f065d5c1ff866e9968452f80b75a29a9253fb4a2c9",
+      "source": "@Test\npublic void testCountMatchesOverlappingSubstrings() throws Exception {\n    assertEquals(1, StringUtils.countMatches(\"aaa\", \"aa\"));\n}",
+      "class_name": "entry.Case_3354eca5b9d498013b1790f0",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "cf525ebb508f350ea2bf8f34b3a58b9a02878c32cf69dfdcb6b9a6697af03267",
+      "index": 5
+    },
+    {
+      "compile_key": "a34e9c156badba1ad8ef544a6b053e5b13833cfc4906d3f2fd67c926bdb392c0",
+      "source": "@Test\npublic void testCountMatchesLargeText() throws Exception {\n    assertEquals(10, StringUtils.countMatches(\"aaaaaaaaaa\", \"aa\"));\n}",
+      "class_name": "entry.Case_a34e9c156badba1ad8ef544a",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<10> but was:<5>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_a34e9c156badba1ad8ef544a.testCountMatchesLargeText(Case_a34e9c156badba1ad8ef544a.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMet",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "febba83018b6d98f8f08e4072ad939daf742268f932d8db82baf362acfaad0e3",
+      "index": 6
+    },
+    {
+      "compile_key": "3c81475a598d7a9d00ebad54b844e66fe14185353e1bed9d99d13e23bc41fc33",
+      "source": "@Test\npublic void testCountMatchesLargeNeedle() throws Exception {\n    assertEquals(1, StringUtils.countMatches(\"abc\", \"abc\"));\n}",
+      "class_name": "entry.Case_3c81475a598d7a9d00ebad54",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "9c29e7f8a0c87cb6c1d2fd9969c75324377f9fd665dbf64e9cdf7090d6415a58",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

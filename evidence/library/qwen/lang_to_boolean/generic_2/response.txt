@@ -1,0 +1,31 @@
+```java
+@Test
+public void testToBooleann() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("n"));
+}
+
+@Test
+public void testToBooleanf() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("f"));
+}
+
+@Test
+public void testToBooleanOne() throws Exception {
+    assertTrue(BooleanUtils.toBoolean("1"));
+}
+
+@Test
+public void testToBooleanFalse() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("false"));
+}
+
+@Test
+public void testToBooleanXGti() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("x gti"));
+}
+
+@Test
+public void testToBooleanNull() throws Exception {
+    assertFalse(BooleanUtils.toBoolean(null));
+}
+```

@@ -1,0 +1,184 @@
+{
+  "structure_pass": true,
+  "total_methods": 5,
+  "methods": [
+    {
+      "compile_key": "2a1e3e4c59c22ac6b93747c4d625337743aed4e8f4f4d4218b8b5cbcc92641fa",
+      "source": "@Test\npublic void testReverseLongString() throws Exception {\n    assertEquals(\"gnirts ylluf\", StringUtils.reverse(\"full swing\"));\n}",
+      "class_name": "entry.Case_2a1e3e4c59c22ac6b93747c4",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<gni[rts y]lluf> but was:<gni[ws ]lluf>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_2a1e3e4c59c22ac6b93747c4.testReverseLongString(Case_2a1e3e4c59c22ac6b93747c4.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "0e1c6b3227f9187126ade82a7c7e004f28883317fa1ea0d08b9def34f4aa8c6e",
+      "index": 0
+    },
+    {
+      "compile_key": "36933241c621f57763e65dfd56e09353990390da64dcef2d2ac327d009aeb8bf",
+      "source": "@Test\npublic void testReverseMixedCase() throws Exception {\n    assertEquals(\"eH dlroW olleH\", StringUtils.reverse(\"Hello World!\"));\n}",
+      "class_name": "entry.Case_36933241c621f57763e65dfd",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[eH ]dlroW olleH> but was:<[!]dlroW olleH>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_36933241c621f57763e65dfd.testReverseMixedCase(Case_36933241c621f57763e65dfd.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "9735fa6b42833ae59bd165f4f0315779b5fbc5c48f8a9e35220bf4cac5c18873",
+      "index": 1
+    },
+    {
+      "compile_key": "02026cc671f253e86ccfd00e7f96412e3ad2b4745dcf2bceb44f3ecbca243f4d",
+      "source": "@Test\npublic void testReverseWhitespace() throws Exception {\n    assertEquals(\" si esrever\", StringUtils.reverse(\"reverse is\"));\n}",
+      "class_name": "entry.Case_02026cc671f253e86ccfd00e",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[ ]si esrever> but was:<[]si esrever>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_02026cc671f253e86ccfd00e.testReverseWhitespace(Case_02026cc671f253e86ccfd00e.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.run",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "449ca6d8582956657f8abad898f5f9d4f29ce2db5bbb73e5c0c7f1107b20ba65",
+      "index": 2
+    },
+    {
+      "compile_key": "a41f931c02bd27ba64142999b5542ee9463c69bc1bd69bdb0231f68ff3dff1bd",
+      "source": "@Test\npublic void testReverseSpecialCharacters() throws Exception {\n    assertEquals(\"!dlrow ,olleH\", StringUtils.reverse(\"Hello, world!\"));\n}",
+      "class_name": "entry.Case_a41f931c02bd27ba64142999",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "36adace61cc2892be305046164b3e44622fbfe6d1f7fb7e302b076684256f063",
+      "index": 3
+    },
+    {
+      "compile_key": "03dbe70ad0cca533aa3f815fe8f5ac924e7f4c0b3dd90e044bc268ac81574d98",
+      "source": "@Test\npublic void testReverseAllAscii() throws Exception {\n    assertEquals(\"~`!@#$%^&*()_+{}|:\\\"<>?`~!@#$%^&*()_+{}|:\\\"<>?\", \n                 StringUtils.reverse(\"~`!@#$%^&*()_+{}|:\\\"<>?`~!@#$%^&*()_+{}|:\\\"<>?\"));\n}",
+      "class_name": "entry.Case_03dbe70ad0cca533aa3f815f",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[~`!@#$%^&*()_+{}|:\"<>?`~!@#$%^&*()_+{}|:\"<>?]> but was:<[?><\":|}{+_)(*&^%$#@!~`?><\":|}{+_)(*&^%$#@!`~]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_03dbe70ad0cca533aa3f815f.testReverseAllAscii(Case_03dbe70ad0cca533aa3f815f.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.eval",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "445e439f469d741a88d09354b4c6bdcceeeaef4b5afbae8c952e773ae4c3c2da",
+      "index": 4
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<gni[rts y]lluf> but was:<gni[ws ]lluf>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_2a1e3e4c59c22ac6b93747c4.testReverseLongString(Case_2a1e3e4c59c22ac6b93747c4.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru"
+    },
+    {
+      "index": 1,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<[eH ]dlroW olleH> but was:<[!]dlroW olleH>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_36933241c621f57763e65dfd.testReverseMixedCase(Case_36933241c621f57763e65dfd.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner"
+    },
+    {
+      "index": 2,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<[ ]si esrever> but was:<[]si esrever>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_02026cc671f253e86ccfd00e.testReverseWhitespace(Case_02026cc671f253e86ccfd00e.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.run"
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

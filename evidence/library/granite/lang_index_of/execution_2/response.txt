@@ -1,0 +1,8 @@
+1. @Test public void testIndexOfNullArray() throws Exception { Assert.assertEquals(-1, indexOf(null, 5)); }
+2. @Test public void testIndexOfEmptyArray() throws Exception { Assert.assertEquals(-1, indexOf(new int[0], 5)); }
+3. @Test public void testIndexOfSingleElementArray() throws Exception { Assert.assertEquals(0, indexOf(new int[]{5}, 5)); }
+4. @Test public void testIndexOfMultipleElementsArray() throws Exception { Assert.assertEquals(0, indexOf(new int[]{1, 2, 3, 4, 5}, 2)); }
+5. @Test public void testIndexOfValueNotInArray() throws Exception { Assert.assertEquals(-1, indexOf(new int[]{1, 2, 3, 4, 5}, 6)); }
+6. @Test public void testIndexOfValueAtEndArray() throws Exception { Assert.assertEquals(4, indexOf(new int[]{1, 2, 3, 4, 5}, 5)); }
+7. @Test public void testIndexOfValueAtBeginningArray() throws Exception { Assert.assertEquals(0, indexOf(new int[]{5, 1, 2, 3, 4}, 5)); }
+8. @Test public void testIndexOfValueRepeatedArray() throws Exception { Assert.assertEquals(0, indexOf(new int[]{5, 5, 1, 2, 3}, 5)); }

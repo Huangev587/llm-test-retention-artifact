@@ -1,0 +1,64 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 1,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 2,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "index": 7,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized arrays are accepted"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 1,
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 2,
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "index": 3,
+      "diagnostic": "undeclared or forbidden expression name"
+    }
+  ]
+}

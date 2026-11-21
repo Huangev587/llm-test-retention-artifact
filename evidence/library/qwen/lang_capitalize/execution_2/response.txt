@@ -1,0 +1,36 @@
+```java
+@Test
+public void testMultipleCharsMixedCase() throws Exception {
+    assertEquals("Hello World", StringUtils.capitalize("hello world"));
+}
+
+@Test
+public void testLeadingWhitespace() throws Exception {
+    assertEquals(" Hello", StringUtils.capitalize(" hello"));
+}
+
+@Test
+public void testAllUppercase() throws Exception {
+    assertEquals("HELLO", StringUtils.capitalize("HELLO"));
+}
+
+@Test
+public void testAllLowercase() throws Exception {
+    assertEquals("Hello", StringUtils.capitalize("hello"));
+}
+
+@Test
+public void testAlreadyCapitalized() throws Exception {
+    assertEquals("Hello", StringUtils.capitalize("Hello"));
+}
+
+@Test
+public void testSingleQuote() throws Exception {
+    assertEquals("'Hello'", StringUtils.capitalize("'hello'"));
+}
+
+@Test
+public void testUnicodeSurrogatePair() throws Exception {
+    assertEquals("\uD83D\uDE00", StringUtils.capitalize("\ud83d\ude00"));
+}
+```

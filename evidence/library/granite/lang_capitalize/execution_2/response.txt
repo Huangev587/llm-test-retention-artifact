@@ -1,0 +1,42 @@
+```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(capitalize(null));
+}
+
+@Test
+public void testEmptyString() {
+    Assert.assertEquals("", capitalize(""));
+}
+
+@Test
+public void testSingleCharacter() {
+    Assert.assertEquals("A", capitalize("a"));
+    Assert.assertEquals("a", capitalize("A"));
+}
+
+@Test
+public void testMultipleCharacters() {
+    Assert.assertEquals("Hello", capitalize("hello"));
+    Assert.assertEquals("Hello", capitalize("helloWorld"));
+    Assert.assertEquals("'Hello'", capitalize("'hello'"));
+}
+
+@Test
+public void testUnicodeCharacters() {
+    Assert.assertEquals("Été", capitalize("été"));
+    Assert.assertEquals("Café", capitalize("café"));
+}
+
+@Test
+public void testMixedCase() {
+    Assert.assertEquals("HeLLo", capitalize("hELLO"));
+    Assert.assertEquals("HeLloWoRlD", capitalize("HeLLoWoRlD"));
+}
+
+@Test
+public void testSpecialCharacters() {
+    Assert.assertEquals("!@#\$%^&*()", capitalize("!@#\$%^&*()"));
+    Assert.assertEquals("!@#\$%^&*()", capitalize("!@#\$%^&*()"));
+}
+```

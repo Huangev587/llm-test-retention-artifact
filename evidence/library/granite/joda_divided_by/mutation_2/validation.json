@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "3b0a43d790faf9424d3d743b51ec8a0846a7adf60e4c46350e39bce597747c17",
+      "source": "@Test\npublic void testDividedByZero() {\n    Duration duration = new Duration(86400000000000L);\n    Duration result = duration.dividedBy(0);\n    assertEquals(0, result.getMillis());\n}",
+      "class_name": "entry.Case_3b0a43d790faf9424d3d743b",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.ArithmeticException: / by zero\n\tat org.joda.time.field.FieldUtils.safeDivide(FieldUtils.java:195)\n\tat org.joda.time.Duration.dividedBy(Duration.java:508)\n\tat entry.Case_3b0a43d790faf9424d3d743b.testDividedByZero(Case_3b0a43d790faf9424d3d743b.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.j",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "181dc729041dd70dfdf71296a14716d39dbee1f6ad1f608d3228f7420c2a9b76",
+      "index": 0
+    },
+    {
+      "compile_key": "f303d02229f4f0aec297d10ef8b71e8079c2c4c6d850a2b4ec2344c699897541",
+      "source": "@Test\npublic void testDividedByNegative() {\n    Duration duration = new Duration(86400000000000L);\n    long divisor = -1000000;\n    Duration result = duration.dividedBy(divisor);\n    assertEquals(864000000000L, result.getMillis());\n}",
+      "class_name": "entry.Case_f303d02229f4f0aec297d10e",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<864000000000> but was:<-86400000>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_f303d02229f4f0aec297d10e.testDividedByNegative(Case_f303d02229f4f0aec297d10e.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statem",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "e45312f2d52025fba4eefb9e26d3522c8635cd1cee48cc8cf1906728b6c16fb4",
+      "index": 1
+    },
+    {
+      "compile_key": "b8f2addc64314a113711e3a5accf50651bbf8564d02e1773db9b03747cab866e",
+      "source": "@Test\npublic void testDividedByPositive() {\n    Duration duration = new Duration(86400000000000L);\n    long divisor = 1000000;\n    Duration result = duration.dividedBy(divisor);\n    assertEquals(864000000L, result.getMillis());\n}",
+      "class_name": "entry.Case_b8f2addc64314a113711e3a5",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<864000000> but was:<86400000>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_b8f2addc64314a113711e3a5.testDividedByPositive(Case_b8f2addc64314a113711e3a5.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "dd23be1669ce403c8557f4a96c1a61b390126d468e09fc01991ca43e1957417d",
+      "index": 2
+    },
+    {
+      "compile_key": "96f78ebc3490f843971e96687ceb223666e4e9a6a4867025b1316919b174e177",
+      "source": "@Test\npublic void testDividedByMax() {\n    Duration duration = new Duration(86400000000000L);\n    long divisor = 2;\n    Duration result = duration.dividedBy(divisor);\n    assertEquals(43200000000000L, result.getMillis());\n}",
+      "class_name": "entry.Case_96f78ebc3490f843971e9668",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "29596d2b9cc704fea2902b7ce2022b204a313bd3b04b02b372396ba0526ea8ad",
+      "index": 3
+    },
+    {
+      "compile_key": "54df8cc6ab9bfa291379df0f3a4546fbed8e4b393da8d38bfe450dd23cb7c8ae",
+      "source": "@Test\npublic void testDividedByMin() {\n    Duration duration = new Duration(86400000000000L);\n    long divisor = 100000000000000L;\n    Duration result = duration.dividedBy(divisor);\n    assertEquals(864000000L, result.getMillis());\n}",
+      "class_name": "entry.Case_54df8cc6ab9bfa291379df0f",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.AssertionError: expected:<864000000> but was:<0>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_54df8cc6ab9bfa291379df0f.testDividedByMin(Case_54df8cc6ab9bfa291379df0f.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMetho",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "9421b55773cf3d64696980151212193126fc437eed40424dfdd1dfc9d0a735dd",
+      "index": 4
+    },
+    {
+      "compile_key": "171b8d592237b2f37469e14c7d901274c71a8833fb86626bc4c141151fa9646b",
+      "source": "@Test\npublic void testDividedByZeroWithNegative() {\n    Duration duration = new Duration(-86400000000000L);\n    Duration result = duration.dividedBy(0);\n    assertEquals(0, result.getMillis());\n}",
+      "class_name": "entry.Case_171b8d592237b2f37469e14c",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.ArithmeticException: / by zero\n\tat org.joda.time.field.FieldUtils.safeDivide(FieldUtils.java:195)\n\tat org.joda.time.Duration.dividedBy(Duration.java:508)\n\tat entry.Case_171b8d592237b2f37469e14c.testDividedByZeroWithNegative(Case_171b8d592237b2f37469e14c.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Pa",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "7945c9015cadd8ec23e44013bd8c6ef4615451595a8f917e46384adcbc232979",
+      "index": 5
+    },
+    {
+      "compile_key": "3a6a4923982b1f3790319b68891facd049812cbde908e6f6586c0750a8f60ce1",
+      "source": "@Test\npublic void testDividedByZeroWithPositive() {\n    Duration duration = new Duration(86400000000000L);\n    Duration result = duration.dividedBy(0);\n    assertEquals(0, result.getMillis());\n}",
+      "class_name": "entry.Case_3a6a4923982b1f3790319b68",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.ArithmeticException: / by zero\n\tat org.joda.time.field.FieldUtils.safeDivide(FieldUtils.java:195)\n\tat org.joda.time.Duration.dividedBy(Duration.java:508)\n\tat entry.Case_3a6a4923982b1f3790319b68.testDividedByZeroWithPositive(Case_3a6a4923982b1f3790319b68.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Pa",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "181dc729041dd70dfdf71296a14716d39dbee1f6ad1f608d3228f7420c2a9b76",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "java.lang.ArithmeticException: / by zero\n\tat org.joda.time.field.FieldUtils.safeDivide(FieldUtils.java:195)\n\tat org.joda.time.Duration.dividedBy(Duration.java:508)\n\tat entry.Case_3b0a43d790faf9424d3d743b.testDividedByZero(Case_3b0a43d790faf9424d3d743b.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.j"
+    },
+    {
+      "index": 1,
+      "diagnostic": "java.lang.AssertionError: expected:<864000000000> but was:<-86400000>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_f303d02229f4f0aec297d10e.testDividedByNegative(Case_f303d02229f4f0aec297d10e.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statem"
+    },
+    {
+      "index": 2,
+      "diagnostic": "java.lang.AssertionError: expected:<864000000> but was:<86400000>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_b8f2addc64314a113711e3a5.testDividedByPositive(Case_b8f2addc64314a113711e3a5.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements"
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

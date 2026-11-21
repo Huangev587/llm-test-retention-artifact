@@ -1,0 +1,226 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "string method outside allowlist"
+    },
+    {
+      "index": 1,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "string method outside allowlist"
+    },
+    {
+      "compile_key": "c0057c2795871eff158fdd9d76c06e6aebc649158d94e50b3d4bef336c36bde2",
+      "source": "@Test\npublic void testCountMatchesMixedCaseStr() {\n    Assert.assertEquals(2, StringUtils.countMatches(\"AbBa\", \"a\"));\n}",
+      "class_name": "entry.Case_c0057c2795871eff158fdd9d",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<2> but was:<1>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_c0057c2795871eff158fdd9d.testCountMatchesMixedCaseStr(Case_c0057c2795871eff158fdd9d.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeM",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "e65fa95e8d2ab74f1916f29f7c524725c8d57e0d0eb21a3f404107c62d9c2ae6",
+      "index": 2
+    },
+    {
+      "compile_key": "1c0fc34d00eb1ba8b671d16fd615db8f97d58f81251869eb9ba06361ad672580",
+      "source": "@Test\npublic void testCountMatchesMixedCaseSub() {\n    Assert.assertEquals(2, StringUtils.countMatches(\"AbBa\", \"A\"));\n}",
+      "class_name": "entry.Case_1c0fc34d00eb1ba8b671d16f",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<2> but was:<1>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_1c0fc34d00eb1ba8b671d16f.testCountMatchesMixedCaseSub(Case_1c0fc34d00eb1ba8b671d16f.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeM",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "44b49467620b572658eb81ce0b28e96347958691de9a0db45799f52b6e9e5ec1",
+      "index": 3
+    },
+    {
+      "compile_key": "4a00cc4fe87ce2913f0a8c4f7649678f0ebab7532479c56b90cda0a84cbe6223",
+      "source": "@Test\npublic void testCountMatchesSpecialCharsStr() {\n    Assert.assertEquals(2, StringUtils.countMatches(\"ab!@ba\", \"!@\"));\n}",
+      "class_name": "entry.Case_4a00cc4fe87ce2913f0a8c4f",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<2> but was:<1>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_4a00cc4fe87ce2913f0a8c4f.testCountMatchesSpecialCharsStr(Case_4a00cc4fe87ce2913f0a8c4f.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.Invo",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "660ee08cf69af1c2a421810771ef52a807880a5fcbd959d067a70e6ed4bf84ce",
+      "index": 4
+    },
+    {
+      "compile_key": "0b927fee29123e249569ab0f575f3c030391de413593c54fb120bf2780a87e72",
+      "source": "@Test\npublic void testCountMatchesSpecialCharsSub() {\n    Assert.assertEquals(2, StringUtils.countMatches(\"ab!@ba\", \"!@\"));\n}",
+      "class_name": "entry.Case_0b927fee29123e249569ab0f",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<2> but was:<1>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_0b927fee29123e249569ab0f.testCountMatchesSpecialCharsSub(Case_0b927fee29123e249569ab0f.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.Invo",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "660ee08cf69af1c2a421810771ef52a807880a5fcbd959d067a70e6ed4bf84ce",
+      "index": 5
+    },
+    {
+      "compile_key": "b95a5456d0d97d37e831f6690ae3f917e88460694da7d19688fd54e5d36f7c2d",
+      "source": "@Test\npublic void testCountMatchesOverlappingStr() {\n    Assert.assertEquals(1, StringUtils.countMatches(\"aaaa\", \"aa\"));\n}",
+      "class_name": "entry.Case_b95a5456d0d97d37e831f669",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<1> but was:<2>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_b95a5456d0d97d37e831f669.testCountMatchesOverlappingStr(Case_b95a5456d0d97d37e831f669.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.Invok",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "f2c22675a1b940d141bab0306b3f8c5cbd2dc5ee64b0cccc4113796b239de47d",
+      "index": 6
+    },
+    {
+      "compile_key": "b8031d933dafd0cd42d5b492b47532e5902111f15103e1d59e722fd816a18ce9",
+      "source": "@Test\npublic void testCountMatchesOverlappingSub() {\n    Assert.assertEquals(1, StringUtils.countMatches(\"aaaa\", \"aa\"));\n}",
+      "class_name": "entry.Case_b8031d933dafd0cd42d5b492",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<1> but was:<2>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_b8031d933dafd0cd42d5b492.testCountMatchesOverlappingSub(Case_b8031d933dafd0cd42d5b492.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.Invok",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "f2c22675a1b940d141bab0306b3f8c5cbd2dc5ee64b0cccc4113796b239de47d",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "string method outside allowlist"
+    },
+    {
+      "index": 1,
+      "diagnostic": "string method outside allowlist"
+    },
+    {
+      "index": 2,
+      "diagnostic": "java.lang.AssertionError: expected:<2> but was:<1>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_c0057c2795871eff158fdd9d.testCountMatchesMixedCaseStr(Case_c0057c2795871eff158fdd9d.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeM"
+    },
+    {
+      "index": 3,
+      "diagnostic": "java.lang.AssertionError: expected:<2> but was:<1>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_1c0fc34d00eb1ba8b671d16f.testCountMatchesMixedCaseSub(Case_1c0fc34d00eb1ba8b671d16f.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeM"
+    }
+  ]
+}

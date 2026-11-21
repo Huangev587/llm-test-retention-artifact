@@ -1,0 +1,80 @@
+{
+  "structure_pass": true,
+  "total_methods": 2,
+  "methods": [
+    {
+      "compile_key": "269a61ae6a8d416c297778f256db7fc83a0764da5832afafa18b28bde3f6a439",
+      "source": "@Test\npublic void testGetDayOfYear_FebruaryLast_2100() throws Exception {\n    LocalDate date = new LocalDate(2100, 2, 28);\n    assertEquals(59, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_269a61ae6a8d416c297778f2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6a91437016743637491b58634f87fa756657733b5feaf40f8a3d3bfa09be7747",
+      "index": 0
+    },
+    {
+      "compile_key": "923e464d36f7b30599af4e6e67a4352cf1d55650e372072c30836854d0e60920",
+      "source": "@Test\npublic void testGetDayOfYear_DecemberLast_2100() throws Exception {\n    LocalDate date = new LocalDate(2100, 12, 31);\n    assertEquals(365, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_923e464d36f7b30599af4e6e",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3c4fb28a115a400a299565babcecefc4901316f9405b07dd909d411743a6fc4f",
+      "index": 1
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

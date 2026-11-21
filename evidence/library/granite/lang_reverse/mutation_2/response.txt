@@ -1,0 +1,31 @@
+1. @Test public void testNullInput() throws Exception {
+    Assert.assertNull(StringUtils.reverse(null));
+}
+
+2. @Test public void testEmptyStringInput() throws Exception {
+    Assert.assertEquals("", StringUtils.reverse(""));
+}
+
+3. @Test public void testSingleCharacterInput() throws Exception {
+    Assert.assertEquals("a", StringUtils.reverse("a"));
+}
+
+4. @Test public void testMultipleCharacterInput() throws Exception {
+    Assert.assertEquals("tab", StringUtils.reverse("bat"));
+}
+
+5. @Test public void testUnicodeInput() throws Exception {
+    Assert.assertEquals("¡Hola!", StringUtils.reverse("!alóH"));
+}
+
+6. @Test public void testControlCharacterInput() throws Exception {
+    Assert.assertEquals("\b", StringUtils.reverse("\b"));
+}
+
+7. @Test public void testMaxLengthInput() throws Exception {
+    Assert.assertEquals("12321", StringUtils.reverse("56765"));
+}
+
+8. @Test public void testMaxLengthASCIIInput() throws Exception {
+    Assert.assertEquals("12321", StringUtils.reverse(new String(new char[128]).replace('\0', '1')));
+}

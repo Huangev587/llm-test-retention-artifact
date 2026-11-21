@@ -1,0 +1,56 @@
+```java
+@Test
+public void testDividedByOne() {
+    Duration duration = new Duration(86400000000000L);
+    Duration result = duration.dividedBy(1);
+    assertEquals(duration.getMillis(), result.getMillis());
+}
+
+@Test
+public void testDividedByZero() {
+    Duration duration = new Duration(86400000000000L);
+    assertThrows(ArithmeticException.class, () -> duration.dividedBy(0));
+}
+
+@Test
+public void testDividedByNegative() {
+    Duration duration = new Duration(86400000000000L);
+    Duration result = duration.dividedBy(-1);
+    assertEquals(new Duration(-86400000000000L), result);
+}
+
+@Test
+public void testDividedByPositive() {
+    Duration duration = new Duration(86400000000000L);
+    Duration result = duration.dividedBy(1000000);
+    assertEquals(new Duration(864000L), result);
+}
+
+@Test
+public void testDividedByMax() {
+    Duration duration = new Duration(86400000000000L);
+    Duration result = duration.dividedBy(1000000);
+    assertEquals(new Duration(864000L), result);
+}
+
+@Test
+public void testDividedByMin() {
+    Duration duration = new Duration(86400000000000L);
+    Duration result = duration.dividedBy(-1000000);
+    assertEquals(new Duration(-864000L), result);
+}
+
+@Test
+public void testDividedByMaxNegative() {
+    Duration duration = new Duration(-86400000000000L);
+    Duration result = duration.dividedBy(-1000000);
+    assertEquals(new Duration(864000L), result);
+}
+
+@Test
+public void testDividedByMaxPositive() {
+    Duration duration = new Duration(-86400000000000L);
+    Duration result = duration.dividedBy(1000000);
+    assertEquals(new Duration(-864000L), result);
+}
+```

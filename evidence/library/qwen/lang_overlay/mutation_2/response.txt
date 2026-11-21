@@ -1,0 +1,36 @@
+```java
+@Test
+public void testOverlayStartEqualsEnd() throws Exception {
+    assertEquals("abcd[]ef", StringUtils.overlay("abcdef", "[]", 2, 2));
+}
+
+@Test
+public void testOverlayStartLessThanZero() throws Exception {
+    assertEquals("zzzzef", StringUtils.overlay("abcdef", "zzzz", -256, 4));
+}
+
+@Test
+public void testOverlayEndGreaterThanLength() throws Exception {
+    assertEquals("abzzzz", StringUtils.overlay("abcdef", "zzzz", 2, 256));
+}
+
+@Test
+public void testOverlayStartAndEndEqual() throws Exception {
+    assertEquals("abef", StringUtils.overlay("abcdef", "ef", 2, 4));
+}
+
+@Test
+public void testOverlayStartAndEndSwapped() throws Exception {
+    assertEquals("abzzzzef", StringUtils.overlay("abcdef", "zzzz", 4, 2));
+}
+
+@Test
+public void testOverlayStartAtZero() throws Exception {
+    assertEquals("zzzzdef", StringUtils.overlay("abcdef", "zzzz", 0, 4));
+}
+
+@Test
+public void testOverlayEndAtLength() throws Exception {
+    assertEquals("abdefzzzz", StringUtils.overlay("abcdef", "zzzz", 2, 6));
+}
+```

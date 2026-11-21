@@ -1,0 +1,64 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 1,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 2,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    },
+    {
+      "index": 7,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 1,
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 2,
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 3,
+      "diagnostic": "field or constant outside allowlist"
+    }
+  ]
+}

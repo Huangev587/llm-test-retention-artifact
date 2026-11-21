@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "6f70f7cc72b87dee3d1af9a5dc954af20d6cbe30a2b89b0d6c8d65469b037c91",
+      "source": "@Test\npublic void testDividedBySmallNegative() {\n    Duration duration = new Duration(1234567890123L);\n    Duration result = duration.dividedBy(-10);\n    assertEquals(123456789012L, result.getMillis());\n}",
+      "class_name": "entry.Case_6f70f7cc72b87dee3d1af9a5",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<123456789012> but was:<-123456789012>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_6f70f7cc72b87dee3d1af9a5.testDividedBySmallNegative(Case_6f70f7cc72b87dee3d1af9a5.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runne",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "be87e82a32bdbd25535db73219922735da25d19991e3c9d5e74e4765d147118d",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "java.lang.AssertionError: expected:<123456789012> but was:<-123456789012>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_6f70f7cc72b87dee3d1af9a5.testDividedBySmallNegative(Case_6f70f7cc72b87dee3d1af9a5.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runne"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "c5341487946b69f2295d29d7974a8d80c10f39aa075443ef0200a5e8e84d418b",
+      "source": "@Test\npublic void testRotateNullString() throws Exception {\n    assertEquals(null, StringUtils.rotate(null, 2));\n}",
+      "class_name": "entry.Case_c5341487946b69f2295d29d7",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "21567ae5c43b8251b28e3e88ab95f0b90c60921aee741454ffc014d341b59b0c",
+      "index": 0
+    },
+    {
+      "compile_key": "6edfeec9b1ec9f75e2321db83ec1682678fba7ec2d03aec07435dcc736f1ff27",
+      "source": "@Test\npublic void testRotateEmptyString() throws Exception {\n    assertEquals(\"\", StringUtils.rotate(\"\", 2));\n}",
+      "class_name": "entry.Case_6edfeec9b1ec9f75e2321db8",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6190469ab5f863b674ad475e452fc78e04fb3dbc72481e55b48d541b652d635e",
+      "index": 1
+    },
+    {
+      "compile_key": "41724079b48dff36d6ba5a41271a070b4e8b9cfa4615e8c8a70827e5945a8c9f",
+      "source": "@Test\npublic void testRotateNoShift() throws Exception {\n    assertEquals(\"abcdefg\", StringUtils.rotate(\"abcdefg\", 0));\n}",
+      "class_name": "entry.Case_41724079b48dff36d6ba5a41",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "cdb05b24b59129f7025f77a1a938dcc20bcb21f584e527b1d4af0ccd3286c07e",
+      "index": 2
+    },
+    {
+      "compile_key": "0be6b3d18675fc43b17863249923ccfc3154759238cd41dd3e7baf0f5659de84",
+      "source": "@Test\npublic void testRotatePositiveShift() throws Exception {\n    assertEquals(\"fgabcde\", StringUtils.rotate(\"abcdefg\", 2));\n}",
+      "class_name": "entry.Case_0be6b3d18675fc43b1786324",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "aaa41b40efaa6566704aa9a07a1bb72a362d6833e1df884391372784d0cc9ce8",
+      "index": 3
+    },
+    {
+      "compile_key": "7d005d8234ed3c5b862541b0f08d922f39b18bb625fbba63e3e131ffd5145e74",
+      "source": "@Test\npublic void testRotateNegativeShift() throws Exception {\n    assertEquals(\"cdefgab\", StringUtils.rotate(\"abcdefg\", -2));\n}",
+      "class_name": "entry.Case_7d005d8234ed3c5b862541b0",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d7aec12702d165b6062dddd8dc050d33d722150134c74626bcf86ef8289eadce",
+      "index": 4
+    },
+    {
+      "compile_key": "16698bd83689a5c979166265c7c5c227210fd339ac15466a41c62124c9c46122",
+      "source": "@Test\npublic void testRotateShiftGreaterThanLength() throws Exception {\n    assertEquals(\"abcdefg\", StringUtils.rotate(\"abcdefg\", 7));\n}",
+      "class_name": "entry.Case_16698bd83689a5c979166265",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "26f78170070a95c423e334efdc020c24c38db2dc6fa23c5bf135f9a18e803864",
+      "index": 5
+    },
+    {
+      "compile_key": "2a39e882f3467d6a8fdd8e2b9040b25e788da5948bf2955ad41cf40e81336a2b",
+      "source": "@Test\npublic void testRotateNegativeShiftGreaterThanLength() throws Exception {\n    assertEquals(\"abcdefg\", StringUtils.rotate(\"abcdefg\", -7));\n}",
+      "class_name": "entry.Case_2a39e882f3467d6a8fdd8e2b",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d7a4da536470b9cbd82f25bb096f0f27101ef686028c8124d07b0ae9452301cb",
+      "index": 6
+    },
+    {
+      "compile_key": "629b543d96082c9d22070522213b05f76a2b058e659c7d483ebfb116f0205a99",
+      "source": "@Test\npublic void testRotateLargePositiveShift() throws Exception {\n    assertEquals(\"fgabcde\", StringUtils.rotate(\"abcdefg\", 9));\n}",
+      "class_name": "entry.Case_629b543d96082c9d22070522",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "212edd74fede14600e7f90a47a59ee50722e5a4d6077edcbaee1de34983f8bbf",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

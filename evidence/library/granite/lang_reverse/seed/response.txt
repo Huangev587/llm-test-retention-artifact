@@ -1,0 +1,55 @@
+1. ```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(StringUtils.reverse(null));
+}
+```
+
+2. ```java
+@Test
+public void testEmptyString() {
+    Assert.assertEquals("", StringUtils.reverse(""));
+}
+```
+
+3. ```java
+@Test
+public void testSingleCharacterString() {
+    Assert.assertEquals("a", StringUtils.reverse("a"));
+}
+```
+
+4. ```java
+@Test
+public void testMultipleCharacterString() {
+    Assert.assertEquals("taco", StringUtils.reverse("cat"));
+}
+```
+
+5. ```java
+@Test
+public void testStringWithSpecialCharacters() {
+    Assert.assertEquals("!@#$%^&*()_+-=[]{};':\"<>,.?/~`", StringUtils.reverse("`',.?/~][]{=_+(-&*()$#^!@"));
+}
+```
+
+6. ```java
+@Test
+public void testStringWithWhitespace() {
+    Assert.assertEquals("  hello  ", StringUtils.reverse("  hello  "));
+}
+```
+
+7. ```java
+@Test
+public void testStringWithNewline() {
+    Assert.assertEquals("\nhello\n", StringUtils.reverse("\nhello\n"));
+}
+```
+
+8. ```java
+@Test
+public void testStringWithTab() {
+    Assert.assertEquals("\tworld\t", StringUtils.reverse("\tworld\t"));
+}
+```

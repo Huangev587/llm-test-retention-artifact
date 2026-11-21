@@ -1,0 +1,63 @@
+1. @Test public void testDaysBetweenSameDate() throws Exception {
+   LocalDate start = LocalDate.of(1900, 1, 1);
+   LocalDate end = LocalDate.of(1900, 1, 1);
+   Days expected = Days.days(0);
+   Days actual = Days.daysBetween(start, end);
+   Assert.assertEquals(expected, actual);
+}
+
+2. @Test public void testDaysBetweenAdjacentDays() throws Exception {
+   LocalDate start = LocalDate.of(1900, 12, 31);
+   LocalDate end = LocalDate.of(1901, 1, 1);
+   Days expected = Days.days(1);
+   Days actual = Days.daysBetween(start, end);
+   Assert.assertEquals(expected, actual);
+}
+
+3. @Test public void testDaysBetweenNonAdjacentDays() throws Exception {
+   LocalDate start = LocalDate.of(1950, 6, 30);
+   LocalDate end = LocalDate.of(1950, 7, 1);
+   Days expected = Days.days(1);
+   Days actual = Days.daysBetween(start, end);
+   Assert.assertEquals(expected, actual);
+}
+
+4. @Test public void testDaysBetweenLeapYear() throws Exception {
+   LocalDate start = LocalDate.of(1996, 12, 31);
+   LocalDate end = LocalDate.of(1997, 1, 1);
+   Days expected = Days.days(1);
+   Days actual = Days.daysBetween(start, end);
+   Assert.assertEquals(expected, actual);
+}
+
+5. @Test public void testDaysBetweenMaxYear() throws Exception {
+   LocalDate start = LocalDate.of(2100, 12, 31);
+   LocalDate end = LocalDate.of(2100, 12, 31);
+   Days expected = Days.days(0);
+   Days actual = Days.daysBetween(start, end);
+   Assert.assertEquals(expected, actual);
+}
+
+6. @Test public void testDaysBetweenMinYear() throws Exception {
+   LocalDate start = LocalDate.of(1900, 1, 1);
+   LocalDate end = LocalDate.of(1900, 1, 2);
+   Days expected = Days.days(1);
+   Days actual = Days.daysBetween(start, end);
+   Assert.assertEquals(expected, actual);
+}
+
+7. @Test public void testDaysBetweenDifferentMonth() throws Exception {
+   LocalDate start = LocalDate.of(1950, 1, 1);
+   LocalDate end = LocalDate.of(1950, 2, 1);
+   Days expected = Days.days(31);
+   Days actual = Days.daysBetween(start, end);
+   Assert.assertEquals(expected, actual);
+}
+
+8. @Test public void testDaysBetweenDifferentYear() throws Exception {
+   LocalDate start = LocalDate.of(1900, 12, 31);
+   LocalDate end = LocalDate.of(1901, 1, 1);
+   Days expected = Days.days(1);
+   Days actual = Days.daysBetween(start, end);
+   Assert.assertEquals(expected, actual);
+}

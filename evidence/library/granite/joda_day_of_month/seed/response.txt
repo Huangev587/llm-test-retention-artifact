@@ -1,0 +1,86 @@
+1. ```java
+@Test
+public void testWithDayOfMonth() {
+    LocalDate date = LocalDate.of(1900, 1, 1);
+    LocalDate result = date.withDayOfMonth(15);
+    assertArrayEquals(new int[]{1900, 1, 15}, result.toInstant().atZone(ZoneOffset.UTC).toLocalDate().getValues());
+}
+```
+
+2. ```java
+@Test
+public void testWithDayOfMonthMax() {
+    LocalDate date = LocalDate.of(2100, 12, 31);
+    LocalDate result = date.withDayOfMonth(31);
+    assertArrayEquals(new int[]{2100, 12, 31}, result.toInstant().atZone(ZoneOffset.UTC).toLocalDate().getValues());
+}
+```
+
+3. ```java
+@Test
+public void testWithDayOfMonthMin() {
+    LocalDate date = LocalDate.of(1900, 1, 1);
+    LocalDate result = date.withDayOfMonth(1);
+    assertArrayEquals(new int[]{1900, 1, 1}, result.toInstant().atZone(ZoneOffset.UTC).toLocalDate().getValues());
+}
+```
+
+4. ```java
+@Test
+public void testWithDayOfMonthInvalidMonth() {
+    LocalDate date = LocalDate.of(1900, 4, 30);
+    try {
+        date.withDayOfMonth(31);
+        assert false : "Expected IllegalArgumentException";
+    } catch (IllegalArgumentException e) {
+        assert true;
+    }
+}
+```
+
+5. ```java
+@Test
+public void testWithDayOfMonthInvalidYear() {
+    LocalDate date = LocalDate.of(1900, 1, 32);
+    try {
+        date.withDayOfMonth(32);
+        assert false : "Expected IllegalArgumentException";
+    } catch (IllegalArgumentException e) {
+        assert true;
+    }
+}
+```
+
+6. ```java
+@Test
+public void testWithDayOfMonthNull() {
+    try {
+        null.withDayOfMonth(15);
+        assert false : "Expected IllegalArgumentException";
+    } catch (IllegalArgumentException e) {
+        assert true;
+    }
+}
+```
+
+7. ```java
+@Test
+public void testWithDayOfMonthZero() {
+    LocalDate date = LocalDate.of(1900, 1, 1);
+    LocalDate result = date.withDayOfMonth(0);
+    assertArrayEquals(new int[]{1900, 1, 1}, result.toInstant().atZone(ZoneOffset.UTC).toLocalDate().getValues());
+}
+```
+
+8. ```java
+@Test
+public void testWithDayOfMonthNegative() {
+    LocalDate date = LocalDate.of(1900, 1, 1);
+    try {
+        date.withDayOfMonth(-1);
+        assert false : "Expected IllegalArgumentException";
+    } catch (IllegalArgumentException e) {
+        assert true;
+    }
+}
+```

@@ -1,0 +1,36 @@
+```java
+@Test
+public void testToBooleantRUe() throws Exception {
+    assertTrue(BooleanUtils.toBoolean("tRUe"));
+}
+
+@Test
+public void testToBooleanOn() throws Exception {
+    assertTrue(BooleanUtils.toBoolean("on"));
+}
+
+@Test
+public void testToBooleanyes() throws Exception {
+    assertTrue(BooleanUtils.toBoolean("yes"));
+}
+
+@Test
+public void testToBooleany() throws Exception {
+    assertTrue(BooleanUtils.toBoolean("y"));
+}
+
+@Test
+public void testToBooleann() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("n"));
+}
+
+@Test
+public void testToBooleant() throws Exception {
+    assertTrue(BooleanUtils.toBoolean("t"));
+}
+
+@Test
+public void testToBooleanf() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("f"));
+}
+```

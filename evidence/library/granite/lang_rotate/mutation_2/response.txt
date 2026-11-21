@@ -1,0 +1,46 @@
+```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(rotate(null, 2));
+}
+
+@Test
+public void testEmptyInput() {
+    Assert.assertEquals("", rotate("", 2));
+}
+
+@Test
+public void testZeroShift() {
+    Assert.assertEquals("abcdefg", rotate("abcdefg", 0));
+}
+
+@Test
+public void testPositiveShift() {
+    Assert.assertEquals("fgabcde", rotate("abcdefg", 2));
+}
+
+@Test
+public void testNegativeShift() {
+    Assert.assertEquals("cdefgab", rotate("abcdefg", -2));
+}
+
+@Test
+public void testFullCirclePositiveShift() {
+    Assert.assertEquals("abcdefg", rotate("abcdefg", 7));
+}
+
+@Test
+public void testFullCircleNegativeShift() {
+    Assert.assertEquals("abcdefg", rotate("abcdefg", -7));
+}
+
+@Test
+public void testBeyondFullCirclePositiveShift() {
+    Assert.assertEquals("fgabcde", rotate("abcdefg", 9));
+}
+
+@Test
+public void testBeyondFullCircleNegativeShift() {
+    Assert.assertEquals("cdefgab", rotate("abcdefg", -9));
+}
+```

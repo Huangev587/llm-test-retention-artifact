@@ -1,0 +1,49 @@
+```java
+@Test
+public void testParseValidDuration() throws Exception {
+    Duration result = Duration.parse("PT1H");
+    assertEquals(3600000, result.getMillis());
+}
+
+@Test
+public void testParseValidNegativeDuration() throws Exception {
+    Duration result = Duration.parse("-PT1H");
+    assertEquals(-3600000, result.getMillis());
+}
+
+@Test
+public void testParseValidFractionalDuration() throws Exception {
+    Duration result = Duration.parse("PT1.5H");
+    assertEquals(5400000, result.getMillis());
+}
+
+@Test
+public void testParseValidLongDuration() throws Exception {
+    Duration result = Duration.parse("PT99999999999999S");
+    assertEquals(99999999999999L, result.getMillis());
+}
+
+@Test
+public void testParseValidShortDuration() throws Exception {
+    Duration result = Duration.parse("PT1S");
+    assertEquals(1000, result.getMillis());
+}
+
+@Test
+public void testParseValidZeroDuration() throws Exception {
+    Duration result = Duration.parse("PT0S");
+    assertEquals(0, result.getMillis());
+}
+
+@Test
+public void testParseValidMaxDuration() throws Exception {
+    Duration result = Duration.parse("PT72000000000000S");
+    assertEquals(72000000000000L, result.getMillis());
+}
+
+@Test
+public void testParseValidMinDuration() throws Exception {
+    Duration result = Duration.parse("-PT72000000000000S");
+    assertEquals(-72000000000000L, result.getMillis());
+}
+```

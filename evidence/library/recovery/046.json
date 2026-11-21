@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "86f4719416afca1fc64364cefc325524e1d9883e298946e8aa999b0477b63bf7",
+      "source": "@Test\npublic void testGetDayOfYear() throws Exception {\n    LocalDate date = new LocalDate(1900, 1, 1);\n    int dayOfYear = date.getDayOfYear();\n    assertArrayEquals(new int[]{1}, new int[]{dayOfYear});\n}",
+      "class_name": "entry.Case_86f4719416afca1fc64364ce",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "e24cc0b66d90f1227225f49a5934333ddfd68d95557f6f37aec57e65c85fb0cf",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

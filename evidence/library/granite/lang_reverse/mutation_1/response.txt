@@ -1,0 +1,36 @@
+1. @Test public void testNullInput() {
+    Assert.assertNull(StringUtils.reverse(null));
+}
+
+2. @Test public void testEmptyString() {
+    Assert.assertEquals("", StringUtils.reverse(""));
+}
+
+3. @Test public void testShortString() {
+    Assert.assertEquals("tnirp", StringUtils.reverse("pirT"));
+}
+
+4. @Test public void testLongString() {
+    String input = "This is a long string to test the reverse function.";
+    String expected = "nifgnats gnizilG si sihT";
+    Assert.assertEquals(expected, StringUtils.reverse(input));
+}
+
+5. @Test public void testUnicodeSupport() {
+    Assert.assertEquals("\u005A\u002E\u0061\u006C\u0061\u002E", StringUtils.reverse("\u002E\u0061\u006C\u0061\u005A"));
+}
+
+6. @Test public void testControlCharacters() {
+    String input = String.join("", Collections.nCopies(128, "\u0001"));
+    Assert.assertEquals(input, StringUtils.reverse(input));
+}
+
+7. @Test public void testSingleCharacterString() {
+    Assert.assertEquals(String.valueOf((char)0x100), StringUtils.reverse(String.valueOf((char)0x100)));
+}
+
+8. @Test public void testByteArrayInput() {
+    byte[] input = "test".getBytes(StandardCharsets.US_ASCII);
+    String expected = "tset";
+    Assert.assertEquals(expected, new String(ArrayUtils.reverse(input), StandardCharsets.US_ASCII));
+}

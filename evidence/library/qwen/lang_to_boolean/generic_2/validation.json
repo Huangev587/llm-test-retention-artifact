@@ -1,0 +1,194 @@
+{
+  "structure_pass": true,
+  "total_methods": 6,
+  "methods": [
+    {
+      "compile_key": "642b57db7e2c7b2125339716100b7c59165f547af09c06b12c1e697333d5f971",
+      "source": "@Test\npublic void testToBooleann() throws Exception {\n    assertFalse(BooleanUtils.toBoolean(\"n\"));\n}",
+      "class_name": "entry.Case_642b57db7e2c7b2125339716",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "9ad6a3e27dfd1c4f3d5dff73de9fdd4bbdc82195cbec36fdbb185a6c3296a077",
+      "index": 0
+    },
+    {
+      "compile_key": "048f8407e42dbb2661462bd22c7b3c603ba00f60886ad51a5c2793020c0bc334",
+      "source": "@Test\npublic void testToBooleanf() throws Exception {\n    assertFalse(BooleanUtils.toBoolean(\"f\"));\n}",
+      "class_name": "entry.Case_048f8407e42dbb2661462bd2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "31e6f1cf5f43609a8a4946b9ddb7fda1b93b151854b855de3c5b0e744556d59b",
+      "index": 1
+    },
+    {
+      "compile_key": "2b9a04188095417b6473c146c1deef06465b3250868eb1a1cfabeadb958ddef9",
+      "source": "@Test\npublic void testToBooleanOne() throws Exception {\n    assertTrue(BooleanUtils.toBoolean(\"1\"));\n}",
+      "class_name": "entry.Case_2b9a04188095417b6473c146",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "e1650e7d23a33c751299a95f032e7e2c6a9e73e2aa2a6e8a13a679aa60984d89",
+      "index": 2
+    },
+    {
+      "compile_key": "1f50ed862b46ca453ecf1620c515744bc78acbe4043b0dff468ccbf347591d02",
+      "source": "@Test\npublic void testToBooleanFalse() throws Exception {\n    assertFalse(BooleanUtils.toBoolean(\"false\"));\n}",
+      "class_name": "entry.Case_1f50ed862b46ca453ecf1620",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6f9cd366c7bbaf4fa037f3eda4ea6edda32de2c6e86258bdd2ff99d384cb7740",
+      "index": 3
+    },
+    {
+      "compile_key": "761166b4e5a90625cdaa5f9616fc21952b975da732ce4693b96895aeb8351275",
+      "source": "@Test\npublic void testToBooleanXGti() throws Exception {\n    assertFalse(BooleanUtils.toBoolean(\"x gti\"));\n}",
+      "class_name": "entry.Case_761166b4e5a90625cdaa5f96",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "435e3129cb36539ae283d89560fb233e221200b7802e0451b2b471bcd215c172",
+      "index": 4
+    },
+    {
+      "compile_key": "d43fa27f36c7260eee30223fb3f24491c4ed5693929b7b532fdaa0e356a5cf13",
+      "source": "@Test\npublic void testToBooleanNull() throws Exception {\n    assertFalse(BooleanUtils.toBoolean(null));\n}",
+      "class_name": "entry.Case_d43fa27f36c7260eee30223f",
+      "original_pass": false,
+      "status": "COMPILE_FAILURE",
+      "original_feedback": "<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_to_boolean/d43fa27f36c7260eee30223fb3f24491c4ed5693929b7b532fdaa0e356a5cf13/Case_d43fa27f36c7260eee30223f.java:10: 错误: 对toBoolean的引用不明确\n    assertFalse(BooleanUtils.toBoolean(null));\n                            ^\n  BooleanUtils 中的方法 toBoolean(Boolean) 和 BooleanUtils 中的方法 toBoolean(String) 都匹配\n1 个错误\n",
+      "id": "f362731883d867353d746b89b9786ed0e3f0c6b54f98aa6d058ee275287cad88",
+      "index": 5
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

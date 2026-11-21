@@ -1,0 +1,81 @@
+```java
+@Test
+public void testRemoveNullArray() {
+    int[] input = null;
+    int index = 0;
+    int[] expected = null;
+    int[] result = ArrayUtils.remove(input, index);
+    Assert.assertArrayEquals(expected, result);
+}
+
+@Test
+public void testRemoveEmptyArray() {
+    int[] input = {};
+    int index = 0;
+    int[] expected = {};
+    int[] result = ArrayUtils.remove(input, index);
+    Assert.assertArrayEquals(expected, result);
+}
+
+@Test
+public void testRemoveSingleElementArray() {
+    int[] input = {1};
+    int index = 0;
+    int[] expected = {};
+    int[] result = ArrayUtils.remove(input, index);
+    Assert.assertArrayEquals(expected, result);
+}
+
+@Test
+public void testRemoveMiddleElementArray() {
+    int[] input = {2, 6};
+    int index = 0;
+    int[] expected = {6};
+    int[] result = ArrayUtils.remove(input, index);
+    Assert.assertArrayEquals(expected, result);
+}
+
+@Test
+public void testRemoveLastElementArray() {
+    int[] input = {2, 6};
+    int index = 1;
+    int[] expected = {2};
+    int[] result = ArrayUtils.remove(input, index);
+    Assert.assertArrayEquals(expected, result);
+}
+
+@Test
+public void testRemoveMiddleElementLargeArray() {
+    int[] input = {2, 6, 3};
+    int index = 1;
+    int[] expected = {2, 3};
+    int[] result = ArrayUtils.remove(input, index);
+    Assert.assertArrayEquals(expected, result);
+}
+
+@Test
+public void testRemoveIndexOutOfBounds() {
+    int[] input = {2, 6, 3};
+    int index = 3;
+    int[] expected = null;
+    try {
+        int[] result = ArrayUtils.remove(input, index);
+        Assert.assertArrayEquals(expected, result);
+    } catch (IndexOutOfBoundsException e) {
+        Assert.assertEquals(IndexOutOfBoundsException.class, e.getClass());
+    }
+}
+
+@Test
+public void testRemoveNegativeIndex() {
+    int[] input = {2, 6, 3};
+    int index = -1;
+    int[] expected = null;
+    try {
+        int[] result = ArrayUtils.remove(input, index);
+        Assert.assertArrayEquals(expected, result);
+    } catch (IndexOutOfBoundsException e) {
+        Assert.assertEquals(IndexOutOfBoundsException.class, e.getClass());
+    }
+}
+```

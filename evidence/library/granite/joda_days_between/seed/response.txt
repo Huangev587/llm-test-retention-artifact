@@ -1,0 +1,54 @@
+1. @Test public void testDaysBetweenSameDate() {
+    LocalDate start = LocalDate.of(1950, 1, 1);
+    LocalDate end = LocalDate.of(1950, 1, 1);
+    Days result = Days.daysBetween(start, end);
+    assertEquals(0, result.getDays());
+}
+
+2. @Test public void testDaysBetweenAdjacentDays() {
+    LocalDate start = LocalDate.of(1950, 12, 31);
+    LocalDate end = LocalDate.of(1951, 1, 1);
+    Days result = Days.daysBetween(start, end);
+    assertEquals(1, result.getDays());
+}
+
+3. @Test public void testDaysBetweenNonAdjacentDays() {
+    LocalDate start = LocalDate.of(1950, 12, 25);
+    LocalDate end = LocalDate.of(1951, 1, 1);
+    Days result = Days.daysBetween(start, end);
+    assertEquals(11, result.getDays());
+}
+
+4. @Test public void testDaysBetweenYearBoundary() {
+    LocalDate start = LocalDate.of(1950, 12, 31);
+    LocalDate end = LocalDate.of(1951, 1, 1);
+    Days result = Days.daysBetween(start, end);
+    assertEquals(1, result.getDays());
+}
+
+5. @Test public void testDaysBetweenCenturyBoundary() {
+    LocalDate start = LocalDate.of(1900, 12, 31);
+    LocalDate end = LocalDate.of(2000, 1, 1);
+    Days result = Days.daysBetween(start, end);
+    assertEquals(10000, result.getDays());
+}
+
+6. @Test public void testDaysBetweenMaxYearBoundary() {
+    LocalDate start = LocalDate.of(2099, 12, 31);
+    LocalDate end = LocalDate.of(2100, 1, 1);
+    Days result = Days.daysBetween(start, end);
+    assertEquals(1, result.getDays());
+}
+
+7. @Test public void testDaysBetweenMinYearBoundary() {
+    LocalDate start = LocalDate.of(1900, 1, 1);
+    LocalDate end = LocalDate.of(1900, 1, 2);
+    Days result = Days.daysBetween(start, end);
+    assertEquals(1, result.getDays());
+}
+
+8. @Test public void testDaysBetweenMaxMinYearBoundary() {
+    LocalDate start = LocalDate.of(2099, 12, 31);
+    LocalDate end = LocalDate.of(2100, 1, 1);
+    Days result = Days.daysBetween(start, end);
+    assertEquals(1, result.getDays());

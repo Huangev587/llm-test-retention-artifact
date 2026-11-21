@@ -1,0 +1,54 @@
+```java
+@Test
+public void testDividedByOne() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(1);
+    assertEquals("PT1D", result.toString());
+}
+
+@Test
+public void testDividedByPositive() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(2);
+    assertEquals("PT12H", result.toString());
+}
+
+@Test
+public void testDividedByNegative() throws Exception {
+    Duration original = new Duration(-86400000);
+    Duration result = original.dividedBy(-2);
+    assertEquals("-PT12H", result.toString());
+}
+
+@Test
+public void testDividedByMaxPositive() throws Exception {
+    Duration original = new Duration(Long.MAX_VALUE);
+    Duration result = original.dividedBy(1000000);
+    assertEquals(new Duration((long) (Long.MAX_VALUE / 1000000)).toString(), result.toString());
+}
+
+@Test
+public void testDividedByMinNegative() throws Exception {
+    Duration original = new Duration(Long.MIN_VALUE);
+    Duration result = original.dividedBy(-1000000);
+    assertEquals(new Duration((long) (Long.MIN_VALUE / -1000000)).toString(), result.toString());
+}
+
+@Test
+public void testDividedByZeroThrowsException() throws Exception {
+    Duration original = new Duration(86400000);
+    try {
+        original.dividedBy(0);
+        fail("Expected ArithmeticException");
+    } catch (ArithmeticException e) {
+        // Expected exception
+    }
+}
+
+@Test
+public void testDividedByLargeNumber() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(999999);
+    assertEquals("PT1M57S", result.toString());
+}
+```

@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "1034c527a25b3c2534d71e60ea33aab4fd38d9839ca6b4323685ce467e477176",
+      "source": "@Test\npublic void testOverlayEqualIndices() throws Exception {\n    assertEquals(\"aabbcc\", StringUtils.overlay(\"aabbcc\", \"xx\", 2, 2));\n}",
+      "class_name": "entry.Case_1034c527a25b3c2534d71e60",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<aa[]bbcc> but was:<aa[xx]bbcc>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1034c527a25b3c2534d71e60.testOverlayEqualIndices(Case_1034c527a25b3c2534d71e60.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "80cc9a7be68705516af447a8b2bc1d6a3a9830ef134e11dfb8ba72e5a71453b9",
+      "index": 0
+    },
+    {
+      "compile_key": "68256160ea4e2e4351fbf2f0280652218891d017596e1152d5bedf49aa27d063",
+      "source": "@Test\npublic void testOverlaySingleCharacter() throws Exception {\n    assertEquals(\"axbc\", StringUtils.overlay(\"axbc\", \"y\", 1, 2));\n}",
+      "class_name": "entry.Case_68256160ea4e2e4351fbf2f0",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<a[x]bc> but was:<a[y]bc>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_68256160ea4e2e4351fbf2f0.testOverlaySingleCharacter(Case_68256160ea4e2e4351fbf2f0.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Par",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "53457657357abc2cacc327a932d347eb9c133f55022e1ef700860170bdf70e9f",
+      "index": 1
+    },
+    {
+      "compile_key": "9982e13a734870c66242d28ef596cdadc637a0bf74fcb605973ae5e2ee50d8fb",
+      "source": "@Test\npublic void testOverlayFullString() throws Exception {\n    assertEquals(\"xxxx\", StringUtils.overlay(\"abcdef\", \"xxxx\", 0, 6));\n}",
+      "class_name": "entry.Case_9982e13a734870c66242d28e",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "a825c0a710159ae423dd042edb30297cdee37928801a3a9990ea0338088341f0",
+      "index": 2
+    },
+    {
+      "compile_key": "1a9b25bff46ecef3e12b1231674ada79f5cd59e4454be1e6d5f561971fe4bd08",
+      "source": "@Test\npublic void testOverlayPartialOverlap() throws Exception {\n    assertEquals(\"abzzzcef\", StringUtils.overlay(\"abcdef\", \"zzz\", 2, 5));\n}",
+      "class_name": "entry.Case_1a9b25bff46ecef3e12b1231",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<abzzz[ce]f> but was:<abzzz[]f>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1a9b25bff46ecef3e12b1231.testOverlayPartialOverlap(Case_1a9b25bff46ecef3e12b1231.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLea",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "a1a399f7fa8437d02e37a99791025428df25801f3b2b565abeeb177ac031b870",
+      "index": 3
+    },
+    {
+      "compile_key": "8f1ded8fb2aa2ddd9bed82fb500324757f7cd240ad55a79aab7648258d153dfb",
+      "source": "@Test\npublic void testOverlayReverseOrderIndices() throws Exception {\n    assertEquals(\"abzzzzef\", StringUtils.overlay(\"abcdef\", \"zzzz\", 4, 2));\n}",
+      "class_name": "entry.Case_8f1ded8fb2aa2ddd9bed82fb",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "7a61cbb0f598dc46a25095ede7609844975841bf8f65fe0b64b7897645e92398",
+      "index": 4
+    },
+    {
+      "compile_key": "895c43b9e4b5531604d40684a6225fe3f63f62ba94eea7cd7c8ab77c51b95cac",
+      "source": "@Test\npublic void testOverlayLargePositiveIndices() throws Exception {\n    assertEquals(\"abcdefzzzz\", StringUtils.overlay(\"abcdef\", \"zzzz\", 8, 10));\n}",
+      "class_name": "entry.Case_895c43b9e4b5531604d40684",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "1341f9e059118f0d38322e1b7bf21478eaaf61066a15ac94d4f1ef58d8819aa8",
+      "index": 5
+    },
+    {
+      "compile_key": "7c5ae14a2f6a9fd2de709b02324c5c444287108868f64d47d3e25ab8d7739b27",
+      "source": "@Test\npublic void testOverlayLargeNegativeIndices() throws Exception {\n    assertEquals(\"zzzzabcdef\", StringUtils.overlay(\"abcdef\", \"zzzz\", -256, -255));\n}",
+      "class_name": "entry.Case_7c5ae14a2f6a9fd2de709b02",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "124c75d1e1e22301fd7080f5ff63aefd9f6f55f05eab5382abc91810fa13f2d7",
+      "index": 6
+    },
+    {
+      "compile_key": "785f062ff4c7bae7bb9996f2a5deb1e3180deaf65a2f14131a3b8db0108bd647",
+      "source": "@Test\npublic void testOverlayMixedIndices() throws Exception {\n    assertEquals(\"abzzzzef\", StringUtils.overlay(\"abcdef\", \"zzzz\", -1, 7));\n}",
+      "class_name": "entry.Case_785f062ff4c7bae7bb9996f2",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[abzzzzef]> but was:<[zzzz]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_785f062ff4c7bae7bb9996f2.testOverlayMixedIndices(Case_785f062ff4c7bae7bb9996f2.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Pa",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "9e829f6ecfa38c84fda4ad91a2b2e855d17bbdb531ba6ebb4364960b863a3600",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<aa[]bbcc> but was:<aa[xx]bbcc>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1034c527a25b3c2534d71e60.testOverlayEqualIndices(Case_1034c527a25b3c2534d71e60.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf("
+    },
+    {
+      "index": 1,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<a[x]bc> but was:<a[y]bc>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_68256160ea4e2e4351fbf2f0.testOverlaySingleCharacter(Case_68256160ea4e2e4351fbf2f0.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Par"
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<abzzz[ce]f> but was:<abzzz[]f>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1a9b25bff46ecef3e12b1231.testOverlayPartialOverlap(Case_1a9b25bff46ecef3e12b1231.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLea"
+    }
+  ]
+}

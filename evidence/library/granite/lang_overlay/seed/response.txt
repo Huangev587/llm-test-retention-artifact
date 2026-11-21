@@ -1,0 +1,41 @@
+```java
+@Test
+public void testNullStr() {
+    Assert.assertNull(overlay(null, "abc", 0, 0));
+}
+
+@Test
+public void testNullOverlay() {
+    Assert.assertEquals("abc", overlay("", null, 0, 0));
+}
+
+@Test
+public void testStartEndZero() {
+    Assert.assertEquals("abc", overlay("abcdef", "ef", 2, 4));
+}
+
+@Test
+public void testStartEndReversed() {
+    Assert.assertEquals("abef", overlay("abcdef", "ef", 4, 2));
+}
+
+@Test
+public void testStartEndWithinBounds() {
+    Assert.assertEquals("abzzzzef", overlay("abcdef", "zzzz", 2, 4));
+}
+
+@Test
+public void testStartNegative() {
+    Assert.assertEquals("zzzzef", overlay("abcdef", "zzzz", -1, 4));
+}
+
+@Test
+public void testEndGreaterLength() {
+    Assert.assertEquals("abzzzz", overlay("abcdef", "zzzz", 2, 8));
+}
+
+@Test
+public void testStartGreaterEnd() {
+    Assert.assertEquals("zzzzabcdef", overlay("abcdef", "zzzz", -2, -3));
+}
+```

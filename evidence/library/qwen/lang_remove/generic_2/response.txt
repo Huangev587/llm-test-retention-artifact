@@ -1,0 +1,31 @@
+```java
+@Test
+public void testRemoveMiddleElement() throws Exception {
+    assertArrayEquals(new int[]{1, 3}, ArrayUtils.remove(new int[]{1, 2, 3}, 1));
+}
+
+@Test
+public void testRemoveSingleElement() throws Exception {
+    assertArrayEquals(new int[]{}, ArrayUtils.remove(new int[]{5}, 0));
+}
+
+@Test
+public void testRemoveSecondElement() throws Exception {
+    assertArrayEquals(new int[]{1, 3}, ArrayUtils.remove(new int[]{1, 2, 3}, 1));
+}
+
+@Test
+public void testRemoveThirdElement() throws Exception {
+    assertArrayEquals(new int[]{1, 2}, ArrayUtils.remove(new int[]{1, 2, 3}, 2));
+}
+
+@Test
+public void testRemoveFourthElement() throws Exception {
+    assertArrayEquals(new int[]{1, 2, 3}, ArrayUtils.remove(new int[]{1, 2, 3, 4}, 3));
+}
+
+@Test
+public void testRemoveFifthElement() throws Exception {
+    assertArrayEquals(new int[]{1, 2, 3, 4}, ArrayUtils.remove(new int[]{1, 2, 3, 4, 5}, 4));
+}
+```

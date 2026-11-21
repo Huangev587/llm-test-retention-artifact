@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "7cd365708733b14deff9bda575c941bf5241684a29af048997fddeb62c79d3b6",
+      "source": "@Test\npublic void testCountMatchesSingleChar() {\n    Assert.assertEquals(2, StringUtils.countMatches(\"aa\", \"a\"));\n}",
+      "class_name": "entry.Case_7cd365708733b14deff9bda5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d93a3968b591509d6b1c1b64cb71d5e7cac213e2d9a12dd289f59fd3c6230b02",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

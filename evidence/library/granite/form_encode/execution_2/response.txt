@@ -1,0 +1,8 @@
+1. @Test public void testNullInput() throws Exception { Assert.assertEquals(null, new URLCodec().encode(null, "UTF-8")); }
+2. @Test public void testEmptyString() throws Exception { Assert.assertEquals("", new URLCodec().encode("", "UTF-8")); }
+3. @Test public void testSingleCharacter() throws Exception { Assert.assertEquals("a", new URLCodec().encode("a", "UTF-8")); }
+4. @Test public void testMultipleCharacters() throws Exception { Assert.assertEquals("hello", new URLCodec().encode("hello", "UTF-8")); }
+5. @Test public void testSpecialCharacters() throws Exception { Assert.assertEquals("test+string", new URLCodec().encode("test string", "UTF-8")); }
+6. @Test public void testUnicodeCharacters() throws Exception { Assert.assertEquals("test_string", new URLCodec().encode("test string", "UTF-8"); }
+7. @Test public void testLongString() throws Exception { Assert.assertEquals("long_string", new URLCodec().encode(new String(new char[256]).replace('\0','s'), "UTF-8")); }
+8. @Test public void testLongStringWithSpecialCharacters() throws Exception { Assert.assertEquals("long+string", new URLCodec().encode("long string", "UTF-8")); }

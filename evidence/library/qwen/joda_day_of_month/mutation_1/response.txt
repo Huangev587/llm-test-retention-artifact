@@ -1,0 +1,61 @@
+```java
+@Test
+public void testWithDayOfMonth_validDay() throws Exception {
+    LocalDate original = new LocalDate(2020, 2, 29);
+    LocalDate result = original.withDayOfMonth(15);
+    assertEquals("2020-02-15", result.toString());
+}
+
+@Test
+public void testWithDayOfMonth_lastDayOfFebruary() throws Exception {
+    LocalDate original = new LocalDate(2021, 2, 28);
+    LocalDate result = original.withDayOfMonth(28);
+    assertEquals("2021-02-28", result.toString());
+}
+
+@Test
+public void testWithDayOfMonth_firstDayOfMonth() throws Exception {
+    LocalDate original = new LocalDate(2020, 1, 15);
+    LocalDate result = original.withDayOfMonth(1);
+    assertEquals("2020-01-01", result.toString());
+}
+
+@Test
+public void testWithDayOfMonth_lastDayOfYear() throws Exception {
+    LocalDate original = new LocalDate(2020, 12, 15);
+    LocalDate result = original.withDayOfMonth(31);
+    assertEquals("2020-12-31", result.toString());
+}
+
+@Test
+public void testWithDayOfMonth_invalidDayThrowsException() throws Exception {
+    LocalDate original = new LocalDate(2020, 2, 29);
+    try {
+        original.withDayOfMonth(30);
+        fail("Expected IllegalArgumentException");
+    } catch (IllegalArgumentException e) {
+        // Expected exception
+    }
+}
+
+@Test
+public void testWithDayOfMonth_sameDayNoChange() throws Exception {
+    LocalDate original = new LocalDate(2020, 2, 29);
+    LocalDate result = original.withDayOfMonth(29);
+    assertEquals("2020-02-29", result.toString());
+}
+
+@Test
+public void testWithDayOfMonth_maxValidDay() throws Exception {
+    LocalDate original = new LocalDate(2020, 2, 29);
+    LocalDate result = original.withDayOfMonth(29);
+    assertEquals("2020-02-29", result.toString());
+}
+
+@Test
+public void testWithDayOfMonth_minValidDay() throws Exception {
+    LocalDate original = new LocalDate(2020, 2, 29);
+    LocalDate result = original.withDayOfMonth(1);
+    assertEquals("2020-02-01", result.toString());
+}
+```

@@ -1,0 +1,43 @@
+```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(capitalize(null));
+}
+
+@Test
+public void testEmptyString() {
+    Assert.assertEquals("", capitalize(""));
+}
+
+@Test
+public void testLowercaseString() {
+    Assert.assertEquals("Cat", capitalize("cat"));
+}
+
+@Test
+public void testUppercaseString() {
+    Assert.assertEquals("CAt", capitalize("cAt"));
+}
+
+@Test
+public void testStringWithApostrophe() {
+    Assert.assertEquals("'cat'", capitalize("'cat'"));
+}
+
+@Test
+public void testSingleCharacterString() {
+    Assert.assertEquals("A", capitalize("a"));
+}
+
+@Test
+public void testSingleCharacterUppercaseString() {
+    Assert.assertEquals("A", capitalize("A"));
+}
+
+@Test
+public void testLongString() {
+    String input = "this is a long string for testing";
+    String expected = "This is a long string for testing";
+    Assert.assertEquals(expected, capitalize(input));
+}
+```

@@ -1,0 +1,15 @@
+1. @Test public void testNullInput() throws DecoderException { Assert.assertArrayEquals(new byte[0], Hex.decodeHex(null)); }
+
+2. @Test public void testEmptyString() throws DecoderException { Assert.assertArrayEquals(new byte[0], Hex.decodeHex("")); }
+
+3. @Test public void testEvenLength() throws DecoderException { Assert.assertArrayEquals(new byte[]{0x00}, Hex.decodeHex("00")); }
+
+4. @Test public void testSingleCharacter() throws DecoderException { Assert.assertArrayEquals(new byte[]{0xFF}, Hex.decodeHex("FF")); }
+
+5. @Test public void testMultipleCharacters() throws DecoderException { Assert.assertArrayEquals(new byte[]{0x1A, 0x3B}, Hex.decodeHex("1A3B")); }
+
+6. @Test public void testUppercaseLetters() throws DecoderException { Assert.assertArrayEquals(new byte[]{0x44}, Hex.decodeHex("44")); }
+
+7. @Test public void testMixedCaseLetters() throws DecoderException { Assert.assertArrayEquals(new byte[]{0x78}, Hex.decodeHex("7x8Y")); }
+
+8. @Test public void testMaxLength() throws DecoderException { Assert.assertArrayEquals(new byte[]{0xAB, 0xCD}, Hex.decodeHex(new char[512].toString().replace(' ', '0').substring(0, 512))); }

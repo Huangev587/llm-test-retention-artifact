@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "b3fa526222e4f4e41f05705e80f3e98a84d1f1d1948684283f0a5d36c8cac16e",
+      "source": "@Test\npublic void testPlusDaysMinNegative() throws Exception {\n    LocalDate base = new LocalDate(1900, 1, 1);\n    LocalDate result = base.plusDays(-36600);\n    assertEquals(\"1900-01-01\", result.toString());\n}",
+      "class_name": "entry.Case_b3fa526222e4f4e41f05705e",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<1[900-01-01]> but was:<1[799-10-17]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_b3fa526222e4f4e41f05705e.testPlusDaysMinNegative(Case_b3fa526222e4f4e41f05705e.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "7d226dac8948bf5ba13035b778166bce6d9de248c15665b132ba663d818df60d",
+      "index": 0
+    },
+    {
+      "compile_key": "dbbf36b527dd43449511d3ef0296921bcc1641350fa3c9d2b1a81bfac68235eb",
+      "source": "@Test\npublic void testPlusDaysMaxPositive() throws Exception {\n    LocalDate base = new LocalDate(2100, 1, 1);\n    LocalDate result = base.plusDays(36600);\n    assertEquals(\"2100-01-01\", result.toString());\n}",
+      "class_name": "entry.Case_dbbf36b527dd43449511d3ef",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<2[100-01-01]> but was:<2[200-03-18]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_dbbf36b527dd43449511d3ef.testPlusDaysMaxPositive(Case_dbbf36b527dd43449511d3ef.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "5ece44fcc2503c41495b14d5857f27c5e5c6beb40ba69a003d786972861faf91",
+      "index": 1
+    },
+    {
+      "compile_key": "1067abab6e711f772a7ad458b64657d3c3ac7371bfcb6474215b073fa567692f",
+      "source": "@Test\npublic void testPlusDaysOneYear() throws Exception {\n    LocalDate base = new LocalDate(2020, 1, 1);\n    LocalDate result = base.plusDays(365);\n    assertEquals(\"2021-01-01\", result.toString());\n}",
+      "class_name": "entry.Case_1067abab6e711f772a7ad458",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<202[1-01-0]1> but was:<202[0-12-3]1>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1067abab6e711f772a7ad458.testPlusDaysOneYear(Case_1067abab6e711f772a7ad458.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLea",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "7dbeeb578bf5d04de20a82011ce4178a9930fbf191bc9ac5de084a782c8f199d",
+      "index": 2
+    },
+    {
+      "compile_key": "7e79a7e589c589fad8dcd492b94ac90d520882eccf87c7f4e69903d3996558cb",
+      "source": "@Test\npublic void testPlusDaysLeapYear() throws Exception {\n    LocalDate base = new LocalDate(2020, 2, 29);\n    LocalDate result = base.plusDays(1);\n    assertEquals(\"2020-03-01\", result.toString());\n}",
+      "class_name": "entry.Case_7e79a7e589c589fad8dcd492",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "b7ff19593a4f5a4b0c5c0141a7f7568d81190f10d5e035e0a894414f77b4a35d",
+      "index": 3
+    },
+    {
+      "compile_key": "df93edc08f8c14e2fe4be41c15c7fd468c49a6ca6b6acd36b03b0b4406b3acf4",
+      "source": "@Test\npublic void testPlusDaysEndOfYear() throws Exception {\n    LocalDate base = new LocalDate(2020, 12, 31);\n    LocalDate result = base.plusDays(1);\n    assertEquals(\"2021-01-01\", result.toString());\n}",
+      "class_name": "entry.Case_df93edc08f8c14e2fe4be41c",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3473d8d1795037812f0aa693c6d2aad6aa7eb4927217943219237b2ca937f347",
+      "index": 4
+    },
+    {
+      "compile_key": "ad865c775b7b09a5065a6286cf99826c491e02ea6122f57a46afc85c2eadb9d2",
+      "source": "@Test\npublic void testPlusDaysStartOfYear() throws Exception {\n    LocalDate base = new LocalDate(2020, 1, 1);\n    LocalDate result = base.plusDays(-1);\n    assertEquals(\"1999-12-31\", result.toString());\n}",
+      "class_name": "entry.Case_ad865c775b7b09a5065a6286",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[199]9-12-31> but was:<[201]9-12-31>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_ad865c775b7b09a5065a6286.testPlusDaysStartOfYear(Case_ad865c775b7b09a5065a6286.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "aebc3eee8ae72e02c74878d8c73ac15bc1a8c30942134fdebb66e4e5b133cbb1",
+      "index": 5
+    },
+    {
+      "compile_key": "eec7efffe78f790261a615967a85db523a08960cabaffc4118d93f105354cc2f",
+      "source": "@Test\npublic void testPlusDaysLargeNegative() throws Exception {\n    LocalDate base = new LocalDate(1900, 1, 1);\n    LocalDate result = base.plusDays(-366000);\n    assertEquals(\"1900-01-01\", result.toString());\n}",
+      "class_name": "entry.Case_eec7efffe78f790261a61596",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[1900-01-01]> but was:<[0897-12-04]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_eec7efffe78f790261a61596.testPlusDaysLargeNegative(Case_eec7efffe78f790261a61596.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "03b8b5e76da7c054f9ef2f32aa36cb0c166847a1acd7cc444b9ee6dca7f0bfe2",
+      "index": 6
+    },
+    {
+      "compile_key": "47f45311ad6513b267da58fc2f1211bc65d9b4b462367fadbbd65b6828498b05",
+      "source": "@Test\npublic void testPlusDaysLargePositive() throws Exception {\n    LocalDate base = new LocalDate(2100, 1, 1);\n    LocalDate result = base.plusDays(366000);\n    assertEquals(\"2100-01-01\", result.toString());\n}",
+      "class_name": "entry.Case_47f45311ad6513b267da58fc",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[2100-01-01]> but was:<[3102-01-29]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_47f45311ad6513b267da58fc.testPlusDaysLargePositive(Case_47f45311ad6513b267da58fc.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "bc968e9ff476e3c280096940a04c117144d6326067efeff194e33e820aa67e9a",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<1[900-01-01]> but was:<1[799-10-17]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_b3fa526222e4f4e41f05705e.testPlusDaysMinNegative(Case_b3fa526222e4f4e41f05705e.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru"
+    },
+    {
+      "index": 1,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<2[100-01-01]> but was:<2[200-03-18]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_dbbf36b527dd43449511d3ef.testPlusDaysMaxPositive(Case_dbbf36b527dd43449511d3ef.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru"
+    },
+    {
+      "index": 2,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<202[1-01-0]1> but was:<202[0-12-3]1>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1067abab6e711f772a7ad458.testPlusDaysOneYear(Case_1067abab6e711f772a7ad458.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLea"
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

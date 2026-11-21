@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "c668481e642eac7932cbf11d7249c26c3678dab49b0bfe49f2f916d00863232e",
+      "source": "@Test\npublic void testGetDayOfWeek_2001_01_01() {\n    LocalDate date = new LocalDate(2001, 1, 1);\n    int expected = 1; // ISO 8601: 2001-01-01 is a Monday\n    Assert.assertEquals(expected, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_c668481e642eac7932cbf11d",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8222b68b59b22c6bbd83343db5fc35d561f5039337ab0346c8a297da25b0c5f0",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

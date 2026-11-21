@@ -1,0 +1,88 @@
+1. ```java
+@Test
+public void testPlusDaysZero() {
+    LocalDate dt = LocalDate.of(1900, 1, 1);
+    LocalDate added = dt.plusDays(0);
+    assertEquals(1900, added.getYear());
+    assertEquals(1, added.getMonthValue());
+    assertEquals(1, added.getDayOfMonth());
+}
+```
+
+2. ```java
+@Test
+public void testPlusDaysPositive() {
+    LocalDate dt = LocalDate.of(1950, 12, 31);
+    LocalDate added = dt.plusDays(1);
+    assertEquals(1951, added.getYear());
+    assertEquals(1, added.getMonthValue());
+    assertEquals(1, added.getDayOfMonth());
+}
+
+```
+
+3. ```java
+@Test
+public void testPlusDaysNegative() {
+    LocalDate dt = LocalDate.of(1900, 1, 1);
+    LocalDate added = dt.plusDays(-1);
+    assertEquals(1899, added.getYear());
+    assertEquals(12, added.getMonthValue());
+    assertEquals(31, added.getDayOfMonth());
+}
+```
+
+4. ```java
+@Test
+public void testPlusDaysMax() {
+    LocalDate dt = LocalDate.of(2100, 12, 31);
+    LocalDate added = dt.plusDays(1);
+    assertEquals(2100, added.getYear());
+    assertEquals(1, added.getMonthValue());
+    assertEquals(1, added.getDayOfMonth());
+}
+```
+
+5. ```java
+@Test
+public void testPlusDaysMin() {
+    LocalDate dt = LocalDate.of(1900, 1, 1);
+    LocalDate added = dt.plusDays(-36600);
+    assertEquals(1899, added.getYear());
+    assertEquals(12, added.getMonthValue());
+    assertEquals(31, added.getDayOfMonth());
+}
+```
+
+6. ```java
+@Test
+public void testPlusDaysLargePositive() {
+    LocalDate dt = LocalDate.of(1950, 12, 31);
+    LocalDate added = dt.plusDays(36600);
+    assertEquals(2000, added.getYear());
+    assertEquals(1, added.getMonthValue());
+    assertEquals(1, added.getDayOfMonth());
+}
+```
+
+7. ```java
+@Test
+public void testPlusDaysLargeNegative() {
+    LocalDate dt = LocalDate.of(1900, 1, 1);
+    LocalDate added = dt.plusDays(-36600);
+    assertEquals(1899, added.getYear());
+    assertEquals(12, added.getMonthValue());
+    assertEquals(31, added.getDayOfMonth());
+}
+```
+
+8. ```java
+@Test
+public void testPlusDaysAcrossLeapYear() {
+    LocalDate dt = LocalDate.of(1993, 2, 28);
+    LocalDate added = dt.plusDays(1);
+    assertEquals(1993, added.getYear());
+    assertEquals(2, added.getMonthValue());
+    assertEquals(1, added.getDayOfMonth());
+}
+```

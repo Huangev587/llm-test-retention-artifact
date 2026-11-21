@@ -1,0 +1,47 @@
+```java
+@Test
+public void testEmptyArray() throws Exception {
+    Assert.assertEquals("", Base64.encodeBase64String(new byte[0]));
+}
+
+@Test
+public void testSingleByteArray() throws Exception {
+    Assert.assertEquals("MQ==", Base64.encodeBase64String(new byte[]{0}));
+}
+
+@Test
+public void testMultiByteArray() throws Exception {
+    Assert.assertEquals("YWJj", Base64.encodeBase64String(new byte[]{0, 0, 0}));
+}
+
+@Test
+public void testLargeByteArray() throws Exception {
+    byte[] data = new byte[256];
+    for (int i = 0; i < data.length; i++) {
+        data[i] = (byte) i;
+    }
+    Assert.assertEquals(Base64.getEncoder().encodeToString(data), Base64.encodeBase64String(data));
+}
+
+@Test
+public void testNullInput() {
+    Assert.assertThrows(NullPointerException.class, () -> Base64.encodeBase64String(null));
+}
+
+@Test
+public void testShortInput() throws Exception {
+    Assert.assertEquals("aGVsbG8=", Base64.encodeBase64String("aGVsbG8=".getBytes(StandardCharsets.UTF_8)));
+}
+
+@Test
+public void testLongInput() throws Exception {
+    String longString = "a" + "GVsbG8h" + "GVsbG55";
+    Assert.assertEquals(Base64.getEncoder().encodeToString(longString.getBytes(StandardCharsets.UTF_8)), Base64.encodeBase64String(longString.getBytes(StandardCharsets.UTF_8)));
+}
+
+@Test
+public void testUnicodeInput() throws Exception {
+    String unicodeString = "Hello, 世界!";
+    Assert.assertEquals(Base64.getEncoder().encodeToString(unicodeString.getBytes(StandardCharsets.UTF_8)), Base64.encodeBase64String(unicodeString.getBytes(StandardCharsets.UTF_8)));
+}
+```

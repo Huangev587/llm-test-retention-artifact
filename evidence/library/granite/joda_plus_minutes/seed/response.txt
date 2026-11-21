@@ -1,0 +1,95 @@
+1. ```java
+@Test
+public void testPlusMinutesZero() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(0);
+    assertEquals(12, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+2. ```java
+@Test
+public void testPlusMinutesPositive() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(60);
+    assertEquals(13, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+3. ```java
+@Test
+public void testPlusMinutesNegative() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(-60);
+    assertEquals(11, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+4. ```java
+@Test
+public void testPlusMinutesMaxPositive() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(14400);
+    assertEquals(13, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+5. ```java
+@Test
+public void testPlusMinutesMaxNegative() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(-14400);
+    assertEquals(11, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+6. ```java
+@Test
+public void testPlusMinutesWrap() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(14401);
+    assertEquals(13, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+7. ```java
+@Test
+public void testPlusMinutesPreserveSeconds() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 123456);
+    LocalTime result = time.plusMinutes(60);
+    assertEquals(13, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(123456, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+8. ```java
+@Test
+public void testPlusMinutesPreserveMillis() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 123, 456);
+    LocalTime result = time.plusMinutes(60);
+    assertEquals(13, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(123, result.getSecond());
+    assertEquals(456, result.getNano());
+}
+```

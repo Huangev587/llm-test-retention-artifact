@@ -1,0 +1,41 @@
+```java
+@Test
+public void testOverlayNullString() throws Exception {
+    assertEquals(null, StringUtils.overlay(null, "abc", 2, 4));
+}
+
+@Test
+public void testOverlayEmptyString() throws Exception {
+    assertEquals("abc", StringUtils.overlay("", "abc", 0, 0));
+}
+
+@Test
+public void testOverlayNullOverlay() throws Exception {
+    assertEquals("abef", StringUtils.overlay("abcdef", null, 2, 4));
+}
+
+@Test
+public void testOverlayEmptyOverlay() throws Exception {
+    assertEquals("abef", StringUtils.overlay("abcdef", "", 2, 4));
+}
+
+@Test
+public void testOverlayStartGreaterThanEnd() throws Exception {
+    assertEquals("abzzzzef", StringUtils.overlay("abcdef", "zzzz", 2, 4));
+}
+
+@Test
+public void testOverlayNegativeIndices() throws Exception {
+    assertEquals("zzzzef", StringUtils.overlay("abcdef", "zzzz", -1, 4));
+}
+
+@Test
+public void testOverlayExceedingLengths() throws Exception {
+    assertEquals("abzzzz", StringUtils.overlay("abcdef", "zzzz", 2, 8));
+}
+
+@Test
+public void testOverlayClampIndices() throws Exception {
+    assertEquals("zzzzabcdef", StringUtils.overlay("abcdef", "zzzz", -2, -3));
+}
+```

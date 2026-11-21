@@ -1,0 +1,41 @@
+```java
+@Test
+public void testDecodeEmpty() throws Exception {
+    Assert.assertArrayEquals(new byte[0], decodeBase64(""));
+}
+
+@Test
+public void testDecodeNull() throws Exception {
+    Assert.assertArrayEquals(new byte[0], decodeBase64(null));
+}
+
+@Test
+public void testDecodeShort() throws Exception {
+    Assert.assertArrayEquals("TWFu".getBytes(StandardCharsets.UTF_8), decodeBase64("Qw=="));
+}
+
+@Test
+public void testDecodeMedium() throws Exception {
+    Assert.assertArrayEquals("VG8gZXJy".getBytes(StandardCharsets.UTF_8), decodeBase64("Rm9ybTogc2VlIG5v"));
+}
+
+@Test
+public void testDecodeLong() throws Exception {
+    Assert.assertArrayEquals("VG8gZXJyIGlzIGh1bWFuLCBidXQgdG8gcmVhbGx5IGZvdWwgdGhpbmdzIHVwIHlvdSBuZWVkIGEgY29tcHV0ZXIu".getBytes(StandardCharsets.UTF_8), decodeBase64("VG8gZXJyIGlzIGh1bWFuLCBidXQgdG8gcmVhbGx5IGZvdWwgdGhpbmdzIHVwIHlvdSBuZWVkIGEgY29tcHV0ZXIu"));
+}
+
+@Test
+public void testDecodeMax() throws Exception {
+    Assert.assertArrayEquals("VG8gZXJyIGlzIGh1bWFuLCBidXQgdG8gcmVhbGx5IGZvdWwgdGhpbmdzIHVwIHlvdSBuZWVkIGEgY29tcHV0ZXIu".getBytes(StandardCharsets.UTF_8), decodeBase64(repeat("=", 256) + "VG8gZXJyIGlzIGh1bWFuLCBidXQgdG8gcmVhbGx5IGZvdWwgdGhpbmdzIHVwIHlvdSBuZWVkIGEgY29tcHV0ZXIu".getBytes(StandardCharsets.UTF_8)));
+}
+
+@Test
+public void testDecodeInvalid() throws Exception {
+    Assert.assertArrayEquals(new byte[0], decodeBase64("!@#$%^&*()"));
+}
+
+@Test
+public void testDecodePadding() throws Exception {
+    Assert.assertArrayEquals("VG8gZXJy".getBytes(StandardCharsets.UTF_8), decodeBase64("VG8gZXJyIG=="));
+}
+```

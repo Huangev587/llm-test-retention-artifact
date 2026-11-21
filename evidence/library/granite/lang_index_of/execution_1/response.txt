@@ -1,0 +1,48 @@
+```java
+@Test
+public void testIndexOfNullArray() {
+    Assert.assertEquals(-1, indexOf(null, 5));
+}
+
+@Test
+public void testIndexOfEmptyArray() {
+    Assert.assertEquals(-1, indexOf(new int[0], 5));
+}
+
+@Test
+public void testIndexOfSingleElementArray() {
+    int[] array = {5};
+    Assert.assertEquals(0, indexOf(array, 5));
+}
+
+@Test
+public void testIndexOfMultipleElementArray() {
+    int[] array = {1, 2, 3, 4, 5};
+    Assert.assertEquals(4, indexOf(array, 5));
+}
+
+@Test
+public void testIndexOfValueNotInArray() {
+    int[] array = {1, 2, 3, 4};
+    Assert.assertEquals(-1, indexOf(array, 5));
+}
+
+@Test
+public void testIndexOfValueInArrayWithMultipleOccurrences() {
+    int[] array = {1, 2, 3, 2, 5};
+    Assert.assertEquals(3, indexOf(array, 2));
+    Assert.assertEquals(1, indexOf(array, 5));
+}
+
+@Test
+public void testIndexOfValueAtArrayEnd() {
+    int[] array = {1, 2, 3, 4};
+    Assert.assertEquals(3, indexOf(array, 4));
+}
+
+@Test
+public void testIndexOfValueAtArrayStart() {
+    int[] array = {5, 1, 2, 3, 4};
+    Assert.assertEquals(0, indexOf(array, 5));
+}
+```

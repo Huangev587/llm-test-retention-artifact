@@ -1,0 +1,34 @@
+@Test
+public void testZeroSizeInput() {
+    Assert.assertEquals("", StringUtils.leftPad("", 0, 'z'));
+}
+
+@Test
+public void testNegativeSizeInput() {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", -1, 'z'));
+}
+
+@Test
+public void testMaxPadLimitInput() {
+    final String maxPadStr = repeat('z', PAD_LIMIT);
+    Assert.assertEquals(maxPadStr + "bat", StringUtils.leftPad("bat", PAD_LIMIT + 4, 'z'));
+}
+
+@Test
+public void testPadWithSpace() {
+    Assert.assertEquals("   bat", StringUtils.leftPad("bat", 8,''));
+}
+
+@Test
+public void testPadWithSpecialChar() {
+    Assert.assertEquals("!!!bat", StringUtils.leftPad("bat", 8, '!'));
+}
+
+@Test
+public void testPadWithLowercaseChar() {
+    Assert.assertEquals("aaa bat", StringUtils.leftPad("bat", 8, 'a'));
+}
+
+@Test
+public void testPadWithUppercaseChar() {
+    Assert.assertEquals("AAA BAT", StringUtils.leftPad("bat", 8, 'A'));

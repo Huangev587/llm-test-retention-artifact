@@ -1,0 +1,23 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "26fc2afb28039998758e3d0d482a082259bea461805a24a182eda8114a747956",
+  "sites": 10,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.joda.time.Duration\",\"dividedBy\",\"(J)Lorg/joda/time/Duration;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[6]]",
+    "[\"org.joda.time.Duration\",\"dividedBy\",\"(J)Lorg/joda/time/Duration;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[10]]",
+    "[\"org.joda.time.Duration\",\"dividedBy\",\"(JLjava/math/RoundingMode;)Lorg/joda/time/Duration;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[6]]",
+    "[\"org.joda.time.Duration\",\"dividedBy\",\"(JLjava/math/RoundingMode;)Lorg/joda/time/Duration;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[21]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeDivide\",\"(JJLjava/math/RoundingMode;)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[50]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.joda.time.Duration\",\"dividedBy\",\"(J)Lorg/joda/time/Duration;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[20]]",
+    "[\"org.joda.time.Duration\",\"dividedBy\",\"(JLjava/math/RoundingMode;)Lorg/joda/time/Duration;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[10]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeDivide\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[33]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeDivide\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[10]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeDivide\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[6]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeDivide\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[34]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeDivide\",\"(JJLjava/math/RoundingMode;)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[10]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeDivide\",\"(JJLjava/math/RoundingMode;)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[6]]"
+  ]
+}

@@ -1,0 +1,57 @@
+```java
+@Test
+public void testPlusMonthsLargePositive() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(1200);
+    assertEquals("2100-10-05", result.toString());
+}
+
+@Test
+public void testPlusMonthsLargeNegative() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(-1200);
+    assertEquals("1900-10-05", result.toString());
+}
+
+@Test
+public void testPlusMonthsMaxPositive() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(Integer.MAX_VALUE);
+    assertEquals("2147483647-01-01", result.toString());
+}
+
+@Test
+public void testPlusMonthsMinNegative() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(Integer.MIN_VALUE);
+    assertEquals("-2147483648-01-01", result.toString());
+}
+
+@Test
+public void testPlusMonthsMaxNegative() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(-Integer.MAX_VALUE);
+    assertEquals("-2147483647-01-01", result.toString());
+}
+
+@Test
+public void testPlusMonthsMinPositive() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(Integer.MIN_VALUE);
+    assertEquals("-2147483648-01-01", result.toString());
+}
+
+@Test
+public void testPlusMonthsEdgeCaseJanuary() throws Exception {
+    LocalDate date = new LocalDate(2023, 1, 31);
+    LocalDate result = date.plusMonths(1);
+    assertEquals("2023-02-28", result.toString());
+}
+
+@Test
+public void testPlusMonthsEdgeCaseFebruaryLeapYear() throws Exception {
+    LocalDate date = new LocalDate(2024, 2, 29);
+    LocalDate result = date.plusMonths(1);
+    assertEquals("2024-03-29", result.toString());
+}
+```

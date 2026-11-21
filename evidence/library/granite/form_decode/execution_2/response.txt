@@ -1,0 +1,38 @@
+```java
+@Test
+public void testDecodeNullInput() throws Exception {
+    Assert.assertNull(decode(null, "UTF-8"));
+}
+
+@Test
+public void testDecodeEmptyInput() throws Exception {
+    Assert.assertEquals("", decode("", "UTF-8"));
+}
+
+@Test
+public void testDecodeSingleCharacter() throws Exception {
+    Assert.assertEquals("a", decode("%61", "UTF-8"));
+}
+
+@Test
+public void testDecodeMultipleCharacters() throws Exception {
+    Assert.assertEquals("hello", decode("%68%65%6c%6c%6f", "UTF-8"));
+}
+
+@Test
+public void testDecodeSpecialCharacters() throws Exception {
+    Assert.assertEquals("!@#$%^&*()", decode("%21%40%23%24%25%5E%26%2A%28%29", "UTF-8"));
+}
+
+@Test
+public void testDecodeUnicodeCharacters() throws Exception {
+    Assert.assertEquals("éèêë", decode("%C3%A9%C3%A8%C3%A9%C3%AB", "UTF-8"));
+}
+
+@Test
+public void testDecodeLongString() throws Exception {
+    String input = "This is a long string with various characters:!@#$%^&*()_+-=[]{}|;':,.<>?";
+    String expected = "This is a long string with various characters:!@#$%^&*()_+-=[]{}|;':,.<>?";
+    Assert.assertEquals(expected, decode(new URLCodec().encode(input, "UTF-8"), "UTF-8"));
+}
+```

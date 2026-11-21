@@ -1,0 +1,45 @@
+```java
+@Test
+public void testToBooleanNull() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean(null));
+}
+
+@Test
+public void testToBooleanEmpty() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean(""));
+}
+
+@Test
+public void testToBooleanWhitespace() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean("   "));
+}
+
+@Test
+public void testToBooleanTrue() throws Exception {
+    Assert.assertTrue(BooleanUtils.toBoolean("true"));
+    Assert.assertTrue(BooleanUtils.toBoolean("TRUE"));
+    Assert.assertTrue(BooleanUtils.toBoolean("tRUe"));
+    Assert.assertTrue(BooleanUtils.toBoolean("t"));
+    Assert.assertTrue(BooleanUtils.toBoolean("y"));
+    Assert.assertTrue(BooleanUtils.toBoolean("yes"));
+    Assert.assertTrue(BooleanUtils.toBoolean("on"));
+}
+
+@Test
+public void testToBooleanFalse() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean("false"));
+    Assert.assertFalse(BooleanUtils.toBoolean("F"));
+    Assert.assertFalse(BooleanUtils.toBoolean("f"));
+}
+
+@Test
+public void testToBooleanOne() throws Exception {
+    Assert.assertTrue(BooleanUtils.toBoolean("1"));
+}
+
+@Test
+public void testToBooleanOther() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean("x gti"));
+    Assert.assertFalse(BooleanUtils.toBoolean("n"));
+}
+```

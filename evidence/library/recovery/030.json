@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "26701b6ace1012cf4fc42cb8c2cfc8b8eb0583aa881933c6ea41ef43d4d6391e",
+      "source": "@Test\npublic void testGetDayOfYearMidMonth() {\n    LocalDate date = new LocalDate(2022, 9, 15);\n    int expected = 258;\n    int actual = date.getDayOfYear();\n    assertEquals(expected, actual);\n}",
+      "class_name": "entry.Case_26701b6ace1012cf4fc42cb8",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d95b886e9538e7d8ad703b1a25062bf7d9d021365e39451789df23c4ce873b7d",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

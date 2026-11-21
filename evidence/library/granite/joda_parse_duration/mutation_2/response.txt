@@ -1,0 +1,88 @@
+```java
+@Test
+public void testParsePositiveDuration() throws Exception {
+    String str = "PT12345S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT12345S", duration.toString());
+    assertEquals(12345, duration.getDays());
+    assertEquals(0, duration.getHours());
+    assertEquals(0, duration.getMinutes());
+    assertEquals(0, duration.getSeconds());
+    assertEquals(500, duration.getMillis());
+}
+
+@Test
+public void testParseZeroDuration() throws Exception {
+    String str = "PT0S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT0S", duration.toString());
+    assertEquals(0, duration.getDays());
+    assertEquals(0, duration.getHours());
+    assertEquals(0, duration.getMinutes());
+    assertEquals(0, duration.getSeconds());
+    assertEquals(0, duration.getMillis());
+}
+
+@Test
+public void testParseNegativeDuration() throws Exception {
+    String str = "PT-12345S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT-12345S", duration.toString());
+    assertEquals(-12345, duration.getDays());
+    assertEquals(0, duration.getHours());
+    assertEquals(0, duration.getMinutes());
+    assertEquals(0, duration.getSeconds());
+    assertEquals(-500, duration.getMillis());
+}
+
+@Test
+public void testParseLargePositiveDuration() throws Exception {
+    String str = "PT999999999S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT999999999S", duration.toString());
+    assertEquals(999999999, duration.getDays());
+    assertEquals(0, duration.getHours());
+    assertEquals(0, duration.getMinutes());
+    assertEquals(0, duration.getSeconds());
+    assertEquals(0, duration.getMillis());
+}
+
+@Test
+public void testParseLargeNegativeDuration() throws Exception {
+    String str = "PT-999999999S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT-999999999S", duration.toString());
+    assertEquals(-999999999, duration.getDays());
+    assertEquals(0, duration.getHours());
+    assertEquals(0, duration.getMinutes());
+    assertEquals(0, duration.getSeconds());
+    assertEquals(0, duration.getMillis());
+}
+
+@Test
+public void testParseFractionalPositiveDuration() throws Exception {
+    String str = "PT1.2345S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT1.2345S", duration.toString());
+    assertEquals(1, duration.getDays());
+    assertEquals(0, duration.getHours());
+    assertEquals(0, duration.getMinutes());
+    assertEquals(2345, duration.getSeconds());
+    assertEquals(500, duration.getMillis());
+}
+
+@Test
+public void testParseFractionalNegativeDuration() throws Exception {
+    String str = "PT-1.2345S";
+    Duration duration = Duration.parse(str);
+    assertEquals("PT-1.2345S", duration.toString());
+    assertEquals(-1, duration.getDays());
+    assertEquals(0, duration.getHours());
+    assertEquals(0, duration.getMinutes());
+    assertEquals(-2345, duration.getSeconds());
+    assertEquals(-500, duration.getMillis());
+}
+
+@Test
+public void testParseLeadingZerosPositiveDuration() throws Exception {
+    String str = "PT00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

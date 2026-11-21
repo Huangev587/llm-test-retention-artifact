@@ -1,0 +1,41 @@
+```java
+@Test
+public void testMultipleCharsMixedCase() throws Exception {
+    assertEquals("Hello World", StringUtils.capitalize("hello world"));
+}
+
+@Test
+public void testLeadingWhitespace() throws Exception {
+    assertEquals(" Hello", StringUtils.capitalize(" hello"));
+}
+
+@Test
+public void testTrailingWhitespace() throws Exception {
+    assertEquals("Hello ", StringUtils.capitalize("hello "));
+}
+
+@Test
+public void testMultipleSpaces() throws Exception {
+    assertEquals("Hello World", StringUtils.capitalize("hello   world"));
+}
+
+@Test
+public void testAllUppercase() throws Exception {
+    assertEquals("HELLO WORLD", StringUtils.capitalize("HELLO WORLD"));
+}
+
+@Test
+public void testAllLowercase() throws Exception {
+    assertEquals("Hello World", StringUtils.capitalize("hello world"));
+}
+
+@Test
+public void testSpecialCharacters() throws Exception {
+    assertEquals("!@#$%^&*()", StringUtils.capitalize("!@#$%^&*()"));
+}
+
+@Test
+public void testUnicodeCharacters() throws Exception {
+    assertEquals("\u00E4\u00F6\u00FC", StringUtils.capitalize("\u00e4\u00f6\u00fc"));
+}
+```

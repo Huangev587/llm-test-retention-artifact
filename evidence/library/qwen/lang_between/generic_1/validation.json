@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "04ce204bf70abb97e4338e2163904d0395750063a525ad686bfd39753796c4df",
+      "source": "@Test\npublic void testEmptyStringWithNonEmptyDelimiters() throws Exception {\n    assertNull(StringUtils.substringBetween(\"\", \"a\", \"b\"));\n}",
+      "class_name": "entry.Case_04ce204bf70abb97e4338e21",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "60d3209da8b08a9ab143cc6f505034371a35c052fb6c800bc6819ff429da595f",
+      "index": 0
+    },
+    {
+      "compile_key": "8bd6ed2ab8de8c5f18dbea2109c242e8236b6d82a7fdfd5468d3fd393b1a61de",
+      "source": "@Test\npublic void testNonEmptyStringWithEmptyDelimiters() throws Exception {\n    assertEquals(\"\", StringUtils.substringBetween(\"abc\", \"\", \"\"));\n}",
+      "class_name": "entry.Case_8bd6ed2ab8de8c5f18dbea21",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "af5e80b4d26505d83740df3ce3fcd7d0fa973fa887d381a13427766506aacb15",
+      "index": 1
+    },
+    {
+      "compile_key": "f39eabcbaa89f3ee92f241345eddd1b08fd86b1c8c9679918fe2528d4dae712d",
+      "source": "@Test\npublic void testStringWithoutDelimiters() throws Exception {\n    assertNull(StringUtils.substringBetween(\"abc\", \"d\", \"e\"));\n}",
+      "class_name": "entry.Case_f39eabcbaa89f3ee92f24134",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "26b3a9d73c9eba7908b5fbbbb57d147d37ea9bea3e628222f35b124abe7fa5af",
+      "index": 2
+    },
+    {
+      "compile_key": "ad91d16ccfea8dc5b3701c4a923de1f03140d355884d489afabee1a1b8564b97",
+      "source": "@Test\npublic void testStringWithSingleCharacterDelimiters() throws Exception {\n    assertEquals(\"b\", StringUtils.substringBetween(\"a[b]c\", \"a\", \"c\"));\n}",
+      "class_name": "entry.Case_ad91d16ccfea8dc5b3701c4a",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[b]> but was:<[[b]]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_ad91d16ccfea8dc5b3701c4a.testStringWithSingleCharacterDelimiters(Case_ad91d16ccfea8dc5b3701c4a.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "609ceebb3c908436eae2da095beaad746c0e41b566ac8fbbc53395beb4f3fd60",
+      "index": 3
+    },
+    {
+      "compile_key": "252b005ac4a8acc46e4064fcf734cd44e1937b3672630be96099ce375ba2a4fb",
+      "source": "@Test\npublic void testStringWithMultipleMatches() throws Exception {\n    assertEquals(\"b\", StringUtils.substringBetween(\"a[b]c[d]e\", \"a\", \"c\"));\n}",
+      "class_name": "entry.Case_252b005ac4a8acc46e4064fc",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[b]> but was:<[[b]]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_252b005ac4a8acc46e4064fc.testStringWithMultipleMatches(Case_252b005ac4a8acc46e4064fc.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Pare",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "99c9b6b481adfeb01b73be3d7c28212773a40d7eb4ef7d007aef86fd8d6520d6",
+      "index": 4
+    },
+    {
+      "compile_key": "9c1523189f7c5770595af1c1dfd38a2461e4e2b8ee3174fc8455ebb5b77b346c",
+      "source": "@Test\npublic void testStringWithNestedDelimiters() throws Exception {\n    assertNull(StringUtils.substringBetween(\"a[b[c]]d\", \"a\", \"d\"));\n}",
+      "class_name": "entry.Case_9c1523189f7c5770595af1c1",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected null, but was:<[b[c]]>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotNull(Assert.java:755)\n\tat org.junit.Assert.assertNull(Assert.java:737)\n\tat org.junit.Assert.assertNull(Assert.java:747)\n\tat entry.Case_9c1523189f7c5770595af1c1.testStringWithNestedDelimiters(Case_9c1523189f7c5770595af1c1.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.Invo",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "f3b7a6ede99d0d5110e7aea560219c3d26c4e791d8748d88d27b75c510fdc003",
+      "index": 5
+    },
+    {
+      "compile_key": "0d056934775e62249d44bc05258fe37190ab7cbb97d5ed9bd2cfe811f0833ae7",
+      "source": "@Test\npublic void testStringWithLeadingAndTrailingWhitespace() throws Exception {\n    assertEquals(\"b\", StringUtils.substringBetween(\" a [ b ] c \", \"a\", \"c\"));\n}",
+      "class_name": "entry.Case_0d056934775e62249d44bc05",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[b]> but was:<[ [ b ] ]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_0d056934775e62249d44bc05.testStringWithLeadingAndTrailingWhitespace(Case_0d056934775e62249d44bc05.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRu",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "1e9c081862f832c184028344d1ae4a956bff42457990bbc31b1fbc1af1b0ff1d",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<[b]> but was:<[[b]]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_ad91d16ccfea8dc5b3701c4a.testStringWithSingleCharacterDelimiters(Case_ad91d16ccfea8dc5b3701c4a.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru"
+    }
+  ]
+}

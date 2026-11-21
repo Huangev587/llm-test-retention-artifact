@@ -1,0 +1,43 @@
+```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(StringUtils.leftPad(null, 3, 'z'));
+}
+
+@Test
+public void testEmptyStringInput() {
+    Assert.assertEquals("zzzz", StringUtils.leftPad("", 3, 'z'));
+}
+
+@Test
+public void testShorterStringInput() {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", 5, 'z'));
+}
+
+@Test
+public void testLongerStringInput() {
+    Assert.assertEquals("zzbat", StringUtils.leftPad("bat", 5, 'z'));
+}
+
+@Test
+public void testNoPaddingNeeded() {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", 3, 'z'));
+}
+
+@Test
+public void testNegativeSizeInput() {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", -1, 'z'));
+}
+
+@Test
+public void testLargePaddingInput() {
+    Assert.assertEquals("zzzzzzzzzzzzzzzzzzbat", StringUtils.leftPad("bat", 20, 'z'));
+}
+
+@Test
+public void testLargePaddingLimitInput() {
+    final String largePaddingLimitInput = StringUtils.leftPad("bat", 1000, 'z');
+    final int padLimit = StringUtils.PAD_LIMIT;
+    Assert.assertEquals("bat".length() + padLimit, largePaddingLimitInput.length());
+}
+```

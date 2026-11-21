@@ -1,0 +1,71 @@
+```java
+@Test
+public void testSubarrayNullInput() {
+    int[] result = subarray(null, 0, 10);
+    assertArrayEquals(EMPTY_INT_ARRAY, result);
+}
+
+@Test
+public void testSubarrayEmptyArray() {
+    int[] array = {};
+    int[] result = subarray(array, 0, 10);
+    assertArrayEquals(EMPTY_INT_ARRAY, result);
+}
+
+@Test
+public void testSubarraySingleElement() {
+    int[] array = {1};
+    int[] result = subarray(array, 0, 1);
+    assertArrayEquals(new int[]{1}, result);
+}
+
+@Test
+public void testSubarrayFullRange() {
+    int[] array = new int[10];
+    for (int i = 0; i < array.length; i++) {
+        array[i] = i + 1;
+    }
+    int[] result = subarray(array, 0, 11);
+    assertArrayEquals(array, result);
+}
+
+@Test
+public void testSubarrayHalfRange() {
+    int[] array = new int[10];
+    for (int i = 0; i < array.length; i++) {
+        array[i] = i + 1;
+    }
+    int[] result = subarray(array, 5, 10);
+    assertArrayEquals(new int[]{6, 7, 8, 9, 10}, result);
+}
+
+@Test
+public void testSubarrayNegativeStartIndex() {
+    int[] array = new int[10];
+    for (int i = 0; i < array.length; i++) {
+        array[i] = i + 1;
+    }
+    int[] result = subarray(array, -1, 10);
+    assertArrayEquals(new int[]{1}, result);
+}
+
+@Test
+public void testSubarrayNegativeEndIndex() {
+    int[] array = new int[10];
+    for (int i = 0; i < array.length; i++) {
+        array[i] = i + 1;
+    }
+    int[] result = subarray(array, 0, -1);
+    assertArrayEquals(EMPTY_INT_ARRAY, result);
+}
+
+@Test
+public void testSubarrayOverEndIndex() {
+    int[] array = new int[10];
+    for (int i = 0; i < array.length; i++) {
+        array[i] = i + 1;
+    }
+    int[] result = subarray(array, 0, 20);
+    assertArrayEquals(array, result);
+}
+```

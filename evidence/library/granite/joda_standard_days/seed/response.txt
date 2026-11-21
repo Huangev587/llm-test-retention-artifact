@@ -1,0 +1,62 @@
+1. ```java
+@Test
+public void testStandardDaysZero() {
+    Duration duration = standardDays(0);
+    assertEquals(0, duration.getMillis());
+}
+```
+
+2. ```java
+@Test
+public void testStandardDaysPositive() {
+    long days = 1;
+    Duration duration = standardDays(days);
+    assertEquals(86400000, duration.getMillis());
+}
+
+3. ```java
+@Test
+public void testStandardDaysNegative() {
+    long days = -1;
+    Duration duration = standardDays(days);
+    assertEquals(-86400000, duration.getMillis());
+}
+
+4. ```java
+@Test
+public void testStandardDaysMax() {
+    long days = 1000000;
+    Duration duration = standardDays(days);
+    assertEquals(days * 86400000, duration.getMillis());
+}
+
+5. ```java
+@Test
+public void testStandardDaysMin() {
+    long days = -1000000;
+    Duration duration = standardDays(days);
+    assertEquals(-days * 86400000, duration.getMillis());
+}
+
+6. ```java
+@Test(expected = ArithmeticException.class)
+public void testStandardDaysOverflow() {
+    long days = 1000001;
+    standardDays(days);
+}
+
+7. ```java
+@Test
+public void testStandardDaysWithDays() {
+    Days days = Days.days(1);
+    Duration duration = standardDays(days.getDays());
+    assertEquals(86400000, duration.getMillis());
+}
+
+8. ```java
+@Test
+public void testStandardDaysWithDuration() {
+    Duration duration = standardDays(1);
+    assertEquals(Duration.standardDays(1).getMillis(), duration.getMillis());
+}
+```

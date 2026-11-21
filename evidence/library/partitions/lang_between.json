@@ -1,0 +1,22 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "42ca5e8693dbc57aaa1deff2e95d467668614310f68478dc81a3402e1553990a",
+  "sites": 9,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.apache.commons.lang3.StringUtils\",\"substringBetween\",\"(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[7]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"substringBetween\",\"(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[56]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"substringBetween\",\"(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[18]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"substringBetween\",\"(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[49]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"substringBetween\",\"(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[59]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.apache.commons.lang3.ObjectUtils\",\"allNotNull\",\"([Ljava/lang/Object;)Z\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[4]]",
+    "[\"org.apache.commons.lang3.ObjectUtils\",\"allNotNull\",\"([Ljava/lang/Object;)Z\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[9]]",
+    "[\"org.apache.commons.lang3.ObjectUtils\",\"allNotNull\",\"([Ljava/lang/Object;)Z\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator\",[17]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"substringBetween\",\"(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[42]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"substringBetween\",\"(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[34]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"substringBetween\",\"(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[22]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"substringBetween\",\"(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[64]]"
+  ]
+}

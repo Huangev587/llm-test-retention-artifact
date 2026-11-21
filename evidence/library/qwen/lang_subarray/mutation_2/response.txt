@@ -1,0 +1,56 @@
+```java
+@Test
+public void testSubarrayNullArray() throws Exception {
+    int[] values = null;
+    int[] result = ArrayUtils.subarray(values, 0, 0);
+    assertNull(result);
+}
+
+@Test
+public void testSubarrayStartNegative() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = ArrayUtils.subarray(values, -1, 3);
+    assertNotNull(result);
+    assertArrayEquals(new int[]{1, 2, 3}, result);
+}
+
+@Test
+public void testSubarrayEndNegative() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = ArrayUtils.subarray(values, 2, -1);
+    assertNotNull(result);
+    assertEquals(0, result.length);
+}
+
+@Test
+public void testSubarrayStartGreaterThanEnd() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = ArrayUtils.subarray(values, 3, 2);
+    assertNotNull(result);
+    assertEquals(0, result.length);
+}
+
+@Test
+public void testSubarrayLargeStart() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = ArrayUtils.subarray(values, 100, 200);
+    assertNotNull(result);
+    assertEquals(0, result.length);
+}
+
+@Test
+public void testSubarrayLargeEnd() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = ArrayUtils.subarray(values, 0, 100);
+    assertNotNull(result);
+    assertArrayEquals(new int[]{1, 2, 3, 4, 5}, result);
+}
+
+@Test
+public void testSubarraySingleElement() throws Exception {
+    int[] values = {1};
+    int[] result = ArrayUtils.subarray(values, 0, 1);
+    assertNotNull(result);
+    assertArrayEquals(new int[]{1}, result);
+}
+```

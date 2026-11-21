@@ -1,0 +1,50 @@
+```java
+@Test
+public void testReverseLongString() throws Exception {
+    String original = "abcdefghijklmnopqrstuvwxyz";
+    String expected = "zyxwvutsrqponmlkjihgfedcba";
+    assertEquals(expected, StringUtils.reverse(original));
+}
+
+@Test
+public void testReverseMixedCase() throws Exception {
+    String original = "HelloWorld";
+    String expected = "dlroWolleH";
+    assertEquals(expected, StringUtils.reverse(original));
+}
+
+@Test
+public void testReverseWithSpaces() throws Exception {
+    String original = "Hello World";
+    String expected = "dlroW olleH";
+    assertEquals(expected, StringUtils.reverse(original));
+}
+
+@Test
+public void testReverseWithNumbers() throws Exception {
+    String original = "1234567890";
+    String expected = "0987654321";
+    assertEquals(expected, StringUtils.reverse(original));
+}
+
+@Test
+public void testReverseWithSpecialCharacters() throws Exception {
+    String original = "!@#$%^&*()";
+    String expected = ")(&*^%$#@!";
+    assertEquals(expected, StringUtils.reverse(original));
+}
+
+@Test
+public void testReverseWithControlCharacters() throws Exception {
+    String original = "\u0000\u0001\u0002";
+    String expected = "\u0002\u0001\u0000";
+    assertEquals(expected, StringUtils.reverse(original));
+}
+
+@Test
+public void testReverseWithUnicodeEscape() throws Exception {
+    String original = "\u00E9"; // é
+    String expected = "\u00E9"; // é
+    assertEquals(expected, StringUtils.reverse(original));
+}
+```

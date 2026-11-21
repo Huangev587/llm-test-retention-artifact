@@ -1,0 +1,41 @@
+```java
+@Test
+public void testNullStr() {
+    Assert.assertNull(substringBetween(null, "[", "]"));
+}
+
+@Test
+public void testNullOpen() {
+    Assert.assertNull(substringBetween("wx[b]yz", null, "]";));
+}
+
+@Test
+public void testNullClose() {
+    Assert.assertNull(substringBetween("wx[b]yz", "[", null));
+}
+
+@Test
+public void testEmptyDelimiters() {
+    Assert.assertEquals("", substringBetween("", "", ""));
+}
+
+@Test
+public void testNoMatch() {
+    Assert.assertNull(substringBetween("", "", "]"));
+}
+
+@Test
+public void testNoMatch2() {
+    Assert.assertNull(substringBetween("", "[", "]"));
+}
+
+@Test
+public void testShortMatch() {
+    Assert.assertEquals("abc", substringBetween("yabcz", "y", "z"));
+}
+
+@Test
+public void testLongMatch() {
+    Assert.assertEquals("abc", substringBetween("yabczyabcz", "y", "z"));
+}
+```

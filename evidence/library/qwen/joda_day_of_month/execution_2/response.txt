@@ -1,0 +1,49 @@
+```java
+@Test
+public void testWithDayOfMonthValidDay() throws Exception {
+    LocalDate original = new LocalDate(2023, 10, 5);
+    LocalDate result = original.withDayOfMonth(10);
+    assertEquals("2023-10-10", result.toString());
+}
+
+@Test
+public void testWithDayOfMonthFirstDayOfMonth() throws Exception {
+    LocalDate original = new LocalDate(2023, 10, 5);
+    LocalDate result = original.withDayOfMonth(1);
+    assertEquals("2023-10-01", result.toString());
+}
+
+@Test
+public void testWithDayOfMonthLastDayOfMonth() throws Exception {
+    LocalDate original = new LocalDate(2023, 10, 5);
+    LocalDate result = original.withDayOfMonth(31);
+    assertEquals("2023-10-31", result.toString());
+}
+
+@Test(expected = IllegalArgumentException.class)
+public void testWithDayOfMonthInvalidDay() throws Exception {
+    LocalDate original = new LocalDate(2023, 2, 29);
+    original.withDayOfMonth(30);
+}
+
+@Test
+public void testWithDayOfMonthSameDay() throws Exception {
+    LocalDate original = new LocalDate(2023, 10, 5);
+    LocalDate result = original.withDayOfMonth(5);
+    assertEquals("2023-10-05", result.toString());
+}
+
+@Test
+public void testWithDayOfMonthEndOfMonth() throws Exception {
+    LocalDate original = new LocalDate(2023, 10, 5);
+    LocalDate result = original.withDayOfMonth(original.lengthOfMonth());
+    assertEquals("2023-10-31", result.toString());
+}
+
+@Test
+public void testWithDayOfMonthBeginningOfMonth() throws Exception {
+    LocalDate original = new LocalDate(2023, 10, 5);
+    LocalDate result = original.withDayOfMonth(1);
+    assertEquals("2023-10-01", result.toString());
+}
+```

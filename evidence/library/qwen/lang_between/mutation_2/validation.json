@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "e2d8cfb20f613120cf53ca99a3fa5768bf8275a5d7be17e668cd7ad3e74cff05",
+      "source": "@Test\npublic void testStringWithSingleCharacterDelimiters() throws Exception {\n    assertEquals(\"c\", StringUtils.substringBetween(\"abc\", \"a\", \"c\"));\n}",
+      "class_name": "entry.Case_e2d8cfb20f613120cf53ca99",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[c]> but was:<[b]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_e2d8cfb20f613120cf53ca99.testStringWithSingleCharacterDelimiters(Case_e2d8cfb20f613120cf53ca99.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runL",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "4e7007331a312503e084f678ba9e084af521a9b181c6a403ff61716bbe5d8b3b",
+      "index": 0
+    },
+    {
+      "compile_key": "6ecc6c0ed7d849d86bb4c136224ea6dee2e767c372261b0e138892ac64d8be4a",
+      "source": "@Test\npublic void testStringWithMultipleOccurrencesOfOpenDelimiter() throws Exception {\n    assertNull(StringUtils.substringBetween(\"abacdc\", \"a\", \"c\"));\n}",
+      "class_name": "entry.Case_6ecc6c0ed7d849d86bb4c136",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected null, but was:<ba>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotNull(Assert.java:755)\n\tat org.junit.Assert.assertNull(Assert.java:737)\n\tat org.junit.Assert.assertNull(Assert.java:747)\n\tat entry.Case_6ecc6c0ed7d849d86bb4c136.testStringWithMultipleOccurrencesOfOpenDelimiter(Case_6ecc6c0ed7d849d86bb4c136.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.s",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "43371a11fa367934296586421070d161bd281e5204e840aac8d6b9fef988c2e5",
+      "index": 1
+    },
+    {
+      "compile_key": "c21029cc418cff5723808b7c3151620e2cb578c8a9fa1967abc1f273e4788550",
+      "source": "@Test\npublic void testStringWithMultipleOccurrencesOfCloseDelimiter() throws Exception {\n    assertNull(StringUtils.substringBetween(\"abccad\", \"a\", \"c\"));\n}",
+      "class_name": "entry.Case_c21029cc418cff5723808b7c",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected null, but was:<b>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotNull(Assert.java:755)\n\tat org.junit.Assert.assertNull(Assert.java:737)\n\tat org.junit.Assert.assertNull(Assert.java:747)\n\tat entry.Case_c21029cc418cff5723808b7c.testStringWithMultipleOccurrencesOfCloseDelimiter(Case_c21029cc418cff5723808b7c.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.s",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "b8ad8f34190ffdfd73aa8e45f9c2d616f3b3f684ae3d6993dd32fb3e75e4dfd9",
+      "index": 2
+    },
+    {
+      "compile_key": "c282dfbac8774c08cf6132e8d4b0f4369b360fb7db5b0d04759b54ad828e4a25",
+      "source": "@Test\npublic void testStringWithNestedDelimiters() throws Exception {\n    assertNull(StringUtils.substringBetween(\"a[b(c)d]e\", \"[\", \"]\"));\n}",
+      "class_name": "entry.Case_c282dfbac8774c08cf6132e8",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected null, but was:<b(c)d>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotNull(Assert.java:755)\n\tat org.junit.Assert.assertNull(Assert.java:737)\n\tat org.junit.Assert.assertNull(Assert.java:747)\n\tat entry.Case_c282dfbac8774c08cf6132e8.testStringWithNestedDelimiters(Case_c282dfbac8774c08cf6132e8.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.Invok",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "fc418d477d6ae079bf6ca9e0d5dbc79f1e6421dd6b49714aba43bf60a771432c",
+      "index": 3
+    },
+    {
+      "compile_key": "b47df7ce1e58ddc0ae4611e46127c19f0eefe2899ce47bfb0c83f93933542d8e",
+      "source": "@Test\npublic void testStringWithLeadingAndTrailingWhitespace() throws Exception {\n    assertEquals(\"b\", StringUtils.substringBetween(\" a[b] c \", \" \", \" \"));\n}",
+      "class_name": "entry.Case_b47df7ce1e58ddc0ae4611e4",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[b]> but was:<[a[b]]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_b47df7ce1e58ddc0ae4611e4.testStringWithLeadingAndTrailingWhitespace(Case_b47df7ce1e58ddc0ae4611e4.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunne",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "820bb60a4fe1ca7bbb3b201fe937e3e4d76fee3f3cfaff9985aeb98210e90c6b",
+      "index": 4
+    },
+    {
+      "compile_key": "c2a94702fd7a531a4d256bc0c5d4d17e957b9c5436412dfd5da28f7a22ba368d",
+      "source": "@Test\npublic void testStringWithSpecialCharacters() throws Exception {\n    assertEquals(\"b\", StringUtils.substringBetween(\"a[b]c\", \"a\", \"c\"));\n}",
+      "class_name": "entry.Case_c2a94702fd7a531a4d256bc0",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[b]> but was:<[[b]]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_c2a94702fd7a531a4d256bc0.testStringWithSpecialCharacters(Case_c2a94702fd7a531a4d256bc0.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Pa",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "609ceebb3c908436eae2da095beaad746c0e41b566ac8fbbc53395beb4f3fd60",
+      "index": 5
+    },
+    {
+      "compile_key": "9bc0dc441f121801eb754921c419ca324e237187b19fc51e2f3f20662b27f567",
+      "source": "@Test\npublic void testStringWithUnicodeCharacters() throws Exception {\n    assertEquals(\"\\u00E4\", StringUtils.substringBetween(\"a\\u00E4b\\u00E4c\", \"a\", \"c\"));\n}",
+      "class_name": "entry.Case_9bc0dc441f121801eb754921",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<ä[]> but was:<ä[bä]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_9bc0dc441f121801eb754921.testStringWithUnicodeCharacters(Case_9bc0dc441f121801eb754921.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Pa",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "fa645096ff51b1a8133031efcc71abffb942bf1fb237217c3aa66b4f65cb2818",
+      "index": 6
+    },
+    {
+      "compile_key": "4dadf5ae8537f48c568093a17ac09f4e3c5fcabf39f4dcf01616bb94023b0a26",
+      "source": "@Test\npublic void testStringWithLongerOpenDelimiter() throws Exception {\n    assertNull(StringUtils.substringBetween(\"abcdefg\", \"abcd\", \"efg\"));\n}",
+      "class_name": "entry.Case_4dadf5ae8537f48c568093a1",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected null, but was:<>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotNull(Assert.java:755)\n\tat org.junit.Assert.assertNull(Assert.java:737)\n\tat org.junit.Assert.assertNull(Assert.java:747)\n\tat entry.Case_4dadf5ae8537f48c568093a1.testStringWithLongerOpenDelimiter(Case_4dadf5ae8537f48c568093a1.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeM",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "4705c9dad2ffdede4761abc6020180800103db46d7be8d496ed8ac97cbab0eeb",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<[c]> but was:<[b]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_e2d8cfb20f613120cf53ca99.testStringWithSingleCharacterDelimiters(Case_e2d8cfb20f613120cf53ca99.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runL"
+    },
+    {
+      "index": 1,
+      "diagnostic": "java.lang.AssertionError: expected null, but was:<ba>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotNull(Assert.java:755)\n\tat org.junit.Assert.assertNull(Assert.java:737)\n\tat org.junit.Assert.assertNull(Assert.java:747)\n\tat entry.Case_6ecc6c0ed7d849d86bb4c136.testStringWithMultipleOccurrencesOfOpenDelimiter(Case_6ecc6c0ed7d849d86bb4c136.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.s"
+    },
+    {
+      "index": 2,
+      "diagnostic": "java.lang.AssertionError: expected null, but was:<b>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotNull(Assert.java:755)\n\tat org.junit.Assert.assertNull(Assert.java:737)\n\tat org.junit.Assert.assertNull(Assert.java:747)\n\tat entry.Case_c21029cc418cff5723808b7c.testStringWithMultipleOccurrencesOfCloseDelimiter(Case_c21029cc418cff5723808b7c.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.s"
+    },
+    {
+      "index": 3,
+      "diagnostic": "java.lang.AssertionError: expected null, but was:<b(c)d>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotNull(Assert.java:755)\n\tat org.junit.Assert.assertNull(Assert.java:737)\n\tat org.junit.Assert.assertNull(Assert.java:747)\n\tat entry.Case_c282dfbac8774c08cf6132e8.testStringWithNestedDelimiters(Case_c282dfbac8774c08cf6132e8.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.Invok"
+    }
+  ]
+}

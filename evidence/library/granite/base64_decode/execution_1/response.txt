@@ -1,0 +1,43 @@
+```java
+@Test
+public void testDecodeEmptyString() {
+    Assert.assertArrayEquals(new byte[0], decodeBase64(""));
+}
+
+@Test
+public void testDecodeSingleByte() {
+    Assert.assertArrayEquals(new byte[]{-1}, decodeBase64("Aw=="));
+}
+
+@Test
+public void testDecodeTwoBytes() {
+    Assert.assertArrayEquals(new byte[]{1, 2}, decodeBase64("MzggNiw="));
+}
+
+@Test
+public void testDecodeThreeBytes() {
+    Assert.assertArrayEquals(new byte[]{3, 4, 5}, decodeBase64("MzggNiwxMjM="));
+}
+
+@Test
+public void testDecodeFourBytes() {
+    Assert.assertArrayEquals(new byte[]{6, 7, 8, 9}, decodeBase64("MzggNiwxMjMtMTI="));
+}
+
+@Test
+public void testDecodeMaxBytes() {
+    byte[] input = new byte[256];
+    Arrays.fill(input, (byte) 123);
+    Assert.assertArrayEquals(input, decodeBase64(new String(input)));
+}
+
+@Test
+public void testReencodeEmptyString() {
+    Assert.assertEquals("", new String(decodeBase64("")));
+}
+
+@Test
+public void testReencodeSingleByte() {
+    Assert.assertEquals("Aw==", new String(decodeBase64("Mzgg")));
+}
+```

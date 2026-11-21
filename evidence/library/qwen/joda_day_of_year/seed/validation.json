@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "321308220d4d7d16432c6a6201f6822abe20eee37932fac2d027d9e2b273b4f1",
+      "source": "@Test\npublic void testGetDayOfYear_JanuaryFirst_1900() throws Exception {\n    LocalDate date = new LocalDate(1900, 1, 1);\n    assertEquals(1, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_321308220d4d7d16432c6a62",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "487bd9ad239290a1e7523202d3810c6e5e7249ea2e7c08b233a66307b5f4b82c",
+      "index": 0
+    },
+    {
+      "compile_key": "2907586b7d3476aacce3f662b3896bdd38fb1f9da9a0c01b9b50b64536f5b04f",
+      "source": "@Test\npublic void testGetDayOfYear_MarchFirst_1900() throws Exception {\n    LocalDate date = new LocalDate(1900, 3, 1);\n    assertEquals(61, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_2907586b7d3476aacce3f662",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<61> but was:<60>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_2907586b7d3476aacce3f662.testGetDayOfYear_MarchFirst_1900(Case_2907586b7d3476aacce3f662.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.I",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "5375b1020d20e0f06334f03b9fdce52dad56e5f692f6b13a0a28d3556b58bcf6",
+      "index": 1
+    },
+    {
+      "compile_key": "ee28c10b9cf5b731f9def5f85482d5e039a621fa0f1d35194cf564a2cdb807ac",
+      "source": "@Test\npublic void testGetDayOfYear_FebruaryLast_1900() throws Exception {\n    LocalDate date = new LocalDate(1900, 2, 28);\n    assertEquals(59, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_ee28c10b9cf5b731f9def5f8",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "018c9e06d34ab511344e8f22107cbceadea2d72710b81d9761b0d9ef85c6d19a",
+      "index": 2
+    },
+    {
+      "compile_key": "97cade88568a579a14ca755e26c0d819c98409efbb81839f6fa892cb66e36b80",
+      "source": "@Test\npublic void testGetDayOfYear_DecemberLast_1900() throws Exception {\n    LocalDate date = new LocalDate(1900, 12, 31);\n    assertEquals(365, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_97cade88568a579a14ca755e",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3c31b873a32e3ce4477de3bc54430172cce8010494fe4d50ad323e0bf89e86cd",
+      "index": 3
+    },
+    {
+      "compile_key": "83c7d9066216df7ff1af85042fac0de93ff6eef0e3a8c70541cbf4823044c961",
+      "source": "@Test\npublic void testGetDayOfYear_JanuaryFirst_2000() throws Exception {\n    LocalDate date = new LocalDate(2000, 1, 1);\n    assertEquals(1, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_83c7d9066216df7ff1af8504",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "de9be72c4144661640f750f5282326653b7e8732852e67c29f92b92a69de1845",
+      "index": 4
+    },
+    {
+      "compile_key": "af499fb33885057fa52952684443460d5123e6734ee5ab084fedda0f592165ab",
+      "source": "@Test\npublic void testGetDayOfYear_MarchFirst_2000() throws Exception {\n    LocalDate date = new LocalDate(2000, 3, 1);\n    assertEquals(61, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_af499fb33885057fa5295268",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "14fa9c395ca96735070e05796024f48b131e12951f780c1f059b27039c7fd88c",
+      "index": 5
+    },
+    {
+      "compile_key": "96d004a780958cb07fb144019da3f718282571985c9060324b23c4292d207ebb",
+      "source": "@Test\npublic void testGetDayOfYear_FebruaryLast_2000() throws Exception {\n    LocalDate date = new LocalDate(2000, 2, 29);\n    assertEquals(60, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_96d004a780958cb07fb14401",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "0738eed491682e9ab440fae0699e577bc99aa4fe091739d270e7cea9aaf43f6d",
+      "index": 6
+    },
+    {
+      "compile_key": "1a130587bd01011e3ae0fa52ace231a7b42f6520fba3615f67257b3cb8d50dd7",
+      "source": "@Test\npublic void testGetDayOfYear_DecemberLast_2000() throws Exception {\n    LocalDate date = new LocalDate(2000, 12, 31);\n    assertEquals(366, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_1a130587bd01011e3ae0fa52",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "578e6984093ebfcca6998db95c79fa96b25c09f4b06e60a2e33802487855d91e",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "java.lang.AssertionError: expected:<61> but was:<60>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_2907586b7d3476aacce3f662.testGetDayOfYear_MarchFirst_1900(Case_2907586b7d3476aacce3f662.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.I"
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

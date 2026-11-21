@@ -1,0 +1,79 @@
+1. ```java
+@Test
+public void testGetMillisOfDay() throws Exception {
+    LocalTime time = LocalTime.of(0, 0, 0, 123);
+    int expected = 123 * 1000;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+2. ```java
+@Test
+public void testGetMillisOfDayWithMaxMillis() throws Exception {
+    LocalTime time = LocalTime.of(23, 59, 59, 999);
+    int expected = 86399999;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+3. ```java
+@Test
+public void testGetMillisOfDayWithMinMillis() throws Exception {
+    LocalTime time = LocalTime.of(0, 0, 0, 0);
+    int expected = 0;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+4. ```java
+@Test
+public void testGetMillisOfDayWithHour() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 45, 678);
+    int expected = 12 * 3600 * 1000 + 30 * 60 * 1000 + 45 * 1000 + 678;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+5. ```java
+@Test
+public void testGetMillisOfDayWithMinute() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 45, 678);
+    int expected = 12 * 60 * 1000 + 30 * 60 * 1000 + 45 * 1000 + 678;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+6. ```java
+@Test
+public void testGetMillisOfDayWithSecond() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 45, 678);
+    int expected = 12 * 60 * 60 * 1000 + 30 * 60 * 1000 + 45 * 1000 + 678;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+7. ```java
+@Test
+public void testGetMillisOfDayWithMillis() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 45, 678);
+    int expected = 12 * 60 * 60 * 1000 + 30 * 60 * 1000 + 45 * 1000 + 678;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+8. ```java
+@Test
+public void testGetMillisOfDayWithMaxHour() throws Exception {
+    LocalTime time = LocalTime.of(23, 59, 59, 999);
+    int expected = 86399999;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```

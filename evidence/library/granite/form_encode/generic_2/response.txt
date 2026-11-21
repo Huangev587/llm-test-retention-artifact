@@ -1,0 +1,56 @@
+1. ```java
+@Test
+public void testNullInput() throws UnsupportedEncodingException {
+    Assert.assertNull(encode(null, "UTF-8"));
+}
+```
+
+2. ```java
+@Test
+public void testEmptyString() throws UnsupportedEncodingException {
+    Assert.assertEquals("", encode("", "UTF-8"));
+}
+```
+
+3. ```java
+@Test
+public void testSingleCharacter() throws UnsupportedEncodingException {
+    Assert.assertEquals("a", encode("a", "UTF-8"));
+}
+```
+
+4. ```java
+@Test
+public void testSpecialCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("a+b+c", encode("a b c", "UTF-8"));
+}
+```
+
+5. ```java
+@Test
+public void testUnicodeCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("a%C3%B1b", encode("añb", "UTF-8"));
+}
+```
+
+6. ```java
+@Test
+public void testSpaceEncoding() throws UnsupportedEncodingException {
+    Assert.assertEquals("a%2Bb", encode("a B c", "UTF-8"));
+}
+```
+
+7. ```java
+@Test
+public void testNonAsciiCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("a%C3%A9b", encode("aéb", "UTF-8"));
+}
+```
+
+8. ```java
+@Test
+public void testLongString() throws UnsupportedEncodingException {
+    String input = "a" + new String(new char[255]) + "b";
+    Assert.assertEquals("a" + (char) 0xFF + "b", encode(input, "UTF-8"));
+}
+```

@@ -1,0 +1,61 @@
+```java
+@Test
+public void testParseValidPositiveDuration() throws Exception {
+    Duration duration = Duration.parse("PT1H");
+    assertEquals(3600000L, duration.getMillis());
+}
+
+@Test
+public void testParseValidNegativeDuration() throws Exception {
+    Duration duration = Duration.parse("-PT1H");
+    assertEquals(-3600000L, duration.getMillis());
+}
+
+@Test
+public void testParseValidFractionalDuration() throws Exception {
+    Duration duration = Duration.parse("PT1.5H");
+    assertEquals(5400000L, duration.getMillis());
+}
+
+@Test
+public void testParseValidMaxDuration() throws Exception {
+    Duration duration = Duration.parse("P1D");
+    assertEquals(86400000000000L, duration.getMillis());
+}
+
+@Test
+public void testParseValidMinDuration() throws Exception {
+    Duration duration = Duration.parse("-P1D");
+    assertEquals(-86400000000000L, duration.getMillis());
+}
+
+@Test
+public void testParseInvalidFormat() throws Exception {
+    try {
+        Duration.parse("PT1H1M");
+        fail("Expected IllegalArgumentException");
+    } catch (IllegalArgumentException e) {
+        // Expected exception
+    }
+}
+
+@Test
+public void testParseEmptyString() throws Exception {
+    try {
+        Duration.parse("");
+        fail("Expected IllegalArgumentException");
+    } catch (IllegalArgumentException e) {
+        // Expected exception
+    }
+}
+
+@Test
+public void testParseNullString() throws Exception {
+    try {
+        Duration.parse(null);
+        fail("Expected NullPointerException");
+    } catch (NullPointerException e) {
+        // Expected exception
+    }
+}
+```

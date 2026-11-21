@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "e0045bc69b144d70c9374e39eec333300d742a2be04082b286d7c4db294a7c06",
+      "source": "@Test\npublic void testDividedByNegativeOne() {\n    Duration duration = new Duration(1234567890123L);\n    Duration result = duration.dividedBy(-1);\n    assertEquals(-1234567890123L, result.getMillis());\n}",
+      "class_name": "entry.Case_e0045bc69b144d70c9374e39",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "c867e0a1c71012e1846d3543efbde4d62e63bebb541e5c6a5f49095a8cd43960",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

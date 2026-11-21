@@ -1,0 +1,46 @@
+```java
+@Test
+public void testValueFoundInMiddle() throws Exception {
+    assertEquals(1, ArrayUtils.indexOf(new int[]{1, 4, 3}, 4));
+}
+
+@Test
+public void testValueFoundAtEnd() throws Exception {
+    assertEquals(2, ArrayUtils.indexOf(new int[]{1, 2, 7}, 7));
+}
+
+@Test
+public void testEmptyArray() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(new int[]{}, 5));
+}
+
+@Test
+public void testNullArray() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(null, 5));
+}
+
+@Test
+public void testSingleElementMatch() throws Exception {
+    assertEquals(0, ArrayUtils.indexOf(new int[]{5}, 5));
+}
+
+@Test
+public void testSingleElementNoMatch() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(new int[]{5}, 3));
+}
+
+@Test
+public void testLargeArrayWithMatch() throws Exception {
+    int[] largeArray = new int[64];
+    Arrays.fill(largeArray, 100);
+    largeArray[32] = 200;
+    assertEquals(32, ArrayUtils.indexOf(largeArray, 200));
+}
+
+@Test
+public void testLargeArrayWithoutMatch() throws Exception {
+    int[] largeArray = new int[64];
+    Arrays.fill(largeArray, 100);
+    assertEquals(-1, ArrayUtils.indexOf(largeArray, 200));
+}
+```

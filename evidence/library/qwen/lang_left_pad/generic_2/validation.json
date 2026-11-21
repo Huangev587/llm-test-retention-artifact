@@ -1,0 +1,194 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "7b8b1f846217eab68c21e40e97a3489c10447137e57f4269f2c4853c99ca736a",
+      "source": "@Test\npublic void testLeftPadSingleCharacter() throws Exception {\n    Assert.assertEquals(\"a\", StringUtils.leftPad(\"a\", 1, 'a'));\n}",
+      "class_name": "entry.Case_7b8b1f846217eab68c21e40e",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "e0480d2d18912b18834d3bfd9f26afd9484c75cbfb41b9af969bfa06535c3c94",
+      "index": 0
+    },
+    {
+      "index": 1,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "compile_key": "42ef7005a99b745eeab5340541d568e346bdb351f3ce44cc2df27a13181a2758",
+      "source": "@Test\npublic void testLeftPadMinSize() throws Exception {\n    Assert.assertEquals(\"\", StringUtils.leftPad(\"\", 0, 'x'));\n}",
+      "class_name": "entry.Case_42ef7005a99b745eeab53405",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "b1d7a79ed46258199df632a7978fe716dbdc88e331abd1cd5b80f4a0cec531ba",
+      "index": 2
+    },
+    {
+      "compile_key": "1f9074b1cdd264d7d3c2d86a0539eaf3301f5982f02c360278d7fadb48ec07d2",
+      "source": "@Test\npublic void testLeftPadWithSpacePadding() throws Exception {\n    Assert.assertEquals(\"   bat\", StringUtils.leftPad(\"bat\", 7, ' '));\n}",
+      "class_name": "entry.Case_1f9074b1cdd264d7d3c2d86a",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<   []bat> but was:<   [ ]bat>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1f9074b1cdd264d7d3c2d86a.testLeftPadWithSpacePadding(Case_1f9074b1cdd264d7d3c2d86a.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLe",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "d48407adf7193c15f1c5172915234d3401c849f3d53d26d723af82152a351e48",
+      "index": 3
+    },
+    {
+      "compile_key": "da8797f39ab2d4798fd85cf0b81319c980bde474503f189698fdd949baba991a",
+      "source": "@Test\npublic void testLeftPadWithNonAsciiPadding() throws Exception {\n    Assert.assertEquals(\"\\u00e9\\u00e9\\u00e9bat\", StringUtils.leftPad(\"bat\", 7, '\\u00e9'));\n}",
+      "class_name": "entry.Case_da8797f39ab2d4798fd85cf0",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<ééé[]bat> but was:<ééé[é]bat>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_da8797f39ab2d4798fd85cf0.testLeftPadWithNonAsciiPadding(Case_da8797f39ab2d4798fd85cf0.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.ru",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "9d763499df9ccbdc13515957839ad4081b50e43a695751d83a182cf6c29aeb8e",
+      "index": 4
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "compile_key": "5f2971c8b9e8c52e7811cf06975c749c7fd364822ada7d247bbfbed76a16b273",
+      "source": "@Test\npublic void testLeftPadWithZeroSize() throws Exception {\n    Assert.assertEquals(\"\", StringUtils.leftPad(\"abc\", 0, 'x'));\n}",
+      "class_name": "entry.Case_5f2971c8b9e8c52e7811cf06",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[]> but was:<[abc]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_5f2971c8b9e8c52e7811cf06.testLeftPadWithZeroSize(Case_5f2971c8b9e8c52e7811cf06.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunne",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "7f01c4ed0bfa5cdbdfd059b4794ffe3039303a7793cb89e3c674a0b8d8c476d0",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<   []bat> but was:<   [ ]bat>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1f9074b1cdd264d7d3c2d86a.testLeftPadWithSpacePadding(Case_1f9074b1cdd264d7d3c2d86a.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLe"
+    }
+  ]
+}

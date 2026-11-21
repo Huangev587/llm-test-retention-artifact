@@ -1,0 +1,16 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "ff4f5f3815dc7817d9bea4071868a49573c4328566197dea9a2b73e1d9fe9b6d",
+  "sites": 6,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.joda.time.LocalTime\",\"plusMinutes\",\"(I)Lorg/joda/time/LocalTime;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[8]]",
+    "[\"org.joda.time.field.PreciseDurationField\",\"add\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[7]]",
+    "[\"org.joda.time.field.PreciseDurationField\",\"add\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[14]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.joda.time.LocalTime\",\"plusMinutes\",\"(I)Lorg/joda/time/LocalTime;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[4]]",
+    "[\"org.joda.time.LocalTime\",\"plusMinutes\",\"(I)Lorg/joda/time/LocalTime;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[24]]",
+    "[\"org.joda.time.field.PreciseDurationField\",\"add\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[13]]"
+  ]
+}

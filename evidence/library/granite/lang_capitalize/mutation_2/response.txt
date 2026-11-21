@@ -1,0 +1,31 @@
+1. @Test public void testNullInput() {
+    Assert.assertNull(StringUtils.capitalize(null));
+}
+
+2. @Test public void testEmptyString() {
+    Assert.assertEquals("", StringUtils.capitalize(""));
+}
+
+3. @Test public void testLowercaseSingleWord() {
+    Assert.assertEquals("Cat", StringUtils.capitalize("cat"));
+}
+
+4. @Test public void testLowercaseSingleWordMixedCase() {
+    Assert.assertEquals("CAt", StringUtils.capitalize("cAt"));
+}
+
+5. @Test public void testLowercaseSingleWordWithQuote() {
+    Assert.assertEquals("'cat'", StringUtils.capitalize("'cat'"));
+}
+
+6. @Test public void testLowercaseMultiWord() {
+    Assert.assertEquals("'Cat's' a'to' z'", StringUtils.capitalize("'cat's' a'to' z'"));
+}
+
+7. @Test public void testUppercaseSingleWord() {
+    Assert.assertEquals("CAT", StringUtils.capitalize("CAT"));
+}
+
+8. @Test public void testUppercaseSingleWordMixedCase() {
+    Assert.assertEquals("CAt", StringUtils.capitalize("CAt"));
+}

@@ -1,0 +1,13 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "9cccc2eea06c1b1ff83813be44aa66beb8d5f7220b676a7606c0ba472e4c685d",
+  "sites": 3,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.apache.commons.lang3.StringUtils\",\"reverse\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[4]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.apache.commons.lang3.StringUtils\",\"reverse\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[18]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"reverse\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[8]]"
+  ]
+}

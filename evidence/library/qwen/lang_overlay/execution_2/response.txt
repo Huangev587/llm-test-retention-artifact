@@ -1,0 +1,41 @@
+```java
+@Test
+public void testOverlayEqualIndices() throws Exception {
+    assertEquals("aabbcc", StringUtils.overlay("aabbcc", "xx", 2, 2));
+}
+
+@Test
+public void testOverlaySingleCharacter() throws Exception {
+    assertEquals("axbc", StringUtils.overlay("axbc", "y", 1, 2));
+}
+
+@Test
+public void testOverlayFullString() throws Exception {
+    assertEquals("xxxx", StringUtils.overlay("abcdef", "xxxx", 0, 6));
+}
+
+@Test
+public void testOverlayPartialOverlap() throws Exception {
+    assertEquals("abzzzcef", StringUtils.overlay("abcdef", "zzz", 2, 5));
+}
+
+@Test
+public void testOverlayReverseOrderIndices() throws Exception {
+    assertEquals("abzzzzef", StringUtils.overlay("abcdef", "zzzz", 4, 2));
+}
+
+@Test
+public void testOverlayLargePositiveIndices() throws Exception {
+    assertEquals("abcdefzzzz", StringUtils.overlay("abcdef", "zzzz", 8, 10));
+}
+
+@Test
+public void testOverlayLargeNegativeIndices() throws Exception {
+    assertEquals("zzzzabcdef", StringUtils.overlay("abcdef", "zzzz", -256, -255));
+}
+
+@Test
+public void testOverlayMixedIndices() throws Exception {
+    assertEquals("abzzzzef", StringUtils.overlay("abcdef", "zzzz", -1, 7));
+}
+```

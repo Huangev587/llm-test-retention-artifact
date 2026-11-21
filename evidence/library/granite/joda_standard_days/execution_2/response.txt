@@ -1,0 +1,77 @@
+1. ```java
+@Test
+public void testStandardDaysZero() {
+    Duration result = Duration.standardDays(0);
+    Assert.assertEquals("ZERO", result.toString(), Duration.ZERO.toString());
+}
+```
+
+2. ```java
+@Test
+public void testStandardDaysPositive() {
+    long days = 1;
+    Duration expected = Duration.standardDays(days);
+    Duration result = Duration.standardDays(days);
+    Assert.assertEquals("Expected: " + expected.getMillis() + ", Got: " + result.getMillis(), days * DateTimeConstants.MILLIS_PER_DAY, result.getMillis());
+}
+```
+
+3. ```java
+@Test
+public void testStandardDaysNegative() {
+    long days = -1;
+    Duration expected = Duration.standardDays(days);
+    Duration result = Duration.standardDays(days);
+    Assert.assertEquals("Expected: " + expected.getMillis() + ", Got: " + result.getMillis(), days * DateTimeConstants.MILLIS_PER_DAY, result.getMillis());
+}
+```
+
+4. ```java
+@Test
+public void testStandardDaysMax() {
+    long days = 1000000;
+    Duration expected = Duration.standardDays(days);
+    Duration result = Duration.standardDays(days);
+    Assert.assertEquals("Expected: " + expected.getMillis() + ", Got: " + result.getMillis(), days * DateTimeConstants.MILLIS_PER_DAY, result.getMillis());
+}
+```
+
+5. ```java
+@Test
+public void testStandardDaysMin() {
+    long days = -1000000;
+    Duration expected = Duration.standardDays(days);
+    Duration result = Duration.standardDays(days);
+    Assert.assertEquals("Expected: " + expected.getMillis() + ", Got: " + result.getMillis(), days * DateTimeConstants.MILLIS_PER_DAY, result.getMillis());
+}
+```
+
+6. ```java
+@Test(expected = ArithmeticException.class)
+public void testStandardDaysOverflow() {
+    long days = 1000001;
+    Duration.standardDays(days);
+}
+```
+
+7. ```java
+@Test
+public void testStandardDaysWithHours() {
+    long days = 1;
+    long hours = 24;
+    Duration expected = Duration.standardDays(days).plusHours(hours);
+    Duration result = Duration.standardDays(days).plus(Duration.standardHours(hours));
+    Assert.assertEquals("Expected: " + expected.getMillis() + ", Got: " + result.getMillis(), expected.getMillis(), result.getMillis());
+}
+```
+
+8. ```java
+@Test
+public void testStandardDaysWithMinutes() {
+    long days = 1;
+    long minutes = 12;
+    Duration expected = Duration.standardDays(days).plusMinutes(minutes);
+    Duration result = Duration.standardDays(days).plus(Duration.standardMinutes(minutes));
+    Assert.assertEquals("Expected: " + expected.getMillis() + ", Got: " + result.getMillis(), expected.getMillis(), result.getMillis());
+}
+```

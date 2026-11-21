@@ -1,0 +1,46 @@
+1. @Test
+public void testNullInput() {
+    Assert.assertNull(StringUtils.leftPad(null, 3, 'z'));
+}
+
+2. @Test
+public void testEmptyStringInput() {
+    Assert.assertEquals("zzzz", StringUtils.leftPad("", 3, 'z'));
+}
+
+3. @Test
+public void testShortStringInput() {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", 3, 'z'));
+}
+
+4. @Test
+public void testLongStringInput() {
+    Assert.assertEquals("zzbat", StringUtils.leftPad("bat", 5, 'z'));
+}
+
+5. @Test
+public void testStringLongerThanSize() {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", 1, 'z'));
+}
+
+6. @Test
+public void testNegativeSizeInput() {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", -1, 'z'));
+}
+
+7. @Test
+public void testMaxPadLimitInput() {
+    final String padChar = 'x';
+    final int maxPadLimit = StringUtils.PAD_LIMIT;
+    final String inputString = "test";
+    final int paddedSize = maxPadLimit + inputString.length();
+    Assert.assertEquals(inputString + String.valueOf(padChar, maxPadLimit), StringUtils.leftPad(inputString, paddedSize, padChar));
+}
+
+8. @Test
+public void testPadCharacterLimitInput() {
+    final char padChar = 'x';
+    final int size = StringUtils.PAD_LIMIT + 1;
+    final String inputString = "test";
+    Assert.assertEquals(inputString + String.valueOf(padChar, StringUtils.PAD_LIMIT), StringUtils.leftPad(inputString, size, padChar));
+}

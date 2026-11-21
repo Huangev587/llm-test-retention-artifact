@@ -1,0 +1,61 @@
+1.
+```java
+@Test
+public void testNullInput() throws UnsupportedEncodingException {
+    Assert.assertNull(encode(null, "UTF-8"));
+}
+```
+
+2.
+```java
+@Test
+public void testEmptyString() throws UnsupportedEncodingException {
+    Assert.assertEquals("", encode("", "UTF-8"));
+}
+```
+
+3.
+```java
+@Test
+public void testSingleCharacter() throws UnsupportedEncodingException {
+    Assert.assertEquals("a", encode("a", "UTF-8"));
+}
+```
+
+4.
+```java
+@Test
+public void testMultipleCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("hello", encode("hello", "UTF-8"));
+}
+```
+
+5.
+```java
+@Test
+public void testSpecialCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("foo%20bar", encode("foo bar", "UTF-8"));
+}
+
+6.
+```java
+@Test
+public void testUnicodeCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("foo%C3%A9%C3%A8%C3%A0bar", encode("fooéèàbar", "UTF-8"));
+}
+
+7.
+```java
+@Test
+public void testNonAsciiCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("foo%C3%A9%C3%A8%C3%A0bar", encode("fooéèàbar", "UTF-8"));
+}
+
+8.
+```java
+@Test
+public void testLongString() throws UnsupportedEncodingException {
+    final String longString = "a".repeat(256);
+    Assert.assertEquals(longString, encode(longString, "UTF-8"));
+}
+```

@@ -1,0 +1,71 @@
+1. ```java
+@Test
+public void testGetDayOfYear() throws Exception {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    int dayOfYear = date.getDayOfYear();
+    assertArrayEquals(new int[]{1}, new int[]{dayOfYear});
+}
+```
+
+2. ```java
+@Test
+public void testGetDayOfYearMax() throws Exception {
+    LocalDate date = new LocalDate(2099, 12, 31);
+    int dayOfYear = date.getDayOfYear();
+    assertArrayEquals(new int[]{365}, new int[]{dayOfYear});
+}
+```
+
+3. ```java
+@Test
+public void testGetDayOfYearLeapYear() throws Exception {
+    LocalDate date = new LocalDate(1904, 1, 1);
+    int dayOfYear = date.getDayOfYear();
+    assertArrayEquals(new int[]{1}, new int[]{dayOfYear});
+}
+```
+
+4. ```java
+@Test
+public void testGetDayOfYearMin() throws Exception {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    int dayOfYear = date.getDayOfYear();
+    assertArrayEquals(new int[]{1}, new int[]{dayOfYear});
+}
+```
+
+5. ```java
+@Test
+public void testGetDayOfYearMidYear() throws Exception {
+    LocalDate date = new LocalDate(2000, 6, 30);
+    int dayOfYear = date.getDayOfYear();
+    assertArrayEquals(new int[]{158}, new int[]{dayOfYear});
+}
+```
+
+6. ```java
+@Test
+public void testGetDayOfYearMidDecade() throws Exception {
+    LocalDate date = new LocalDate(1950, 7, 1);
+    int dayOfYear = date.getDayOfYear();
+    assertArrayEquals(new int[]{152}, new int[]{dayOfYear});
+}
+```
+
+7. ```java
+@Test
+public void testGetDayOfYearMidCentury() throws Exception {
+    LocalDate date = new LocalDate(2000, 1, 1);
+    int dayOfYear = date.getDayOfYear();
+    assertArrayEquals(new int[]{1}, new int[]{dayOfYear});
+}
+```
+
+8. ```java
+@Test
+public void testGetDayOfYearMidMillennium() throws Exception {
+    LocalDate date = new LocalDate(2100, 1, 1);
+    int dayOfYear = date.getDayOfYear();
+    assertArrayEquals(new int[]{1}, new int[]{dayOfYear});
+}
+```

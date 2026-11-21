@@ -1,0 +1,184 @@
+{
+  "structure_pass": true,
+  "total_methods": 5,
+  "methods": [
+    {
+      "compile_key": "df5d279a548c1f2a6da52fb3b7bd5255b5e0dcaff5565b1e64ed6531a5feb8b2",
+      "source": "@Test\npublic void testGetDayOfYear_FebruaryLast_1999() throws Exception {\n    LocalDate date = new LocalDate(1999, 2, 28);\n    assertEquals(59, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_df5d279a548c1f2a6da52fb3",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "77ffbaad4219e01c1e71f8bd33d5f496bc28c1cb9bbb3e7f2d110016c24c2cb6",
+      "index": 0
+    },
+    {
+      "compile_key": "6e0e41e5d07cdefbfce686c4a16e96019c9ff0192771f8145f5c5dcff811babb",
+      "source": "@Test\npublic void testGetDayOfYear_DecemberLast_1999() throws Exception {\n    LocalDate date = new LocalDate(1999, 12, 31);\n    assertEquals(365, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_6e0e41e5d07cdefbfce686c4",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "17131a3ae4637977a69ffb87cbf6484f87df9172687b5df4f8da165d8f644215",
+      "index": 1
+    },
+    {
+      "compile_key": "0fc601d1033625414fc4f67f0b5869b21fd8a4f4f20d315d265375ae0a002637",
+      "source": "@Test\npublic void testGetDayOfYear_JanuaryFirst_2099() throws Exception {\n    LocalDate date = new LocalDate(2099, 1, 1);\n    assertEquals(1, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_0fc601d1033625414fc4f67f",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "b8f86ec378a72d1db89d3bbda86d9c49ca8ebbf52b4bd32801be5536abb5c2c4",
+      "index": 2
+    },
+    {
+      "compile_key": "c3956035dc8678ce733d7e47adc170a1f64b1e7ad62f3bf6b3c49299b31b986c",
+      "source": "@Test\npublic void testGetDayOfYear_FebruaryLast_2099() throws Exception {\n    LocalDate date = new LocalDate(2099, 2, 28);\n    assertEquals(59, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_c3956035dc8678ce733d7e47",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ce2784817bcb597785cba5d5897e03ab7007ea8da68dcb911f96a8d44b559b76",
+      "index": 3
+    },
+    {
+      "compile_key": "14308a469aa2a128bd218788988b8457b39561af1ac6c0a7321d168af662566d",
+      "source": "@Test\npublic void testGetDayOfYear_DecemberLast_2099() throws Exception {\n    LocalDate date = new LocalDate(2099, 12, 31);\n    assertEquals(365, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_14308a469aa2a128bd218788",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "99702e3ab57d25f987d548ebd6809a721ac1d4c0ebe860c11d26ff3425cba24d",
+      "index": 4
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

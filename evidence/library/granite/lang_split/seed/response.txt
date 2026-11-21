@@ -1,0 +1,47 @@
+1. @Test
+public void testNullInput() throws Exception {
+    String[] result = splitPreserveAllTokens(null, '.');
+    assertNull(result);
+}
+
+2. @Test
+public void testEmptyInput() throws Exception {
+    String[] result = splitPreserveAllTokens("", '.');
+    assertArrayEquals(new String[0], result);
+}
+
+3. @Test
+public void testSingleToken() throws Exception {
+    String[] result = splitPreserveAllTokens("a.b.c", '.');
+    assertArrayEquals(new String[]{"a", "b", "c"}, result);
+}
+
+4. @Test
+public void testAdjacentSeparators() throws Exception {
+    String[] result = splitPreserveAllTokens("a..b.c", '.');
+    assertArrayEquals(new String[]{"a", "", "b", "c"}, result);
+}
+
+5. @Test
+public void testNoSeparator() throws Exception {
+    String[] result = splitPreserveAllTokens("a:b:c", '.');
+    assertArrayEquals(new String[]{"a:b:c"}, result);
+}
+
+6. @Test
+public void testWhitespaceSeparator() throws Exception {
+    String[] result = splitPreserveAllTokens("a\tb\nc", null);
+    assertArrayEquals(new String[]{"a", "b", "c"}, result);
+}
+
+7. @Test
+public void testSingleSpaceSeparator() throws Exception {
+    String[] result = splitPreserveAllTokens("a b c",'');
+    assertArrayEquals(new String[]{"a", "b", "c"}, result);
+}
+
+8. @Test
+public void testMultipleSpaces() throws Exception {
+    String[] result = splitPreserveAllTokens("a b c ",'');
+    assertArrayEquals(new String[]{"a", "b", "c", ""}, result);
+}

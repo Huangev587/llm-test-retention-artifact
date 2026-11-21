@@ -1,0 +1,145 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized byte arrays are accepted"
+    },
+    {
+      "compile_key": "96e86311434de55ab9af01eeb8a76256752124cf7ad4ff9eca666c6d05555796",
+      "source": "@Test\npublic void testSingleByteArray() throws Exception {\n    Assert.assertEquals(\"MQ==\", Base64.encodeBase64String(new byte[]{0}));\n}",
+      "class_name": "entry.Case_96e86311434de55ab9af01ee",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[MQ]==> but was:<[AA]==>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_96e86311434de55ab9af01ee.testSingleByteArray(Case_96e86311434de55ab9af01ee.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunn",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "01bb5b4be8d88d6d9df8183bd54e62b32adabf7195c1f369f5ebe86a0618247d",
+      "index": 1
+    },
+    {
+      "compile_key": "bb724793f20e7dedc551725a92c6b765888c8db48f3e32f4b3cd6b3f969f63d2",
+      "source": "@Test\npublic void testMultiByteArray() throws Exception {\n    Assert.assertEquals(\"YWJj\", Base64.encodeBase64String(new byte[]{0, 0, 0}));\n}",
+      "class_name": "entry.Case_bb724793f20e7dedc551725a",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[YWJj]> but was:<[AAAA]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_bb724793f20e7dedc551725a.testMultiByteArray(Case_bb724793f20e7dedc551725a.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunne",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "e1bfb1b24b0540d972109e1acd0107f02de3ab0f2fff9e4cdda6e4b70e4715d3",
+      "index": 2
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized byte arrays are accepted"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "compile_key": "b33b090a1ab4e3b8263a818c360521315653619ff9c5ab0a81344fbad1ae1d9d",
+      "source": "@Test\npublic void testShortInput() throws Exception {\n    Assert.assertEquals(\"aGVsbG8=\", Base64.encodeBase64String(\"aGVsbG8=\".getBytes(StandardCharsets.UTF_8)));\n}",
+      "class_name": "entry.Case_b33b090a1ab4e3b8263a818c",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<[aGVsbG8]=> but was:<[YUdWc2JHOD0]=>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_b33b090a1ab4e3b8263a818c.testShortInput(Case_b33b090a1ab4e3b8263a818c.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Par",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "3b887796f4af29f29ae00df96607d12f5a7394c78f674e070281b80c80a65970",
+      "index": 5
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "method outside API allowlist"
+    },
+    {
+      "index": 7,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "method outside API allowlist"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "only inline initialized byte arrays are accepted"
+    },
+    {
+      "index": 1,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<[MQ]==> but was:<[AA]==>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_96e86311434de55ab9af01ee.testSingleByteArray(Case_96e86311434de55ab9af01ee.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunn"
+    },
+    {
+      "index": 2,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<[YWJj]> but was:<[AAAA]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_bb724793f20e7dedc551725a.testMultiByteArray(Case_bb724793f20e7dedc551725a.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunne"
+    },
+    {
+      "index": 3,
+      "diagnostic": "only inline initialized byte arrays are accepted"
+    }
+  ]
+}

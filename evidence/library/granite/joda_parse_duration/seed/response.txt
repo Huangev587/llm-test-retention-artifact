@@ -1,0 +1,95 @@
+1.
+```java
+@Test
+public void testParseValidDuration() throws Exception {
+    Duration duration = Duration.parse("P1DT2H3M4S");
+    assertEquals("P1DT2H3M4S", duration.toString());
+    assertEquals(1, duration.getDays());
+    assertEquals(2, duration.getHours());
+    assertEquals(3, duration.getMinutes());
+    assertEquals(4, duration.getSeconds());
+}
+```
+
+2.
+```java
+@Test
+public void testParseZeroDuration() throws Exception {
+    Duration duration = Duration.parse("P0DT0H0M0S");
+    assertEquals("P0DT0H0M0S", duration.toString());
+    assertEquals(0, duration.getDays());
+    assertEquals(0, duration.getHours());
+    assertEquals(0, duration.getMinutes());
+    assertEquals(0, duration.getSeconds());
+}
+```
+
+3.
+```java
+@Test
+public void testParseMaxDuration() throws Exception {
+    Duration duration = Duration.parse("P31622400DT23H59M59S");
+    assertEquals("P31622400DT23H59M59S", duration.toString());
+    assertEquals(31622400, duration.getDays());
+    assertEquals(23, duration.getHours());
+    assertEquals(59, duration.getMinutes());
+    assertEquals(59, duration.getSeconds());
+}
+```
+
+4.
+```java
+@Test
+public void testParseMinDuration() throws Exception {
+    Duration duration = Duration.parse("P-31622400DT-23H-59M-59S");
+    assertEquals("P-31622400DT-23H-59M-59S", duration.toString());
+    assertEquals(-31622400, duration.getDays());
+    assertEquals(-23, duration.getHours());
+    assertEquals(-59, duration.getMinutes());
+    assertEquals(-59, duration.getSeconds());
+}
+```
+
+5.
+```java
+@Test
+public void testParseFractionalSeconds() throws Exception {
+    Duration duration = Duration.parse("P1DT2H3M4.5S");
+    assertEquals("P1DT2H3M4.5S", duration.toString());
+    assertEquals(1, duration.getDays());
+    assertEquals(2, duration.getHours());
+    assertEquals(3, duration.getMinutes());
+    assertEquals(4, duration.getSeconds());
+    assertEquals(5, duration.getMillis());
+}
+```
+
+6.
+```java
+@Test
+public void testParseNegativeFractionalSeconds() throws Exception {
+    Duration duration = Duration.parse("P1DT2H3M-4.5S");
+    assertEquals("P1DT2H3M-4.5S", duration.toString());
+    assertEquals(1, duration.getDays());
+    assertEquals(2, duration.getHours());
+    assertEquals(3, duration.getMinutes());
+    assertEquals(-4, duration.getSeconds());
+    assertEquals(-5, duration.getMillis());
+}
+```
+
+7.
+```java
+@Test
+public void testParseInvalidDuration() {
+    assertThrows(IllegalArgumentException.class, () -> Duration.parse("P1DT2H3M60S"));
+}
+```
+
+8.
+```java
+@Test
+public void testParseInvalidDurationWithMinusSign() {
+    assertThrows(IllegalArgumentException.class, () -> Duration.parse("P1DT2H3M-60S"));
+}
+```

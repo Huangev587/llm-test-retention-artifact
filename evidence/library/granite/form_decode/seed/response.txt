@@ -1,0 +1,32 @@
+1. @Test public void testNullInput() throws Exception {
+    Assert.assertEquals(null, decode(null, "UTF-8"));
+}
+
+2. @Test public void testEmptyInput() throws Exception {
+    Assert.assertEquals("", decode("", "UTF-8"));
+}
+
+3. @Test public void testSingleCharacterInput() throws Exception {
+    Assert.assertEquals("a", decode("%61", "UTF-8"));
+}
+
+4. @Test public void testMultipleCharactersInput() throws Exception {
+    Assert.assertEquals("hello", decode("%68%65%6c%6c%6f", "UTF-8"));
+}
+
+5. @Test public void testSpecialCharactersInput() throws Exception {
+    Assert.assertEquals("!@#$%^&*()", decode("%21%40%23%24%25%5E%26%2A%28%29", "UTF-8"));
+}
+
+6. @Test public void testUnicodeCharactersInput() throws Exception {
+    Assert.assertEquals("🌎", decode("%F0%9F%8C%82", "UTF-8"));
+}
+
+7. @Test public void testMixedCharactersInput() throws Exception {
+    Assert.assertEquals("héllo", decode("%68%C3%A9%6C%6C%6F", "UTF-8"));
+}
+
+8. @Test public void testLongInput() throws Exception {
+    String input = "This is a long input string with various characters: %68%65%6c%6c%6f %21%40%23%24%25%5E%26%2A%28%29 %F0%9F%8C%82";
+    Assert.assertEquals(input, decode(input, "UTF-8"));
+}

@@ -1,0 +1,27 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "e45cd20b26db8f72f46de42e5b28a172d81d604c70995138d2da36b817695a26",
+  "sites": 6,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.joda.time.LocalTime\",\"withMillisOfSecond\",\"(I)Lorg/joda/time/LocalTime;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[12]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[12]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[16]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[18]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"set\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[17]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"set\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[21]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"set\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[22]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"set\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[23]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[6]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[24]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[27]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[30]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[34]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[36]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[6]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[37]]",
+    "[\"org.joda.time.field.PreciseDateTimeField\",\"set\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator\",[9]]"
+  ]
+}

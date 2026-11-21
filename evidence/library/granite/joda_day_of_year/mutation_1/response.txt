@@ -1,0 +1,41 @@
+1. @Test public void testDayOfYear() throws Exception {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    int dayOfYear = date.getDayOfYear();
+    Assert.assertEquals(1, dayOfYear);
+}
+
+2. @Test public void testDayOfYearMax() throws Exception {
+    LocalDate date = new LocalDate(2099, 12, 31);
+    int dayOfYear = date.getDayOfYear();
+    Assert.assertEquals(365, dayOfYear);
+}
+
+3. @Test public void testDayOfYearLeapYear() throws Exception {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    Assert.assertEquals(1, date.getDayOfYear());
+}
+
+4. @Test public void testDayOfYearLeapYearMax() throws Exception {
+    LocalDate date = new LocalDate(2000, 12, 31);
+    Assert.assertEquals(366, date.getDayOfYear());
+}
+
+5. @Test public void testDayOfYearMin() throws Exception {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    Assert.assertEquals(1, date.getDayOfYear());
+}
+
+6. @Test public void testDayOfYearMaxYear() throws Exception {
+    LocalDate date = new LocalDate(2100, 12, 31);
+    Assert.assertEquals(365, date.getDayOfYear());
+}
+
+7. @Test public void testDayOfYearMaxYearLeap() throws Exception {
+    LocalDate date = new LocalDate(2000, 12, 31);
+    Assert.assertEquals(366, date.getDayOfYear());
+}
+
+8. @Test public void testDayOfYearMinYear() throws Exception {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    Assert.assertEquals(1, date.getDayOfYear());
+}

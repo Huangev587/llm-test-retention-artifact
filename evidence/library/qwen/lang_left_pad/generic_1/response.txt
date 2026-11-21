@@ -1,0 +1,36 @@
+```java
+@Test
+public void testLeftPadDecreaseSize() throws Exception {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", 1, 'z'));
+}
+
+@Test
+public void testLeftPadNegativeSize() throws Exception {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", -1, 'z'));
+}
+
+@Test
+public void testLeftPadSingleCharacter() throws Exception {
+    Assert.assertEquals("a", StringUtils.leftPad("a", 2, 'b'));
+}
+
+@Test
+public void testLeftPadMaxSize() throws Exception {
+    Assert.assertEquals(repeat('x', 256), StringUtils.leftPad("", 256, 'x'));
+}
+
+@Test
+public void testLeftPadMinSize() throws Exception {
+    Assert.assertEquals("", StringUtils.leftPad("", 0, 'x'));
+}
+
+@Test
+public void testLeftPadWithNonAsciiChar() throws Exception {
+    Assert.assertEquals("\u00e9\u00e9\u00e9", StringUtils.leftPad("", 3, '\u00e9'));
+}
+
+@Test
+public void testLeftPadWithWhitespaceChar() throws Exception {
+    Assert.assertEquals("   bat", StringUtils.leftPad("bat", 7, ' '));
+}
+```

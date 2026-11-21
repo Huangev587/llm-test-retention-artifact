@@ -1,0 +1,17 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "543e0b2f04872bdeeca555cfb75a8a345a44bb35f76cc6fb54ca9d924b663572",
+  "sites": 4,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.joda.time.LocalDate\",\"getDayOfYear\",\"()I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[9]]",
+    "[\"org.joda.time.chrono.BasicDayOfYearDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[7]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfYear\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[9]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfYear\",\"(JI)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[11]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfYear\",\"(JI)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[13]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfYear\",\"(JI)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[16]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfYear\",\"(JI)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[17]]"
+  ]
+}

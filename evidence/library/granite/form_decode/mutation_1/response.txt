@@ -1,0 +1,13 @@
+```java
+@Test
+public void testDecode() throws DecoderException, UnsupportedEncodingException {
+    Assert.assertEquals("test", decode("test", "UTF-8"));
+    Assert.assertEquals("test with spaces", decode("test%20with%20spaces", "UTF-8"));
+    Assert.assertEquals("test%20with%20unicode%3A%E2%98%83", decode("test%20with%20unicode%3A%E2%98%83", "UTF-8"));
+    Assert.assertEquals("%C3%A9", decode("\u00C9", "UTF-8"));
+    Assert.assertEquals("https://example.com", decode("https://example.com", "UTF-8"));
+    Assert.assertEquals("http://example.com/path?query=value", decode("http://example.com/path?query=value", "UTF-8"));
+    Assert.assertEquals("http://example.com/?query=value", decode("http://example.com/?query=value", "UTF-8"));
+    Assert.assertEquals("http://example.com", decode("http://example.com/", "UTF-8"));
+}
+```

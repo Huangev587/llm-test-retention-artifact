@@ -1,0 +1,55 @@
+1. @Test public void testWithDayOfMonth() throws Exception {
+   LocalDate date = LocalDate.of(1900, 1, 1);
+   LocalDate result = date.withDayOfMonth(15);
+   assertArrayEquals(new int[]{1900, 1, 15}, result.toInstant().toEpochMilli() / 10000000000L >> 32);
+}
+
+2. @Test public void testWithDayOfMonthMaxValue() throws Exception {
+   LocalDate date = LocalDate.of(2100, 12, 31);
+   LocalDate result = date.withDayOfMonth(32);
+   assertArrayEquals(new int[]{2100, 12, 31}, result.toInstant().toEpochMilli() / 10000000000L >> 32);
+}
+
+3. @Test public void testWithDayOfMonthMinValue() throws Exception {
+   LocalDate date = LocalDate.of(1900, 1, 1);
+   LocalDate result = date.withDayOfMonth(1);
+   assertArrayEquals(new int[]{1900, 1, 1}, result.toInstant().toEpochMilli() / 10000000000L >> 32);
+}
+
+4. @Test public void testWithDayOfMonthInvalidMonth() throws Exception {
+   LocalDate date = LocalDate.of(1900, 2, 30);
+   try {
+       date.withDayOfMonth(31);
+       assert false : "Expected IllegalArgumentException";
+   } catch (IllegalArgumentException e) {
+       // Expected
+   }
+}
+
+5. @Test public void testWithDayOfMonthInvalidDay() throws Exception {
+   LocalDate date = LocalDate.of(1900, 4, 31);
+   try {
+       date.withDayOfMonth(32);
+       assert false : "Expected IllegalArgumentException";
+   } catch (IllegalArgumentException e) {
+       // Expected
+   }
+}
+
+6. @Test public void testWithDayOfMonthSameDay() throws Exception {
+   LocalDate date = LocalDate.of(1900, 1, 1);
+   LocalDate result = date.withDayOfMonth(1);
+   assertArrayEquals(new int[]{1900, 1, 1}, result.toInstant().toEpochMilli() / 10000000000L >> 32);
+}
+
+7. @Test public void testWithDayOfMonthDifferentDay() throws Exception {
+   LocalDate date = LocalDate.of(1900, 1, 1);
+   LocalDate result = date.withDayOfMonth(15);
+   assertArrayEquals(new int[]{1900, 1, 15}, result.toInstant().toEpochMilli() / 10000000000L >> 32);
+}
+
+8. @Test public void testWithDayOfMonthDifferentMonth() throws Exception {
+   LocalDate date = LocalDate.of(1900, 1, 31);
+   LocalDate result = date.withDayOfMonth(15);
+   assertArrayEquals(new int[]{1900, 2, 15}, result.toInstant().toEpochMilli() / 10000000000L >> 32);
+}

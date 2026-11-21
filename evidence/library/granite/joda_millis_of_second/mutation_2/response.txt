@@ -1,0 +1,55 @@
+1. @Test public void testWithMillisOfSecond() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 45, 123);
+   LocalTime result = time.withMillisOfSecond(456);
+   Assert.assertEquals("12:30:45.456", result.toString());
+}
+
+2. @Test public void testWithMillisOfSecondOutOfRange() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 45, 123);
+   try {
+       time.withMillisOfSecond(1000);
+       Assert.fail("Expected IllegalArgumentException");
+   } catch (IllegalArgumentException e) {
+       Assert.assertTrue(true);
+   }
+}
+
+3. @Test public void testWithMillisOfSecondZero() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 45, 123);
+   LocalTime result = time.withMillisOfSecond(0);
+   Assert.assertEquals("12:30:45.123", result.toString());
+}
+
+4. @Test public void testWithMillisOfSecondMax() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 45, 999);
+   LocalTime result = time.withMillisOfSecond(999);
+   Assert.assertEquals("12:30:45.999", result.toString());
+}
+
+5. @Test public void testWithMillisOfSecondMin() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 45, 0);
+   LocalTime result = time.withMillisOfSecond(0);
+   Assert.assertEquals("12:30:45.000", result.toString());
+}
+
+6. @Test public void testWithMillisOfSecondNegative() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 45, 123);
+   try {
+       time.withMillisOfSecond(-1);
+       Assert.fail("Expected IllegalArgumentException");
+   } catch (IllegalArgumentException e) {
+       Assert.assertTrue(true);
+   }
+}
+
+7. @Test public void testWithMillisOfSecondMaxWithTime() throws Exception {
+   LocalTime time = LocalTime.of(23, 59, 59, 999);
+   LocalTime result = time.withMillisOfSecond(999);
+   Assert.assertEquals("23:59:59.999", result.toString());
+}
+
+8. @Test public void testWithMillisOfSecondMinWithTime() throws Exception {
+   LocalTime time = LocalTime.of(0, 0, 0, 0);
+   LocalTime result = time.withMillisOfSecond(0);
+   Assert.assertEquals("00:00:00.000", result.toString());
+}

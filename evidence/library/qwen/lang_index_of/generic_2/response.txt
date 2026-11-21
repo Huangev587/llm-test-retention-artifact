@@ -1,0 +1,47 @@
+```java
+@Test
+public void testNullArray() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(null, 5));
+}
+
+@Test
+public void testSingleElementMatch() throws Exception {
+    assertEquals(0, ArrayUtils.indexOf(new int[]{42}, 42));
+}
+
+@Test
+public void testSingleElementNoMatch() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(new int[]{42}, 99));
+}
+
+@Test
+public void testLargeArrayNoMatch() throws Exception {
+    int[] largeArray = new int[64];
+    Arrays.fill(largeArray, 123);
+    assertEquals(-1, ArrayUtils.indexOf(largeArray, 456));
+}
+
+@Test
+public void testLargeArrayMatchFirst() throws Exception {
+    int[] largeArray = new int[64];
+    Arrays.fill(largeArray, 123);
+    largeArray[0] = 456;
+    assertEquals(0, ArrayUtils.indexOf(largeArray, 456));
+}
+
+@Test
+public void testLargeArrayMatchLast() throws Exception {
+    int[] largeArray = new int[64];
+    Arrays.fill(largeArray, 123);
+    largeArray[63] = 456;
+    assertEquals(63, ArrayUtils.indexOf(largeArray, 456));
+}
+
+@Test
+public void testLargeArrayMatchMiddle() throws Exception {
+    int[] largeArray = new int[64];
+    Arrays.fill(largeArray, 123);
+    largeArray[32] = 456;
+    assertEquals(32, ArrayUtils.indexOf(largeArray, 456));
+}
+```

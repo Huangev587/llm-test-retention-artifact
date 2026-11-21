@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "42fb45e94fe82b278db7e36e93faf3e0db018dacac6eab2ebce068b9c5769d19",
+      "source": "@Test\npublic void testParseValidDuration() throws Exception {\n    Duration duration = Duration.parse(\"PT1H\");\n    assertEquals(3600000L, duration.getMillis());\n}",
+      "class_name": "entry.Case_42fb45e94fe82b278db7e36e",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.IllegalArgumentException: Invalid format: \"PT1H\"\n\tat org.joda.time.convert.StringConverter.getDurationMillis(StringConverter.java:113)\n\tat org.joda.time.base.BaseDuration.<init>(BaseDuration.java:105)\n\tat org.joda.time.Duration.<init>(Duration.java:212)\n\tat org.joda.time.Duration.parse(Duration.java:62)\n\tat entry.Case_42fb45e94fe82b278db7e36e.testParseValidDuration(Case_42fb45e94fe82b278db7e36e.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMet",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "2801f5cfda69aa5809a4c2e63c20d35495233d648c3f63adc5d1972eca060937",
+      "index": 0
+    },
+    {
+      "compile_key": "c34c55a37ce90f321a0782f678a8651a9f0224ae89ba42ab271d298dabcc04a0",
+      "source": "@Test\npublic void testParseValidNegativeDuration() throws Exception {\n    Duration duration = Duration.parse(\"-PT1H\");\n    assertEquals(-3600000L, duration.getMillis());\n}",
+      "class_name": "entry.Case_c34c55a37ce90f321a0782f6",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.IllegalArgumentException: Invalid format: \"-PT1H\"\n\tat org.joda.time.convert.StringConverter.getDurationMillis(StringConverter.java:113)\n\tat org.joda.time.base.BaseDuration.<init>(BaseDuration.java:105)\n\tat org.joda.time.Duration.<init>(Duration.java:212)\n\tat org.joda.time.Duration.parse(Duration.java:62)\n\tat entry.Case_c34c55a37ce90f321a0782f6.testParseValidNegativeDuration(Case_c34c55a37ce90f321a0782f6.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(Fra",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "2cfb734eab240771733b367ea0ce2240cd2e708f8a79feb3350de87fa760c8d5",
+      "index": 1
+    },
+    {
+      "compile_key": "6c847aeb671c45bf9babf22b6b4df019e3034c123b52fc981e6e28de5ceabf84",
+      "source": "@Test\npublic void testParseValidFractionalDuration() throws Exception {\n    Duration duration = Duration.parse(\"PT1.5H\");\n    assertEquals(5400000L, duration.getMillis());\n}",
+      "class_name": "entry.Case_6c847aeb671c45bf9babf22b",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.IllegalArgumentException: Invalid format: \"PT1.5H\"\n\tat org.joda.time.convert.StringConverter.getDurationMillis(StringConverter.java:113)\n\tat org.joda.time.base.BaseDuration.<init>(BaseDuration.java:105)\n\tat org.joda.time.Duration.<init>(Duration.java:212)\n\tat org.joda.time.Duration.parse(Duration.java:62)\n\tat entry.Case_6c847aeb671c45bf9babf22b.testParseValidFractionalDuration(Case_6c847aeb671c45bf9babf22b.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "fa9dcc88ec71069124ede911e6230ea32f23a8dab96c0c17ed82b1ed37e5071b",
+      "index": 2
+    },
+    {
+      "compile_key": "f785f9ed1de12b18154ba629cab637344788161cfb565e371061be3b233df9c1",
+      "source": "@Test\npublic void testParseValidLongDuration() throws Exception {\n    Duration duration = Duration.parse(\"PT99999999999999S\");\n    assertEquals(99999999999999000L, duration.getMillis());\n}",
+      "class_name": "entry.Case_f785f9ed1de12b18154ba629",
+      "original_pass": true,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "1b9acb100e094d1ce987551b57e59f4710c18f710180d402fee5f086b88bb163",
+      "index": 3
+    },
+    {
+      "compile_key": "89ff9613b8f9314e990e56e525840131a12205af4011babb5ab414fefe374092",
+      "source": "@Test\npublic void testParseValidShortDuration() throws Exception {\n    Duration duration = Duration.parse(\"PT1S\");\n    assertEquals(1000L, duration.getMillis());\n}",
+      "class_name": "entry.Case_89ff9613b8f9314e990e56e5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "cd9579cf300dfc17fcf15aa9f99ef1fc556031d045c72e349b6e5422df235f6d",
+      "index": 4
+    },
+    {
+      "compile_key": "be119c0ade0d9dd6692e2403878fb3efc72a3e8e086025e7ada2c5548ce39fc9",
+      "source": "@Test\npublic void testParseValidZeroDuration() throws Exception {\n    Duration duration = Duration.parse(\"PT0S\");\n    assertEquals(0L, duration.getMillis());\n}",
+      "class_name": "entry.Case_be119c0ade0d9dd6692e2403",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "0a9a92bc559c4f4309db8ac3ab75301c64ac15513e50d269a346203faeb9d9d5",
+      "index": 5
+    },
+    {
+      "compile_key": "2dca52d3979b46bcdd7a0ef446d7c6e2a9754c1e04b91ce166d2e0ce96611c3d",
+      "source": "@Test\npublic void testParseValidMaxDuration() throws Exception {\n    Duration duration = Duration.parse(\"PT72000000000000S\");\n    assertEquals(72000000000000000L, duration.getMillis());\n}",
+      "class_name": "entry.Case_2dca52d3979b46bcdd7a0ef4",
+      "original_pass": true,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "95d0366f8c48e22ff90d7de3485c8fc5a69a4ca72b16c5ee0fb116508bfadae0",
+      "index": 6
+    },
+    {
+      "compile_key": "75041895c2f5cd3467e95cfaf041c2c3225e741ee197aa0ce8c59110ea6380c6",
+      "source": "@Test\npublic void testParseValidMinDuration() throws Exception {\n    Duration duration = Duration.parse(\"-PT72000000000000S\");\n    assertEquals(-72000000000000000L, duration.getMillis());\n}",
+      "class_name": "entry.Case_75041895c2f5cd3467e95cfa",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.IllegalArgumentException: Invalid format: \"-PT72000000000000S\"\n\tat org.joda.time.convert.StringConverter.getDurationMillis(StringConverter.java:113)\n\tat org.joda.time.base.BaseDuration.<init>(BaseDuration.java:105)\n\tat org.joda.time.Duration.<init>(Duration.java:212)\n\tat org.joda.time.Duration.parse(Duration.java:62)\n\tat entry.Case_75041895c2f5cd3467e95cfa.testParseValidMinDuration(Case_75041895c2f5cd3467e95cfa.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosi",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "10cfd2fb7a29039ebb1ef1d68c1aa27af2ae4d863b7912227a0e16136a2a5ae4",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "java.lang.IllegalArgumentException: Invalid format: \"PT1H\"\n\tat org.joda.time.convert.StringConverter.getDurationMillis(StringConverter.java:113)\n\tat org.joda.time.base.BaseDuration.<init>(BaseDuration.java:105)\n\tat org.joda.time.Duration.<init>(Duration.java:212)\n\tat org.joda.time.Duration.parse(Duration.java:62)\n\tat entry.Case_42fb45e94fe82b278db7e36e.testParseValidDuration(Case_42fb45e94fe82b278db7e36e.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMet"
+    },
+    {
+      "index": 1,
+      "diagnostic": "java.lang.IllegalArgumentException: Invalid format: \"-PT1H\"\n\tat org.joda.time.convert.StringConverter.getDurationMillis(StringConverter.java:113)\n\tat org.joda.time.base.BaseDuration.<init>(BaseDuration.java:105)\n\tat org.joda.time.Duration.<init>(Duration.java:212)\n\tat org.joda.time.Duration.parse(Duration.java:62)\n\tat entry.Case_c34c55a37ce90f321a0782f6.testParseValidNegativeDuration(Case_c34c55a37ce90f321a0782f6.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(Fra"
+    },
+    {
+      "index": 2,
+      "diagnostic": "java.lang.IllegalArgumentException: Invalid format: \"PT1.5H\"\n\tat org.joda.time.convert.StringConverter.getDurationMillis(StringConverter.java:113)\n\tat org.joda.time.base.BaseDuration.<init>(BaseDuration.java:105)\n\tat org.joda.time.Duration.<init>(Duration.java:212)\n\tat org.joda.time.Duration.parse(Duration.java:62)\n\tat entry.Case_6c847aeb671c45bf9babf22b.testParseValidFractionalDuration(Case_6c847aeb671c45bf9babf22b.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively("
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

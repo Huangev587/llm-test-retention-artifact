@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "e0e1cf0b79d0aa774daf421a466a609903dd1a9fb1d2e0ce7083422f4b25b8db",
+      "source": "@Test\npublic void testGetDayOfYearMax() throws Exception {\n    LocalDate date = new LocalDate(2099, 12, 31);\n    int dayOfYear = date.getDayOfYear();\n    assertArrayEquals(new int[]{365}, new int[]{dayOfYear});\n}",
+      "class_name": "entry.Case_e0e1cf0b79d0aa774daf421a",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6c5e7df3f1c5f0717c327e7954de08998b740de5e95ff656adbe6bf5aac4426a",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

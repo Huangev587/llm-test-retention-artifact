@@ -1,0 +1,57 @@
+1. ```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(StringUtils.reverse(null));
+}
+```
+
+2. ```java
+@Test
+public void testEmptyStringInput() {
+    Assert.assertEquals("", StringUtils.reverse(""));
+}
+```
+
+3. ```java
+@Test
+public void testSingleCharacterInput() {
+    Assert.assertEquals("a", StringUtils.reverse("a"));
+}
+```
+
+4. ```java
+@Test
+public void testMultipleCharactersInput() {
+    Assert.assertEquals("tna", StringUtils.reverse("nat"));
+}
+```
+
+5. ```java
+@Test
+public void testUnicodeInput() {
+    Assert.assertEquals("ναίρει", StringUtils.reverse("είναινα"));
+}
+```
+
+6. ```java
+@Test
+public void testControlCharactersInput() {
+    Assert.assertEquals("\x01\x02\x03", StringUtils.reverse("\x03\x02\x01"));
+}
+```
+
+7. ```java
+@Test
+public void testLongStringInput() {
+    String original = ArrayUtils.toString(new String[128]);
+    String reversed = StringUtils.reverse(original);
+    Assert.assertEquals(original, new StringBuilder(reversed).reverse().toString());
+}
+```
+
+8. ```java
+@Test
+public void testExceptionInput() {
+    Assert.assertNull(StringUtils.reverse((String) null));
+}
+```

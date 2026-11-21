@@ -1,0 +1,41 @@
+```java
+@Test(expected = IndexOutOfBoundsException.class)
+public void testRemoveNullArray() throws Exception {
+    ArrayUtils.remove(null, 0);
+}
+
+@Test(expected = IndexOutOfBoundsException.class)
+public void testRemoveEmptyArray() throws Exception {
+    ArrayUtils.remove(new int[0], 0);
+}
+
+@Test(expected = IndexOutOfBoundsException.class)
+public void testRemoveNegativeIndex() throws Exception {
+    ArrayUtils.remove(new int[]{1}, -1);
+}
+
+@Test(expected = IndexOutOfBoundsException.class)
+public void testRemoveTooLargeIndex() throws Exception {
+    ArrayUtils.remove(new int[]{1}, 1);
+}
+
+@Test
+public void testRemoveSingleElement() throws Exception {
+    assertArrayEquals(new int[]{}, ArrayUtils.remove(new int[]{1}, 0));
+}
+
+@Test
+public void testRemoveFirstElement() throws Exception {
+    assertArrayEquals(new int[]{6}, ArrayUtils.remove(new int[]{2, 6}, 0));
+}
+
+@Test
+public void testRemoveLastElement() throws Exception {
+    assertArrayEquals(new int[]{2}, ArrayUtils.remove(new int[]{2, 6}, 1));
+}
+
+@Test
+public void testRemoveMiddleElement() throws Exception {
+    assertArrayEquals(new int[]{2, 3}, ArrayUtils.remove(new int[]{2, 6, 3}, 1));
+}
+```

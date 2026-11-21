@@ -1,0 +1,41 @@
+```java
+@Test
+public void testNull() throws Exception {
+    assertNull(StringUtils.capitalize(null));
+}
+
+@Test
+public void testEmpty() throws Exception {
+    assertEquals("", StringUtils.capitalize(""));
+}
+
+@Test
+public void testSingleCharLowercase() throws Exception {
+    assertEquals("A", StringUtils.capitalize("a"));
+}
+
+@Test
+public void testSingleCharUppercase() throws Exception {
+    assertEquals("A", StringUtils.capitalize("A"));
+}
+
+@Test
+public void testMultipleCharsLowercase() throws Exception {
+    assertEquals("Hello", StringUtils.capitalize("hello"));
+}
+
+@Test
+public void testMultipleCharsMixedCase() throws Exception {
+    assertEquals("Hello", StringUtils.capitalize("hElLo"));
+}
+
+@Test
+public void testLeadingWhitespace() throws Exception {
+    assertEquals(" Hello", StringUtils.capitalize(" hello"));
+}
+
+@Test
+public void testTrailingWhitespace() throws Exception {
+    assertEquals("Hello ", StringUtils.capitalize("hello "));
+}
+```

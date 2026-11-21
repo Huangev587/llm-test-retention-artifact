@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "dcbee7d20158ba8bad6cf40653f1a620e9af8f3189af671997aeed9018f2fa79",
+      "source": "@Test\npublic void testGetDayOfWeek_1900_01_01() {\n    LocalDate date = new LocalDate(1900, 1, 1);\n    assertArrayEquals(new int[]{1}, new int[]{date.getDayOfWeek()});\n}",
+      "class_name": "entry.Case_dcbee7d20158ba8bad6cf406",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "4644265974294b18f790d109ad41c64cb9bac86a71da26f6c6341284078d4d2a",
+      "index": 0
+    },
+    {
+      "compile_key": "0849cb59a2273791e43f8ad9eefab93817000466b90349273869b949bc0c53e7",
+      "source": "@Test\npublic void testGetDayOfWeek_1950_06_01() {\n    LocalDate date = new LocalDate(1950, 6, 1);\n    assertArrayEquals(new int[]{4}, new int[]{date.getDayOfWeek()});\n}",
+      "class_name": "entry.Case_0849cb59a2273791e43f8ad9",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "228902cd55d63c5a3d86bba776288475f6d80c46e74efcc33ba767b1bed6b7bc",
+      "index": 1
+    },
+    {
+      "compile_key": "7102e2d86082a9a1f0a2b591695281f2dafeefc79b7912abfd98c891007137c4",
+      "source": "@Test\npublic void testGetDayOfWeek_2000_12_31() {\n    LocalDate date = new LocalDate(2000, 12, 31);\n    assertArrayEquals(new int[]{7}, new int[]{date.getDayOfWeek()});\n}",
+      "class_name": "entry.Case_7102e2d86082a9a1f0a2b591",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "5ca763c11064706664ee864eaad320526ecf783bfb65add5be283e227876ddb9",
+      "index": 2
+    },
+    {
+      "compile_key": "fb0e307a236f417cd697115b6b6cf16d1cfc41a29ed05791f0f48f61aeecc464",
+      "source": "@Test\npublic void testGetDayOfWeek_2100_02_28() {\n    LocalDate date = new LocalDate(2100, 2, 28);\n    assertArrayEquals(new int[]{6}, new int[]{date.getDayOfWeek()});\n}",
+      "class_name": "entry.Case_fb0e307a236f417cd697115b",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "arrays first differed at element [0]; expected:<6> but was:<7>\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:55)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:416)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:427)\n\tat entry.Case_fb0e307a236f417cd697115b.testGetDayOfWeek_2100_02_28(Case_fb0e307a236f417cd697115b.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(Framewo",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "4ab5d7f929134fddbede3b0405d6eb4afa40ff232e1d624b7d7b98d87c94b354",
+      "index": 3
+    },
+    {
+      "compile_key": "ca659303f93a0bd32d71846ef9ca95b8979cf8c3922049725259cfe1ea121261",
+      "source": "@Test\npublic void testGetDayOfWeek_1900_02_28() {\n    LocalDate date = new LocalDate(1900, 2, 28);\n    assertArrayEquals(new int[]{5}, new int[]{date.getDayOfWeek()});\n}",
+      "class_name": "entry.Case_ca659303f93a0bd32d71846e",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "arrays first differed at element [0]; expected:<5> but was:<3>\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:55)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:416)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:427)\n\tat entry.Case_ca659303f93a0bd32d71846e.testGetDayOfWeek_1900_02_28(Case_ca659303f93a0bd32d71846e.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(Framewo",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "c4459f8f55da5fa38e955d93cf392e73858b9c3fd115b4ea3ee0b0de1456c2c5",
+      "index": 4
+    },
+    {
+      "compile_key": "df99194f570f15b1d14537216653d5236295853f9b1096a015aff3b889842c66",
+      "source": "@Test\npublic void testGetDayOfWeek_1900_04_30() {\n    LocalDate date = new LocalDate(1900, 4, 30);\n    assertArrayEquals(new int[]{3}, new int[]{date.getDayOfWeek()});\n}",
+      "class_name": "entry.Case_df99194f570f15b1d1453721",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "arrays first differed at element [0]; expected:<3> but was:<1>\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:55)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:416)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:427)\n\tat entry.Case_df99194f570f15b1d1453721.testGetDayOfWeek_1900_04_30(Case_df99194f570f15b1d1453721.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(Framewo",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "f087007019f4faa04878499616ce600a7213cbd222fe5fb1da65aceb5f309f76",
+      "index": 5
+    },
+    {
+      "compile_key": "240eb702abe6560735039a1b4bff09db2237f20905c345a5cdbf519b0e700cbf",
+      "source": "@Test\npublic void testGetDayOfWeek_1900_06_31() {\n    LocalDate date = new LocalDate(1900, 6, 31);\n    assertArrayEquals(new int[]{5}, new int[]{date.getDayOfWeek()});\n}",
+      "class_name": "entry.Case_240eb702abe6560735039a1b",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.joda.time.IllegalFieldValueException: Value 31 for dayOfMonth must be in the range [1,30]: year: 1900 month: 6\n\tat org.joda.time.chrono.BasicChronology.getDateMidnightMillis(BasicChronology.java:645)\n\tat org.joda.time.chrono.BasicChronology.getDateTimeMillis0(BasicChronology.java:188)\n\tat org.joda.time.chrono.BasicChronology.getDateTimeMillis(BasicChronology.java:162)\n\tat org.joda.time.chrono.GregorianChronology.getDateTimeMillis(GregorianChronology.java:44)\n\tat org.joda.time.chrono.AssembledChronology.getDateTimeMillis(AssembledChronology.java:122)\n\tat org.joda.time.LocalDate.<init>(LocalDate.java:459)\n\tat org.joda.time.LocalDate.<init>(LocalDate.java:438)\n\tat entry.Case_240eb702abe6560735039a1b.testGetDayOfWeek_1900_06_31(Case_240eb702abe6560735039a1b.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "dd068e9e525ab6dba168ba6b27e9f704c62ca5f8e94a1cea97b43c1bb4df2698",
+      "index": 6
+    },
+    {
+      "compile_key": "9ba28c5ebc949a2e51f27461c677eb9e20fb6637f9ee8e2313c20292a356f73a",
+      "source": "@Test\npublic void testGetDayOfWeek_1900_12_31() {\n    LocalDate date = new LocalDate(1900, 12, 31);\n    assertArrayEquals(new int[]{6}, new int[]{date.getDayOfWeek()});\n}",
+      "class_name": "entry.Case_9ba28c5ebc949a2e51f27461",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "arrays first differed at element [0]; expected:<6> but was:<1>\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:55)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:416)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:427)\n\tat entry.Case_9ba28c5ebc949a2e51f27461.testGetDayOfWeek_1900_12_31(Case_9ba28c5ebc949a2e51f27461.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(Framewo",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "4c78132c3fcdeb75b98b7a3201212b66592273fc83e85bb551fc163eafb696c6",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "arrays first differed at element [0]; expected:<6> but was:<7>\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:55)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:416)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:427)\n\tat entry.Case_fb0e307a236f417cd697115b.testGetDayOfWeek_2100_02_28(Case_fb0e307a236f417cd697115b.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(Framewo"
+    }
+  ]
+}

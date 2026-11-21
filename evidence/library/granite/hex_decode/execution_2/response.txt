@@ -1,0 +1,8 @@
+1. @Test public void testEmptyString() throws Exception { Assert.assertArrayEquals(new byte[0], Hex.decodeHex("")); }
+2. @Test public void testZeroLength() throws Exception { Assert.assertArrayEquals(new byte[0], Hex.decodeHex("00")); }
+3. @Test public void testSingleByte() throws Exception { Assert.assertArrayEquals(new byte[]{0x00}, Hex.decodeHex("00")); }
+4. @Test public void testTwoBytes() throws Exception { Assert.assertArrayEquals(new byte[]{0x41, 0x42}, Hex.decodeHex("4142")); }
+5. @Test public void testMaxLength() throws Exception { Assert.assertArrayEquals(new byte[]{0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F}, Hex.decodeHex("000102030405060708090A0B0C0D0E0F")); }
+6. @Test public void testIllegalCharacter() throws Exception { Assert.thrown(DecoderException.class, () -> Hex.decodeHex("G0")); }
+7. @Test public void testOddLength() throws Exception { Assert.thrown(DecoderException.class, () -> Hex.decodeHex("414243")); }
+8. @Test public void testNullInput() throws Exception { Assert.thrown(NullPointerException.class, () -> Hex.decodeHex(null)); }

@@ -1,0 +1,47 @@
+```java
+@Test
+public void testNullArray() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(null, 5));
+}
+
+@Test
+public void testSingleElementMatch() throws Exception {
+    assertEquals(0, ArrayUtils.indexOf(new int[]{5}, 5));
+}
+
+@Test
+public void testSingleElementNoMatch() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(new int[]{5}, 3));
+}
+
+@Test
+public void testLargeArrayMatchEarly() throws Exception {
+    int[] largeArray = new int[64];
+    Arrays.fill(largeArray, 0);
+    largeArray[0] = 5;
+    assertEquals(0, ArrayUtils.indexOf(largeArray, 5));
+}
+
+@Test
+public void testLargeArrayMatchLate() throws Exception {
+    int[] largeArray = new int[64];
+    Arrays.fill(largeArray, 0);
+    largeArray[63] = 5;
+    assertEquals(63, ArrayUtils.indexOf(largeArray, 5));
+}
+
+@Test
+public void testNegativeValues() throws Exception {
+    assertEquals(1, ArrayUtils.indexOf(new int[]{-1, -2, -3}, -2));
+}
+
+@Test
+public void testPositiveValues() throws Exception {
+    assertEquals(1, ArrayUtils.indexOf(new int[]{1, 2, 3}, 2));
+}
+
+@Test
+public void testZeroValue() throws Exception {
+    assertEquals(1, ArrayUtils.indexOf(new int[]{1, 0, 3}, 0));
+}
+```

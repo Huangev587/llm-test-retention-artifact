@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "89298a0e210ffd1f9c98c939fe8b99a0ae36eb471e6cde6281f7abdbb3fd11d4",
+      "source": "@Test\npublic void testGetDayOfWeekMonday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 2); // Monday\n    assertEquals(1, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_89298a0e210ffd1f9c98c939",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "e08c4f237549834110660021e0564d46247e1e5c55a9bc264fb2034c6e8ad499",
+      "index": 0
+    },
+    {
+      "compile_key": "e9fc92998e2d0b8b83cc1b5f0c81e5989ebb38bbc030580b0a690100ccc7064b",
+      "source": "@Test\npublic void testGetDayOfWeekTuesday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 3); // Tuesday\n    assertEquals(2, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_e9fc92998e2d0b8b83cc1b5f",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "fd09705fe0e28428fab82ab3e1bdf46389f21d9c3d51ca013b4fc48dbb250e52",
+      "index": 1
+    },
+    {
+      "compile_key": "563bd48f2f97084a16bcf0914db122f2f86100214b2eaac003a70c50ffc5ca3e",
+      "source": "@Test\npublic void testGetDayOfWeekWednesday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 4); // Wednesday\n    assertEquals(3, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_563bd48f2f97084a16bcf091",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "20ce5c790828e17224a25481027362ef7a3fb33e579775aabfd35a400245cdb4",
+      "index": 2
+    },
+    {
+      "compile_key": "70a27da0432caed3894cfbc2d1634301bbf5c6519829e96a78e000213b1c62b1",
+      "source": "@Test\npublic void testGetDayOfWeekThursday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 5); // Thursday\n    assertEquals(4, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_70a27da0432caed3894cfbc2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "f3180ce35db37eb1b7b7af9beef233ef2c70ce8239803043fcf4b994f043cecc",
+      "index": 3
+    },
+    {
+      "compile_key": "4b405a14c141073bbac061510bb9f2dcf8e73b31666e64ad345429c1d8501295",
+      "source": "@Test\npublic void testGetDayOfWeekFriday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 6); // Friday\n    assertEquals(5, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_4b405a14c141073bbac06151",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "c675f480990005613ee037d8b80e2d46efbb26fbbc2d17bfcfe85b5d402f033f",
+      "index": 4
+    },
+    {
+      "compile_key": "9ca9b8793e7824f2b7b140fe5370ebe2081d42b6c35d452523c929e14e16fbbd",
+      "source": "@Test\npublic void testGetDayOfWeekSaturday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 7); // Saturday\n    assertEquals(6, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_9ca9b8793e7824f2b7b140fe",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "1d60968fcbefcf433cb461330c49c7950225642c1bdd0744ae925b023f1586cc",
+      "index": 5
+    },
+    {
+      "compile_key": "000f0431a7c8a9d91211cce19c0b1965adfd8c8d50958b85bc973d0a612e8142",
+      "source": "@Test\npublic void testGetDayOfWeekSunday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 8); // Sunday\n    assertEquals(7, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_000f0431a7c8a9d91211cce1",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8b9538dbe4eb728ea9bf58095049abc44f94cbc347e9c60250c4b58520f10d57",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

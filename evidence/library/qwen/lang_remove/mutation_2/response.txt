@@ -1,0 +1,89 @@
+```java
+@Test
+public void testRemoveFirstElement() throws Exception {
+    int[] originalArray = {2, 6};
+    int[] expectedResult = {6};
+    int[] result = ArrayUtils.remove(originalArray, 0);
+    assertEquals(expectedResult.length, result.length);
+    for (int i = 0; i < expectedResult.length; i++) {
+        assertEquals(expectedResult[i], result[i]);
+    }
+}
+
+@Test
+public void testRemoveLastElement() throws Exception {
+    int[] originalArray = {2, 6};
+    int[] expectedResult = {2};
+    int[] result = ArrayUtils.remove(originalArray, 1);
+    assertEquals(expectedResult.length, result.length);
+    for (int i = 0; i < expectedResult.length; i++) {
+        assertEquals(expectedResult[i], result[i]);
+    }
+}
+
+@Test
+public void testRemoveMiddleElement() throws Exception {
+    int[] originalArray = {2, 6, 3};
+    int[] expectedResult = {2, 3};
+    int[] result = ArrayUtils.remove(originalArray, 1);
+    assertEquals(expectedResult.length, result.length);
+    for (int i = 0; i < expectedResult.length; i++) {
+        assertEquals(expectedResult[i], result[i]);
+    }
+}
+
+@Test
+public void testRemoveSingleElement() throws Exception {
+    int[] originalArray = {1};
+    int[] expectedResult = {};
+    int[] result = ArrayUtils.remove(originalArray, 0);
+    assertEquals(expectedResult.length, result.length);
+    for (int i = 0; i < expectedResult.length; i++) {
+        assertEquals(expectedResult[i], result[i]);
+    }
+}
+
+@Test
+public void testRemoveFirstNegativeElement() throws Exception {
+    int[] originalArray = {-1000000, 6};
+    int[] expectedResult = {6};
+    int[] result = ArrayUtils.remove(originalArray, 0);
+    assertEquals(expectedResult.length, result.length);
+    for (int i = 0; i < expectedResult.length; i++) {
+        assertEquals(expectedResult[i], result[i]);
+    }
+}
+
+@Test
+public void testRemoveLastPositiveElement() throws Exception {
+    int[] originalArray = {2, 1000000};
+    int[] expectedResult = {2};
+    int[] result = ArrayUtils.remove(originalArray, 1);
+    assertEquals(expectedResult.length, result.length);
+    for (int i = 0; i < expectedResult.length; i++) {
+        assertEquals(expectedResult[i], result[i]);
+    }
+}
+
+@Test
+public void testRemoveMiddleZeroElement() throws Exception {
+    int[] originalArray = {2, 0, 3};
+    int[] expectedResult = {2, 3};
+    int[] result = ArrayUtils.remove(originalArray, 1);
+    assertEquals(expectedResult.length, result.length);
+    for (int i = 0; i < expectedResult.length; i++) {
+        assertEquals(expectedResult[i], result[i]);
+    }
+}
+
+@Test
+public void testRemoveLastElementWithLargeIndex() throws Exception {
+    int[] originalArray = {2, 6};
+    int[] expectedResult = {2};
+    int[] result = ArrayUtils.remove(originalArray, 1);
+    assertEquals(expectedResult.length, result.length);
+    for (int i = 0; i < expectedResult.length; i++) {
+        assertEquals(expectedResult[i], result[i]);
+    }
+}
+```

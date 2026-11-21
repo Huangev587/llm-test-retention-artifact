@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "effcb11621f35b4691d117c25f8aae8133a623cf59821424fadc755cae4fad43",
+      "source": "@Test\npublic void testDayOfYearMidYearLeap() {\n    LocalDate date = new LocalDate(2000, 12, 31);\n    Assert.assertEquals(366, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_effcb11621f35b4691d117c2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6f689c3b524a56c317946d910af643f2ce8985e723a35421a64f8052362d84ae",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

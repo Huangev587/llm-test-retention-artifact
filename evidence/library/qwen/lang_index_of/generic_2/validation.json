@@ -1,0 +1,118 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "efe59a530969da4768c11b68556926ca3b9d63f72efae4109703b634d4ae2a20",
+      "source": "@Test\npublic void testNullArray() throws Exception {\n    assertEquals(-1, ArrayUtils.indexOf(null, 5));\n}",
+      "class_name": "entry.Case_efe59a530969da4768c11b68",
+      "original_pass": false,
+      "status": "COMPILE_FAILURE",
+      "original_feedback": "<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_index_of/efe59a530969da4768c11b68556926ca3b9d63f72efae4109703b634d4ae2a20/Case_efe59a530969da4768c11b68.java:10: 错误: 对indexOf的引用不明确\n    assertEquals(-1, ArrayUtils.indexOf(null, 5));\n                               ^\n  ArrayUtils 中的方法 indexOf(int[],int) 和 ArrayUtils 中的方法 indexOf(long[],long) 都匹配\n1 个错误\n",
+      "id": "114fcbc57967060b6f8f4d247c7928b777d5e77926db7db6355b7e6af531392a",
+      "index": 0
+    },
+    {
+      "compile_key": "e2c21ea405c1edb1e2e3bd545a26c443a844e7093494f981166228561c7bf0eb",
+      "source": "@Test\npublic void testSingleElementMatch() throws Exception {\n    assertEquals(0, ArrayUtils.indexOf(new int[]{42}, 42));\n}",
+      "class_name": "entry.Case_e2c21ea405c1edb1e2e3bd54",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6b3e426a4148994247a379053ed0558c4d671dbe23e7ad4c95d10963a08ae1a5",
+      "index": 1
+    },
+    {
+      "compile_key": "200e320e2306d7275f5181b5b286ffad21fecfae214d4c4c1926e8d3864c0196",
+      "source": "@Test\npublic void testSingleElementNoMatch() throws Exception {\n    assertEquals(-1, ArrayUtils.indexOf(new int[]{42}, 99));\n}",
+      "class_name": "entry.Case_200e320e2306d7275f5181b5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "a2e9428574643a37ed60f66c8273bf28ece847d7a9e6467f9914ac41cadf388a",
+      "index": 2
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized arrays are accepted"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized arrays are accepted"
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized arrays are accepted"
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized arrays are accepted"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_index_of/efe59a530969da4768c11b68556926ca3b9d63f72efae4109703b634d4ae2a20/Case_efe59a530969da4768c11b68.java:10: 错误: 对indexOf的引用不明确\n    assertEquals(-1, ArrayUtils.indexOf(null, 5));\n                               ^\n  ArrayUtils 中的方法 indexOf(int[],int) 和 ArrayUtils 中的方法 indexOf(long[],long) 都匹配\n1 个错误\n"
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "only inline initialized arrays are accepted"
+    }
+  ]
+}

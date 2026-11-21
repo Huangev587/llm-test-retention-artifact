@@ -1,0 +1,79 @@
+1. ```java
+@Test
+public void testGetMillisOfDay() throws Exception {
+    LocalTime time = LocalTime.of(0, 0, 0, 123);
+    int expected = 123;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+2. ```java
+@Test
+public void testGetMillisOfDayMax() throws Exception {
+    LocalTime time = LocalTime.MAX;
+    int expected = 86399999;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+3. ```java
+@Test
+public void testGetMillisOfDayMin() throws Exception {
+    LocalTime time = LocalTime.of(0, 0, 0, 123);
+    int expected = 123;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+4. ```java
+@Test
+public void testGetMillisOfDayZero() throws Exception {
+    LocalTime time = LocalTime.of(0, 0, 0, 0);
+    int expected = 0;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+5. ```java
+@Test
+public void testGetMillisOfDayMidnight() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 15, 500);
+    int expected = 45150000;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+6. ```java
+@Test
+public void testGetMillisOfDayNoon() throws Exception {
+    LocalTime time = LocalTime.of(12, 0, 0, 0);
+    int expected = 43200000;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+7. ```java
+@Test
+public void testGetMillisOfDayMidnightPlus() throws Exception {
+    LocalTime time = LocalTime.of(0, 0, 0, 86399);
+    int expected = 86399999;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```
+
+8. ```java
+@Test
+public void testGetMillisOfDayNoonPlus() throws Exception {
+    LocalTime time = LocalTime.of(12, 0, 0, 86399);
+    int expected = 86040000;
+    int actual = time.getMillisOfDay();
+    assertEquals(expected, actual);
+}
+```

@@ -1,0 +1,49 @@
+```java
+@Test
+public void testGetMillisOfDayAtQuarterToThreePM() throws Exception {
+    LocalTime time = new LocalTime(15, 45, 0, 0);
+    assertEquals(56700000, time.getMillisOfDay());
+}
+
+@Test
+public void testGetMillisOfDayAtFiveMinutesToSevenAM() throws Exception {
+    LocalTime time = new LocalTime(7, 55, 0, 0);
+    assertEquals(27700000, time.getMillisOfDay());
+}
+
+@Test
+public void testGetMillisOfDayAtThirtySecondsToNineOClock() throws Exception {
+    LocalTime time = new LocalTime(9, 59, 30, 0);
+    assertEquals(35993000, time.getMillisOfDay());
+}
+
+@Test
+public void testGetMillisOfDayAtFifteenSecondsToTwoOClock() throws Exception {
+    LocalTime time = new LocalTime(2, 59, 45, 0);
+    assertEquals(95945000, time.getMillisOfDay());
+}
+
+@Test
+public void testGetMillisOfDayAtFortyFiveSecondsToFourOClock() throws Exception {
+    LocalTime time = new LocalTime(4, 59, 45, 0);
+    assertEquals(167945000, time.getMillisOfDay());
+}
+
+@Test
+public void testGetMillisOfDayAtOneMillisecondBeforeMidnight() throws Exception {
+    LocalTime time = new LocalTime(23, 59, 59, 998);
+    assertEquals(86399998, time.getMillisOfDay());
+}
+
+@Test
+public void testGetMillisOfDayAtOneMicrosecondBeforeMidnight() throws Exception {
+    LocalTime time = new LocalTime(23, 59, 59, 999);
+    assertEquals(86399999, time.getMillisOfDay());
+}
+
+@Test
+public void testGetMillisOfDayAtOneNanosecondBeforeMidnight() throws Exception {
+    LocalTime time = new LocalTime(23, 59, 59, 999);
+    assertEquals(86399999, time.getMillisOfDay());
+}
+```

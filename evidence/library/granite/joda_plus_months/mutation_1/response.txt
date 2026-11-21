@@ -1,0 +1,57 @@
+```java
+@Test
+public void testPlusMonthsZero() {
+    LocalDate original = new LocalDate(1950, 1, 1);
+    LocalDate result = original.plusMonths(0);
+    assertEquals(original, result);
+}
+
+@Test
+public void testPlusMonthsPositive() {
+    LocalDate original = new LocalDate(1950, 1, 1);
+    LocalDate result = original.plusMonths(1);
+    assertEquals(new LocalDate(1950, 2, 1), result);
+}
+
+@Test
+public void testPlusMonthsNegative() {
+    LocalDate original = new LocalDate(1950, 1, 1);
+    LocalDate result = original.plusMonths(-1);
+    assertEquals(new LocalDate(1949, 12, 1), result);
+}
+
+@Test
+public void testPlusMonthsEndOfMonth() {
+    LocalDate original = new LocalDate(1950, 1, 31);
+    LocalDate result = original.plusMonths(1);
+    assertEquals(new LocalDate(1950, 2, 28), result);
+}
+
+@Test
+public void testPlusMonthsEndOfYear() {
+    LocalDate original = new LocalDate(1950, 12, 31);
+    LocalDate result = original.plusMonths(1);
+    assertEquals(new LocalDate(1951, 1, 31), result);
+}
+
+@Test
+public void testPlusMonthsAcrossYearBoundary() {
+    LocalDate original = new LocalDate(1999, 12, 31);
+    LocalDate result = original.plusMonths(1);
+    assertEquals(new LocalDate(2000, 1, 31), result);
+}
+
+@Test
+public void testPlusMonthsAcrossCenturyBoundary() {
+    LocalDate original = new LocalDate(1999, 12, 31);
+    LocalDate result = original.plusMonths(119);
+    assertEquals(new LocalDate(2199, 12, 31), result);
+}
+
+@Test
+public void testPlusMonthsAcrossMaxYearBoundary() {
+    LocalDate original = new LocalDate(2099, 12, 31);
+    LocalDate result = original.plusMonths(1);
+    assertEquals(new LocalDate(2100, 1, 31), result);
+}
+```

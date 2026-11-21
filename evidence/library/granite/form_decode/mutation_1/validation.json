@@ -1,0 +1,17 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only throws Exception is accepted"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "only throws Exception is accepted"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "57ea9081b9cab57ee83906f01fe0e66665d451c81db7ddbbd9da1dfd687d03db",
+  "sites": 16,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[12]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[9]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[12]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[9]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[76]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"([CI)[C\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[7]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"([DI)[D\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[7]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"([FI)[F\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[7]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"([Ljava/lang/Object;I)[Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[7]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"([SI)[S\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[7]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"([ZI)[Z\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[7]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"getLength\",\"(Ljava/lang/Object;)I\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[4]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[57]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[40]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[56]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[63]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[68]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[70]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[57]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator\",[50]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"(Ljava/lang/Object;I)Ljava/lang/Object;\",\"org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator\",[71]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"([BI)[B\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[7]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"([II)[I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[7]]",
+    "[\"org.apache.commons.lang3.ArrayUtils\",\"remove\",\"([JI)[J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[7]]"
+  ]
+}

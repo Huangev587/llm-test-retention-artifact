@@ -1,0 +1,31 @@
+1. @Test public void testDecodeEmptyString() throws Exception {
+    Assert.assertArrayEquals(new byte[0], decodeBase64(""));
+}
+
+2. @Test public void testDecodeSingleByte() throws Exception {
+    Assert.assertArrayEquals(new byte[]{-1}, decodeBase64("AQ=="));
+}
+
+3. @Test public static void testDecodeTwoBytes() throws Exception {
+    Assert.assertArrayEquals(new byte[]{1, 2}, decodeBase64("MzggNiw="));
+}
+
+4. @Test public void testDecodeThreeBytes() throws Exception {
+    Assert.assertArrayEquals(new byte[]{3, 4, 5}, decodeBase64("MzggNiwxMjM="));
+}
+
+5. @Test public void testDecodeMaxBytes() throws Exception {
+    Assert.assertArrayEquals(new byte[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31}, decodeBase64("MQ0zODQ1RDE2ODU5OTk5OTktMTIzNDU2NTY="));
+}
+
+6. @Test public void testDecodeWithPadding() throws Exception {
+    Assert.assertArrayEquals(new byte[]{1, 2, 3}, decodeBase64("MzggNiwxMjM="));
+}
+
+7. @Test public void testDecodeWithURLSafePadding() throws Exception {
+    Assert.assertArrayEquals(new byte[]{1, 2, 3}, decodeBase64("+Mzgg+Niw+MjM="));
+}
+
+8. @Test public void testDecodeWithURLSafeCharacters() throws Exception {
+    Assert.assertArrayEquals(new byte[]{1, 2, 3}, decodeBase64("+Mzgg+Niw+MjM="));
+}

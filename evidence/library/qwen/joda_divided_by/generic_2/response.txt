@@ -1,0 +1,50 @@
+```java
+@Test
+public void testDividedByOne() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(1);
+    assertEquals("PT24H", result.toString());
+}
+
+@Test
+public void testDividedByPositive() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(2);
+    assertEquals("PT12H", result.toString());
+}
+
+@Test
+public void testDividedByNegative() throws Exception {
+    Duration original = new Duration(-86400000);
+    Duration result = original.dividedBy(-2);
+    assertEquals("-PT12H", result.toString());
+}
+
+@Test
+public void testDividedByLargePositive() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(1000000);
+    assertEquals("PT0.00000864H", result.toString());
+}
+
+@Test
+public void testDividedByLargeNegative() throws Exception {
+    Duration original = new Duration(-86400000);
+    Duration result = original.dividedBy(-1000000);
+    assertEquals("-PT0.00000864H", result.toString());
+}
+
+@Test
+public void testDividedByMinValue() throws Exception {
+    Duration original = new Duration(Long.MIN_VALUE);
+    Duration result = original.dividedBy(-1);
+    assertEquals("P-9223372036854775808D", result.toString());
+}
+
+@Test
+public void testDividedByMaxValue() throws Exception {
+    Duration original = new Duration(Long.MAX_VALUE);
+    Duration result = original.dividedBy(1);
+    assertEquals("P9223372036854775807D", result.toString());
+}
+```

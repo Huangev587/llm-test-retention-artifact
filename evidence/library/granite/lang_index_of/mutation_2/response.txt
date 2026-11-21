@@ -1,0 +1,48 @@
+```java
+@Test
+public void testIndexOfNullArray() {
+    Assert.assertEquals(INDEX_NOT_FOUND, indexOf(null, 5));
+}
+
+@Test
+public void testIndexOfEmptyArray() {
+    Assert.assertEquals(INDEX_NOT_FOUND, indexOf(new int[0], 5));
+}
+
+@Test
+public void testIndexOfValueInArray() {
+    int[] array = {1, 2, 3, 4, 5};
+    Assert.assertEquals(2, indexOf(array, 3));
+}
+
+@Test
+public void testIndexOfValueNotInArray() {
+    int[] array = {1, 2, 3, 4, 5};
+    Assert.assertEquals(INDEX_NOT_FOUND, indexOf(array, 6));
+}
+
+@Test
+public void testIndexOfValueAtArrayEnd() {
+    int[] array = {1, 2, 3, 4, 5};
+    Assert.assertEquals(4, indexOf(array, 5));
+}
+
+@Test
+public void testIndexOfValueAtArrayStart() {
+    int[] array = {5, 4, 3, 2, 1};
+    Assert.assertEquals(0, indexOf(array, 5));
+}
+
+@Test
+public void testIndexOfMultipleMatches() {
+    int[] array = {1, 2, 2, 3, 4};
+    Assert.assertEquals(1, indexOf(array, 2));
+}
+
+@Test
+public void testIndexOfLargeArray() {
+    int[] array = new int[64];
+    ArrayUtils.randomArray(array, -1000000, 1000000);
+    Assert.assertNotEquals(INDEX_NOT_FOUND, indexOf(array, ArrayUtils.random(array)));
+}
+```

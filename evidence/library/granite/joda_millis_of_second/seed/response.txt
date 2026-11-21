@@ -1,0 +1,83 @@
+1. ```java
+@Test
+public void testWithMillisOfSecond() {
+    LocalTime time = LocalTime.of(12, 34, 56, 789);
+    LocalTime result = time.withMillisOfSecond(123);
+    assertEquals(12, result.getHour());
+    assertEquals(34, result.getMinuteOfHour());
+    assertEquals(56, result.getSecondOfMinute());
+    assertEquals(123, result.getMillisOfSecond());
+}
+```
+
+2. ```java
+@Test
+public void testWithMillisOfSecondMaxValue() {
+    LocalTime time = LocalTime.of(12, 34, 56, 999);
+    LocalTime result = time.withMillisOfSecond(999);
+    assertEquals(12, result.getHour());
+    assertEquals(34, result.getMinuteOfHour());
+    assertEquals(56, result.getSecondOfMinute());
+    assertEquals(999, result.getMillisOfSecond());
+}
+```
+
+3. ```java
+@Test
+public void testWithMillisOfSecondMinValue() {
+    LocalTime time = LocalTime.of(12, 34, 56, 0);
+    LocalTime result = time.withMillisOfSecond(0);
+    assertEquals(12, result.getHour());
+    assertEquals(34, result.getMinuteOfHour());
+    assertEquals(56, result.getSecondOfMinute());
+    assertEquals(0, result.getMillisOfSecond());
+}
+```
+
+4. ```java
+@Test
+public void testWithMillisOfSecondOverflow() {
+    LocalTime time = LocalTime.of(12, 34, 56, 999);
+    assertThrows(IllegalArgumentException.class, () -> time.withMillisOfSecond(1000));
+}
+```
+
+5. ```java
+@Test
+public void testWithMillisOfSecondNegativeValue() {
+    LocalTime time = LocalTime.of(12, 34, 56, 789);
+    assertThrows(IllegalArgumentException.class, () -> time.withMillisOfSecond(-1));
+}
+```
+
+6. ```java
+@Test
+public void testWithMillisOfSecondMaxValueWithTime() {
+    LocalTime time = LocalTime.of(23, 59, 59, 999);
+    LocalTime result = time.withMillisOfSecond(999);
+    assertEquals(23, result.getHour());
+    assertEquals(59, result.getMinuteOfHour());
+    assertEquals(59, result.getSecondOfMinute());
+    assertEquals(999, result.getMillisOfSecond());
+}
+```
+
+7. ```java
+@Test
+public void testWithMillisOfSecondMinValueWithTime() {
+    LocalTime time = LocalTime.of(23, 59, 59, 0);
+    LocalTime result = time.withMillisOfSecond(0);
+    assertEquals(23, result.getHour());
+    assertEquals(59, result.getMinuteOfHour());
+    assertEquals(59, result.getSecondOfMinute());
+    assertEquals(0, result.getMillisOfSecond());
+}
+```
+
+8. ```java
+@Test
+public void testWithMillisOfSecondOverflowWithTime() {
+    LocalTime time = LocalTime.of(23, 59, 59, 999);
+    assertThrows(IllegalArgumentException.class, () -> time.withMillisOfSecond(1000));
+}
+```

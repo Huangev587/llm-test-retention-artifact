@@ -1,0 +1,70 @@
+1. ```java
+@Test
+public void testPlusDaysZero() {
+    LocalDate original = LocalDate.of(1950, 1, 1);
+    LocalDate result = original.plusDays(0);
+    assertEquals(original, result);
+}
+```
+
+2. ```java
+@Test
+public void testPlusDaysPositive() {
+    LocalDate original = LocalDate.of(1950, 1, 1);
+    LocalDate result = original.plusDays(10);
+    assertEquals(LocalDate.of(1950, 1, 11), result);
+}
+
+3. ```java
+@Test
+public void testPlusDaysNegative() {
+    LocalDate original = LocalDate.of(1950, 12, 31);
+    LocalDate result = original.plusDays(-10);
+    assertEquals(LocalDate.of(1950, 12, 21), result);
+}
+```
+
+4. ```java
+@Test
+public void testPlusDaysMax() {
+    LocalDate original = LocalDate.of(2050, 1, 1);
+    LocalDate result = original.plusDays(36600);
+    assertEquals(LocalDate.of(2100, 1, 1), result);
+}
+```
+
+5. ```java
+@Test
+public void testPlusDaysMin() {
+    LocalDate original = LocalDate.of(1900, 12, 31);
+    LocalDate result = original.plusDays(-36600);
+    assertEquals(LocalDate.of(1900, 1, 1), result);
+}
+```
+
+6. ```java
+@Test
+public void testPlusDaysAcrossYearBoundary() {
+    LocalDate original = LocalDate.of(1950, 12, 31);
+    LocalDate result = original.plusDays(10);
+    assertEquals(LocalDate.of(1951, 1, 10), result);
+}
+```
+
+7. ```java
+@Test
+public void testPlusDaysBeforeYearBoundary() {
+    LocalDate original = LocalDate.of(1950, 1, 1);
+    LocalDate result = original.plusDays(-10);
+    assertEquals(LocalDate.of(1949, 31, 1), result);
+}
+```
+
+8. ```java
+@Test
+public void testPlusDaysAcrossCenturyBoundary() {
+    LocalDate original = LocalDate.of(1999, 12, 31);
+    LocalDate result = original.plusDays(10);
+    assertEquals(LocalDate.of(2000, 1, 10), result);
+}
+```

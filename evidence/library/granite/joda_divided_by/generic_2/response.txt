@@ -1,0 +1,70 @@
+1. ```java
+@Test
+public void testDividedByOne() {
+    Duration duration = new Duration(1234567890123L);
+    Duration result = duration.dividedBy(1);
+    assertEquals(1234567890123L, result.getMillis());
+}
+```
+
+2. ```java
+@Test
+public void testDividedByZero() {
+    Duration duration = new Duration(1234567890123L);
+    assertThrows(ArithmeticException.class, () -> duration.dividedBy(0));
+}
+```
+
+3. ```java
+@Test
+public void testDividedByNegative() {
+    Duration duration = new Duration(1234567890123L);
+    Duration result = duration.dividedBy(-1);
+    assertEquals(1234567890123L, result.getMillis());
+}
+```
+
+4. ```java
+@Test
+public void testDividedByLargePositive() {
+    Duration duration = new Duration(1234567890123L);
+    Duration result = duration.dividedBy(1000000);
+    assertEquals(1234567L, result.getMillis());
+}
+```
+
+5. ```java
+@Test
+public void testDividedByLargeNegative() {
+    Duration duration = new Duration(1234567890123L);
+    Duration result = duration.dividedBy(-1000000);
+    assertEquals(1234567L, result.getMillis());
+}
+```
+
+6. ```java
+@Test
+public void testDividedBySmallPositive() {
+    Duration duration = new Duration(1234567890123L);
+    Duration result = duration.dividedBy(10);
+    assertEquals(123456789012L, result.getMillis());
+}
+```
+
+7. ```java
+@Test
+public void testDividedBySmallNegative() {
+    Duration duration = new Duration(1234567890123L);
+    Duration result = duration.dividedBy(-10);
+    assertEquals(123456789012L, result.getMillis());
+}
+```
+
+8. ```java
+@Test
+public void testDividedByExtremePositive() {
+    Duration duration = new Duration(1234567890123L);
+    Duration result = duration.dividedBy(1234567890123L);
+    assertEquals(1L, result.getMillis());
+}
+```

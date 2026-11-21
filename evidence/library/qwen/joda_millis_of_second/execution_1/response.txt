@@ -1,0 +1,55 @@
+```java
+@Test
+public void testWithMillisOfSecond_000() throws Exception {
+    LocalTime original = LocalTime.of(12, 30, 45, 123);
+    LocalTime result = original.withMillisOfSecond(0);
+    assertEquals("12:30:45.000", result.toString());
+}
+
+@Test
+public void testWithMillisOfSecond_999() throws Exception {
+    LocalTime original = LocalTime.of(12, 30, 45, 123);
+    LocalTime result = original.withMillisOfSecond(999);
+    assertEquals("12:30:45.999", result.toString());
+}
+
+@Test
+public void testWithMillisOfSecond_PreserveHourMinuteSecond() throws Exception {
+    LocalTime original = LocalTime.of(12, 30, 45, 123);
+    LocalTime result = original.withMillisOfSecond(789);
+    assertEquals("12:30:45.789", result.toString());
+}
+
+@Test(expected = IllegalArgumentException.class)
+public void testWithMillisOfSecond_NegativeValue() throws Exception {
+    LocalTime original = LocalTime.of(12, 30, 45, 123);
+    original.withMillisOfSecond(-1);
+}
+
+@Test(expected = IllegalArgumentException.class)
+public void testWithMillisOfSecond_InvalidValue() throws Exception {
+    LocalTime original = LocalTime.of(12, 30, 45, 123);
+    original.withMillisOfSecond(1000);
+}
+
+@Test
+public void testWithMillisOfSecond_SameValue() throws Exception {
+    LocalTime original = LocalTime.of(12, 30, 45, 123);
+    LocalTime result = original.withMillisOfSecond(123);
+    assertEquals("12:30:45.123", result.toString());
+}
+
+@Test
+public void testWithMillisOfSecond_MaxValue() throws Exception {
+    LocalTime original = LocalTime.of(12, 30, 45, 123);
+    LocalTime result = original.withMillisOfSecond(999);
+    assertEquals("12:30:45.999", result.toString());
+}
+
+@Test
+public void testWithMillisOfSecond_MinValue() throws Exception {
+    LocalTime original = LocalTime.of(12, 30, 45, 123);
+    LocalTime result = original.withMillisOfSecond(0);
+    assertEquals("12:30:45.000", result.toString());
+}
+```

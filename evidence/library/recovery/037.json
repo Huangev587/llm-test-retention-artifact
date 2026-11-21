@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "e9cba385442be6bb6214b437b17bd780c0c04f01a5ed45340ecf3ac80c2e7d2f",
+      "source": "@Test\npublic void testGetDayOfYearEdgeCase() {\n    LocalDate date = new LocalDate(1900, 12, 31);\n    int expected = 365;\n    int actual = date.getDayOfYear();\n    assertEquals(expected, actual);\n}",
+      "class_name": "entry.Case_e9cba385442be6bb6214b437",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "0ab1b75dcb4b46fe6fa79c537bf5c29f7922f85023d2c9a9399b0f89557d56e6",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

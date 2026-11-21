@@ -1,0 +1,75 @@
+1. ```java
+@Test
+public void testWithMillisOfSecond() {
+    LocalTime time = LocalTime.of(12, 34, 56, 789);
+    LocalTime result = time.withMillisOfSecond(890);
+    Assert.assertEquals("12:34:56.890", result.toString());
+}
+```
+
+2. ```java
+@Test
+public void testWithMillisOfSecondMaxValue() {
+    LocalTime time = LocalTime.of(12, 34, 56, 999);
+    LocalTime result = time.withMillisOfSecond(0);
+    Assert.assertEquals("12:34:56.000", result.toString());
+}
+```
+
+3. ```java
+@Test
+public void testWithMillisOfSecondMinValue() {
+    LocalTime time = LocalTime.of(12, 34, 56, 0);
+    LocalTime result = time.withMillisOfSecond(999);
+    Assert.assertEquals("12:34:56.999", result.toString());
+}
+```
+
+4. ```java
+@Test
+public void testWithMillisOfSecondOverflow() {
+    LocalTime time = LocalTime.of(12, 34, 59, 999);
+    try {
+        time.withMillisOfSecond(1);
+        Assert.fail("Expected IllegalArgumentException");
+    } catch (IllegalArgumentException e) {
+        Assert.assertTrue(true);
+    }
+}
+```
+
+5. ```java
+@Test
+public void testWithMillisOfSecondUnderflow() {
+    LocalTime time = LocalTime.of(12, 34, 56, 0);
+    LocalTime result = time.withMillisOfSecond(1000);
+    Assert.assertEquals("12:34:57.000", result.toString());
+}
+```
+
+6. ```java
+@Test
+public void testWithMillisOfSecondWithZeroTime() {
+    LocalTime time = LocalTime.of(0, 0, 0);
+    LocalTime result = time.withMillisOfSecond(456);
+    Assert.assertEquals("00:00:00.456", result.toString());
+}
+```
+
+7. ```java
+@Test
+public void testWithMillisOfSecondWithMaxTime() {
+    LocalTime time = LocalTime.of(23, 59, 59, 999);
+    LocalTime result = time.withMillisOfSecond(0);
+    Assert.assertEquals("23:59:59.000", result.toString());
+}
+```
+
+8. ```java
+@Test
+public void testWithMillisOfSecondWithMinTime() {
+    LocalTime time = LocalTime.of(0, 0, 0, 0);
+    LocalTime result = time.withMillisOfSecond(999);
+    Assert.assertEquals("00:00:00.999", result.toString());
+}
+```

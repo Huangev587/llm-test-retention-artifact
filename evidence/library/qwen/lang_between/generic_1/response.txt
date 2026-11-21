@@ -1,0 +1,36 @@
+```java
+@Test
+public void testEmptyStringWithNonEmptyDelimiters() throws Exception {
+    assertNull(StringUtils.substringBetween("", "a", "b"));
+}
+
+@Test
+public void testNonEmptyStringWithEmptyDelimiters() throws Exception {
+    assertEquals("", StringUtils.substringBetween("abc", "", ""));
+}
+
+@Test
+public void testStringWithoutDelimiters() throws Exception {
+    assertNull(StringUtils.substringBetween("abc", "d", "e"));
+}
+
+@Test
+public void testStringWithSingleCharacterDelimiters() throws Exception {
+    assertEquals("b", StringUtils.substringBetween("a[b]c", "a", "c"));
+}
+
+@Test
+public void testStringWithMultipleMatches() throws Exception {
+    assertEquals("b", StringUtils.substringBetween("a[b]c[d]e", "a", "c"));
+}
+
+@Test
+public void testStringWithNestedDelimiters() throws Exception {
+    assertNull(StringUtils.substringBetween("a[b[c]]d", "a", "d"));
+}
+
+@Test
+public void testStringWithLeadingAndTrailingWhitespace() throws Exception {
+    assertEquals("b", StringUtils.substringBetween(" a [ b ] c ", "a", "c"));
+}
+```

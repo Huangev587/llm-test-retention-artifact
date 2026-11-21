@@ -1,0 +1,63 @@
+1. ```java
+@Test
+public void testDayOfYear() {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    Assert.assertEquals(1, date.getDayOfYear());
+}
+```
+
+2. ```java
+@Test
+public void testDayOfYearMax() {
+    LocalDate date = new LocalDate(2100, 12, 31);
+    Assert.assertEquals(366, date.getDayOfYear());
+}
+```
+
+3. ```java
+@Test
+public void testDayOfYearMidYear() {
+    LocalDate date = new LocalDate(2000, 6, 30);
+    Assert.assertEquals(180, date.getDayOfYear());
+}
+```
+
+4. ```java
+@Test
+public void testDayOfYearMidYearLeap() {
+    LocalDate date = new LocalDate(2000, 12, 31);
+    Assert.assertEquals(366, date.getDayOfYear());
+}
+```
+
+5. ```java
+@Test
+public void testDayOfYearMin() {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    Assert.assertEquals(1, date.getDayOfYear());
+}
+```
+
+6. ```java
+@Test
+public void testDayOfYearMaxLeap() {
+    LocalDate date = new LocalDate(2000, 2, 29);
+    Assert.assertEquals(60, date.getDayOfYear());
+}
+```
+
+7. ```java
+@Test
+public void testDayOfYearMidMonth() {
+    LocalDate date = new LocalDate(2022, 9, 15);
+    Assert.assertEquals(283, date.getDayOfYear());
+}
+```
+
+8. ```java
+@Test
+public void testDayOfYearEdgeCase() throws Exception {
+    LocalDate date = new LocalDate(1582, 10, 4);
+    Assert.assertEquals(305, date.getDayOfYear());
+}
+```

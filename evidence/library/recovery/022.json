@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "fe5da12a13bf11595ba3712c80e46c1d52940453bbedd5aa097f854b86bf2866",
+      "source": "@Test\npublic void testGetDayOfWeek_1900_02_29() {\n    LocalDate date = new LocalDate(1900, 2, 29);\n    int expected = 5; // Friday\n    assertEquals(expected, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_fe5da12a13bf11595ba3712c",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.joda.time.IllegalFieldValueException: Value 29 for dayOfMonth must be in the range [1,28]: year: 1900 month: 2\n\tat org.joda.time.chrono.BasicChronology.getDateMidnightMillis(BasicChronology.java:645)\n\tat org.joda.time.chrono.BasicChronology.getDateTimeMillis0(BasicChronology.java:188)\n\tat org.joda.time.chrono.BasicChronology.getDateTimeMillis(BasicChronology.java:162)\n\tat org.joda.time.chrono.GregorianChronology.getDateTimeMillis(GregorianChronology.java:44)\n\tat org.joda.time.chrono.AssembledChronology.getDateTimeMillis(AssembledChronology.java:122)\n\tat org.joda.time.LocalDate.<init>(LocalDate.java:459)\n\tat org.joda.time.LocalDate.<init>(LocalDate.java:438)\n\tat entry.Case_fe5da12a13bf11595ba3712c.testGetDayOfWeek_1900_02_29(Case_fe5da12a13bf11595ba3712c.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "45da20564e73dc25bed698dc3297b56276fe8ed27f71df7a5cb4cf44c8d5363b",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "org.joda.time.IllegalFieldValueException: Value 29 for dayOfMonth must be in the range [1,28]: year: 1900 month: 2\n\tat org.joda.time.chrono.BasicChronology.getDateMidnightMillis(BasicChronology.java:645)\n\tat org.joda.time.chrono.BasicChronology.getDateTimeMillis0(BasicChronology.java:188)\n\tat org.joda.time.chrono.BasicChronology.getDateTimeMillis(BasicChronology.java:162)\n\tat org.joda.time.chrono.GregorianChronology.getDateTimeMillis(GregorianChronology.java:44)\n\tat org.joda.time.chrono.AssembledChronology.getDateTimeMillis(AssembledChronology.java:122)\n\tat org.joda.time.LocalDate.<init>(LocalDate.java:459)\n\tat org.joda.time.LocalDate.<init>(LocalDate.java:438)\n\tat entry.Case_fe5da12a13bf11595ba3712c.testGetDayOfWeek_1900_02_29(Case_fe5da12a13bf11595ba3712c.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl"
+    }
+  ]
+}

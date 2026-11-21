@@ -1,0 +1,67 @@
+1. ```java
+@Test
+public void testStandardDaysZero() {
+    Duration result = standardDays(0);
+    assertEquals(0, result.getMillis());
+}
+```
+
+2. ```java
+@Test
+public void testStandardDaysPositive() {
+    long days = 1;
+    Duration result = standardDays(days);
+    assertEquals(86400000, result.getMillis());
+}
+
+3. ```java
+@Test
+public void testStandardDaysNegative() {
+    long days = -1;
+    Duration result = standardDays(days);
+    assertEquals(-86400000, result.getMillis());
+}
+
+4. ```java
+@Test(expected = ArithmeticException.class)
+public void testStandardDaysTooLarge() {
+    long days = Long.MAX_VALUE + 1;
+    standardDays(days);
+}
+
+5. ```java
+@Test
+public void testStandardDaysMax() {
+    long days = Long.MAX_VALUE;
+    Duration result = standardDays(days);
+    assertEquals(Long.MAX_VALUE * 86400000, result.getMillis());
+}
+
+6. ```java
+@Test
+public void testStandardDaysMin() {
+    long days = Long.MIN_VALUE;
+    Duration result = standardDays(days);
+    assertEquals(Long.MIN_VALUE * 86400000, result.getMillis());
+}
+
+7. ```java
+@Test
+public void testStandardDaysWithDaylightSavings() throws Exception {
+    // This test is conceptual as it depends on the system clock and cannot be deterministic.
+    // It assumes that the system clock is adjusted for Daylight Savings.
+    long days = -1; // A day before Daylight Savings adjustment
+    Duration result = standardDays(days);
+    assertTrue(result.getMillis() < 86400000);
+}
+
+8. ```java
+@Test
+public void testStandardDaysWithDaylightSavingsNegative() throws Exception {
+    // This test is conceptual as it depends on the system clock and cannot be deterministic.
+    // It assumes that the system clock is adjusted for Daylight Savings.
+    long days = 1; // A day after Daylight Savings adjustment
+    Duration result = standardDays(days);
+    assertTrue(result.getMillis() > 86400000);
+}
+```

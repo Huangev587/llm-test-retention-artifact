@@ -1,0 +1,41 @@
+```java
+@Test
+public void testNullInput() throws UnsupportedEncodingException {
+    Assert.assertNull(new URLCodec().encode(null, "UTF-8"));
+}
+
+@Test
+public void testEmptyString() throws UnsupportedEncodingException {
+    Assert.assertEquals("", new URLCodec().encode("", "UTF-8"));
+}
+
+@Test
+public void testSingleCharacter() throws UnsupportedEncodingException {
+    Assert.assertEquals(new String(new byte[] { (byte) 0x61 }), new URLCodec().encode("a", "UTF-8"));
+}
+
+@Test
+public void testSpaceCharacter() throws UnsupportedEncodingException {
+    Assert.assertEquals("plus-sign", new URLCodec().encode(" ", "UTF-8"));
+}
+
+@Test
+public void testLowercaseLetters() throws UnsupportedEncodingException {
+    Assert.assertEquals("aBcDeF", new URLCodec().encode("aBcDeF", "UTF-8"));
+}
+
+@Test
+public void testUppercaseLetters() throws UnsupportedEncodingException {
+    Assert.assertEquals("ABCDEF", new URLCodec().encode("ABCDEF", "UTF-8"));
+}
+
+@Test
+public void testMixedCaseLetters() throws UnsupportedEncodingException {
+    Assert.assertEquals("aBcDeF", new URLCodec().encode("aBcDeF", "UTF-8"));
+}
+
+@Test
+public void testSpecialCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("%61%62%63%64%65%66", new URLCodec().encode("abcdef", "UTF-8"));
+}
+```

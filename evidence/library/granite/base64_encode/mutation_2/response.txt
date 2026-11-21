@@ -1,0 +1,36 @@
+```java
+@Test
+public void testEmptyByteArray() {
+    Assert.assertEquals(new String(new byte[]{}), Base64.encodeBase64String(new byte[]{}));
+}
+
+@Test
+public void testSingleByteArray() {
+    Assert.assertEquals(new String(new byte[]{(byte)0x54}), Base64.encodeBase64String(new byte[]{(byte)0x54}));
+}
+
+@Test
+public void testMultiByteArray() {
+    Assert.assertEquals(new String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f}), Base64.encodeBase64String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f}));
+}
+
+@Test
+public void testMultiByteArrayWithPadding() {
+    Assert.assertEquals(new String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f, (byte)0x3f}), Base64.encodeBase64String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f}));
+}
+
+@Test
+public void testMultiByteArrayWithMoreThanOnePadding() {
+    Assert.assertEquals(new String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f, (byte)0x3f, (byte)0x3f}), Base64.encodeBase64String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f}));
+}
+
+@Test
+public void testMultiByteArrayWithMultiplePaddings() {
+    Assert.assertEquals(new String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f, (byte)0x3f, (byte)0x3f, (byte)0x3f}), Base64.encodeBase64String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f}));
+}
+
+@Test
+public void testMultiByteArrayWithMaxPadding() {
+    Assert.assertEquals(new String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f, (byte)0x3f, (byte)0x3f, (byte)0x3f, (byte)0x3f}), Base64.encodeBase64String(new byte[]{(byte)0x48, (byte)0x65, (byte)0x6c, (byte)0x6c, (byte)0x6f}));
+}
+```

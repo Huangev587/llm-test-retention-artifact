@@ -1,0 +1,46 @@
+1. @Test public void testNullInput() throws Exception {
+    int[] result = subarray(null, 0, 10);
+    assertNull(result);
+}
+
+2. @Test public void testEmptyArrayInput() throws Exception {
+    int[] values = {};
+    int[] result = subarray(values, 0, 10);
+    assertArrayEquals(EMPTY_INT_ARRAY, result);
+}
+
+3. @Test public void testSingleElementArrayInput() throws Exception {
+    int[] values = {1};
+    int[] result = subarray(values, 0, 10);
+    assertArrayEquals(new int[]{1}, result);
+}
+
+4. @Test public void testSubarrayFromStart() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = subarray(values, 0, 4);
+    assertArrayEquals(new int[]{1, 2, 3, 4}, result);
+}
+
+5. @Test public void testSubarrayFromMiddle() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = subarray(values, 1, 4);
+    assertArrayEquals(new int[]{2, 3, 4}, result);
+}
+
+6. @Test public void testSubarrayToEnd() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = subarray(values, 2, 5);
+    assertArrayEquals(new int[]{3, 4, 5}, result);
+}
+
+7. @Test public void testSubarrayBeyondEnd() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = subarray(values, 0, 10);
+    assertArrayEquals(new int[]{1, 2, 3, 4, 5}, result);
+}
+
+8. @Test public void testSubarrayWithNegativeIndex() throws Exception {
+    int[] values = {1, 2, 3, 4, 5};
+    int[] result = subarray(values, -10, 5);
+    assertArrayEquals(new int[]{}, result);
+}

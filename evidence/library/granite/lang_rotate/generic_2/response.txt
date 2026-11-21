@@ -1,0 +1,31 @@
+1. @Test public void testNullInput() throws Exception {
+    Assert.assertNull(rotate(null, 2));
+}
+
+2. @Test public void testEmptyInput() throws Exception {
+    Assert.assertEquals("", rotate("", 2));
+}
+
+3. @Test public void testZeroShift() throws Exception {
+    Assert.assertEquals("abcdefg", rotate("abcdefg", 0));
+}
+
+4. @Test public void testRightShift() throws Exception {
+    Assert.assertEquals("fgabcde", rotate("abcdefg", 2));
+}
+
+5. @Test public void testLeftShift() throws Exception {
+    Assert.assertEquals("cdefgab", rotate("abcdefg", -2));
+}
+
+6. @Test public void testFullCircleRightShift() throws Exception {
+    Assert.assertEquals("abcdefg", rotate("abcdefg", 7));
+}
+
+7. @Test public void testFullCircleLeftShift() throws Exception {
+    Assert.assertEquals("abcdefg", rotate("abcdefg", -7));
+}
+
+8. @Test public void testBeyondFullCircleRightShift() throws Exception {
+    Assert.assertEquals("fgabcde", rotate("abcdefg", 9));
+}

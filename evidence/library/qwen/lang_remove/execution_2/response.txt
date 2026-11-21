@@ -1,0 +1,57 @@
+```java
+@Test(expected = IndexOutOfBoundsException.class)
+public void testRemoveNegativeIndex() {
+    remove(new int[]{1, 2, 3}, -1);
+}
+
+@Test(expected = IndexOutOfBoundsException.class)
+public void testRemoveTooLargeIndex() {
+    remove(new int[]{1, 2, 3}, 3);
+}
+
+@Test
+public void testRemoveFirstElement() {
+    assertArrayEquals(new int[]{2, 3}, remove(new int[]{1, 2, 3}, 0));
+}
+
+@Test
+public void testRemoveLastElement() {
+    assertArrayEquals(new int[]{1, 2}, remove(new int[]{1, 2, 3}, 2));
+}
+
+@Test
+public void testRemoveMiddleElement() {
+    assertArrayEquals(new int[]{1, 3}, remove(new int[]{1, 2, 3}, 1));
+}
+
+@Test
+public void testRemoveSingleElementArray() {
+    assertArrayEquals(new int[]{}, remove(new int[]{1}, 0));
+}
+
+@Test
+public void testRemoveFromEndOfLongArray() {
+    int[] original = new int[64];
+    for (int i = 0; i < 64; i++) {
+        original[i] = i;
+    }
+    int[] result = remove(original, 63);
+    assertEquals(63, result.length);
+    for (int i = 0; i < 63; i++) {
+        assertEquals(i, result[i]);
+    }
+}
+
+@Test
+public void testRemoveFromBeginningOfLongArray() {
+    int[] original = new int[64];
+    for (int i = 0; i < 64; i++) {
+        original[i] = i;
+    }
+    int[] result = remove(original, 0);
+    assertEquals(63, result.length);
+    for (int i = 0; i < 63; i++) {
+        assertEquals(i + 1, result[i]);
+    }
+}
+```

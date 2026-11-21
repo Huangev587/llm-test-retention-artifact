@@ -1,0 +1,54 @@
+```java
+@Test
+public void testNullInput() throws Exception {
+    assertNull(subarray(null, 0, 10));
+}
+
+@Test
+public void testEmptyArrayInput() throws Exception {
+    int[] input = {};
+    assertEmpty(subarray(input, 0, 10));
+}
+
+@Test
+public void testSingleElementArrayInput() throws Exception {
+    int[] input = {1};
+    int[] expected = {};
+    assertEqual(subarray(input, 0, 0), expected);
+    assertEqual(subarray(input, 0, 1), new int[]{1});
+    assertEqual(subarray(input, 1, 2), expected);
+}
+
+@Test
+public void testArrayWithMultipleElementsInput() throws Exception {
+    int[] input = {1, 2, 3, 4, 5};
+    int[] expected = {2, 3};
+    assertEqual(subarray(input, 1, 4), expected);
+}
+
+@Test
+public void testStartIndexGreaterThanLength() throws Exception {
+    int[] input = {1, 2, 3, 4, 5};
+    assertEmpty(subarray(input, 6, 10));
+}
+
+@Test
+public void testEndIndexLessThanStartIndex() throws Exception {
+    int[] input = {1, 2, 3, 4, 5};
+    assertEmpty(subarray(input, 3, 2));
+}
+
+@Test
+public void testStartIndexAndEndIndexAtBounds() throws Exception {
+    int[] input = {1, 2, 3, 4, 5};
+    int[] expected = {1, 2, 3};
+    assertEqual(subarray(input, 0, 4), expected);
+}
+
+@Test
+public void testSubarrayAtMiddle() throws Exception {
+    int[] input = {1, 2, 3, 4, 5};
+    int[] expected = {3};
+    assertEqual(subarray(input, 2, 3), expected);
+}
+```

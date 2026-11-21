@@ -1,0 +1,87 @@
+1. ```java
+@Test
+public void testSubarrayNullInput() {
+    int[] result = subarray(null, 0, 10);
+    assertNull(result);
+}
+```
+
+2. ```java
+@Test
+public void testSubarrayEmptyArray() {
+    int[] result = subarray(new int[0], 0, 10);
+    assertArrayEquals(EMPTY_INT_ARRAY, result);
+}
+```
+
+3. ```java
+@Test
+public void testSubarraySingleElement() {
+    int[] values = {1};
+    int[] result = subarray(values, 0, 1);
+    assertArrayEquals(new int[]{1}, result);
+}
+```
+
+4. ```java
+@Test
+public void testSubarrayFullArray() {
+    int[] values = new int[10];
+    for (int i = 0; i < values.length; i++) {
+        values[i] = i;
+    }
+    int[] result = subarray(values, 0, 10);
+    assertArrayEquals(values, result);
+}
+```
+
+5. ```java
+@Test
+public void testSubarrayPartialArray() {
+    int[] values = new int[10];
+    for (int i = 0; i < values.length; i++) {
+        values[i] = i;
+    }
+    int[] result = subarray(values, 3, 7);
+    int[] expected = {3, 4, 5, 6};
+    assertArrayEquals(expected, result);
+}
+```
+
+6. ```java
+@Test
+public void testSubarrayNegativeStartIndex() {
+    int[] values = new int[10];
+    for (int i = 0; i < values.length; i++) {
+        values[i] = i;
+    }
+    int[] result = subarray(values, -2, 5);
+    int[] expected = {8, 9};
+    assertArrayEquals(expected, result);
+}
+```
+
+7. ```java
+@Test
+public void testSubarrayOversizedEndIndex() {
+    int[] values = new int[10];
+    for (int i = 0; i < values.length; i++) {
+        values[i] = i;
+    }
+    int[] result = subarray(values, 0, 20);
+    int[] expected = values;
+    assertArrayEquals(expected, result);
+}
+```
+
+8. ```java
+@Test
+public void testSubarrayUnderStartIndex() {
+    int[] values = new int[10];
+    for (int i = 0; i < values.length; i++) {
+        values[i] = i;
+    }
+    int[] result = subarray(values, 15, 20);
+    assertArrayEquals(EMPTY_INT_ARRAY, result);
+}
+```

@@ -1,0 +1,221 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "0b8ed923793574c6fc5262ba418decf607ec0119f266859b66b578fafc3dd817",
+      "source": "@Test\npublic void testTrailingSeparator() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"b\", \"c\", \"\"}, StringUtils.splitPreserveAllTokens(\"a b c \", ' '));\n}",
+      "class_name": "entry.Case_0b8ed923793574c6fc5262ba",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8e4016a40b77b8f69974dca0b8c586d89dfd8f1e14bb2ffaf091a33dc6001ddd",
+      "index": 0
+    },
+    {
+      "compile_key": "c90b0459d74c15279d4e00f21ddb4a3c3e9cda4d7f461702883bbad309d2929d",
+      "source": "@Test\npublic void testMultipleConsecutiveSeparators() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"\", \"\", \"b\", \"\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a,,,b,,c\", ','));\n}",
+      "class_name": "entry.Case_c90b0459d74c15279d4e00f2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "444d405e2b2d7040563532783cf797da93d19ba126f32d4606b6363e9bd80bf2",
+      "index": 1
+    },
+    {
+      "compile_key": "afc1ed24848e1d0515d4146615eb88ac06dc4fa1edaec2d23ec60ad1313b0c70",
+      "source": "@Test\npublic void testNonAsciiSeparator() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a\\u00A0b\\u00A0c\", '\\u00A0')); // Non-breaking space\n}",
+      "class_name": "entry.Case_afc1ed24848e1d0515d41466",
+      "original_pass": true,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "163989cb24dd7fd48c7c4997344b87d653d87a03fd0ac6231bf2816d351a33db",
+      "index": 2
+    },
+    {
+      "compile_key": "ba6dc800845d98f95bbcbf1816fa386e5f972eeb7cd83b270d5694d2a1ad4249",
+      "source": "@Test\npublic void testEmptyTokenAtStartAndEnd() throws Exception {\n    assertArrayEquals(new String[]{\"\", \"\", \"a\", \"b\", \"c\", \"\", \"\"}, StringUtils.splitPreserveAllTokens(\"  a b c  \", ' '));\n}",
+      "class_name": "entry.Case_ba6dc800845d98f95bbcbf18",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ffa1946c43eec06a8c3c1f560dcdf5f3a0f389c9ec55ff9e08f403a03f8032ff",
+      "index": 3
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "type outside allowlist"
+    },
+    {
+      "compile_key": "441af23c4c1452e97ddc204910891f4ac5c94d497f1e2ea75ce238913927a0c9",
+      "source": "@Test\npublic void testNullSeparatorChar() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a b c\", (char) 0));\n}",
+      "class_name": "entry.Case_441af23c4c1452e97ddc2049",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: array lengths differed, expected.length=3 actual.length=1\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.internal.ComparisonCriteria.assertArraysAreSameLength(ComparisonCriteria.java:76)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:37)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:283)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:298)\n\tat entry.Case_441af23c4c1452e97ddc2049.testNullSeparatorChar(Case_441af23c4c1452e97ddc2049.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat ",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "31aefde9aec66dd241264a3c51547b4551df2bd8cfa035b43b2a6e7444ded4c8",
+      "index": 5
+    },
+    {
+      "compile_key": "dafa6def01b070e1230d35177b601e2c1b0545af3f30c149c699637d471612ae",
+      "source": "@Test\npublic void testEmptyTokenInMiddle() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a,b,c\", ','));\n}",
+      "class_name": "entry.Case_dafa6def01b070e1230d3517",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: array lengths differed, expected.length=4 actual.length=3\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.internal.ComparisonCriteria.assertArraysAreSameLength(ComparisonCriteria.java:76)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:37)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:283)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:298)\n\tat entry.Case_dafa6def01b070e1230d3517.testEmptyTokenInMiddle(Case_dafa6def01b070e1230d3517.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "5d2ac5445c1a414f7e22ab8db8c42d933a3c667bb91c4943291469e36897d00f",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

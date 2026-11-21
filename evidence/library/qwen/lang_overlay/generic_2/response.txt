@@ -1,0 +1,36 @@
+```java
+@Test
+public void testOverlayLargeEnd() throws Exception {
+    assertEquals("abzzzz", StringUtils.overlay("abcdef", "zzzz", 2, 8));
+}
+
+@Test
+public void testOverlayEqualIndices() throws Exception {
+    assertEquals("abc", StringUtils.overlay("abcdef", "xyz", 3, 3));
+}
+
+@Test
+public void testOverlayFullReplacement() throws Exception {
+    assertEquals("xyz", StringUtils.overlay("abcdef", "xyz", 0, 6));
+}
+
+@Test
+public void testOverlaySingleCharacter() throws Exception {
+    assertEquals("axyzdef", StringUtils.overlay("abcdef", "xyz", 1, 2));
+}
+
+@Test
+public void testOverlayReverseOrderIndices() throws Exception {
+    assertEquals("abzzzzef", StringUtils.overlay("abcdef", "zzzz", 4, 2));
+}
+
+@Test
+public void testOverlayBoundaryStart() throws Exception {
+    assertEquals("zzzzbcdef", StringUtils.overlay("abcdef", "zzzz", 0, 0));
+}
+
+@Test
+public void testOverlayBoundaryEnd() throws Exception {
+    assertEquals("abcdefzzzz", StringUtils.overlay("abcdef", "zzzz", 6, 6));
+}
+```

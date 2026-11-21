@@ -1,0 +1,34 @@
+@Test
+public void testCountMatchesOneOccurrence() {
+    Assert.assertEquals(1, StringUtils.countMatches("ababa", "aba"));
+}
+
+@Test
+public void testCountMatchesMultipleOccurrences() {
+    Assert.assertEquals(2, StringUtils.countMatches("aaaaa", "aa"));
+}
+
+@Test
+public void testCountMatchesNoOccurrences() {
+    Assert.assertEquals(0, StringUtils.countMatches("ababa", "ba"));
+}
+
+@Test
+public void testCountMatchesLongSub() {
+    Assert.assertEquals(1, StringUtils.countMatches("ababa", "ab"));
+}
+
+@Test
+public void testCountMatchesLongStr() {
+    Assert.assertEquals(4, StringUtils.countMatches("aaaaaaaaaa", "aa"));
+}
+
+@Test
+public void testCountMatchesMaxLengthSub() {
+    Assert.assertEquals(2, StringUtils.countMatches("abcdabcd", "abcd"));
+}
+
+@Test
+public void testCountMatchesMaxLengthStr() {
+    Assert.assertEquals(2, StringUtils.countMatches("abcd" + "abcd", "abcd"));
+}

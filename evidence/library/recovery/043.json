@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "d1a4e19c58869eec46afaeada181275f4e64d0b5aaf96c25344a4d3481f2b117",
+      "source": "@Test\npublic void testDayOfYearMaxLeap() {\n    LocalDate date = new LocalDate(2000, 2, 29);\n    Assert.assertEquals(60, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_d1a4e19c58869eec46afaead",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "c46836c5c50cef130b156b13213034ad8a032b0270f9a4d4251ac2b6e1e1e428",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

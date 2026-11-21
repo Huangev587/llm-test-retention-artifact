@@ -1,0 +1,57 @@
+```java
+@Test
+public void testPlusMinutesWrapHourForward() throws Exception {
+    LocalTime base = new LocalTime(23, 59, 59, 999);
+    LocalTime result = base.plusMinutes(1);
+    assertEquals("00:00:00.000", result.toString());
+}
+
+@Test
+public void testPlusMinutesWrapHourBackward() throws Exception {
+    LocalTime base = new LocalTime(0, 0, 0, 0);
+    LocalTime result = base.plusMinutes(-1);
+    assertEquals("23:59:59.999", result.toString());
+}
+
+@Test
+public void testPlusMinutesCrossMidnight() throws Exception {
+    LocalTime base = new LocalTime(23, 0, 0, 0);
+    LocalTime result = base.plusMinutes(60);
+    assertEquals("00:01:00.000", result.toString());
+}
+
+@Test
+public void testPlusMinutesCrossMidnightNegative() throws Exception {
+    LocalTime base = new LocalTime(0, 1, 0, 0);
+    LocalTime result = base.plusMinutes(-60);
+    assertEquals("23:59:00.000", result.toString());
+}
+
+@Test
+public void testPlusMinutesNearMidnight() throws Exception {
+    LocalTime base = new LocalTime(23, 59, 0, 0);
+    LocalTime result = base.plusMinutes(1);
+    assertEquals("00:00:00.000", result.toString());
+}
+
+@Test
+public void testPlusMinutesNearMidnightNegative() throws Exception {
+    LocalTime base = new LocalTime(0, 0, 0, 0);
+    LocalTime result = base.plusMinutes(-1);
+    assertEquals("23:59:00.000", result.toString());
+}
+
+@Test
+public void testPlusMinutesMaxMinutes() throws Exception {
+    LocalTime base = new LocalTime(0, 0, 0, 0);
+    LocalTime result = base.plusMinutes(1439);
+    assertEquals("23:59:00.000", result.toString());
+}
+
+@Test
+public void testPlusMinutesMinMinutes() throws Exception {
+    LocalTime base = new LocalTime(0, 0, 0, 0);
+    LocalTime result = base.plusMinutes(-1439);
+    assertEquals("00:01:00.000", result.toString());
+}
+```

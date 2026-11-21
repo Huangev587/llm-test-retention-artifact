@@ -1,0 +1,34 @@
+@Test
+public void testToBooleanNull() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean(null));
+}
+
+@Test
+public void testToBooleanFalse() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean("false"));
+}
+
+@Test
+public void testToBooleanOne() throws Exception {
+    Assert.assertTrue(BooleanUtils.toBoolean("1"));
+}
+
+@Test
+public void testToBooleanXGti() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean("x gti"));
+}
+
+@Test
+public void testToBooleanNonAscii() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean(new String(new char[128]))));
+}
+
+@Test
+public void testToBooleanLongString() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean(new String(new char[129]))));
+}
+
+@Test
+public void testToBooleanShortString() throws Exception {
+    Assert.assertTrue(BooleanUtils.toBoolean(new String(new char[]{'y', ''})));
+}

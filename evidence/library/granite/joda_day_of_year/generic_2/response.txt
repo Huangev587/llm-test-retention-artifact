@@ -1,0 +1,80 @@
+1. ```java
+@Test
+public void testGetDayOfYear() {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    int expected = 1;
+    int actual = date.getDayOfYear();
+    assertEquals(expected, actual);
+}
+```
+
+2. ```java
+@Test
+public void testGetDayOfYearMax() {
+    LocalDate date = new LocalDate(2100, 12, 31);
+    int expected = 366;
+    int actual = date.getDayOfYear();
+    assertEquals(expected, actual);
+}
+
+```
+
+3. ```java
+@Test
+public void testGetDayOfYearLeapYear() {
+    LocalDate date = new LocalDate(1904, 1, 1);
+    int expected = 1;
+    int actual = date.getDayOfYear();
+    assertEquals(expected, actual);
+}
+```
+
+4. ```java
+@Test
+public void testGetDayOfYearNonLeapYear() {
+    LocalDate date = new LocalDate(2000, 1, 1);
+    int expected = 1;
+    int actual = date.getDayOfYear();
+    assertEquals(expected, actual);
+}
+```
+
+5. ```java
+@Test
+public void testGetDayOfYearMidYear() {
+    LocalDate date = new LocalDate(1950, 6, 30);
+    int expected = 180;
+    int actual = date.getDayOfYear();
+    assertEquals(expected, actual);
+}
+```
+
+6. ```java
+@Test
+public void testGetDayOfYearStartOfYear() {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    int expected = 1;
+    int actual = date.getDayOfYear();
+    assertEquals(expected, actual);
+}
+```
+
+7. ```java
+@Test
+public void testGetDayOfYearEndOfYear() {
+    LocalDate date = new LocalDate(2100, 12, 31);
+    int expected = 366;
+    int actual = date.getDayOfYear();
+    assertEquals(expected, actual);
+}
+```
+
+8. ```java
+@Test
+public void testGetDayOfYearEdgeCase() {
+    LocalDate date = new LocalDate(1900, 12, 31);
+    int expected = 365;
+    int actual = date.getDayOfYear();
+    assertEquals(expected, actual);
+}
+```

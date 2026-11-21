@@ -1,0 +1,87 @@
+1. ```java
+@Test
+public void testPlusMonthsZero() throws Exception {
+    LocalDate dt = LocalDate.of(1950, 2, 28);
+    LocalDate added = dt.plusMonths(0);
+    assertEquals(1950, added.getYear());
+    assertEquals(2, added.getMonthValue());
+    assertEquals(28, added.getDayOfMonth());
+}
+```
+
+2. ```java
+@Test
+public void testPlusMonthsOne() throws Exception {
+    LocalDate dt = LocalDate.of(1950, 2, 28);
+    LocalDate added = dt.plusMonths(1);
+    assertEquals(1950, added.getYear());
+    assertEquals(3, added.getMonthValue());
+    assertEquals(28, added.getDayOfMonth());
+}
+```
+
+3. ```java
+@Test
+public void testPlusMonthsTwelve() throws Exception {
+    LocalDate dt = LocalDate.of(1950, 2, 28);
+    LocalDate added = dt.plusMonths(12);
+    assertEquals(1951, added.getYear());
+    assertEquals(2, added.getMonthValue());
+    assertEquals(28, added.getDayOfMonth());
+}
+```
+
+4. ```java
+@Test
+public void testPlusMonthsThirteen() throws Exception {
+    LocalDate dt = LocalDate.of(1950, 2, 28);
+    LocalDate added = dt.plusMonths(13);
+    assertEquals(1951, added.getYear());
+    assertEquals(3, added.getMonthValue());
+    assertEquals(31, added.getDayOfMonth());
+}
+```
+
+5. ```java
+@Test
+public void testPlusMonthsMinusOne() throws Exception {
+    LocalDate dt = LocalDate.of(1950, 3, 31);
+    LocalDate added = dt.plusMonths(-1);
+    assertEquals(1950, added.getYear());
+    assertEquals(2, added.getMonthValue());
+    assertEquals(28, added.getDayOfMonth());
+}
+```
+
+6. ```java
+@Test
+public void testPlusMonthsMinusTwelve() throws Exception {
+    LocalDate dt = LocalDate.of(1950, 3, 31);
+    LocalDate added = dt.plusMonths(-12);
+    assertEquals(1950, added.getYear());
+    assertEquals(3, added.getMonthValue());
+    assertEquals(31, added.getDayOfMonth());
+}
+```
+
+7. ```java
+@Test
+public void testPlusMonthsMinusThirteen() throws Exception {
+    LocalDate dt = LocalDate.of(1950, 3, 31);
+    LocalDate added = dt.plusMonths(-13);
+    assertEquals(1949, added.getYear());
+    assertEquals(1, added.getMonthValue());
+    assertEquals(31, added.getDayOfMonth());
+}
+```
+
+8. ```java
+@Test
+public void testPlusMonthsMax() throws Exception {
+    LocalDate dt = LocalDate.of(1900, 1, 1);
+    LocalDate added = dt.plusMonths(1200);
+    assertEquals(2100, added.getYear());
+    assertEquals(1, added.getMonthValue());
+    assertEquals(1, added.getDayOfMonth());
+}
+```

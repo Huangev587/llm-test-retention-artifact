@@ -1,0 +1,41 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "a2a8b19fa3e2534bf30e0e2681307c7a04ee7bb87b19dee2972e965d64d4f2c9",
+  "sites": 20,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.joda.time.Duration\",\"standardDays\",\"(J)Lorg/joda/time/Duration;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[10]]",
+    "[\"org.joda.time.Duration\",\"standardDays\",\"(J)Lorg/joda/time/Duration;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[19]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(II)I\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[14]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(II)I\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[18]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(II)I\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[14]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(II)I\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[18]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[47]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[54]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[57]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[41]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[79]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[16]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[6]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[20]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.joda.time.Duration\",\"standardDays\",\"(J)Lorg/joda/time/Duration;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[6]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(II)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[7]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(II)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[41]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.InvertNegsMutator\",[32]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[10]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JI)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[33]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[39]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[45]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[26]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[30]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[48]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[52]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[56]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[61]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[65]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[10]]",
+    "[\"org.joda.time.field.FieldUtils\",\"safeMultiply\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[87]]"
+  ]
+}

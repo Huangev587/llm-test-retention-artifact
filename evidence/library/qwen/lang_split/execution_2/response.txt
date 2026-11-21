@@ -1,0 +1,50 @@
+```java
+@Test
+public void testTrailingSeparator() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c", ""}, StringUtils.splitPreserveAllTokens("a b c ", ' '));
+}
+
+@Test
+public void testMultipleConsecutiveSeparators() throws Exception {
+    assertArrayEquals(new String[]{"a", "", "", "b", "", "c"}, StringUtils.splitPreserveAllTokens("a,,,b,,c", ','));
+}
+
+@Test
+public void testNonAsciiSeparator() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c"}, StringUtils.splitPreserveAllTokens("a\u00A0b\u00A0c", '\u00A0')); // Non-breaking space
+}
+
+@Test
+public void testEmptyTokenAtStartAndEnd() throws Exception {
+    assertArrayEquals(new String[]{"", "", "a", "b", "c", "", ""}, StringUtils.splitPreserveAllTokens("  a b c  ", ' '));
+}
+
+@Test
+public void testLargeInput() throws Exception {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < 100; i++) {
+        sb.append('a');
+        if (i % 10 == 9) {
+            sb.append('.');
+        } else {
+            sb.append(',');
+        }
+    }
+    String largeInput = sb.toString();
+    String[] result = StringUtils.splitPreserveAllTokens(largeInput, '.');
+    assertEquals(10, result.length);
+    for (int i = 0; i < 10; i++) {
+        assertEquals("a" + i, result[i]);
+    }
+}
+
+@Test
+public void testNullSeparatorChar() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c"}, StringUtils.splitPreserveAllTokens("a b c", (char) 0));
+}
+
+@Test
+public void testEmptyTokenInMiddle() throws Exception {
+    assertArrayEquals(new String[]{"a", "", "b", "c"}, StringUtils.splitPreserveAllTokens("a,b,c", ','));
+}
+```

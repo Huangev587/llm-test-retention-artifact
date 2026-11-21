@@ -1,0 +1,15 @@
+1. @Test public void testDecodeEmptyString() throws Exception { Assert.assertArrayEquals(new byte[0], decodeBase64("")); }
+
+2. @Test public void testDecodeSingleByte() throws Exception { Assert.assertArrayEquals(new byte[]{-1}, decodeBase64("Aw==")); }
+
+3. @Test public void testDecodeTwoBytes() throws Exception { Assert.assertArrayEquals(new byte[]{1, 2}, decodeBase64("MTIz")); }
+
+4. @Test public void testDecodeThreeBytes() throws Exception { Assert.assertArrayEquals(new byte[]{1, 2, 3}, decodeBase64("MTIzNA==")); }
+
+5. @Test public void testDecodeFourBytes() throws Exception { Assert.assertArrayEquals(new byte[]{1, 2, 3, 4}, decodeBase64("MTIzNDU2Nzg=")); }
+
+6. @Test public void testDecodeMaxBytes() throws Exception { Assert.assertArrayEquals(new byte[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31}, decodeBase64("AGFzbQE=")); }
+
+7. @Test public void testDecodeWithPadding() throws Exception { Assert.assertArrayEquals(new byte[]{1, 2, 3}, decodeBase64("MTIzMC4=")); }
+
+8. @Test public void testDecodeReencoding() throws Exception { Assert.assertArrayEquals("MTIz".getBytes(StandardCharsets.UTF_8), decodeBase64(new String(decodeBase64("MTIz"), StandardCharsets.UTF_8))); }

@@ -1,0 +1,52 @@
+```java
+@Test
+public void testWithDayOfMonthValidInput() throws Exception {
+    LocalDate date = LocalDate.of(1950, 2, 28);
+    LocalDate result = date.withDayOfMonth(29);
+    assertArrayEquals(new int[]{1950, 3, 29}, result.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().getValues());
+}
+
+@Test
+public void testWithDayOfMonthMaxInput() throws Exception {
+    LocalDate date = LocalDate.of(1950, 2, 28);
+    LocalDate result = date.withDayOfMonth(31);
+    assertArrayEquals(new int[]{1950, 3, 1}, result.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().getValues());
+}
+
+@Test
+public void testWithDayOfMonthMinInput() throws Exception {
+    LocalDate date = LocalDate.of(1950, 2, 28);
+    LocalDate result = date.withDayOfMonth(1);
+    assertArrayEquals(new int[]{1950, 2, 1}, result.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().getValues());
+}
+
+@Test
+public void testWithDayOfMonthSameInput() throws Exception {
+    LocalDate date = LocalDate.of(1950, 2, 28);
+    LocalDate result = date.withDayOfMonth(28);
+    assertArrayEquals(new int[]{1950, 2, 28}, result.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().getValues());
+}
+
+@Test
+public void testWithDayOfMonthInvalidInput() throws Exception {
+    LocalDate date = LocalDate.of(1950, 2, 28);
+    assertThrows(IllegalArgumentException.class, () -> date.withDayOfMonth(0));
+}
+
+@Test
+public void testWithDayOfMonthInvalidMonthInput() throws Exception {
+    LocalDate date = LocalDate.of(1950, 2, 28);
+    assertThrows(IllegalArgumentException.class, () -> date.withDayOfMonth(32));
+}
+
+@Test
+public void testWithDayOfMonthInvalidYearInput() throws Exception {
+    LocalDate date = LocalDate.of(1950, 2, 28);
+    assertThrows(IllegalArgumentException.class, () -> date.withDayOfMonth(29, 13, 1));
+}
+
+@Test
+public void testWithDayOfMonthInvalidChronologyInput() throws Exception {
+    // This test is not applicable as LocalDate does not support alternate chronology.
+}
+```

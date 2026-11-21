@@ -1,0 +1,41 @@
+```java
+@Test
+public void testCountMatchesNoMatch() throws Exception {
+    assertEquals(0, StringUtils.countMatches("abc", "d"));
+}
+
+@Test
+public void testCountMatchesOverlappingMatches() throws Exception {
+    assertEquals(1, StringUtils.countMatches("aaa", "aa"));
+}
+
+@Test
+public void testCountMatchesLargeTextSmallNeedle() throws Exception {
+    assertEquals(10, StringUtils.countMatches("aaaaaaaaaa", "a"));
+}
+
+@Test
+public void testCountMatchesSmallTextLargeNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches("abc", "abcd"));
+}
+
+@Test
+public void testCountMatchesWhitespace() throws Exception {
+    assertEquals(1, StringUtils.countMatches(" a ", " "));
+}
+
+@Test
+public void testCountMatchesMixedCase() throws Exception {
+    assertEquals(1, StringUtils.countMatches("Abc", "bc"));
+}
+
+@Test
+public void testCountMatchesLeadingTrailingSpaces() throws Exception {
+    assertEquals(1, StringUtils.countMatches(" ab ", "b"));
+}
+
+@Test
+public void testCountMatchesSpecialCharacters() throws Exception {
+    assertEquals(1, StringUtils.countMatches("!@#$$%^&*()", "!@#"));
+}
+```

@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "7c07469fff41eea6bb638c88cd965299d44c95712c7681d3af91de4e4d3f8ca8",
+      "source": "@Test\npublic void testGetMillisOfDayAtOneMinuteAfterMidnight() throws Exception {\n    LocalTime time = new LocalTime(0, 1, 0, 0);\n    assertEquals(60000, time.getMillisOfDay());\n}",
+      "class_name": "entry.Case_7c07469fff41eea6bb638c88",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "e043395de0bddfe15928255bbbc806096a2eef646cee09ba8a004e75ba8141fb",
+      "index": 0
+    },
+    {
+      "compile_key": "208b994a22e16fd5acec95c9788a5f48885df8c959ad492fac33fe0efdacb1d5",
+      "source": "@Test\npublic void testGetMillisOfDayAtOneHourAfterMidnight() throws Exception {\n    LocalTime time = new LocalTime(1, 0, 0, 0);\n    assertEquals(3600000, time.getMillisOfDay());\n}",
+      "class_name": "entry.Case_208b994a22e16fd5acec95c9",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "832d722081df4c8aa1b30cba85f0b787015b0f6a53d53e340bf1ea36f361773c",
+      "index": 1
+    },
+    {
+      "compile_key": "2c5d0b7eb8ed4dba6c9d5a0828bd1a2f2d4f99406f29316644734863af82f1b2",
+      "source": "@Test\npublic void testGetMillisOfDayAtOneSecondAfterNoon() throws Exception {\n    LocalTime time = new LocalTime(12, 0, 0, 1);\n    assertEquals(43200001, time.getMillisOfDay());\n}",
+      "class_name": "entry.Case_2c5d0b7eb8ed4dba6c9d5a08",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "869d878a1306733d31e5f3b90f44862cd1b0ccbbd6430635ec99813dafe6df60",
+      "index": 2
+    },
+    {
+      "compile_key": "ffa64f67ca08946581c0900436a88dca2f7b9a17980606934f7c0689e470ad25",
+      "source": "@Test\npublic void testGetMillisOfDayAtOneMinuteBeforeNoon() throws Exception {\n    LocalTime time = new LocalTime(11, 59, 0, 0);\n    assertEquals(41700000, time.getMillisOfDay());\n}",
+      "class_name": "entry.Case_ffa64f67ca08946581c09004",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<41700000> but was:<43140000>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_ffa64f67ca08946581c09004.testGetMillisOfDayAtOneMinuteBeforeNoon(Case_ffa64f67ca08946581c09004.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.r",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "2b213f72b1db65a265f045bfc2da68f17e50e0643932c84a9e39d85f7738fbee",
+      "index": 3
+    },
+    {
+      "compile_key": "fb1f470e677ff9a239f99334fa1b971fb9b09557160d9518d69d1220ffd3a9e9",
+      "source": "@Test\npublic void testGetMillisOfDayAtOneSecondBeforeHalfPastTenAM() throws Exception {\n    LocalTime time = new LocalTime(10, 30, 0, 998);\n    assertEquals(37800998, time.getMillisOfDay());\n}",
+      "class_name": "entry.Case_fb1f470e677ff9a239f99334",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ae5e46a7de3e80090995b4f236bbd8f0c3440ebec4615dc8cee9d5486879b0e2",
+      "index": 4
+    },
+    {
+      "compile_key": "582715aa021fdf6cfb602807a030e92fbb572c7f82642769d3bbc6ca77690563",
+      "source": "@Test\npublic void testGetMillisOfDayAtOneMinuteAfterHalfPastTenAM() throws Exception {\n    LocalTime time = new LocalTime(10, 31, 0, 0);\n    assertEquals(37860000, time.getMillisOfDay());\n}",
+      "class_name": "entry.Case_582715aa021fdf6cfb602807",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "012215079fa966315d7f4342eca1a0a86bf497fc94afcb8c7da35640c739cb47",
+      "index": 5
+    },
+    {
+      "compile_key": "91b34bf3cd8470ea33abc6cc4c3caf35215a1e7362ce7ff1a48c108b331a638e",
+      "source": "@Test\npublic void testGetMillisOfDayAtOneSecondAfterOneSecondBeforeMidnight() throws Exception {\n    LocalTime time = new LocalTime(23, 59, 59, 1000);\n    assertEquals(86400000, time.getMillisOfDay());\n}",
+      "class_name": "entry.Case_91b34bf3cd8470ea33abc6cc",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.joda.time.IllegalFieldValueException: Value 1000 for millisOfSecond must be in the range [0,999]\n\tat org.joda.time.field.FieldUtils.verifyValueBounds(FieldUtils.java:260)\n\tat org.joda.time.field.PreciseDateTimeField.set(PreciseDateTimeField.java:115)\n\tat org.joda.time.chrono.BaseChronology.getDateTimeMillis(BaseChronology.java:172)\n\tat org.joda.time.chrono.AssembledChronology.getDateTimeMillis(AssembledChronology.java:156)\n\tat org.joda.time.chrono.AssembledChronology.getDateTimeMillis(AssembledChronology.java:153)\n\tat org.joda.time.LocalTime.<init>(LocalTime.java:510)\n\tat org.joda.time.LocalTime.<init>(LocalTime.java:486)\n\tat entry.Case_91b34bf3cd8470ea33abc6cc.testGetMillisOfDayAtOneSecondAfterOneSecondBeforeMidnight(Case_91b34bf3cd8470ea33abc6cc.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invok",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "4af058466148c7e2819c37ef8a133f64c0bef20df0371ee7888154a0984c8104",
+      "index": 6
+    },
+    {
+      "compile_key": "22e6f76a3752c12a5c0162fa596a0acbdce204a5b32fd7ddee2e33063cb4f9ff",
+      "source": "@Test\npublic void testGetMillisOfDayAtOneMinuteBeforeOneSecondBeforeMidnight() throws Exception {\n    LocalTime time = new LocalTime(23, 58, 59, 0);\n    assertEquals(86394000, time.getMillisOfDay());\n}",
+      "class_name": "entry.Case_22e6f76a3752c12a5c0162fa",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<86394000> but was:<86339000>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_22e6f76a3752c12a5c0162fa.testGetMillisOfDayAtOneMinuteBeforeOneSecondBeforeMidnight(Case_22e6f76a3752c12a5c0162fa.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat o",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "2f20e0837e545e0de5e12198b24bd59d93c9b253072bcef247c1285030b5829f",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "java.lang.AssertionError: expected:<41700000> but was:<43140000>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_ffa64f67ca08946581c09004.testGetMillisOfDayAtOneMinuteBeforeNoon(Case_ffa64f67ca08946581c09004.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.r"
+    }
+  ]
+}

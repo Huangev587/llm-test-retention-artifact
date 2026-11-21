@@ -1,0 +1,81 @@
+```java
+@Test
+public void testPlusMinutesZero() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(0);
+    assertEquals(12, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getMillis());
+}
+
+@Test
+public void testPlusMinutesPositive() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(60);
+    assertEquals(13, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getMillis());
+}
+
+@Test
+public void testPlusMinutesNegative() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(-60);
+    assertEquals(11, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getMillis());
+}
+
+@Test
+public void testPlusMinutesMaxPositive() {
+    LocalTime time = LocalTime.of(23, 59, 59);
+    LocalTime result = time.plusMinutes(60);
+    assertEquals(0, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(1, result.getSecond());
+    assertEquals(0, result.getMillis());
+}
+
+@Test
+public void testPlusMinutesMaxNegative() {
+    LocalTime time = LocalTime.of(0, 0, 0);
+    LocalTime result = time.plusMinutes(-14400);
+    assertEquals(23, result.getHour());
+    assertEquals(59, result.getMinute());
+    assertEquals(59, result.getSecond());
+    assertEquals(999, result.getMillis());
+}
+
+@Test
+public void testPlusMinutesWrap() {
+    LocalTime time = LocalTime.of(23, 59, 59);
+    LocalTime result = time.plusMinutes(1);
+    assertEquals(0, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(1, result.getSecond());
+    assertEquals(0, result.getMillis());
+}
+
+@Test
+public void testPlusMinutesWithSeconds() {
+    LocalTime time = LocalTime.of(12, 30, 15);
+    LocalTime result = time.plusMinutes(60);
+    assertEquals(13, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(15, result.getSecond());
+    assertEquals(0, result.getMillis());
+}
+
+@Test
+public void testPlusMinutesWithMillis() {
+    LocalTime time = LocalTime.of(12, 30, 15, 500);
+    LocalTime result = time.plusMinutes(60);
+    assertEquals(13, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(15, result.getSecond());
+    assertEquals(500, result.getMillis());
+}
+```

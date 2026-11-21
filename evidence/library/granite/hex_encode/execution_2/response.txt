@@ -1,0 +1,45 @@
+1. @Test public void testEmptyArray() {
+    byte[] data = {};
+    Assert.assertEquals("{}", encodeHexString(data));
+}
+
+2. @Test public void testSingleByte() {
+    byte[] data = {0x00};
+    Assert.assertEquals("00", encodeHexString(data));
+}
+
+3. @Test public void testMultipleBytes() {
+    byte[] data = {0x12, 0x34, 0x56, 0x78};
+    Assert.assertEquals("12345678", encodeHexString(data));
+}
+
+4. @Test public void testMaxByteValue() {
+    byte[] data = {0xFF};
+    Assert.assertEquals("ff", encodeHexString(data));
+}
+
+5. @Test public void testFullRangeBytes() {
+    byte[] data = {0x00, 0x01, 0x0F, 0xFF};
+    Assert.assertEquals("00010fff", encodeHexString(data));
+}
+
+6. @Test public void testLargeArray() {
+    byte[] data = new byte[256];
+    for (int i = 0; i < data.length; i++) {
+        data[i] = (byte) i;
+    }
+    String expected = "";
+    for (byte b : data) {
+        expected += Hex.encodeHexString(new byte[]{b});
+    }
+    Assert.assertEquals(expected, encodeHexString(data));
+}
+
+7. @Test public void testNullInput() throws Exception {
+    Assert.throws(NullPointerException::new, () -> encodeHexString(null));
+}
+
+8. @Test public void testEmptyInput() {
+    byte[] data = {};
+    Assert.assertEquals("{}", encodeHexString(data));
+}

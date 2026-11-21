@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "97cd3c022c916a6d81883c18ed8a0b54baf1db31e04a898e8e4847705a07a27a",
+      "source": "@Test\npublic void testSubarrayNullArray() throws Exception {\n    int[] values = null;\n    int[] result = ArrayUtils.subarray(values, 0, 0);\n    assertNull(result);\n}",
+      "class_name": "entry.Case_97cd3c022c916a6d81883c18",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "9595f05dc50a7e12cc9575cdda04505c7c31ee027d814a348b8315ed2a1a6396",
+      "index": 0
+    },
+    {
+      "compile_key": "1250e32e08f8b00ad04e5494b38f1fa3bab534c7ef01687cf27f7efe80eccb5e",
+      "source": "@Test\npublic void testSubarrayStartNegative() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, -1, 3);\n    assertNotNull(result);\n    assertArrayEquals(new int[]{1, 2, 3}, result);\n}",
+      "class_name": "entry.Case_1250e32e08f8b00ad04e5494",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "25d452b7d07c04b6423dceda23cb091f2d6382cffe9debc6369f88f895369b8a",
+      "index": 1
+    },
+    {
+      "compile_key": "fdf0af540fc5c4307613ab3eb310f8edccfc64c6c1ecbe38922f70fad4f508ce",
+      "source": "@Test\npublic void testSubarrayEndNegative() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, 2, -1);\n    assertNotNull(result);\n    assertEquals(0, result.length);\n}",
+      "class_name": "entry.Case_fdf0af540fc5c4307613ab3e",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "97c9000d2d1fed60092946064844cd238d1a9ebf6bd92e6586c8f27026f5ce88",
+      "index": 2
+    },
+    {
+      "compile_key": "7c3da83224484c037e0a93a375509390bec2c66509e1c4f41d067b9e9a8dcc8e",
+      "source": "@Test\npublic void testSubarrayStartGreaterThanEnd() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, 3, 2);\n    assertNotNull(result);\n    assertEquals(0, result.length);\n}",
+      "class_name": "entry.Case_7c3da83224484c037e0a93a3",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ff449f5088366f9af5c1526f99f6ea4a396e4db16317046a28e8c849c4e78977",
+      "index": 3
+    },
+    {
+      "compile_key": "32abb0b63c188dc19c10d0f218774753720349bd3d30b4a65c22dd1ec905a12f",
+      "source": "@Test\npublic void testSubarrayLargeStart() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, 100, 200);\n    assertNotNull(result);\n    assertEquals(0, result.length);\n}",
+      "class_name": "entry.Case_32abb0b63c188dc19c10d0f2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8b8eee83f3e485628f888039495b6f1575aa86d8f622a9a70ad2aff7716dd827",
+      "index": 4
+    },
+    {
+      "compile_key": "c1f47c2d1fc175a5b30ee3ac3267a97a55885b2b8883ef4cb10a18dec9d9a303",
+      "source": "@Test\npublic void testSubarrayLargeEnd() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, 0, 100);\n    assertNotNull(result);\n    assertArrayEquals(new int[]{1, 2, 3, 4, 5}, result);\n}",
+      "class_name": "entry.Case_c1f47c2d1fc175a5b30ee3ac",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ec7db8f5fb4b5266cf45ca3ddf601639495d48af12cf2c68a9048d071eb4434e",
+      "index": 5
+    },
+    {
+      "compile_key": "ccf99178dd300041567b79f37df80b65d11149a7b21a085a27170ca3710c500f",
+      "source": "@Test\npublic void testSubarraySingleElement() throws Exception {\n    int[] values = {1};\n    int[] result = ArrayUtils.subarray(values, 0, 1);\n    assertNotNull(result);\n    assertArrayEquals(new int[]{1}, result);\n}",
+      "class_name": "entry.Case_ccf99178dd300041567b79f3",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6626f97112accb62ac66a66b756fd4340ba8e54f98bbd6d9c6b9346257d16df7",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

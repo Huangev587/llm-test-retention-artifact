@@ -1,0 +1,72 @@
+1. @Test public void testWithMillisOfSecond() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 45, 123);
+   LocalTime result = time.withMillisOfSecond(456);
+   Assert.assertEquals(12, result.getHour());
+   Assert.assertEquals(30, result.getMinuteOfHour());
+   Assert.assertEquals(45, result.getSecondOfMinute());
+   Assert.assertEquals(456, result.getMillisOfSecond());
+}
+
+2. @Test public void testWithMillisOfSecondOverflow() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 59, 999);
+   try {
+       time.withMillisOfSecond(100);
+       Assert.fail("Expected IllegalArgumentException");
+   } catch (IllegalArgumentException e) {
+       Assert.assertTrue(true);
+   }
+}
+
+3. @Test public void testWithMillisOfSecondUnderflow() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 0, 0);
+   LocalTime result = time.withMillisOfSecond(-1);
+   Assert.assertEquals(12, result.getHour());
+   Assert.assertEquals(30, result.getMinuteOfHour());
+   Assert.assertEquals(0, result.getSecondOfMinute());
+   Assert.assertEquals(0, result.getMillisOfSecond());
+}
+
+4. @Test public void testWithMillisOfSecondZero() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 45, 123);
+   LocalTime result = time.withMillisOfSecond(0);
+   Assert.assertEquals(12, result.getHour());
+   Assert.assertEquals(30, result.getMinuteOfHour());
+   Assert.assertEquals(45, result.getSecondOfMinute());
+   Assert.assertEquals(0, result.getMillisOfSecond());
+}
+
+5. @Test public void testWithMillisOfSecondMax() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 59, 999);
+   LocalTime result = time.withMillisOfSecond(999);
+   Assert.assertEquals(12, result.getHour());
+   Assert.assertEquals(30, result.getMinuteOfHour());
+   Assert.assertEquals(59, result.getSecondOfMinute());
+   Assert.assertEquals(999, result.getMillisOfSecond());
+}
+
+6. @Test public void testWithMillisOfSecondMin() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 0, 0);
+   LocalTime result = time.withMillisOfSecond(0);
+   Assert.assertEquals(12, result.getHour());
+   Assert.assertEquals(30, result.getMinuteOfHour());
+   Assert.assertEquals(0, result.getSecondOfMinute());
+   Assert.assertEquals(0, result.getMillisOfSecond());
+}
+
+7. @Test public void testWithMillisOfSecondMid() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 30, 500);
+   LocalTime result = time.withMillisOfSecond(550);
+   Assert.assertEquals(12, result.getHour());
+   Assert.assertEquals(30, result.getMinuteOfHour());
+   Assert.assertEquals(30, result.getSecondOfMinute());
+   Assert.assertEquals(550, result.getMillisOfSecond());
+}
+
+8. @Test public void testWithMillisOfSecondMidNegative() throws Exception {
+   LocalTime time = LocalTime.of(12, 30, 30, 500);
+   LocalTime result = time.withMillisOfSecond(-50);
+   Assert.assertEquals(12, result.getHour());
+   Assert.assertEquals(30, result.getMinuteOfHour());
+   Assert.assertEquals(30, result.getSecondOfMinute());
+   Assert.assertEquals(450, result.getMillisOfSecond());
+}

@@ -1,0 +1,36 @@
+```java
+@Test
+public void testNullInput() throws UnsupportedEncodingException {
+    Assert.assertNull(new URLCodec().encode(null, "UTF-8"));
+}
+
+@Test
+public void testEmptyString() throws UnsupportedEncodingException {
+    Assert.assertEquals("", new URLCodec().encode("", "UTF-8"));
+}
+
+@Test
+public void testBasicCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("test", new URLCodec().encode("test", "UTF-8"));
+}
+
+@Test
+public void testSpecialCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("test%20with%20spaces", new URLCodec().encode("test with spaces", "UTF-8"));
+}
+
+@Test
+public void testUnicodeCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("test%E9AEB%E8AF8", new URLCodec().encode("test中文", "UTF-8"));
+}
+
+@Test
+public void testUppercaseCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("TEST", new URLCodec().encode("TEST", "UTF-8"));
+}
+
+@Test
+public void testLowercaseCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("test", new URLCodec().encode("test", "UTF-8"));
+}
+```

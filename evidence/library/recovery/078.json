@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "468e00dce55c7bb4cc6d646f995dc8a294e6a9c547c4c69d5c7cdbe5d0d47f13",
+      "source": "@Test\npublic void testGetMillisOfDayWithMaxSecondValues() throws Exception {\n    LocalTime localTime = new LocalTime(12, 34, 59, 999);\n    int expected = 12 * 3600000 + 34 * 60000 + 59 * 1000 + 999;\n    int actual = localTime.getMillisOfDay();\n    Assert.assertEquals(expected, actual);\n}",
+      "class_name": "entry.Case_468e00dce55c7bb4cc6d646f",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8d31d6acdebd4d0d2eba3b96355961afad8244030701f779466a8703205ee8be",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

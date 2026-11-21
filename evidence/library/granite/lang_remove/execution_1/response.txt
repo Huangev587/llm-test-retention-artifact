@@ -1,0 +1,78 @@
+1. ```java
+@Test
+public void testRemoveFromEmptyArray() {
+    int[] array = {};
+    int index = 0;
+    int[] result = remove(array, index);
+    assertArrayEquals(new int[]{}, result);
+}
+```
+
+2. ```java
+@Test
+public void testRemoveFromSingleElementArray() {
+    int[] array = {1};
+    int index = 0;
+    int[] result = remove(array, index);
+    assertArrayEquals(new int[]{}, result);
+}
+```
+
+3. ```java
+@Test
+public void testRemoveFromMultipleElementArray() {
+    int[] array = {2, 6};
+    int index = 0;
+    int[] result = remove(array, index);
+    assertArrayEquals(new int[]{6}, result);
+}
+```
+
+4. ```java
+@Test
+public void testRemoveFromMultipleElementArrayMiddle() {
+    int[] array = {2, 6};
+    int index = 1;
+    int[] result = remove(array, index);
+    assertArrayEquals(new int[]{2}, result);
+}
+```
+
+5. ```java
+@Test
+public void testRemoveFromMultipleElementArrayLast() {
+    int[] array = {2, 6, 3};
+    int index = 2;
+    int[] result = remove(array, index);
+    assertArrayEquals(new int[]{2, 3}, result);
+}
+```
+
+6. ```java
+@Test
+public void testRemoveFromLargeArray() {
+    int[] array = new int[64];
+    Arrays.fill(array, 1);
+    int index = 32;
+    int[] result = remove(array, index);
+    assertArrayEquals(new int[63], result);
+}
+```
+
+7. ```java
+@Test(expected = IndexOutOfBoundsException.class)
+public void testRemoveWithInvalidIndex() {
+    int[] array = {1, 2, 3};
+    int index = -1;
+    remove(array, index);
+}
+```
+
+8. ```java
+@Test(expected = IndexOutOfBoundsException.class)
+public void testRemoveWithOutOfBoundsIndex() {
+    int[] array = {1, 2, 3};
+    int index = 3;
+    remove(array, index);
+}
+```

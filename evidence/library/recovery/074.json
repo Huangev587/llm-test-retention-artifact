@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "29ff44e9ceaa34ec9e2005c586151c261f1884f6f97d30734617839395c1a631",
+      "source": "@Test\npublic void testGetMillisOfDayWithMidnight() throws Exception {\n    LocalTime localTime = new LocalTime(0, 0, 0, 0);\n    int expected = 0;\n    int actual = localTime.getMillisOfDay();\n    Assert.assertEquals(expected, actual);\n}",
+      "class_name": "entry.Case_29ff44e9ceaa34ec9e2005c5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8c5c483f9b99fdb03fb4e7e4251132097eae3b290b1d6ef091118834d5ed74e6",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

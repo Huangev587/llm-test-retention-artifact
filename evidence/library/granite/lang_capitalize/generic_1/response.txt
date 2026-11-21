@@ -1,0 +1,73 @@
+1. ```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(capitalize(null));
+}
+```
+
+2. ```java
+@Test
+public void testEmptyString() {
+    Assert.assertEquals("", capitalize(""));
+}
+
+```
+
+3. ```java
+@Test
+public void testSingleCharacter() {
+    Assert.assertEquals("A", capitalize("a"));
+    Assert.assertEquals("B", capitalize("b"));
+    Assert.assertEquals("C", capitalize("c"));
+    //... for all lowercase ASCII letters
+}
+
+```
+
+4. ```java
+@Test
+public void testMultipleCharacters() {
+    Assert.assertEquals("Hello", capitalize("hello"));
+    Assert.assertEquals("World", capitalize("world"));
+    //... for other combinations
+}
+
+```
+
+5. ```java
+@Test
+public void testMixedCase() {
+    Assert.assertEquals("HeLLo", capitalize("hELLO"));
+    Assert.assertEquals("WoRlD", capitalize("WoRlD"));
+    //... for other mixed case combinations
+}
+
+```
+
+6. ```java
+@Test
+public void testQuotedString() {
+    Assert.assertEquals("'Hello'", capitalize("'hello'"));
+    Assert.assertEquals("`Hello`", capitalize("`hello`"));
+    //... for other quoted strings
+}
+
+```
+
+7. ```java
+@Test
+public void testUnicodeCharacters() {
+    Assert.assertEquals("Exàmple", capitalize("exàmple"));
+    //... for other Unicode characters
+}
+
+```
+
+8. ```java
+@Test
+public void testLongString() {
+    final String longStr = StringUtils.repeatedString("a", 128);
+    Assert.assertEquals(longStr.substring(0, 1), longStr.substring(0, 1).toUpperCase()) + longStr.substring(1);
+    Assert.assertEquals(capitalize(longStr), longStr.substring(0, 1).toUpperCase() + longStr.substring(1));
+}
+```

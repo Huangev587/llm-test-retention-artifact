@@ -1,0 +1,58 @@
+1. ```java
+@Test
+public void testReverseNull() {
+    Assert.assertNull(StringUtils.reverse(null));
+}
+```
+
+2. ```java
+@Test
+public void testReverseEmpty() {
+    Assert.assertEquals("", StringUtils.reverse(""));
+}
+```
+
+3. ```java
+@Test
+public void testReverseAscii() {
+    Assert.assertEquals("tab", StringUtils.reverse("bat"));
+}
+```
+
+4. ```java
+@Test
+public void testReverseAsciiUpper() {
+    Assert.assertEquals("tab", StringUtils.reverse("AT"));
+}
+
+```
+
+5. ```java
+@Test
+public void testReverseAsciiLower() {
+    Assert.assertEquals("tab", StringUtils.reverse("bat"));
+}
+```
+
+6. ```java
+@Test
+public void testReverseAsciiControl() {
+    Assert.assertEquals("\u0007ab\u0007", StringUtils.reverse("\u0007\u001b\u001c"));
+}
+```
+
+7. ```java
+@Test
+public void testReverseAsciiMax() {
+    Assert.assertEquals("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", StringUtils.reverse(new String(new char[128])))
+       .equals(new String(new char[128]).reverse().toCharArray());
+}
+```
+
+8. ```java
+@Test
+public void testReverseAsciiOutofbound() {
+    Assert.assertEquals("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", StringUtils.reverse(new String(new char[256])))
+       .equals(new String(new char[256]).reverse().toCharArray());
+}
+```

@@ -1,0 +1,118 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized byte arrays are accepted"
+    },
+    {
+      "compile_key": "4098be04af66df32108fe3ed061663fe318c73beb9cc4b0920d40dd34cabe95c",
+      "source": "@Test\npublic void testDecodeHexTwoChars() throws Exception {\n    Assert.assertArrayEquals(new byte[]{0}, Hex.decodeHex(\"0\"));\n    Assert.assertArrayEquals(new byte[]{15}, Hex.decodeHex(\"a\"));\n}",
+      "class_name": "entry.Case_4098be04af66df32108fe3ed",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.apache.commons.codec.DecoderException: Odd number of characters.\n\tat org.apache.commons.codec.binary.Hex.decodeHex(Hex.java:97)\n\tat org.apache.commons.codec.binary.Hex.decodeHex(Hex.java:77)\n\tat org.apache.commons.codec.binary.Hex.decodeHex(Hex.java:128)\n\tat entry.Case_4098be04af66df32108fe3ed.testDecodeHexTwoChars(Case_4098be04af66df32108fe3ed.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.In",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "9401bdb70b3e0be158263a16d462825190893c1407f8ae2d712e176c81b39e66",
+      "index": 1
+    },
+    {
+      "compile_key": "81b196b6c22b866e159142d310d5bbd71a979aa2d3e6139e5f369ef575a15349",
+      "source": "@Test\npublic void testDecodeHexFourChars() throws Exception {\n    Assert.assertArrayEquals(new byte[]{0, 0}, Hex.decodeHex(\"00\"));\n    Assert.assertArrayEquals(new byte[]{15, 15}, Hex.decodeHex(\"aa\"));\n}",
+      "class_name": "entry.Case_81b196b6c22b866e159142d3",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: array lengths differed, expected.length=2 actual.length=1\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.internal.ComparisonCriteria.assertArraysAreSameLength(ComparisonCriteria.java:76)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:37)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:341)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:352)\n\tat entry.Case_81b196b6c22b866e159142d3.testDecodeHexFourChars(Case_81b196b6c22b866e159142d3.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "ab4b334e0f2b8242edd4a25b96667a2647bf899abcc3752095c77dc7d3f1a469",
+      "index": 2
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized byte arrays are accepted"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 7,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "only inline initialized byte arrays are accepted"
+    },
+    {
+      "index": 1,
+      "diagnostic": "org.apache.commons.codec.DecoderException: Odd number of characters.\n\tat org.apache.commons.codec.binary.Hex.decodeHex(Hex.java:97)\n\tat org.apache.commons.codec.binary.Hex.decodeHex(Hex.java:77)\n\tat org.apache.commons.codec.binary.Hex.decodeHex(Hex.java:128)\n\tat entry.Case_4098be04af66df32108fe3ed.testDecodeHexTwoChars(Case_4098be04af66df32108fe3ed.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.In"
+    },
+    {
+      "index": 2,
+      "diagnostic": "java.lang.AssertionError: array lengths differed, expected.length=2 actual.length=1\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.internal.ComparisonCriteria.assertArraysAreSameLength(ComparisonCriteria.java:76)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:37)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:341)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:352)\n\tat entry.Case_81b196b6c22b866e159142d3.testDecodeHexFourChars(Case_81b196b6c22b866e159142d3.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat"
+    },
+    {
+      "index": 3,
+      "diagnostic": "only inline initialized byte arrays are accepted"
+    }
+  ]
+}

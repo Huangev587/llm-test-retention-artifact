@@ -1,0 +1,31 @@
+```java
+@Test
+public void testLeftPadNullString() throws Exception {
+    Assert.assertNull(StringUtils.leftPad(null, 5, 'a'));
+}
+
+@Test
+public void testLeftPadEmptyString() throws Exception {
+    Assert.assertEquals("zzz", StringUtils.leftPad("", 3, 'z'));
+}
+
+@Test
+public void testLeftPadAlreadyLargeString() throws Exception {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", 3, 'z'));
+}
+
+@Test
+public void testLeftPadIncreaseSize() throws Exception {
+    Assert.assertEquals("zzbat", StringUtils.leftPad("bat", 5, 'z'));
+}
+
+@Test
+public void testLeftPadNoChangeSmallSize() throws Exception {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", 1, 'z'));
+}
+
+@Test
+public void testLeftPadNoChangeNegativeSize() throws Exception {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", -1, 'z'));
+}
+```

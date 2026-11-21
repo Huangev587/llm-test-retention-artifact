@@ -1,0 +1,47 @@
+1. @Test public void testPlusDaysZero() throws Exception {
+   LocalDate original = new LocalDate(1900, 1, 1);
+   LocalDate result = original.plusDays(0);
+   Assert.assertEquals(original, result);
+}
+
+2. @Test public void testPlusDaysPositive() throws Exception {
+   LocalDate original = new LocalDate(1950, 12, 31);
+   LocalDate result = original.plusDays(10);
+   Assert.assertEquals(new LocalDate(1951, 1, 11), result);
+}
+
+3. @Test public void testPlusDaysNegative() throws Exception {
+   LocalDate original = new LocalDate(2000, 1, 1);
+   LocalDate result = original.plusDays(-10);
+   Assert.assertEquals(new LocalDate(1999, 12, 21), result);
+}
+
+4. @Test public void testPlusDaysMax() throws Exception {
+   LocalDate original = new LocalDate(1900, 1, 1);
+   LocalDate result = original.plusDays(36600);
+   Assert.assertEquals(new LocalDate(2000, 1, 1), result);
+}
+
+5. @Test public void testPlusDaysMin() throws Exception {
+   LocalDate original = new LocalDate(2000, 1, 1);
+   LocalDate result = original.plusDays(-36600);
+   Assert.assertEquals(new LocalDate(1900, 12, 31), result);
+}
+
+6. @Test public void testPlusDaysAcrossYearBoundary() throws Exception {
+   LocalDate original = new LocalDate(1999, 12, 31);
+   LocalDate result = original.plusDays(2);
+   Assert.assertEquals(new LocalDate(2000, 1, 2), result);
+}
+
+7. @Test public void testPlusDaysAcrossCenturyBoundary() throws Exception {
+   LocalDate original = new LocalDate(1900, 12, 31);
+   LocalDate result = original.plusDays(36600);
+   Assert.assertEquals(new LocalDate(2000, 1, 1), result);
+}
+
+8. @Test public void testPlusDaysAcrossMaxBoundary() throws Exception {
+   LocalDate original = new LocalDate(2000, 12, 31);
+   LocalDate result = original.plusDays(36600);
+   Assert.assertEquals(new LocalDate(2100, 1, 1), result);
+}

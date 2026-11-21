@@ -1,0 +1,37 @@
+```java
+@Test
+public void testGetDayOfWeekJanuaryFirst() throws Exception {
+    LocalDate date = new LocalDate(2023, 1, 1); // Friday
+    assertEquals(5, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekDecemberThirtyOne() throws Exception {
+    LocalDate date = new LocalDate(2023, 12, 31); // Thursday
+    assertEquals(4, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekLeapYearFebruaryTwentieth() throws Exception {
+    LocalDate date = new LocalDate(2024, 2, 20); // Monday
+    assertEquals(1, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekNonLeapYearFebruaryTwenty() throws Exception {
+    LocalDate date = new LocalDate(2023, 2, 20); // Saturday
+    assertEquals(6, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekMarchFirst() throws Exception {
+    LocalDate date = new LocalDate(2023, 3, 1); // Tuesday
+    assertEquals(2, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekAprilFirst() throws Exception {
+    LocalDate date = new LocalDate(2023, 4, 1); // Sunday
+    assertEquals(7, date.getDayOfWeek());
+}
+```

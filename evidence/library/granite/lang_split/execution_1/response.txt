@@ -1,0 +1,54 @@
+```java
+@Test
+public void testNullInput() throws Exception {
+    assertEquals(null, StringUtils.splitPreserveAllTokens(null, '.'));
+}
+
+@Test
+public void testEmptyInput() throws Exception {
+    String[] result = StringUtils.splitPreserveAllTokens("", '.');
+    assertEquals(0, result.length);
+}
+
+@Test
+public void testSingleToken() throws Exception {
+    String[] result = StringUtils.splitPreserveAllTokens("a.b.c", '.');
+    assertEquals(3, result.length);
+    assertArrayEquals(new String[]{"a", "b", "c"}, result);
+}
+
+@Test
+public void testAdjacentSeparators() throws Exception {
+    String[] result = StringUtils.splitPreserveAllTokens("a..b.c", '.');
+    assertEquals(4, result.length);
+    assertArrayEquals(new String[]{"a", "", "b", "c"}, result);
+}
+
+@Test
+public void testNonSeparator() throws Exception {
+    String[] result = StringUtils.splitPreserveAllTokens("a:b:c", '.');
+    assertEquals(1, result.length);
+    assertArrayEquals(new String[]{"a:b:c"}, result);
+}
+
+@Test
+public void testWhitespaceSeparator() throws Exception {
+    String[] result = StringUtils.splitPreserveAllTokens("a\tb\nc", null);
+    assertEquals(3, result.length);
+    assertArrayEquals(new String[]{"a", "b", "c"}, result);
+}
+
+@Test
+public void testLeadingTrailingWhitespace() throws Exception {
+    String[] result = StringUtils.splitPreserveAllTokens(" a b c ",'');
+    assertEquals(4, result.length);
+    assertArrayEquals(new String[]{"", "a", "b", "c", ""}, result);
+}
+
+@Test
+public void testMixedWhitespace() throws Exception {
+    String[] result = StringUtils.splitPreserveAllTokens("  a b c",'');
+    assertEquals(4, result.length);
+    assertArrayEquals(new String[]{"", "", "a", "b", "c"}, result);
+}
+```

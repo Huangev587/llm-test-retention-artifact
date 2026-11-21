@@ -1,0 +1,61 @@
+1. ```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(capitalize(null));
+}
+```
+
+2. ```java
+@Test
+public void testEmptyString() {
+    Assert.assertEquals("", capitalize(""));
+}
+
+```
+
+3. ```java
+@Test
+public void testSingleCharacterLower() {
+    Assert.assertEquals("Cat", capitalize("cat"));
+}
+
+```
+
+4. ```java
+@Test
+public void testSingleCharacterUpper() {
+    Assert.assertEquals("CAt", capitalize("cAt"));
+}
+
+```
+
+5. ```java
+@Test
+public void testSingleCharacterQuote() {
+    Assert.assertEquals("'cat'", capitalize("'cat'"));
+}
+
+```
+
+6. ```java
+@Test
+public void testMultipleCharactersLower() {
+    Assert.assertEquals("Hello World", capitalize("hello world"));
+}
+
+```
+
+7. ```java
+@Test
+public void testMultipleCharactersUpper() {
+    Assert.assertEquals("hElLo WoRlD", capitalize("hElLo WoRlD"));
+}
+
+```
+
+8. ```java
+@Test
+public void testMultipleCharactersWithQuote() {
+    Assert.assertEquals("'He'llo 'Wo'rld", capitalize("'He'llo 'Wo'rld"));
+}
+```

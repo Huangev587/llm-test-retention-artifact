@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "807d17c8bf9f1bcf5f43e9a0773ebb45a7370edc7eec5745c739346150bb7daf",
+      "source": "@Test\npublic void testNullInput() {\n    Assert.assertNull(StringUtils.leftPad(null, 3, 'z'));\n}",
+      "class_name": "entry.Case_807d17c8bf9f1bcf5f43e9a0",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "69173fe285bf036f362b3c3065e61d75abed032a34171bfe64161f8e84e1b3ea",
+      "index": 0
+    },
+    {
+      "compile_key": "933b54b2172c8a29fb2d608b54748902b5ab3cdc61120c2a1910e06fcfe7e6fd",
+      "source": "@Test\npublic void testEmptyStringInput() {\n    Assert.assertEquals(\"zzzz\", StringUtils.leftPad(\"\", 3, 'z'));\n}",
+      "class_name": "entry.Case_933b54b2172c8a29fb2d608b",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<zzz[z]> but was:<zzz[]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_933b54b2172c8a29fb2d608b.testEmptyStringInput(Case_933b54b2172c8a29fb2d608b.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunn",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "153f57ed106b8580d5b03749f3f46d73457d2b1c3924b6446c4e549e0ba40af2",
+      "index": 1
+    },
+    {
+      "compile_key": "cde524ace9acfb6d060f4f2c0d1a5918402ba90bf84fe29096b26997327f377a",
+      "source": "@Test\npublic void testShorterStringInput() {\n    Assert.assertEquals(\"bat\", StringUtils.leftPad(\"bat\", 3, 'z'));\n}",
+      "class_name": "entry.Case_cde524ace9acfb6d060f4f2c",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "aad4cb532d67cb9966a4a479b348ba2664b2ba23b1e4b358d31abf1b41e6bf83",
+      "index": 2
+    },
+    {
+      "compile_key": "17968c1f1b7b4034e36dfcac940a1d6614f0f16c95b50e2f2e9b01bc0bb1a174",
+      "source": "@Test\npublic void testLongerStringInput() {\n    Assert.assertEquals(\"zzbat\", StringUtils.leftPad(\"bat\", 5, 'z'));\n}",
+      "class_name": "entry.Case_17968c1f1b7b4034e36dfcac",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "52bdcfa35f3e4779e57a8d2f31e1d23c56112ebc46b677ab0a828ce32892da9c",
+      "index": 3
+    },
+    {
+      "compile_key": "f9609b47b4c14d894adf09ac2e18a7a87bc4188a117983b5cc1d8a2a4f1a89a2",
+      "source": "@Test\npublic void testNoPaddingRequired() {\n    Assert.assertEquals(\"bat\", StringUtils.leftPad(\"bat\", 1, 'z'));\n}",
+      "class_name": "entry.Case_f9609b47b4c14d894adf09ac",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "0db1313d00855b527b95f1037f128cb9be3c5b6b4b1db5797bf6ecac54e49a50",
+      "index": 4
+    },
+    {
+      "compile_key": "d041d30ab21d276260cd58a4cf1d9f61f324e7a31b8618d1e005e11dd3a79bb2",
+      "source": "@Test\npublic void testNegativeSizeInput() {\n    Assert.assertEquals(\"bat\", StringUtils.leftPad(\"bat\", -1, 'z'));\n}",
+      "class_name": "entry.Case_d041d30ab21d276260cd58a4",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3d7992230c9b1acf015379442f264ba33f90e555b596e3c7dfc8d076ca5c6481",
+      "index": 5
+    },
+    {
+      "compile_key": "041a4aedc0eb6058f6e8713bbe2feff8e7c477bbc4b8a1716d2817158dec365e",
+      "source": "@Test\npublic void testLargePaddingInput() {\n    Assert.assertEquals(\"zzzzzzzzzzzzzzzzzzbat\", StringUtils.leftPad(\"bat\", 20, 'z'));\n}",
+      "class_name": "entry.Case_041a4aedc0eb6058f6e8713b",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<zzzzzzzzzzzzzzzzz[z]bat> but was:<zzzzzzzzzzzzzzzzz[]bat>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_041a4aedc0eb6058f6e8713b.testLargePaddingInput(Case_041a4aedc0eb6058f6e8713b.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runn",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "56fe0ae3e9f97a8d2e60b8853e9ef9a60fee2721f03623a25debb91802e52b40",
+      "index": 6
+    },
+    {
+      "compile_key": "04af6cf27d4553ad67e66a12283cdeaddf8a2645621889081555facbb310402f",
+      "source": "@Test\npublic void testLargeNegativePaddingInput() {\n    Assert.assertEquals(\"bat\", StringUtils.leftPad(\"bat\", -128, 'z'));\n}",
+      "class_name": "entry.Case_04af6cf27d4553ad67e66a12",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "83b3331f45c9a3e4add469820f299e9f77ec1ab9eeed4f0ec970b763b948ae82",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<zzz[z]> but was:<zzz[]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_933b54b2172c8a29fb2d608b.testEmptyStringInput(Case_933b54b2172c8a29fb2d608b.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunn"
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

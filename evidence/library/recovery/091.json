@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "9836f8dec215494a881c081923217240d13e0f6bb3e3f044acfb958d72adffc2",
+      "source": "@Test\npublic void testReverseAsciiLower() {\n    Assert.assertEquals(\"tab\", StringUtils.reverse(\"bat\"));\n}",
+      "class_name": "entry.Case_9836f8dec215494a881c0819",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d0c894aa4d6cc8d4e757a2879cb4dc9e9572086224a0c3adc6ed9c76be224ae3",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

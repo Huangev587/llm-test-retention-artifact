@@ -1,0 +1,18 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "a3b35bf30ed44860c293070b5e314432e3472ea09bd692d833269de5425f1c48",
+  "sites": 6,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.joda.time.Days\",\"daysBetween\",\"(Lorg/joda/time/ReadableInstant;Lorg/joda/time/ReadableInstant;)Lorg/joda/time/Days;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[12]]",
+    "[\"org.joda.time.Days\",\"daysBetween\",\"(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;)Lorg/joda/time/Days;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[47]]",
+    "[\"org.joda.time.field.BaseDurationField\",\"getDifference\",\"(JJ)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[8]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.joda.time.Days\",\"daysBetween\",\"(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;)Lorg/joda/time/Days;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[5]]",
+    "[\"org.joda.time.Days\",\"daysBetween\",\"(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;)Lorg/joda/time/Days;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[8]]",
+    "[\"org.joda.time.Days\",\"daysBetween\",\"(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;)Lorg/joda/time/Days;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator\",[35]]",
+    "[\"org.joda.time.field.PreciseDurationField\",\"getDifferenceAsLong\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[12]]",
+    "[\"org.joda.time.field.PreciseDurationField\",\"getDifferenceAsLong\",\"(JJ)J\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[13]]"
+  ]
+}

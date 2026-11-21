@@ -1,0 +1,216 @@
+{
+  "structure_pass": true,
+  "total_methods": 6,
+  "methods": [
+    {
+      "compile_key": "082411f9c9a4575f9650a9c5164ec6cb892e3a9c9bbbc9e31102f132727a95ab",
+      "source": "@Test\npublic void testRemoveMiddleElement() throws Exception {\n    assertArrayEquals(new int[]{1, 3}, ArrayUtils.remove(new int[]{1, 2, 3}, 1));\n}",
+      "class_name": "entry.Case_082411f9c9a4575f9650a9c5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "fe907921ced9726d5c9fdb325ecc618d517d3de22338ce38aede471268ed2701",
+      "index": 0
+    },
+    {
+      "compile_key": "b3a75a9851c7ce21fe084ac7bd128d612489f83f7f2bc7cfe0148c8fbfef9a20",
+      "source": "@Test\npublic void testRemoveSingleElement() throws Exception {\n    assertArrayEquals(new int[]{}, ArrayUtils.remove(new int[]{5}, 0));\n}",
+      "class_name": "entry.Case_b3a75a9851c7ce21fe084ac7",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "62064cf19d130006670a66c691e125ccf0de42e267bda4b6d2437321a81fc7ba",
+      "index": 1
+    },
+    {
+      "compile_key": "f1b2f03b258e90610b299708e724c098ee5e3cda9e052336dd09d74918990740",
+      "source": "@Test\npublic void testRemoveSecondElement() throws Exception {\n    assertArrayEquals(new int[]{1, 3}, ArrayUtils.remove(new int[]{1, 2, 3}, 1));\n}",
+      "class_name": "entry.Case_f1b2f03b258e90610b299708",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "fe907921ced9726d5c9fdb325ecc618d517d3de22338ce38aede471268ed2701",
+      "index": 2
+    },
+    {
+      "compile_key": "e71f1e70bb47b2bfdf21906ceefa42eb15c4b232d91f025fa62d4481c1d34e1a",
+      "source": "@Test\npublic void testRemoveThirdElement() throws Exception {\n    assertArrayEquals(new int[]{1, 2}, ArrayUtils.remove(new int[]{1, 2, 3}, 2));\n}",
+      "class_name": "entry.Case_e71f1e70bb47b2bfdf21906c",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "1808dd433e3cc2fd31da513c4a1e845630b1002f75d340f39422cf576b15feb3",
+      "index": 3
+    },
+    {
+      "compile_key": "2272c473d49d58ccf7313e0a1b773a1c02c529f3b1c7fbbf335cb41ee46a3312",
+      "source": "@Test\npublic void testRemoveFourthElement() throws Exception {\n    assertArrayEquals(new int[]{1, 2, 3}, ArrayUtils.remove(new int[]{1, 2, 3, 4}, 3));\n}",
+      "class_name": "entry.Case_2272c473d49d58ccf7313e0a",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "c7197fc676efbebe9ad7a37e1485cd8077a11c702c0e3544178e3ac8a02079fa",
+      "index": 4
+    },
+    {
+      "compile_key": "e74214078944a4c7d26edbb242719850f6cf83c2dcdf5c2fe02d4cba6e67c834",
+      "source": "@Test\npublic void testRemoveFifthElement() throws Exception {\n    assertArrayEquals(new int[]{1, 2, 3, 4}, ArrayUtils.remove(new int[]{1, 2, 3, 4, 5}, 4));\n}",
+      "class_name": "entry.Case_e74214078944a4c7d26edbb2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "9038ffb1e5806dc6d162fd765a9e81427f7a9fafc3590bd38e00d49a377d43ec",
+      "index": 5
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

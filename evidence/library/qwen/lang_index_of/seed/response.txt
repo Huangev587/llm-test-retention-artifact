@@ -1,0 +1,41 @@
+```java
+@Test
+public void testNullArray() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(null, 5));
+}
+
+@Test
+public void testEmptyArray() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(new int[0], 5));
+}
+
+@Test
+public void testValueNotFound() throws Exception {
+    assertEquals(-1, ArrayUtils.indexOf(new int[]{1, 2, 3}, 4));
+}
+
+@Test
+public void testValueFoundAtStart() throws Exception {
+    assertEquals(0, ArrayUtils.indexOf(new int[]{5, 2, 3}, 5));
+}
+
+@Test
+public void testValueFoundInMiddle() throws Exception {
+    assertEquals(1, ArrayUtils.indexOf(new int[]{1, 5, 3}, 5));
+}
+
+@Test
+public void testValueFoundAtEnd() throws Exception {
+    assertEquals(2, ArrayUtils.indexOf(new int[]{1, 2, 5}, 5));
+}
+
+@Test
+public void testLargePositiveValue() throws Exception {
+    assertEquals(3, ArrayUtils.indexOf(new int[]{1, 2, 3, 1000000}, 1000000));
+}
+
+@Test
+public void testLargeNegativeValue() throws Exception {
+    assertEquals(3, ArrayUtils.indexOf(new int[]{1, 2, 3, -1000000}, -1000000));
+}
+```

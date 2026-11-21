@@ -1,0 +1,50 @@
+1. @Test public void testEmptyArray() {
+    byte[] input = {};
+    String expected = "";
+    Assert.assertEquals(expected, Base64.encodeBase64String(input));
+}
+
+2. @Test public void testSingleByte() {
+    byte[] input = {0x01};
+    String expected = "Qw==";
+    Assert.assertEquals(expected, Base64.encodeBase64String(input));
+}
+
+3. @Test public void testMultiByte() {
+    byte[] input = {0x48, 0x65, 0x6C, 0x6C, 0x6F};
+    String expected = "aW5mbw==";
+    Assert.assertEquals(expected, Base64.encodeBase64String(input));
+}
+
+4. @Test public void testMaxByte() {
+    byte[] input = new byte[]{0xFF};
+    String expected = "/0=";
+    Assert.assertEquals(expected, Base64.encodeBase64String(input));
+}
+
+5. @Test public void testMiddleBytes() {
+    byte[] input = {0x10, 0x11, 0x12, 0x13, 0x14};
+    String expected = "MTIzNDU2";
+    Assert.assertEquals(expected, Base64.encodeBase64String(input));
+}
+
+6. @Test public void testPadding() {
+    byte[] input = {0x00, 0x00, 0x00, 0x00};
+    String expected = "AAAA";
+    Assert.assertEquals(expected, Base64.encodeBase64String(input));
+}
+
+7. @Test public void testMixedBytes() {
+    byte[] input = {0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88};
+    String expected = "GzA3RUNGRkZUTmFtZQ==";
+    Assert.assertEquals(expected, Base64.encodeBase64String(input));
+}
+
+8. @Test public void testLargeArray() {
+    byte[] input = new byte[256];
+    for (int i = 0; i < input.length; i++) {
+        input[i] = (byte) i;
+    }
+    String expected = "gAAAAAAAAADAAIAAAAAAAAAQAAAAEAAAAAAAAAAQAAAAFAAAAAAAAAQAAAAgAAAAAAAAAQAAAAHAAAAAAAAAQAAAAIAAAAAAAAAQAAAAJAAAAAAAAAQAAAAMAAA==";
+    Assert.assertEquals(expected, Base64.encodeBase64String(input));
+}

@@ -1,0 +1,39 @@
+@Test
+public void testCountMatchesLongStr() {
+    Assert.assertEquals(1, StringUtils.countMatches("a".repeat(128), "a"));
+}
+
+@Test
+public void testCountMatchesLongSub() {
+    Assert.assertEquals(128, StringUtils.countMatches("a".repeat(128), "a".repeat(1)));
+}
+
+@Test
+public void testCountMatchesMixedCaseStr() {
+    Assert.assertEquals(2, StringUtils.countMatches("AbBa", "a"));
+}
+
+@Test
+public void testCountMatchesMixedCaseSub() {
+    Assert.assertEquals(2, StringUtils.countMatches("AbBa", "A"));
+}
+
+@Test
+public void testCountMatchesSpecialCharsStr() {
+    Assert.assertEquals(2, StringUtils.countMatches("ab!@ba", "!@"));
+}
+
+@Test
+public void testCountMatchesSpecialCharsSub() {
+    Assert.assertEquals(2, StringUtils.countMatches("ab!@ba", "!@"));
+}
+
+@Test
+public void testCountMatchesOverlappingStr() {
+    Assert.assertEquals(1, StringUtils.countMatches("aaaa", "aa"));
+}
+
+@Test
+public void testCountMatchesOverlappingSub() {
+    Assert.assertEquals(1, StringUtils.countMatches("aaaa", "aa"));
+}

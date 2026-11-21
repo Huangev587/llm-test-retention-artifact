@@ -1,0 +1,64 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 1,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 2,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 7,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "invalid or shadowing local name"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 1,
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 2,
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 3,
+      "diagnostic": "only @Test without arguments is accepted"
+    }
+  ]
+}

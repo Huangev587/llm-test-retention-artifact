@@ -1,0 +1,41 @@
+```java
+@Test
+public void testLeadingSeparator() throws Exception {
+    assertArrayEquals(new String[]{"", "a", "b", "c"}, StringUtils.splitPreserveAllTokens(".a.b.c", '.'));
+}
+
+@Test
+public void testTrailingSeparator() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c", ""}, StringUtils.splitPreserveAllTokens("a.b.c.", '.'));
+}
+
+@Test
+public void testMultipleConsecutiveSeparators() throws Exception {
+    assertArrayEquals(new String[]{"a", "", "", "b", "c"}, StringUtils.splitPreserveAllTokens("a...b.c", '.'));
+}
+
+@Test
+public void testWhitespaceAsSeparator() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c"}, StringUtils.splitPreserveAllTokens("a b c", ' '));
+}
+
+@Test
+public void testEmptyTokenAtStart() throws Exception {
+    assertArrayEquals(new String[]{"", "a", "b", "c"}, StringUtils.splitPreserveAllTokens(" .a.b.c", '.'));
+}
+
+@Test
+public void testEmptyTokenAtEnd() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c", ""}, StringUtils.splitPreserveAllTokens("a.b.c ", '.'));
+}
+
+@Test
+public void testEmptyTokenInMiddle() throws Exception {
+    assertArrayEquals(new String[]{"a", "", "b", "c"}, StringUtils.splitPreserveAllTokens("a..b.c", '.'));
+}
+
+@Test
+public void testNullSeparatorChar() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c"}, StringUtils.splitPreserveAllTokens("a b c", '\0'));
+}
+```

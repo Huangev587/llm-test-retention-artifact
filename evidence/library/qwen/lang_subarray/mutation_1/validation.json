@@ -1,0 +1,258 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "69e3e45b6ca61667091ebc35fde08833c5437df997db6cc34322bcaae5c85f1c",
+      "source": "@Test\npublic void testSubarrayNullArray() throws Exception {\n    int[] result = ArrayUtils.subarray(null, 0, 0);\n    assertNull(result);\n}",
+      "class_name": "entry.Case_69e3e45b6ca61667091ebc35",
+      "original_pass": false,
+      "status": "COMPILE_FAILURE",
+      "original_feedback": "<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_subarray/69e3e45b6ca61667091ebc35fde08833c5437df997db6cc34322bcaae5c85f1c/Case_69e3e45b6ca61667091ebc35.java:10: 错误: 对subarray的引用不明确\n    int[] result = ArrayUtils.subarray(null, 0, 0);\n                             ^\n  ArrayUtils 中的方法 subarray(short[],int,int) 和 ArrayUtils 中的方法 <T>subarray(T[],int,int) 都匹配\n  其中, T是类型变量:\n    T扩展已在方法 <T>subarray(T[],int,int)中声明的Object\n<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_subarray/69e3e45b6ca61667091ebc35fde08833c5437df997db6cc34322bcaae5c85f1c/Case_69e3e45b6ca61667091ebc35.java:10: 错误: 不兼容的类型: short[]无法转换为int[]\n    int[] result = ArrayUtils.subarray(null, 0, 0);\n                                      ^\n2 个错误\n",
+      "id": "b6eb69e68347659f0a3dc0733c1466ebb9da2559abc4b6a229de581ef05d0f7a",
+      "index": 0
+    },
+    {
+      "compile_key": "182771a905027b4cc692e1480029c55f088512c0640520dabce14e6b8146a042",
+      "source": "@Test\npublic void testSubarrayEmptyArray() throws Exception {\n    int[] values = {};\n    int[] result = ArrayUtils.subarray(values, 0, 0);\n    assertNotNull(result);\n    assertEquals(0, result.length);\n}",
+      "class_name": "entry.Case_182771a905027b4cc692e148",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "7f138585b4c2f92680f6f7d9793206c4f317e379df4b6eb8aabb608293d31f93",
+      "index": 1
+    },
+    {
+      "compile_key": "51523a5f9d8e5ecced857f0214090bd86cac1cb50608851f799e3220e5dc32eb",
+      "source": "@Test\npublic void testSubarrayFullArray() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, 0, 5);\n    assertNotNull(result);\n    assertArrayEquals(new int[]{1, 2, 3, 4, 5}, result);\n}",
+      "class_name": "entry.Case_51523a5f9d8e5ecced857f02",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "a80c2448badd12955f3f5fd1bd6eea7753f16db90fdef14061d08ce5ea39be15",
+      "index": 2
+    },
+    {
+      "compile_key": "c98c1a7f9aae17f1fdd0acdd6445374875aceeb7a721df0b5beb61516771f82c",
+      "source": "@Test\npublic void testSubarrayPartialArray() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, 1, 4);\n    assertNotNull(result);\n    assertArrayEquals(new int[]{2, 3, 4}, result);\n}",
+      "class_name": "entry.Case_c98c1a7f9aae17f1fdd0acdd",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "facb1736559f6b878a63a70f4810447cf6ed04ca4b2ea5cd739fdb8619753e8f",
+      "index": 3
+    },
+    {
+      "compile_key": "1250e32e08f8b00ad04e5494b38f1fa3bab534c7ef01687cf27f7efe80eccb5e",
+      "source": "@Test\npublic void testSubarrayStartNegative() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, -1, 3);\n    assertNotNull(result);\n    assertArrayEquals(new int[]{1, 2, 3}, result);\n}",
+      "class_name": "entry.Case_1250e32e08f8b00ad04e5494",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "25d452b7d07c04b6423dceda23cb091f2d6382cffe9debc6369f88f895369b8a",
+      "index": 4
+    },
+    {
+      "compile_key": "501398fd4d34cefa4629ffd86b26f33eb0336b23e9fb567c1f8ea9541a714b0a",
+      "source": "@Test\npublic void testSubarrayEndPositive() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, 2, 10);\n    assertNotNull(result);\n    assertArrayEquals(new int[]{3, 4, 5}, result);\n}",
+      "class_name": "entry.Case_501398fd4d34cefa4629ffd8",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "4f531d5729c483f39e81a348be2b4021d93bb8dc68eb79fb3617026bbe1581d0",
+      "index": 5
+    },
+    {
+      "compile_key": "dcc320aa703426e69c8a95478fe5369be209c9fc83af4c0608552675ae6433a3",
+      "source": "@Test\npublic void testSubarrayEmptyResult() throws Exception {\n    int[] values = {1, 2, 3, 4, 5};\n    int[] result = ArrayUtils.subarray(values, 3, 2);\n    assertNotNull(result);\n    assertEquals(0, result.length);\n}",
+      "class_name": "entry.Case_dcc320aa703426e69c8a9547",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ff449f5088366f9af5c1526f99f6ea4a396e4db16317046a28e8c849c4e78977",
+      "index": 6
+    },
+    {
+      "compile_key": "bf12dd44f30e4160bb541b8bf1756106623d52a8b971756ed9a5d382e70d3b35",
+      "source": "@Test\npublic void testSubarrayLargeValues() throws Exception {\n    int[] values = {-1000000, 1000000, -500000, 500000};\n    int[] result = ArrayUtils.subarray(values, 1, 3);\n    assertNotNull(result);\n    assertArrayEquals(new int[]{1000000, -500000}, result);\n}",
+      "class_name": "entry.Case_bf12dd44f30e4160bb541b8b",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "fd36d9facc42553dfe9f4f9c2bfe29c9b6bd0faf34e685744db4b4e25053bdc7",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_subarray/69e3e45b6ca61667091ebc35fde08833c5437df997db6cc34322bcaae5c85f1c/Case_69e3e45b6ca61667091ebc35.java:10: 错误: 对subarray的引用不明确\n    int[] result = ArrayUtils.subarray(null, 0, 0);\n                             ^\n  ArrayUtils 中的方法 subarray(short[],int,int) 和 ArrayUtils 中的方法 <T>subarray(T[],int,int) 都匹配\n  其中, T是类型变量:\n    T扩展已在方法 <T>subarray(T[],int,int)中声明的Object\n<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_subarray/69e3e45b6ca61667091ebc35fde08833c5437df997db6cc34322bcaae5c85f1c/Case_69e3e45b6ca61667091ebc35.java:10: 错误: 不兼容的类型: short[]无法转换为int[]\n    int[] result = ArrayUtils.subarray(null, 0, 0);\n                                      ^\n2 个错误\n"
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

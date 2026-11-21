@@ -1,0 +1,32 @@
+1. @Test public void testNullInput() throws DecoderException, UnsupportedEncodingException {
+    Assert.assertNull(decode(null, "UTF-8"));
+}
+
+2. @Test public void testEmptyInput() throws DecoderException, UnsupportedEncodingException {
+    Assert.assertEquals("", decode("", "UTF-8"));
+}
+
+3. @Test public void testSingleCharacterInput() throws DecoderException, UnsupportedEncodingException {
+    Assert.assertEquals("a", decode("%61", "UTF-8"));
+}
+
+4. @Test public void testMultipleCharactersInput() throws DecoderException, UnsupportedEncodingException {
+    Assert.assertEquals("hello", decode("hello", "UTF-8"));
+}
+
+5. @Test public void testSpecialCharactersInput() throws DecoderException, UnsupportedEncodingException {
+    Assert.assertEquals("!@#$%^&*()", decode("%21%40%23%24%25%5E%26%2A%28%29", "UTF-8"));
+}
+
+6. @Test public void testUnicodeCharactersInput() throws DecoderException, UnsupportedEncodingException {
+    Assert.assertEquals("🌎", decode("%F0%9F%8C%8E", "UTF-8"));
+}
+
+7. @Test public void testLongUnicodeCharactersInput() throws DecoderException, UnsupportedEncodingException {
+    String input = String.join("", Collections.nCopies(256, "%F0%9F%8C%8E"));
+    Assert.assertEquals(input, decode(input, "UTF-8"));
+}
+
+8. @Test public void testNonUTF8Input() throws DecoderException, UnsupportedEncodingException {
+    Assert.assertNotEquals("non-utf8", decode("non-utf8", "UTF-8"));
+}

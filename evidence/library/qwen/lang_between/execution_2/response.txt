@@ -1,0 +1,41 @@
+```java
+@Test
+public void testStringWithSingleCharacterDelimiters() throws Exception {
+    assertEquals("b", StringUtils.substringBetween("a[b]c", "a", "c"));
+}
+
+@Test
+public void testStringWithMultipleOccurrencesOfOpenDelimiter() throws Exception {
+    assertNull(StringUtils.substringBetween("a[b]b[c]", "b", "c"));
+}
+
+@Test
+public void testStringWithMultipleOccurrencesOfCloseDelimiter() throws Exception {
+    assertNull(StringUtils.substringBetween("a[b]c[d]", "b", "d"));
+}
+
+@Test
+public void testStringWithNestedDelimiters() throws Exception {
+    assertNull(StringUtils.substringBetween("a[b[c]]d", "b", "d"));
+}
+
+@Test
+public void testStringWithLeadingAndTrailingWhitespace() throws Exception {
+    assertEquals("b", StringUtils.substringBetween(" a [ b ] c ", " ", " "));
+}
+
+@Test
+public void testStringWithSpecialCharacters() throws Exception {
+    assertEquals("b", StringUtils.substringBetween("a[b]c", "a", "c"));
+}
+
+@Test
+public void testStringWithUnicodeCharacters() throws Exception {
+    assertEquals("б", StringUtils.substringBetween("а[б]в", "а", "в"));
+}
+
+@Test
+public void testStringWithLongerOpenDelimiter() throws Exception {
+    assertNull(StringUtils.substringBetween("a[bc]d", "ab", "cd"));
+}
+```

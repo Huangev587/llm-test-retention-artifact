@@ -1,0 +1,57 @@
+```java
+@Test
+public void testPlusDaysMinNegative() throws Exception {
+    LocalDate base = new LocalDate(1900, 1, 1);
+    LocalDate result = base.plusDays(-36600);
+    assertEquals("1900-01-01", result.toString());
+}
+
+@Test
+public void testPlusDaysMaxPositive() throws Exception {
+    LocalDate base = new LocalDate(2100, 1, 1);
+    LocalDate result = base.plusDays(36600);
+    assertEquals("2100-01-01", result.toString());
+}
+
+@Test
+public void testPlusDaysOneYear() throws Exception {
+    LocalDate base = new LocalDate(2020, 1, 1);
+    LocalDate result = base.plusDays(365);
+    assertEquals("2021-01-01", result.toString());
+}
+
+@Test
+public void testPlusDaysLeapYear() throws Exception {
+    LocalDate base = new LocalDate(2020, 2, 29);
+    LocalDate result = base.plusDays(1);
+    assertEquals("2020-03-01", result.toString());
+}
+
+@Test
+public void testPlusDaysEndOfYear() throws Exception {
+    LocalDate base = new LocalDate(2020, 12, 31);
+    LocalDate result = base.plusDays(1);
+    assertEquals("2021-01-01", result.toString());
+}
+
+@Test
+public void testPlusDaysStartOfYear() throws Exception {
+    LocalDate base = new LocalDate(2020, 1, 1);
+    LocalDate result = base.plusDays(-1);
+    assertEquals("1999-12-31", result.toString());
+}
+
+@Test
+public void testPlusDaysLargeNegative() throws Exception {
+    LocalDate base = new LocalDate(1900, 1, 1);
+    LocalDate result = base.plusDays(-366000);
+    assertEquals("1900-01-01", result.toString());
+}
+
+@Test
+public void testPlusDaysLargePositive() throws Exception {
+    LocalDate base = new LocalDate(2100, 1, 1);
+    LocalDate result = base.plusDays(366000);
+    assertEquals("2100-01-01", result.toString());
+}
+```

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite this evidence package when using its data or code."
+type: dataset
+title: "Test Retention in Evaluating LLM-Generated Unit Tests: Local Effects and Limits - Reproduction Evidence"
+authors:
+  - family-names: "Lv"
+    given-names: "Shuhuan"
+  - family-names: "Zheng"
+    given-names: "Wei"
+    orcid: "https://orcid.org/0000-0002-1890-8186"
+version: "1.0.0"
+date-released: 2026-11-21
+url: "https://github.com/Huangev587/llm-test-retention-artifact"
+repository-code: "https://github.com/Huangev587/llm-test-retention-artifact"

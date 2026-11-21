@@ -1,0 +1,57 @@
+```java
+@Test
+public void testDaysBetweenSameDay() throws Exception {
+    LocalDate start = new LocalDate(2023, 10, 1);
+    LocalDate end = new LocalDate(2023, 10, 1);
+    assertEquals(Days.days(0), Days.daysBetween(start, end));
+}
+
+@Test
+public void testDaysBetweenOneDayApart() throws Exception {
+    LocalDate start = new LocalDate(2023, 10, 1);
+    LocalDate end = new LocalDate(2023, 10, 2);
+    assertEquals(Days.days(1), Days.daysBetween(start, end));
+}
+
+@Test
+public void testDaysBetweenNegativeOneDayApart() throws Exception {
+    LocalDate start = new LocalDate(2023, 10, 2);
+    LocalDate end = new LocalDate(2023, 10, 1);
+    assertEquals(Days.days(-1), Days.daysBetween(start, end));
+}
+
+@Test
+public void testDaysBetweenMultipleDaysApart() throws Exception {
+    LocalDate start = new LocalDate(2023, 10, 1);
+    LocalDate end = new LocalDate(2023, 10, 5);
+    assertEquals(Days.days(4), Days.daysBetween(start, end));
+}
+
+@Test
+public void testDaysBetweenDifferentMonths() throws Exception {
+    LocalDate start = new LocalDate(2023, 10, 31);
+    LocalDate end = new LocalDate(2023, 11, 1);
+    assertEquals(Days.days(1), Days.daysBetween(start, end));
+}
+
+@Test
+public void testDaysBetweenDifferentYears() throws Exception {
+    LocalDate start = new LocalDate(2022, 12, 31);
+    LocalDate end = new LocalDate(2023, 1, 1);
+    assertEquals(Days.days(1), Days.daysBetween(start, end));
+}
+
+@Test
+public void testDaysBetweenLeapYear() throws Exception {
+    LocalDate start = new LocalDate(2020, 2, 28);
+    LocalDate end = new LocalDate(2020, 3, 1);
+    assertEquals(Days.days(1), Days.daysBetween(start, end));
+}
+
+@Test
+public void testDaysBetweenNonLeapYear() throws Exception {
+    LocalDate start = new LocalDate(2021, 2, 28);
+    LocalDate end = new LocalDate(2021, 3, 1);
+    assertEquals(Days.days(1), Days.daysBetween(start, end));
+}
+```

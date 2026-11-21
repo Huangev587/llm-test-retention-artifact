@@ -1,0 +1,258 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "7af64ec37c022ab083662860f70975124f6c2d510b447b35f2ece9ad02431ea1",
+      "source": "@Test\npublic void testValueFoundInMiddle() throws Exception {\n    assertEquals(1, ArrayUtils.indexOf(new int[]{1, 4, 3}, 4));\n}",
+      "class_name": "entry.Case_7af64ec37c022ab083662860",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6e86b90502afbcf7724cacb63b0b75355643b675583424b830b59263562d36bc",
+      "index": 0
+    },
+    {
+      "compile_key": "ccf065095442d4703f8f39d873013b6f322e25866afddc44d0cc48ab7953d586",
+      "source": "@Test\npublic void testValueFoundAtEnd() throws Exception {\n    assertEquals(2, ArrayUtils.indexOf(new int[]{1, 2, 7}, 7));\n}",
+      "class_name": "entry.Case_ccf065095442d4703f8f39d8",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "474adb2f51050e7f3658b28e14756b533009762c3bf717a75775ebc721ff192d",
+      "index": 1
+    },
+    {
+      "compile_key": "56914324669185ece69d004b5af946a27781d4f57a3b7336cf7a0aea646917ca",
+      "source": "@Test\npublic void testEmptyArray() throws Exception {\n    assertEquals(-1, ArrayUtils.indexOf(new int[]{}, 5));\n}",
+      "class_name": "entry.Case_56914324669185ece69d004b",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "bc78d06144b124dab5ba58c83ac7bd3324797665f7393446db165bec0ceec150",
+      "index": 2
+    },
+    {
+      "compile_key": "efe59a530969da4768c11b68556926ca3b9d63f72efae4109703b634d4ae2a20",
+      "source": "@Test\npublic void testNullArray() throws Exception {\n    assertEquals(-1, ArrayUtils.indexOf(null, 5));\n}",
+      "class_name": "entry.Case_efe59a530969da4768c11b68",
+      "original_pass": false,
+      "status": "COMPILE_FAILURE",
+      "original_feedback": "<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_index_of/efe59a530969da4768c11b68556926ca3b9d63f72efae4109703b634d4ae2a20/Case_efe59a530969da4768c11b68.java:10: 错误: 对indexOf的引用不明确\n    assertEquals(-1, ArrayUtils.indexOf(null, 5));\n                               ^\n  ArrayUtils 中的方法 indexOf(int[],int) 和 ArrayUtils 中的方法 indexOf(long[],long) 都匹配\n1 个错误\n",
+      "id": "114fcbc57967060b6f8f4d247c7928b777d5e77926db7db6355b7e6af531392a",
+      "index": 3
+    },
+    {
+      "compile_key": "79c3e339ccfa5fbca31e2c5fc48ea7796e68bfa103afa5f66f244f225c4924e7",
+      "source": "@Test\npublic void testSingleElementMatch() throws Exception {\n    assertEquals(0, ArrayUtils.indexOf(new int[]{9}, 9));\n}",
+      "class_name": "entry.Case_79c3e339ccfa5fbca31e2c5f",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "7e348cf0dd73f4ee3208cb9707097bda7fb0bdc109af520ebee5776dbb461fb0",
+      "index": 4
+    },
+    {
+      "compile_key": "bebdb705ec7b5483095c2e6c7c39631016612e31a86396e7a63427c96da79649",
+      "source": "@Test\npublic void testSingleElementNoMatch() throws Exception {\n    assertEquals(-1, ArrayUtils.indexOf(new int[]{9}, 8));\n}",
+      "class_name": "entry.Case_bebdb705ec7b5483095c2e6c",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "23e9693ce6ef4ecefa4d72efe06c48d69c424fefbdbb89a55dd9c323a6e85254",
+      "index": 5
+    },
+    {
+      "compile_key": "a80915d5e009f2708aaf805c76521e3ea003f2d5783252be649e74f36ae3c68f",
+      "source": "@Test\npublic void testLargePositiveValue() throws Exception {\n    assertEquals(3, ArrayUtils.indexOf(new int[]{1, 2, 3, 1000000}, 1000000));\n}",
+      "class_name": "entry.Case_a80915d5e009f2708aaf805c",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "c3a1f0d29d8f53663b706d2ce1832cd6e4ff14fd3589c7faa7b928994cc0ddbd",
+      "index": 6
+    },
+    {
+      "compile_key": "874e4cade4ad1dbea6cfbdaccaa0e0c7573fbaa2091de2f8342e7ed7a57c3b4a",
+      "source": "@Test\npublic void testLargeNegativeValue() throws Exception {\n    assertEquals(3, ArrayUtils.indexOf(new int[]{1, 2, 3, -1000000}, -1000000));\n}",
+      "class_name": "entry.Case_874e4cade4ad1dbea6cfbdac",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8df42f688444c9dd0453c7f44642c39e37eb6411d71a1f27af845c6d038f4766",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_index_of/efe59a530969da4768c11b68556926ca3b9d63f72efae4109703b634d4ae2a20/Case_efe59a530969da4768c11b68.java:10: 错误: 对indexOf的引用不明确\n    assertEquals(-1, ArrayUtils.indexOf(null, 5));\n                               ^\n  ArrayUtils 中的方法 indexOf(int[],int) 和 ArrayUtils 中的方法 indexOf(long[],long) 都匹配\n1 个错误\n"
+    }
+  ]
+}

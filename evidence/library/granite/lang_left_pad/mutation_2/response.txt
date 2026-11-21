@@ -1,0 +1,36 @@
+@Test
+public void testZeroSizeInput() {
+    Assert.assertEquals("", StringUtils.leftPad("bat", 0, 'z'));
+}
+
+@Test
+public void testNegativeSizeInput() {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", -1, 'z'));
+}
+
+@Test
+public void testMaxPaddingInput() {
+    final int maxPadding = Integer.MAX_VALUE - "bat".length();
+    Assert.assertEquals(new StringBuilder(maxPadding + "z").toString(), StringUtils.leftPad("bat", Integer.MAX_VALUE, 'z'));
+}
+
+@Test
+public void testLargePaddingInput() {
+    final int largePadding = 100000;
+    Assert.assertEquals(new StringBuilder(largePadding + "z").toString(), StringUtils.leftPad("bat", 100003, 'z'));
+}
+
+@Test
+public void testSmallPaddingInput() {
+    Assert.assertEquals("zz", StringUtils.leftPad("bat", 3, 'z'));
+}
+
+@Test
+public void testSinglePaddingInput() {
+    Assert.assertEquals("zbat", StringUtils.leftPad("bat", 4, 'z'));
+}
+
+@Test
+public void testNoPaddingCharacterInput() {
+    Assert.assertEquals("bat", StringUtils.leftPad("bat", 5,''));
+}

@@ -1,0 +1,54 @@
+```java
+@Test
+public void testPlusMonthsEndOfMonthClampForward() throws Exception {
+    LocalDate date = new LocalDate(2023, 11, 30);
+    LocalDate result = date.plusMonths(1);
+    assertEquals("2024-12-31", result.toString());
+}
+
+@Test
+public void testPlusMonthsLargePositive() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(1200);
+    assertEquals("2100-04-05", result.toString());
+}
+
+@Test
+public void testPlusMonthsLargeNegative() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(-1200);
+    assertEquals("1900-04-05", result.toString());
+}
+
+@Test
+public void testPlusMonthsMaxPositive() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(Integer.MAX_VALUE);
+    // Note: The exact result depends on the implementation details of LocalDate
+    // For simplicity, we assume it wraps around within the valid range
+    assertEquals("2023-04-05", result.toString());
+}
+
+@Test
+public void testPlusMonthsMinNegative() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(Integer.MIN_VALUE);
+    // Note: The exact result depends on the implementation details of LocalDate
+    // For simplicity, we assume it wraps around within the valid range
+    assertEquals("2023-04-05", result.toString());
+}
+
+@Test
+public void testPlusMonthsBoundaryPositive() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(11);
+    assertEquals("2024-09-05", result.toString());
+}
+
+@Test
+public void testPlusMonthsBoundaryNegative() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 5);
+    LocalDate result = date.plusMonths(-11);
+    assertEquals("2022-09-05", result.toString());
+}
+```

@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "f67c96ff4e92a147d2509e0ad0fe676f9beb9deb6e225e4886076dbbb8595ab8",
+      "source": "@Test\npublic void testAdjacentSeparators() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a..b.c\", '.'));\n}",
+      "class_name": "entry.Case_f67c96ff4e92a147d2509e0a",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "60d3ef7e4358ce33e3d7b61390a97e30932ffa17664cfda854f83db134d2d2be",
+      "index": 0
+    },
+    {
+      "compile_key": "86e760c34baaa10f59d186199c2622a14fff600384de5a7f0c340b765284f636",
+      "source": "@Test\npublic void testNoSeparator() throws Exception {\n    assertArrayEquals(new String[]{\"a:b:c\"}, StringUtils.splitPreserveAllTokens(\"a:b:c\", '.'));\n}",
+      "class_name": "entry.Case_86e760c34baaa10f59d18619",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d11f9fda85049a4a378d54fd30f1ab1115322b858b0919e0a7863ca93b4fa13b",
+      "index": 1
+    },
+    {
+      "compile_key": "20e572c8901064d8f927c693be238ef64205f457744f64610a60863a7544e30a",
+      "source": "@Test\npublic void testWhitespaceSeparator() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a b c\", ' '));\n}",
+      "class_name": "entry.Case_20e572c8901064d8f927c693",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "b43dc55920e80a70b2a3c5ebfa674e70eae92c90592392fbf20faf907f8c3afe",
+      "index": 2
+    },
+    {
+      "compile_key": "90deb7c4e5d7125a7c3b3a334ce113c682f12fd5b1b68b823595fabb9e3967f2",
+      "source": "@Test\npublic void testLeadingSeparator() throws Exception {\n    assertArrayEquals(new String[]{\"\", \"a\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\" a b c\", ' '));\n}",
+      "class_name": "entry.Case_90deb7c4e5d7125a7c3b3a33",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "c654ad7bedce6978a61a994a868a8b760dae806f6d98a34d963bc154e42a19ef",
+      "index": 3
+    },
+    {
+      "compile_key": "0b8ed923793574c6fc5262ba418decf607ec0119f266859b66b578fafc3dd817",
+      "source": "@Test\npublic void testTrailingSeparator() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"b\", \"c\", \"\"}, StringUtils.splitPreserveAllTokens(\"a b c \", ' '));\n}",
+      "class_name": "entry.Case_0b8ed923793574c6fc5262ba",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8e4016a40b77b8f69974dca0b8c586d89dfd8f1e14bb2ffaf091a33dc6001ddd",
+      "index": 4
+    },
+    {
+      "compile_key": "d4c6ddbcda2c06cd471fd91697f410dd5f01d54ac105bf7ea5eebffdac308c8c",
+      "source": "@Test\npublic void testMultipleConsecutiveSeparators() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"\", \"\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a,,,b,c\", ','));\n}",
+      "class_name": "entry.Case_d4c6ddbcda2c06cd471fd916",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d7265c18ce5b3b300fbc3d3be2bb7fb7516a845f98208049528749d299ec917b",
+      "index": 5
+    },
+    {
+      "compile_key": "ba6dc800845d98f95bbcbf1816fa386e5f972eeb7cd83b270d5694d2a1ad4249",
+      "source": "@Test\npublic void testEmptyTokenAtStartAndEnd() throws Exception {\n    assertArrayEquals(new String[]{\"\", \"\", \"a\", \"b\", \"c\", \"\", \"\"}, StringUtils.splitPreserveAllTokens(\"  a b c  \", ' '));\n}",
+      "class_name": "entry.Case_ba6dc800845d98f95bbcbf18",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ffa1946c43eec06a8c3c1f560dcdf5f3a0f389c9ec55ff9e08f403a03f8032ff",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

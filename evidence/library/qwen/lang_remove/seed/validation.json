@@ -1,0 +1,172 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 1,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 2,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "compile_key": "2af981c1ea06771cd48a3d21fc33a93b31f544b6381b2ede9630e4a2522e566e",
+      "source": "@Test\npublic void testRemoveSingleElement() throws Exception {\n    assertArrayEquals(new int[]{}, ArrayUtils.remove(new int[]{1}, 0));\n}",
+      "class_name": "entry.Case_2af981c1ea06771cd48a3d21",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "20516ee9f205f6816f3a4e27f5cdca829c44dc4b85f831e713ac3c96e4866949",
+      "index": 4
+    },
+    {
+      "compile_key": "2d468fe0174b61f0ce5dd788d6c761fb99c475290dcf3093fcb683dd38ce809e",
+      "source": "@Test\npublic void testRemoveFirstElement() throws Exception {\n    assertArrayEquals(new int[]{6}, ArrayUtils.remove(new int[]{2, 6}, 0));\n}",
+      "class_name": "entry.Case_2d468fe0174b61f0ce5dd788",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d88f44367b5a8051adc853e5b6a7c66cee6ab3599271ade6d3600f3bbf7e8f6d",
+      "index": 5
+    },
+    {
+      "compile_key": "994cf4d1d0c720f998d10ad4d746719d2b2d8c5cf0560d3f656ed4846368f2bb",
+      "source": "@Test\npublic void testRemoveLastElement() throws Exception {\n    assertArrayEquals(new int[]{2}, ArrayUtils.remove(new int[]{2, 6}, 1));\n}",
+      "class_name": "entry.Case_994cf4d1d0c720f998d10ad4",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "2eed4e74b6478f0b5f69fdbef181f31952ec22e9d4a79beb2ca7f8b1a5cac3d4",
+      "index": 6
+    },
+    {
+      "compile_key": "9ccb7704ab17f1e11ca32acf20298f8991d9c29d1356756815925870252b0050",
+      "source": "@Test\npublic void testRemoveMiddleElement() throws Exception {\n    assertArrayEquals(new int[]{2, 3}, ArrayUtils.remove(new int[]{2, 6, 3}, 1));\n}",
+      "class_name": "entry.Case_9ccb7704ab17f1e11ca32acf",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8c71c7823a92adb54983a5edf1550a504729fdbf671870b8195bad0b6a6bb640",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 1,
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 2,
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 3,
+      "diagnostic": "only @Test without arguments is accepted"
+    }
+  ]
+}

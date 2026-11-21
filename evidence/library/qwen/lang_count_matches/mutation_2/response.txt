@@ -1,0 +1,41 @@
+```java
+@Test
+public void testCountMatchesNonOverlappingSubstrings() throws Exception {
+    assertEquals(2, StringUtils.countMatches("hello world hello", "hello"));
+}
+
+@Test
+public void testCountMatchesNoMatchingSubstring() throws Exception {
+    assertEquals(0, StringUtils.countMatches("abcdefg", "xyz"));
+}
+
+@Test
+public void testCountMatchesSingleCharacterInLongString() throws Exception {
+    assertEquals(100, StringUtils.countMatches("a".repeat(100), "a"));
+}
+
+@Test
+public void testCountMatchesMultipleOccurrencesAtStart() throws Exception {
+    assertEquals(3, StringUtils.countMatches("aaa", "a"));
+}
+
+@Test
+public void testCountMatchesMultipleOccurrencesAtEnd() throws Exception {
+    assertEquals(3, StringUtils.countMatches("aaa", "a"));
+}
+
+@Test
+public void testCountMatchesMultipleOccurrencesInMiddle() throws Exception {
+    assertEquals(3, StringUtils.countMatches("aabaacaada", "a"));
+}
+
+@Test
+public void testCountMatchesCaseSensitive() throws Exception {
+    assertEquals(0, StringUtils.countMatches("Hello World", "hello"));
+}
+
+@Test
+public void testCountMatchesWhitespace() throws Exception {
+    assertEquals(1, StringUtils.countMatches("a b c d e", " "));
+}
+```

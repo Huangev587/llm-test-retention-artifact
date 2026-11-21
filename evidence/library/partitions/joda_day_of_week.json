@@ -1,0 +1,27 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "bd34b37a219c9ddfc76d08da23a8229a7541db79fbd932b8b024e95c32c11b3c",
+  "sites": 8,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.joda.time.LocalDate\",\"getDayOfWeek\",\"()I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[9]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[33]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[35]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[37]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[44]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[46]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[48]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[38]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[49]]",
+    "[\"org.joda.time.chrono.GJDayOfWeekDateTimeField\",\"get\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[7]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[27]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[6]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[11]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[18]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[20]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[27]]",
+    "[\"org.joda.time.chrono.BasicChronology\",\"getDayOfWeek\",\"(J)I\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[6]]"
+  ]
+}

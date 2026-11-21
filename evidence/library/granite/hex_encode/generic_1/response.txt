@@ -1,0 +1,48 @@
+1. @Test public void testEmptyArray() {
+    byte[] data = {};
+    String expected = "";
+    Assert.assertEquals(expected, encodeHexString(data));
+}
+
+2. @Test public void testSingleByte() {
+    byte[] data = {0xAB};
+    String expected = "6162";
+    Assert.assertEquals(expected, encodeHexString(data));
+}
+
+3. @Test public void testMultipleBytes() {
+    byte[] data = {0x12, 0x34, 0x56, 0x78};
+    String expected = "12345678";
+    Assert.assertEquals(expected, encodeHexString(data));
+}
+
+4. @Test public void testMaxByteValue() {
+    byte[] data = {0xFF};
+    String expected = "ff";
+    Assert.assertEquals(expected, encodeHexString(data));
+}
+
+5. @Test public void testMinByteValue() {
+    byte[] data = {0x00};
+    String expected = "00";
+    Assert.assertEquals(expected, encodeHexString(data));
+}
+
+6. @Test public void testByteValues() {
+    byte[] data = {0xAB, 0xCD, 0xEF};
+    String expected = "616263646566";
+    Assert.assertEquals(expected, encodeHexString(data));
+}
+
+7. @Test public void testLargeArray() {
+    byte[] data = new byte[256];
+    for (int i = 0; i < data.length; i++) {
+        data[i] = (byte) i;
+    }
+    String expected = Hex.encodeHexString(data);
+    Assert.assertEquals(expected, encodeHexString(data));
+}
+
+8. @Test public void testNullInput() {
+    throw new IllegalArgumentException("Input should not be null");
+}

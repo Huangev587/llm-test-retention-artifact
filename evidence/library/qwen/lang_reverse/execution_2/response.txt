@@ -1,0 +1,28 @@
+```java
+@Test
+public void testReverseThreeChars() throws Exception {
+    assertEquals("cba", StringUtils.reverse("abc"));
+}
+
+@Test
+public void testReverseLongString() throws Exception {
+    String original = "abcdefghijklmnopqrstuvwxyz";
+    String expected = "zyxwvutsrqponmlkjihgfedcba";
+    assertEquals(expected, StringUtils.reverse(original));
+}
+
+@Test
+public void testReverseStringWithSpaces() throws Exception {
+    assertEquals(" sihT", StringUtils.reverse("This "));
+}
+
+@Test
+public void testReverseStringWithNumbers() throws Exception {
+    assertEquals("54321", StringUtils.reverse("12345"));
+}
+
+@Test
+public void testReverseStringWithSpecialChars() throws Exception {
+    assertEquals("!@#$%^&*()", StringUtils.reverse("()&^%$#@!"));
+}
+```

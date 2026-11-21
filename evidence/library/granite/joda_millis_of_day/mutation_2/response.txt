@@ -1,0 +1,79 @@
+1. ```java
+@Test
+public void testGetMillisOfDay() throws Exception {
+    LocalTime localTime = new LocalTime(12, 34, 56, 789);
+    int expected = localTime.getHour() * 3600000 + localTime.getMinute() * 60000 + localTime.getSecond() * 1000 + localTime.getMillis();
+    int actual = localTime.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+2. ```java
+@Test
+public void testGetMillisOfDayWithMidnight() throws Exception {
+    LocalTime localTime = new LocalTime(0, 0, 0, 0);
+    int expected = 0;
+    int actual = localTime.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+3. ```java
+@Test
+public void testGetMillisOfDayWithMaxValues() throws Exception {
+    LocalTime localTime = new LocalTime(23, 59, 59, 999);
+    int expected = localTime.getHour() * 3600000 + localTime.getMinute() * 60000 + localTime.getSecond() * 1000 + localTime.getMillis();
+    int actual = localTime.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+4. ```java
+@Test
+public void testGetMillisOfDayWithMinValues() throws Exception {
+    LocalTime localTime = new LocalTime(0, 0, 0, 1);
+    int expected = 1;
+    int actual = localTime.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+5. ```java
+@Test
+public void testGetMillisOfDayWithZeroValues() throws Exception {
+    LocalTime localTime = new LocalTime(12, 34, 56, 0);
+    int expected = localTime.getHour() * 3600000 + localTime.getMinute() * 60000 + localTime.getSecond() * 1000;
+    int actual = localTime.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+6. ```java
+@Test
+public void testGetMillisOfDayWithMaxHourValues() throws Exception {
+    LocalTime localTime = new LocalTime(23, 0, 0, 0);
+    int expected = 23 * 3600000;
+    int actual = localTime.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+7. ```java
+@Test
+public void testGetMillisOfDayWithMaxMinuteValues() throws Exception {
+    LocalTime localTime = new LocalTime(12, 59, 0, 0);
+    int expected = 12 * 60000 + 59 * 1000;
+    int actual = localTime.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+8. ```java
+@Test
+public void testGetMillisOfDayWithMaxSecondValues() throws Exception {
+    LocalTime localTime = new LocalTime(12, 34, 59, 999);
+    int expected = 12 * 3600000 + 34 * 60000 + 59 * 1000 + 999;
+    int actual = localTime.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```

@@ -1,0 +1,95 @@
+1. ```java
+@Test
+public void testPlusMinutesZero() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(0);
+    assertEquals(12, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+2. ```java
+@Test
+public void testPlusMinutesPositive() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(60);
+    assertEquals(13, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+3. ```java
+@Test
+public void testPlusMinutesNegative() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(-60);
+    assertEquals(11, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+4. ```java
+@Test
+public void testPlusMinutesMaxPositive() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(14400);
+    assertEquals(13, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+5. ```java
+@Test
+public void testPlusMinutesMinNegative() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(-14400);
+    assertEquals(11, result.getHour());
+    assertEquals(30, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+6. ```java
+@Test
+public void testPlusMinutesWrapPositive() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(14401);
+    assertEquals(13, result.getHour());
+    assertEquals(1, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+7. ```java
+@Test
+public void testPlusMinutesWrapNegative() {
+    LocalTime time = LocalTime.of(12, 30, 0);
+    LocalTime result = time.plusMinutes(-14401);
+    assertEquals(11, result.getHour());
+    assertEquals(1, result.getMinute());
+    assertEquals(0, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```
+
+8. ```java
+@Test
+public void testPlusMinutesPreserveSeconds() {
+    LocalTime time = LocalTime.of(12, 30, 123);
+    LocalTime result = time.plusMinutes(60);
+    assertEquals(13, result.getHour());
+    assertEquals(0, result.getMinute());
+    assertEquals(123, result.getSecond());
+    assertEquals(0, result.getNano());
+}
+```

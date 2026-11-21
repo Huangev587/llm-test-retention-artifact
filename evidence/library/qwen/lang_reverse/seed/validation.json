@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "3e2046c427dd3ea0de6ff8a83d968d35b9df07f2159327114549edc818e4b11d",
+      "source": "@Test\npublic void testReverseNull() throws Exception {\n    assertNull(StringUtils.reverse(null));\n}",
+      "class_name": "entry.Case_3e2046c427dd3ea0de6ff8a8",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8979aa4ee57e77e861511fd3d0aa2d354e4115f8f559a5b5f2e71d09543743a6",
+      "index": 0
+    },
+    {
+      "compile_key": "ae330badeda1754b9452950d4860f6a4b5cac4d89e421adf866d936862f03cb2",
+      "source": "@Test\npublic void testReverseEmpty() throws Exception {\n    assertEquals(\"\", StringUtils.reverse(\"\"));\n}",
+      "class_name": "entry.Case_ae330badeda1754b9452950d",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ec1ff8295ffbf18bee5b0df45ef438dc8c2a2991a46398cf3cbfa1a1daa5c141",
+      "index": 1
+    },
+    {
+      "compile_key": "5655d0b49a235e5acaa7e3a623b8b745fe1d0795ff601435b8c9ac3a164746ad",
+      "source": "@Test\npublic void testReverseSingleChar() throws Exception {\n    assertEquals(\"a\", StringUtils.reverse(\"a\"));\n}",
+      "class_name": "entry.Case_5655d0b49a235e5acaa7e3a6",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "bd3c4682bc783a4e1c1da919e25f9124438d041123ca4d67fca735ea39e85774",
+      "index": 2
+    },
+    {
+      "compile_key": "e35311e8abedafeb8659ce195f60b8d6900f2cf4e997a3537beae752116569b5",
+      "source": "@Test\npublic void testReverseTwoChars() throws Exception {\n    assertEquals(\"ba\", StringUtils.reverse(\"ab\"));\n}",
+      "class_name": "entry.Case_e35311e8abedafeb8659ce19",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "0185d959ed29c83375ddea5e42379b0d2ad6f45c0008b49d1de0e6be8fed89c7",
+      "index": 3
+    },
+    {
+      "compile_key": "07bd7773fdab8bedeab6f913a244b630a91fa43f07163eecc8b324866263efa3",
+      "source": "@Test\npublic void testReverseMultipleChars() throws Exception {\n    assertEquals(\"dcba\", StringUtils.reverse(\"abcd\"));\n}",
+      "class_name": "entry.Case_07bd7773fdab8bedeab6f913",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3dc0f82c7c0652c776fe0f3f603403a2f1d6681ebb78512dfc0d090bfd83c280",
+      "index": 4
+    },
+    {
+      "compile_key": "7c675c153b1221fb4ca7c998d53a3685b493c2d172657d34ae43ef76ab8abdf2",
+      "source": "@Test\npublic void testReverseLongString() throws Exception {\n    String longStr = \"abcdefghijklmnopqrstuvwxyz\";\n    assertEquals(\"zyxwvutsrqponmlkjihgfedcba\", StringUtils.reverse(longStr));\n}",
+      "class_name": "entry.Case_7c675c153b1221fb4ca7c998",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "e99766e89a877f27a08314fe0dd7ccc6d022998708b29691588a7cb47f42547a",
+      "index": 5
+    },
+    {
+      "compile_key": "7f2a2a0b76976f6973f65ab5b5bf1abed7c0bd2ad2c3dcda6b2f03e3b1625b43",
+      "source": "@Test\npublic void testReverseWithSpaces() throws Exception {\n    assertEquals(\" dlroW olleH\", StringUtils.reverse(\"Hello World \"));\n}",
+      "class_name": "entry.Case_7f2a2a0b76976f6973f65ab5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ebac04586ce1f9a8e4729c3e16db036764f6785758efe87223b41fd92ee0fc6c",
+      "index": 6
+    },
+    {
+      "compile_key": "706d476c001639c4cddc8f3596eb8aecd300630ceef2cd6ce37281f53c026b2d",
+      "source": "@Test\npublic void testReverseWithSpecialChars() throws Exception {\n    assertEquals(\"!@#$%^&*()\", StringUtils.reverse(\"(*)&^%$#@!\"));\n}",
+      "class_name": "entry.Case_706d476c001639c4cddc8f35",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<!@#$%^&[*()]> but was:<!@#$%^&[)*(]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_706d476c001639c4cddc8f35.testReverseWithSpecialChars(Case_706d476c001639c4cddc8f35.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunne",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "19e2355d8cb6041863a41b1067c27f815eaf988cc1870f1682ec85267a1a25f7",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

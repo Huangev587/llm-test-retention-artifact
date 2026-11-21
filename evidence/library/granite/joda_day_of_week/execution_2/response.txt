@@ -1,0 +1,71 @@
+1. ```java
+@Test
+public void testGetDayOfWeek_1900_01_01() {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    int expected = 3; // Wednesday
+    Assert.assertEquals(expected, date.getDayOfWeek());
+}
+```
+
+2. ```java
+@Test
+public void testGetDayOfWeek_2000_01_01() {
+    LocalDate date = new LocalDate(2000, 1, 1);
+    int expected = 4; // Thursday
+    Assert.assertEquals(expected, date.getDayOfWeek());
+}
+```
+
+3. ```java
+@Test
+public void testGetDayOfWeek_2100_12_31() {
+    LocalDate date = new LocalDate(2100, 12, 31);
+    int expected = 6; // Saturday
+    Assert.assertEquals(expected, date.getDayOfWeek());
+}
+```
+
+4. ```java
+@Test
+public void testGetDayOfWeek_1900_12_31() {
+    LocalDate date = new LocalDate(1900, 12, 31);
+    int expected = 2; // Tuesday
+    Assert.assertEquals(expected, date.getDayOfWeek());
+}
+```
+
+5. ```java
+@Test
+public void testGetDayOfWeek_2000_12_31() {
+    LocalDate date = new LocalDate(2000, 12, 31);
+    int expected = 0; // Monday
+    Assert.assertEquals(expected, date.getDayOfWeek());
+}
+```
+
+6. ```java
+@Test
+public void testGetDayOfWeek_1950_07_01() {
+    LocalDate date = new LocalDate(1950, 7, 1);
+    int expected = 5; // Friday
+    Assert.assertEquals(expected, date.getDayOfWeek());
+}
+```
+
+7. ```java
+@Test
+public void testGetDayOfWeek_1960_02_29() {
+    LocalDate date = new LocalDate(1960, 2, 29);
+    int expected = 4; // Thursday
+    Assert.assertEquals(expected, date.getDayOfWeek());
+}
+```
+
+8. ```java
+@Test
+public void testGetDayOfWeek_1970_01_01() {
+    LocalDate date = new LocalDate(1970, 1, 1);
+    int expected = 2; // Tuesday
+    Assert.assertEquals(expected, date.getDayOfWeek());
+}
+```

@@ -1,0 +1,41 @@
+```java
+@Test
+public void testCountMatchesNullStr() {
+    Assert.assertEquals(0, StringUtils.countMatches(null, "a"));
+}
+
+@Test
+public void testCountMatchesNullSub() {
+    Assert.assertEquals(0, StringUtils.countMatches("abba", null));
+}
+
+@Test
+public void testCountMatchesEmptyStr() {
+    Assert.assertEquals(0, StringUtils.countMatches("", "a"));
+}
+
+@Test
+public void testCountMatchesEmptySub() {
+    Assert.assertEquals(0, StringUtils.countMatches("abba", ""));
+}
+
+@Test
+public void testCountMatchesOneMatch() {
+    Assert.assertEquals(2, StringUtils.countMatches("abba", "a"));
+}
+
+@Test
+public void testCountMatchesOneMatchNonOverlapping() {
+    Assert.assertEquals(1, StringUtils.countMatches("abba", "ab"));
+}
+
+@Test
+public void testCountMatchesNoMatch() {
+    Assert.assertEquals(0, StringUtils.countMatches("abba", "xxx"));
+}
+
+@Test
+public void testCountMatchesMultipleMatches() {
+    Assert.assertEquals(1, StringUtils.countMatches("ababa", "aba"));
+}
+```

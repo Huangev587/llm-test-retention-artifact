@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "6e439d5432e36961968d20c77ffffdbec309d312e89bd0110a38705222f5b2a2",
+      "source": "@Test\npublic void testPlusMinutesWrapHourForward() throws Exception {\n    LocalTime base = new LocalTime(23, 59, 59, 999);\n    LocalTime result = base.plusMinutes(1);\n    assertEquals(\"00:00:00.000\", result.toString());\n}",
+      "class_name": "entry.Case_6e439d5432e36961968d20c7",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<00:00:[00.000]> but was:<00:00:[59.999]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_6e439d5432e36961968d20c7.testPlusMinutesWrapHourForward(Case_6e439d5432e36961968d20c7.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.Pare",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "8c5fb9de4140f91190ebe93abbb4151db68b64ccb294b881ce9cccb07413a2eb",
+      "index": 0
+    },
+    {
+      "compile_key": "1d77de189252d6a08fb3c61baa7301697edcefcc9b07e64ae838249913ed27d4",
+      "source": "@Test\npublic void testPlusMinutesWrapHourBackward() throws Exception {\n    LocalTime base = new LocalTime(0, 0, 0, 0);\n    LocalTime result = base.plusMinutes(-1);\n    assertEquals(\"23:59:59.999\", result.toString());\n}",
+      "class_name": "entry.Case_1d77de189252d6a08fb3c61b",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<23:59:[59.999]> but was:<23:59:[00.000]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1d77de189252d6a08fb3c61b.testPlusMinutesWrapHourBackward(Case_1d77de189252d6a08fb3c61b.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.Par",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "c730e3b783d7fe19cf48f99304f0b13a096ec25018bba99cbe9cbc3e790a2d3e",
+      "index": 1
+    },
+    {
+      "compile_key": "0e32a46a42a44fd886290a5860b5d84be567eedd0923668818eed52fee2c0d40",
+      "source": "@Test\npublic void testPlusMinutesCrossMidnight() throws Exception {\n    LocalTime base = new LocalTime(23, 0, 0, 0);\n    LocalTime result = base.plusMinutes(60);\n    assertEquals(\"00:01:00.000\", result.toString());\n}",
+      "class_name": "entry.Case_0e32a46a42a44fd886290a58",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<00:0[1]:00.000> but was:<00:0[0]:00.000>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_0e32a46a42a44fd886290a58.testPlusMinutesCrossMidnight(Case_0e32a46a42a44fd886290a58.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.Parent",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "cbe5a7ecda24f88c9b6b33aace3f24ac97f9c6d154c8d0b9172a9d70c9d36138",
+      "index": 2
+    },
+    {
+      "compile_key": "9c8a359aceb9260911d9396710ec01e693e9837c0e5e51dcc4b0bac8c44df981",
+      "source": "@Test\npublic void testPlusMinutesCrossMidnightNegative() throws Exception {\n    LocalTime base = new LocalTime(0, 1, 0, 0);\n    LocalTime result = base.plusMinutes(-60);\n    assertEquals(\"23:59:00.000\", result.toString());\n}",
+      "class_name": "entry.Case_9c8a359aceb9260911d93967",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<23:[59]:00.000> but was:<23:[01]:00.000>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_9c8a359aceb9260911d93967.testPlusMinutesCrossMidnightNegative(Case_9c8a359aceb9260911d93967.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runner",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "1ba49091b38ce4453288f90783c44a37147baf296e45fa22db4ce0ddafa58649",
+      "index": 3
+    },
+    {
+      "compile_key": "d9d56a443318a7becb93f036345a1caf782562c56a1024aea856d5778996572f",
+      "source": "@Test\npublic void testPlusMinutesBoundaryStart() throws Exception {\n    LocalTime base = new LocalTime(0, 0, 0, 0);\n    LocalTime result = base.plusMinutes(1440);\n    assertEquals(\"00:00:00.000\", result.toString());\n}",
+      "class_name": "entry.Case_d9d56a443318a7becb93f036",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "094f49dd68e0b99bcbbb5db4882eda9324d36d4797f451f87f6de036c7928001",
+      "index": 4
+    },
+    {
+      "compile_key": "272ff47c3359676ad983db366e8789adde0b0de718ff4f080890308a9f443eb4",
+      "source": "@Test\npublic void testPlusMinutesBoundaryEnd() throws Exception {\n    LocalTime base = new LocalTime(23, 59, 59, 999);\n    LocalTime result = base.plusMinutes(-1440);\n    assertEquals(\"23:59:59.999\", result.toString());\n}",
+      "class_name": "entry.Case_272ff47c3359676ad983db36",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "efdf41fdbef0b47d4ee7b46fb2787f7cf03d471595d46f864567b4171d2590c0",
+      "index": 5
+    },
+    {
+      "compile_key": "9562914e53856780ea91c42063c9984aeed7181b1e5f2aedd91ebd83ab4d6b63",
+      "source": "@Test\npublic void testPlusMinutesSmallPositive() throws Exception {\n    LocalTime base = new LocalTime(12, 30, 45, 500);\n    LocalTime result = base.plusMinutes(1);\n    assertEquals(\"12:31:45.500\", result.toString());\n}",
+      "class_name": "entry.Case_9562914e53856780ea91c420",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3db644fdc135fa52d25f1b0103a8d7a391b70c3fdcfeac1cead6cdbd7f52fd11",
+      "index": 6
+    },
+    {
+      "compile_key": "c4bdb6c8ff49805f008f7a8a4a4019586c0e28b3228a7fcfc7c290a028368f23",
+      "source": "@Test\npublic void testPlusMinutesSmallNegative() throws Exception {\n    LocalTime base = new LocalTime(12, 31, 45, 500);\n    LocalTime result = base.plusMinutes(-1);\n    assertEquals(\"12:30:45.500\", result.toString());\n}",
+      "class_name": "entry.Case_c4bdb6c8ff49805f008f7a8a",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "7ca6c5ab0c15dffe32135e709f16300f588824bcbe0064368756bb9b59069d29",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<00:00:[00.000]> but was:<00:00:[59.999]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_6e439d5432e36961968d20c7.testPlusMinutesWrapHourForward(Case_6e439d5432e36961968d20c7.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.Pare"
+    },
+    {
+      "index": 1,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<23:59:[59.999]> but was:<23:59:[00.000]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_1d77de189252d6a08fb3c61b.testPlusMinutesWrapHourBackward(Case_1d77de189252d6a08fb3c61b.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.Par"
+    },
+    {
+      "index": 2,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<00:0[1]:00.000> but was:<00:0[0]:00.000>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_0e32a46a42a44fd886290a58.testPlusMinutesCrossMidnight(Case_0e32a46a42a44fd886290a58.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.Parent"
+    },
+    {
+      "index": 3,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<23:[59]:00.000> but was:<23:[01]:00.000>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_9c8a359aceb9260911d93967.testPlusMinutesCrossMidnightNegative(Case_9c8a359aceb9260911d93967.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runner"
+    }
+  ]
+}

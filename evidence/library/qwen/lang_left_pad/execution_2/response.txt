@@ -1,0 +1,41 @@
+```java
+@Test
+public void testLeftPadSingleCharacterPadding() throws Exception {
+    Assert.assertEquals("ba", StringUtils.leftPad("a", 2, 'b'));
+}
+
+@Test
+public void testLeftPadMultipleCharactersPadding() throws Exception {
+    Assert.assertEquals("abcde", StringUtils.leftPad("abc", 5, 'd'));
+}
+
+@Test
+public void testLeftPadMaxSizePadding() throws Exception {
+    Assert.assertEquals("abcdefghijklmnopqrstuvwxyz", StringUtils.leftPad("xyz", 26, 'a'));
+}
+
+@Test
+public void testLeftPadZeroSizePadding() throws Exception {
+    Assert.assertEquals("", StringUtils.leftPad("", 0, 'a'));
+}
+
+@Test
+public void testLeftPadNegativePadding() throws Exception {
+    Assert.assertEquals("", StringUtils.leftPad("abc", -1, 'a'));
+}
+
+@Test
+public void testLeftPadLargePadding() throws Exception {
+    Assert.assertEquals(repeat('a', 1000) + "abc", StringUtils.leftPad("abc", 1003, 'a'));
+}
+
+@Test
+public void testLeftPadNonAsciiPadding() throws Exception {
+    Assert.assertEquals("\u00E9\u00E9\u00E9abc", StringUtils.leftPad("abc", 6, '\u00E9'));
+}
+
+@Test
+public void testLeftPadMixedCasePadding() throws Exception {
+    Assert.assertEquals("Abcdefghijklmnopqrstuvwxyz", StringUtils.leftPad("xyz", 26, 'A'));
+}
+```

@@ -1,0 +1,226 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "2f4cfaa24fbbaa4c21b34fa3ead2d12be40e938ec2026027bc3edbc1fe5753f9",
+      "source": "@Test\npublic void testLeftPadNegativeSize() throws Exception {\n    Assert.assertEquals(\"bat\", StringUtils.leftPad(\"bat\", -1, 'z'));\n}",
+      "class_name": "entry.Case_2f4cfaa24fbbaa4c21b34fa3",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3d7992230c9b1acf015379442f264ba33f90e555b596e3c7dfc8d076ca5c6481",
+      "index": 0
+    },
+    {
+      "compile_key": "b8992c99630409354989d84bbe6b56a3215d6482a41cfb80e7d6f82da74e685e",
+      "source": "@Test\npublic void testLeftPadSmallSize() throws Exception {\n    Assert.assertEquals(\"b\", StringUtils.leftPad(\"b\", 1, 'z'));\n}",
+      "class_name": "entry.Case_b8992c99630409354989d84b",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "5903d24cfe82b233705f7a3fdf899d07629e90e39a7643584381e27b7e37d27a",
+      "index": 1
+    },
+    {
+      "index": 2,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "compile_key": "0bf969855685020ab756ea395f83b0d92a3cca994f999d6eeb13febeeae3e6d2",
+      "source": "@Test\npublic void testLeftPadNonAsciiPadding() throws Exception {\n    Assert.assertEquals(\"\\u00e9bat\", StringUtils.leftPad(\"bat\", 5, '\\u00e9'));\n}",
+      "class_name": "entry.Case_0bf969855685020ab756ea39",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<é[]bat> but was:<é[é]bat>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_0bf969855685020ab756ea39.testLeftPadNonAsciiPadding(Case_0bf969855685020ab756ea39.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner.runLeaf(Pa",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "b7c00a568932bf0270a40417b1852acdb38369b701b7aa32a991f0a458117240",
+      "index": 4
+    },
+    {
+      "compile_key": "f30d74482ef50e84f9cf1936f32684658f010bd4b475c6c81a81ab2a624d819c",
+      "source": "@Test\npublic void testLeftPadSingleCharacterString() throws Exception {\n    Assert.assertEquals(\"ab\", StringUtils.leftPad(\"b\", 2, 'a'));\n}",
+      "class_name": "entry.Case_f30d74482ef50e84f9cf1936",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "2fce10ca3db23a36a9b654a8d76c38cd72516ef51a2bc222a80ee410bc217254",
+      "index": 5
+    },
+    {
+      "compile_key": "33ff5db13e9722391c8eb6cc73dcb00bbe7890e48f11cfea875953cdedf4ce7e",
+      "source": "@Test\npublic void testLeftPadZeroSize() throws Exception {\n    Assert.assertEquals(\"\", StringUtils.leftPad(\"\", 0, 'z'));\n}",
+      "class_name": "entry.Case_33ff5db13e9722391c8eb6cc",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "126fe97564de604dbe0f37798d2fb7629749fe80b092b917743d5948360f7b61",
+      "index": 6
+    },
+    {
+      "compile_key": "06114105c6f40450f393cfae77f8286c472ecce90472164123d7e72dbd7c6dd7",
+      "source": "@Test\npublic void testLeftPadOneCharacterString() throws Exception {\n    Assert.assertEquals(\"az\", StringUtils.leftPad(\"z\", 2, 'a'));\n}",
+      "class_name": "entry.Case_06114105c6f40450f393cfae",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d40a4fc504aa69d8932e5cabc15ff91f6e53ee0d14bd6f0a8012884d33972bfc",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "undeclared or forbidden expression name"
+    },
+    {
+      "index": 3,
+      "diagnostic": "undeclared or forbidden expression name"
+    }
+  ]
+}

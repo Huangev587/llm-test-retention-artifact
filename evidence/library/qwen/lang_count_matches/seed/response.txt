@@ -1,0 +1,41 @@
+```java
+@Test
+public void testCountMatchesNullTextAndNullNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches(null, null));
+}
+
+@Test
+public void testCountMatchesEmptyTextAndEmptyNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches("", ""));
+}
+
+@Test
+public void testCountMatchesNonEmptyTextAndNullNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches("abc", null));
+}
+
+@Test
+public void testCountMatchesNullTextAndNonEmptyNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches(null, "abc"));
+}
+
+@Test
+public void testCountMatchesEmptyTextAndNonEmptyNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches("", "abc"));
+}
+
+@Test
+public void testCountMatchesNonEmptyTextAndEmptyNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches("abc", ""));
+}
+
+@Test
+public void testCountMatchesSingleCharacterMatch() throws Exception {
+    assertEquals(2, StringUtils.countMatches("aaa", "a"));
+}
+
+@Test
+public void testCountMatchesSubstringMatch() throws Exception {
+    assertEquals(1, StringUtils.countMatches("ababa", "aba"));
+}
+```

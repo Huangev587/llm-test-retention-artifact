@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "b8005383bf946c638eaccdb057720117ac7c13b4b85ae6f97b9449160f1db635",
+      "source": "@Test\npublic void testDaysBetweenLeapYear() throws Exception {\n    LocalDate startDate = new LocalDate(2020, 2, 28);\n    LocalDate endDate = new LocalDate(2020, 3, 1);\n    Days result = Days.daysBetween(startDate, endDate);\n    assertEquals(1, result.getDays());\n}",
+      "class_name": "entry.Case_b8005383bf946c638eaccdb0",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<1> but was:<2>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_b8005383bf946c638eaccdb0.testDaysBetweenLeapYear(Case_b8005383bf946c638eaccdb0.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "7132578b4be86d1ae8464c344026685b117b0cbb3087c8fa0237bdcab5c8aec2",
+      "index": 0
+    },
+    {
+      "compile_key": "d91edb0649e6571347e13ab402447bce67ef1b104da796129a612f96ee20c7d6",
+      "source": "@Test\npublic void testDaysBetweenNonLeapYear() throws Exception {\n    LocalDate startDate = new LocalDate(2021, 2, 28);\n    LocalDate endDate = new LocalDate(2021, 3, 1);\n    Days result = Days.daysBetween(startDate, endDate);\n    assertEquals(1, result.getDays());\n}",
+      "class_name": "entry.Case_d91edb0649e6571347e13ab4",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "59ad386883f187d44171d364b525ed870fd73330f59995f125ded338a55c74b2",
+      "index": 1
+    },
+    {
+      "compile_key": "d5849cc40ec507812fd7c28007bb1a831ca2cce51eaf1bcd9f3882dab59096eb",
+      "source": "@Test\npublic void testDaysBetweenDifferentMonths() throws Exception {\n    LocalDate startDate = new LocalDate(2020, 1, 31);\n    LocalDate endDate = new LocalDate(2020, 2, 1);\n    Days result = Days.daysBetween(startDate, endDate);\n    assertEquals(1, result.getDays());\n}",
+      "class_name": "entry.Case_d5849cc40ec507812fd7c280",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6fc52d1bf7e27284fc626141f4111f60abf84407b62d93860b987711fcaa9a32",
+      "index": 2
+    },
+    {
+      "compile_key": "2ec7532fc1e4e71df9e4c0d1cc12c06eb1e9f8bc96eb46d8d93208e2278346cc",
+      "source": "@Test\npublic void testDaysBetweenDifferentYears() throws Exception {\n    LocalDate startDate = new LocalDate(2019, 12, 31);\n    LocalDate endDate = new LocalDate(2020, 1, 1);\n    Days result = Days.daysBetween(startDate, endDate);\n    assertEquals(1, result.getDays());\n}",
+      "class_name": "entry.Case_2ec7532fc1e4e71df9e4c0d1",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "1872746bfd25d9afc5551adb1391a78ead26d1bd81099651a421fd336fc86f92",
+      "index": 3
+    },
+    {
+      "compile_key": "567de0e750c68e28ed93fe6db28a9bf719d6a2ea1b1181edd280601ec654c9ce",
+      "source": "@Test\npublic void testDaysBetweenNegativeDuration() throws Exception {\n    LocalDate startDate = new LocalDate(2020, 1, 1);\n    LocalDate endDate = new LocalDate(2019, 12, 31);\n    Days result = Days.daysBetween(startDate, endDate);\n    assertEquals(-1, result.getDays());\n}",
+      "class_name": "entry.Case_567de0e750c68e28ed93fe6d",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "5b468a28b3d679b351006386e3559c7f93f7a1bfc817a5182c1f032374aca826",
+      "index": 4
+    },
+    {
+      "compile_key": "e7fc84bab23bfdfbc56a00fe46155ac8b47f5bdddacdf5137727a6009820ec44",
+      "source": "@Test\npublic void testDaysBetweenMaxRange() throws Exception {\n    LocalDate startDate = new LocalDate(1900, 1, 1);\n    LocalDate endDate = new LocalDate(2100, 12, 31);\n    Days result = Days.daysBetween(startDate, endDate);\n    assertEquals(73044, result.getDays());\n}",
+      "class_name": "entry.Case_e7fc84bab23bfdfbc56a00fe",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<73044> but was:<73413>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_e7fc84bab23bfdfbc56a00fe.testDaysBetweenMaxRange(Case_e7fc84bab23bfdfbc56a00fe.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.Invo",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "fe14235adeb90392365904ab80927c197463fc78f02b1e0ac5540c4d65bfdfc2",
+      "index": 5
+    },
+    {
+      "compile_key": "717662efe4ddbab1e362cd09f67261e8187131c3ed1172a3fb5b87d6bc958aee",
+      "source": "@Test\npublic void testDaysBetweenMinRange() throws Exception {\n    LocalDate startDate = new LocalDate(1900, 1, 1);\n    LocalDate endDate = new LocalDate(1900, 1, 2);\n    Days result = Days.daysBetween(startDate, endDate);\n    assertEquals(1, result.getDays());\n}",
+      "class_name": "entry.Case_717662efe4ddbab1e362cd09",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "f4332341f2c02f329e0a7a6b6f5e81def33cd3680a95006e87aeb33c58fe6549",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "java.lang.AssertionError: expected:<1> but was:<2>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_b8005383bf946c638eaccdb0.testDaysBetweenLeapYear(Case_b8005383bf946c638eaccdb0.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod"
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

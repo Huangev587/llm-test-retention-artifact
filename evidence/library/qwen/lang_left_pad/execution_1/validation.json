@@ -1,0 +1,167 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "b3c1b0034c4d9d087d191515705392306bb79dfb1e4c2787335271ec7a2003ec",
+      "source": "@Test\npublic void testLeftPadDecreaseSize() throws Exception {\n    Assert.assertEquals(\"bat\", StringUtils.leftPad(\"bat\", 1, 'z'));\n}",
+      "class_name": "entry.Case_b3c1b0034c4d9d087d191515",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "0db1313d00855b527b95f1037f128cb9be3c5b6b4b1db5797bf6ecac54e49a50",
+      "index": 0
+    },
+    {
+      "compile_key": "2f4cfaa24fbbaa4c21b34fa3ead2d12be40e938ec2026027bc3edbc1fe5753f9",
+      "source": "@Test\npublic void testLeftPadNegativeSize() throws Exception {\n    Assert.assertEquals(\"bat\", StringUtils.leftPad(\"bat\", -1, 'z'));\n}",
+      "class_name": "entry.Case_2f4cfaa24fbbaa4c21b34fa3",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3d7992230c9b1acf015379442f264ba33f90e555b596e3c7dfc8d076ca5c6481",
+      "index": 1
+    },
+    {
+      "compile_key": "c6a1b796259d4a2a64dbbaf0a7a99e5d2bf545d439cfefb0fce290694061274c",
+      "source": "@Test\npublic void testLeftPadSingleCharacter() throws Exception {\n    Assert.assertEquals(\"a\", StringUtils.leftPad(\"a\", 1, 'b'));\n}",
+      "class_name": "entry.Case_c6a1b796259d4a2a64dbbaf0",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "22d000d850e9c7c61f31847b99a57d1175b65e2ed457e0e81c2e1be399d5cf75",
+      "index": 2
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "compile_key": "899c8049d495109facd0cd71fd73475ecb704a6e93c65a04945e0eb74aa7c2ca",
+      "source": "@Test\npublic void testLeftPadMinSize() throws Exception {\n    Assert.assertEquals(\"\", StringUtils.leftPad(\"\", 0, 'z'));\n}",
+      "class_name": "entry.Case_899c8049d495109facd0cd71",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "126fe97564de604dbe0f37798d2fb7629749fe80b092b917743d5948360f7b61",
+      "index": 4
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "call outside assertion allowlist"
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "call outside assertion allowlist"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "call outside assertion allowlist"
+    }
+  ]
+}

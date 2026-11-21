@@ -1,0 +1,41 @@
+```java
+@Test
+public void testNullString() throws Exception {
+    assertNull(StringUtils.substringBetween(null, "a", "b"));
+}
+
+@Test
+public void testNullOpenDelimiter() throws Exception {
+    assertNull(StringUtils.substringBetween("abc", null, "b"));
+}
+
+@Test
+public void testNullCloseDelimiter() throws Exception {
+    assertNull(StringUtils.substringBetween("abc", "a", null));
+}
+
+@Test
+public void testEmptyDelimiters() throws Exception {
+    assertEquals("", StringUtils.substringBetween("", "", ""));
+}
+
+@Test
+public void testNoMatch() throws Exception {
+    assertNull(StringUtils.substringBetween("abc", "x", "y"));
+}
+
+@Test
+public void testSingleCharacterMatch() throws Exception {
+    assertEquals("b", StringUtils.substringBetween("ab", "a", "b"));
+}
+
+@Test
+public void testMultipleMatchesFirstOne() throws Exception {
+    assertEquals("abc", StringUtils.substringBetween("abcxyzabc", "a", "c"));
+}
+
+@Test
+public void testEmptyStringWithNonEmptyDelimiters() throws Exception {
+    assertNull(StringUtils.substringBetween("", "a", "b"));
+}
+```

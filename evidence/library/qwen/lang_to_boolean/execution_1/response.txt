@@ -1,0 +1,41 @@
+```java
+@Test
+public void testToBooleanFalse() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("false"));
+}
+
+@Test
+public void testToBooleanFALSE() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("FALSE"));
+}
+
+@Test
+public void testToBooleanfAlSe() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("fAlSe"));
+}
+
+@Test
+public void testToBooleanNo() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("no"));
+}
+
+@Test
+public void testToBooleanNO() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("NO"));
+}
+
+@Test
+public void testToBooleannO() throws Exception {
+    assertFalse(BooleanUtils.toBoolean("nO"));
+}
+
+@Test
+public void testToBooleanOn() throws Exception {
+    assertTrue(BooleanUtils.toBoolean("on"));
+}
+
+@Test
+public void testToBooleanON() throws Exception {
+    assertTrue(BooleanUtils.toBoolean("ON"));
+}
+```

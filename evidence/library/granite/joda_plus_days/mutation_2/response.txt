@@ -1,0 +1,57 @@
+```java
+@Test
+public void testPlusDaysZero() {
+    LocalDate original = new LocalDate(1900, 1, 1);
+    LocalDate result = original.plusDays(0);
+    assertEquals(original, result);
+}
+
+@Test
+public void testPlusDaysPositive() {
+    LocalDate original = new LocalDate(1900, 1, 1);
+    LocalDate result = original.plusDays(5);
+    assertEquals(original.plusDays(5), result);
+}
+
+@Test
+public void testPlusDaysNegative() {
+    LocalDate original = new LocalDate(1900, 12, 31);
+    LocalDate result = original.plusDays(-5);
+    assertEquals(original.plusDays(-5), result);
+}
+
+@Test
+public void testPlusDaysMaxPositive() {
+    LocalDate original = new LocalDate(2100, 12, 31);
+    LocalDate result = original.plusDays(36600);
+    assertEquals(original.plusDays(36600), result);
+}
+
+@Test
+public void testPlusDaysMaxNegative() {
+    LocalDate original = new LocalDate(1900, 1, 1);
+    LocalDate result = original.plusDays(-36600);
+    assertEquals(original.plusDays(-36600), result);
+}
+
+@Test
+public void testPlusDaysBoundary() {
+    LocalDate original = new LocalDate(1900, 12, 31);
+    LocalDate result = original.plusDays(1);
+    assertEquals(new LocalDate(1901, 1, 1), result);
+}
+
+@Test
+public void testPlusDaysBeforeBoundary() {
+    LocalDate original = new LocalDate(1900, 1, 1);
+    LocalDate result = original.plusDays(-1);
+    assertEquals(new LocalDate(1899, 12, 31), result);
+}
+
+@Test
+public void testPlusDaysYearBoundary() {
+    LocalDate original = new LocalDate(1900, 12, 31);
+    LocalDate result = original.plusDays(1);
+    assertEquals(new LocalDate(1901, 1, 1), result);
+}
+```

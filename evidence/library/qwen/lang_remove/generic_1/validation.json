@@ -1,0 +1,172 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 1,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "compile_key": "b81fb118408dc00b724c22a51d9204bf11017825cf243197cf6445123ed0a463",
+      "source": "@Test\npublic void testRemoveFirstElement() throws Exception {\n    assertArrayEquals(new int[]{2, 3}, ArrayUtils.remove(new int[]{1, 2, 3}, 0));\n}",
+      "class_name": "entry.Case_b81fb118408dc00b724c22a5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "475b3d87c37dcc3637f3a12b675d59905ff236742af53ce79bd5629abcff3150",
+      "index": 2
+    },
+    {
+      "compile_key": "1062471c5eb83ebc7ce087fd315f19d5700d37a57b8ca6c2f6094a1d206c57dd",
+      "source": "@Test\npublic void testRemoveLastElement() throws Exception {\n    assertArrayEquals(new int[]{1, 2}, ArrayUtils.remove(new int[]{1, 2, 3}, 2));\n}",
+      "class_name": "entry.Case_1062471c5eb83ebc7ce087fd",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "1808dd433e3cc2fd31da513c4a1e845630b1002f75d340f39422cf576b15feb3",
+      "index": 3
+    },
+    {
+      "compile_key": "082411f9c9a4575f9650a9c5164ec6cb892e3a9c9bbbc9e31102f132727a95ab",
+      "source": "@Test\npublic void testRemoveMiddleElement() throws Exception {\n    assertArrayEquals(new int[]{1, 3}, ArrayUtils.remove(new int[]{1, 2, 3}, 1));\n}",
+      "class_name": "entry.Case_082411f9c9a4575f9650a9c5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "fe907921ced9726d5c9fdb325ecc618d517d3de22338ce38aede471268ed2701",
+      "index": 4
+    },
+    {
+      "compile_key": "7b6d935848f5b5dc27200f98f41f6edb15ab7cc3b332c0d4b0a6f88593c6a4e0",
+      "source": "@Test\npublic void testRemoveSingleElementArray() throws Exception {\n    assertArrayEquals(new int[]{}, ArrayUtils.remove(new int[]{1}, 0));\n}",
+      "class_name": "entry.Case_7b6d935848f5b5dc27200f98",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "20516ee9f205f6816f3a4e27f5cdca829c44dc4b85f831e713ac3c96e4866949",
+      "index": 5
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "invalid or shadowing local name"
+    },
+    {
+      "index": 7,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "invalid or shadowing local name"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 1,
+      "diagnostic": "only @Test without arguments is accepted"
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

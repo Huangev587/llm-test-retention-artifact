@@ -1,0 +1,41 @@
+```java
+@Test
+public void testAdjacentSeparators() throws Exception {
+    assertArrayEquals(new String[]{"a", "", "b", "c"}, StringUtils.splitPreserveAllTokens("a..b.c", '.'));
+}
+
+@Test
+public void testSeparatorAtStart() throws Exception {
+    assertArrayEquals(new String[]{"", "a", "b", "c"}, StringUtils.splitPreserveAllTokens(".a.b.c", '.'));
+}
+
+@Test
+public void testSeparatorAtEnd() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c", ""}, StringUtils.splitPreserveAllTokens("a.b.c.", '.'));
+}
+
+@Test
+public void testConsecutiveSeparators() throws Exception {
+    assertArrayEquals(new String[]{"a", "", "", "b", "", "c"}, StringUtils.splitPreserveAllTokens("a...b...c", '.'));
+}
+
+@Test
+public void testWhitespaceAsSeparator() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c"}, StringUtils.splitPreserveAllTokens("a b c", ' '));
+}
+
+@Test
+public void testLeadingWhitespace() throws Exception {
+    assertArrayEquals(new String[]{"", "a", "b", "c"}, StringUtils.splitPreserveAllTokens(" a b c", ' '));
+}
+
+@Test
+public void testTrailingWhitespace() throws Exception {
+    assertArrayEquals(new String[]{"a", "b", "c", ""}, StringUtils.splitPreserveAllTokens("a b c ", ' '));
+}
+
+@Test
+public void testMixedWhitespaceAndSeparator() throws Exception {
+    assertArrayEquals(new String[]{"a", "", "b", "", "c"}, StringUtils.splitPreserveAllTokens("a . b . c", ' '));
+}
+```

@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "66b6ae7c0bdaa40c1b85057d9a15366256a8d7b65b6ecc61082712d1b20f4134",
+      "source": "@Test\npublic void testPlusMinutesZero() throws Exception {\n    LocalTime base = new LocalTime(12, 30, 45, 500);\n    LocalTime result = base.plusMinutes(0);\n    assertEquals(\"12:30:45.500\", result.toString());\n}",
+      "class_name": "entry.Case_66b6ae7c0bdaa40c1b85057d",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "4e10c3f001dbee124dc4f79f5ad8b00d981f936e1463d4b2f9bba691a2b3392e",
+      "index": 0
+    },
+    {
+      "compile_key": "c4a9589322b15d67bc81e5af51c99cfd80d0f9b01fb076155d0b8bcbeaf33daf",
+      "source": "@Test\npublic void testPlusMinutesPositive() throws Exception {\n    LocalTime base = new LocalTime(12, 30, 45, 500);\n    LocalTime result = base.plusMinutes(30);\n    assertEquals(\"13:00:45.500\", result.toString());\n}",
+      "class_name": "entry.Case_c4a9589322b15d67bc81e5af",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "0e37f795108c5a452cfef276d38e243978051ebdca44c18648715d8f15f255af",
+      "index": 1
+    },
+    {
+      "compile_key": "48b83dacf0cc968e1dedc8667cb752ef85166ed498fab76b4224028ecfe7f21a",
+      "source": "@Test\npublic void testPlusMinutesNegative() throws Exception {\n    LocalTime base = new LocalTime(12, 30, 45, 500);\n    LocalTime result = base.plusMinutes(-30);\n    assertEquals(\"12:00:45.500\", result.toString());\n}",
+      "class_name": "entry.Case_48b83dacf0cc968e1dedc866",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "bc0ba3918d35031fcf20953b0271a6054eb001c72073339f628e30a4f86bbeca",
+      "index": 2
+    },
+    {
+      "compile_key": "679dc586bda6f28776450b0ecbcede617dddd598f7a132f6c296bef7585d0906",
+      "source": "@Test\npublic void testPlusMinutesWrapHour() throws Exception {\n    LocalTime base = new LocalTime(23, 59, 59, 999);\n    LocalTime result = base.plusMinutes(1);\n    assertEquals(\"00:00:00.000\", result.toString());\n}",
+      "class_name": "entry.Case_679dc586bda6f28776450b0e",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "org.junit.ComparisonFailure: expected:<00:00:[00.000]> but was:<00:00:[59.999]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_679dc586bda6f28776450b0e.testPlusMinutesWrapHour(Case_679dc586bda6f28776450b0e.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunne",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "8c5fb9de4140f91190ebe93abbb4151db68b64ccb294b881ce9cccb07413a2eb",
+      "index": 3
+    },
+    {
+      "compile_key": "e8b4000bd5606c105ee0412c9e1e6ec86bc76b49da2f928499e42f54fbe2ed0d",
+      "source": "@Test\npublic void testPlusMinutesWrapDay() throws Exception {\n    LocalTime base = new LocalTime(23, 59, 59, 999);\n    LocalTime result = base.plusMinutes(1440);\n    assertEquals(\"23:59:59.999\", result.toString());\n}",
+      "class_name": "entry.Case_e8b4000bd5606c105ee0412c",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "447dc3c11f82165af71e79c8f0752b968947f408c4f8c81627e7c04c36f78493",
+      "index": 4
+    },
+    {
+      "compile_key": "994846e451cf94ece7f1fb0705d92cb4a0f859435aa21eccb1cabcc3ad2e0688",
+      "source": "@Test\npublic void testPlusMinutesLargePositive() throws Exception {\n    LocalTime base = new LocalTime(12, 30, 45, 500);\n    LocalTime result = base.plusMinutes(14400);\n    assertEquals(\"12:30:45.500\", result.toString());\n}",
+      "class_name": "entry.Case_994846e451cf94ece7f1fb07",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "cb423eae265ba318170cac9a1eb8228b72f118ad961d0e9cfa95348ec397c648",
+      "index": 5
+    },
+    {
+      "compile_key": "710c089c3921125701fd62d24a9f34da55ccff6046d3862ac5fc8240c7819784",
+      "source": "@Test\npublic void testPlusMinutesLargeNegative() throws Exception {\n    LocalTime base = new LocalTime(12, 30, 45, 500);\n    LocalTime result = base.plusMinutes(-14400);\n    assertEquals(\"12:30:45.500\", result.toString());\n}",
+      "class_name": "entry.Case_710c089c3921125701fd62d2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "c564cb54d22d07375e7f98fabd9794ed7d08dff85f5c8b8ffad2480246aa439f",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "org.junit.ComparisonFailure: expected:<00:00:[00.000]> but was:<00:00:[59.999]>\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat entry.Case_679dc586bda6f28776450b0e.testPlusMinutesWrapHour(Case_679dc586bda6f28776450b0e.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunne"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+```java
+@Test
+public void testStandardDaysZero() {
+    assertEquals(Duration.standardDays(0), Duration.ZERO);
+}
+
+@Test
+public void testStandardDaysNegative() {
+    assertEquals(Duration.standardDays(-1), Duration.minusDays(1));
+}
+
+@Test
+public void testStandardDaysPositive() {
+    assertEquals(Duration.standardDays(1), Duration.days(1));
+}
+
+@Test
+public void testStandardDaysMax() {
+    assertEquals(Duration.standardDays(Long.MAX_VALUE), Duration.days(Long.MAX_VALUE));
+}
+
+@Test
+public void testStandardDaysMin() {
+    assertEquals(Duration.standardDays(Long.MIN_VALUE), Duration.days(Long.MIN_VALUE));
+}
+
+@Test
+public void testStandardDaysArithmeticException() {
+    assertThrows(ArithmeticException.class, () -> Duration.standardDays(Long.MAX_VALUE + 1));
+}
+
+@Test
+public void testStandardDaysMillseconds() {
+    assertEquals(Duration.standardDays(86400000), Duration.standardDays(1));
+}
+
+@Test
+public void testStandardDaysMillsecondsNegative() {
+    assertEquals(Duration.standardDays(-86400000), Duration.standardDays(-1));
+}
+```

@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "4b405a14c141073bbac061510bb9f2dcf8e73b31666e64ad345429c1d8501295",
+      "source": "@Test\npublic void testGetDayOfWeekFriday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 6); // Friday\n    assertEquals(5, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_4b405a14c141073bbac06151",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "c675f480990005613ee037d8b80e2d46efbb26fbbc2d17bfcfe85b5d402f033f",
+      "index": 0
+    },
+    {
+      "compile_key": "9ca9b8793e7824f2b7b140fe5370ebe2081d42b6c35d452523c929e14e16fbbd",
+      "source": "@Test\npublic void testGetDayOfWeekSaturday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 7); // Saturday\n    assertEquals(6, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_9ca9b8793e7824f2b7b140fe",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "1d60968fcbefcf433cb461330c49c7950225642c1bdd0744ae925b023f1586cc",
+      "index": 1
+    },
+    {
+      "compile_key": "000f0431a7c8a9d91211cce19c0b1965adfd8c8d50958b85bc973d0a612e8142",
+      "source": "@Test\npublic void testGetDayOfWeekSunday() throws Exception {\n    LocalDate date = new LocalDate(2023, 10, 8); // Sunday\n    assertEquals(7, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_000f0431a7c8a9d91211cce1",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8b9538dbe4eb728ea9bf58095049abc44f94cbc347e9c60250c4b58520f10d57",
+      "index": 2
+    },
+    {
+      "compile_key": "f12e7b26460df3d466c51a4cbb752808330a05d26a80c5bb0ecb70acb7b7d95a",
+      "source": "@Test\npublic void testGetDayOfWeekJanuaryFirst() throws Exception {\n    LocalDate date = new LocalDate(2024, 1, 1); // Monday\n    assertEquals(1, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_f12e7b26460df3d466c51a4c",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "09415c4459dc55295c8134d3e35fece29217fdfa2e5480251adaa2ea7209cabe",
+      "index": 3
+    },
+    {
+      "compile_key": "139bffe65ff8f75551562e24841d4bf47931b84e8e4181e2a323d533945b8366",
+      "source": "@Test\npublic void testGetDayOfWeekDecemberThirtyOne() throws Exception {\n    LocalDate date = new LocalDate(2023, 12, 31); // Sunday\n    assertEquals(7, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_139bffe65ff8f75551562e24",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "5506eaf57d03f23c33ef1e13fe9e199814fb40db01d44a48b12031682b124704",
+      "index": 4
+    },
+    {
+      "compile_key": "f9cb2f064814a29649c8f10c1ab8faf20aa6f06584918dbd7381aa815771cd33",
+      "source": "@Test\npublic void testGetDayOfWeekLeapYearFebruaryTwentieth() throws Exception {\n    LocalDate date = new LocalDate(2024, 2, 20); // Wednesday\n    assertEquals(3, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_f9cb2f064814a29649c8f10c",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<3> but was:<2>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_f9cb2f064814a29649c8f10c.testGetDayOfWeekLeapYearFebruaryTwentieth(Case_f9cb2f064814a29649c8f10c.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.state",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "84e47084597a405e5ad0c60fe52b22041f30c8f58fadd4acdf79d1a0145eb85d",
+      "index": 5
+    },
+    {
+      "compile_key": "4fdbe721eb105d514e7fff8c6bbd0f33016e71a053202b9b91da970090ac829b",
+      "source": "@Test\npublic void testGetDayOfWeekNonLeapYearFebruaryTwenty() throws Exception {\n    LocalDate date = new LocalDate(2023, 2, 20); // Thursday\n    assertEquals(4, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_4fdbe721eb105d514e7fff8c",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<4> but was:<1>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_4fdbe721eb105d514e7fff8c.testGetDayOfWeekNonLeapYearFebruaryTwenty(Case_4fdbe721eb105d514e7fff8c.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.state",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "cd74b0ab872f2bd6c35ad97306d533b84d1542377e190203eca9510de46a7816",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+```java
+@Test
+public void testDividedByZero() {
+    Duration duration = new Duration(86400000000000L);
+    Duration result = duration.dividedBy(0);
+    assertEquals(0, result.getMillis());
+}
+
+@Test
+public void testDividedByNegative() {
+    Duration duration = new Duration(86400000000000L);
+    long divisor = -1000000;
+    Duration result = duration.dividedBy(divisor);
+    assertEquals(864000000000L, result.getMillis());
+}
+
+@Test
+public void testDividedByPositive() {
+    Duration duration = new Duration(86400000000000L);
+    long divisor = 1000000;
+    Duration result = duration.dividedBy(divisor);
+    assertEquals(864000000L, result.getMillis());
+}
+
+@Test
+public void testDividedByMax() {
+    Duration duration = new Duration(86400000000000L);
+    long divisor = 2;
+    Duration result = duration.dividedBy(divisor);
+    assertEquals(43200000000000L, result.getMillis());
+}
+
+@Test
+public void testDividedByMin() {
+    Duration duration = new Duration(86400000000000L);
+    long divisor = 100000000000000L;
+    Duration result = duration.dividedBy(divisor);
+    assertEquals(864000000L, result.getMillis());
+}
+
+@Test
+public void testDividedByZeroWithNegative() {
+    Duration duration = new Duration(-86400000000000L);
+    Duration result = duration.dividedBy(0);
+    assertEquals(0, result.getMillis());
+}
+
+@Test
+public void testDividedByZeroWithPositive() {
+    Duration duration = new Duration(86400000000000L);
+    Duration result = duration.dividedBy(0);
+    assertEquals(0, result.getMillis());
+}
+```

@@ -1,0 +1,49 @@
+```java
+@Test
+public void testGetDayOfYear_JanuaryFirst_2000() throws Exception {
+    LocalDate date = new LocalDate(2000, 1, 1);
+    assertEquals(1, date.getDayOfYear());
+}
+
+@Test
+public void testGetDayOfYear_FebruaryLast_2000() throws Exception {
+    LocalDate date = new LocalDate(2000, 2, 29);
+    assertEquals(60, date.getDayOfYear());
+}
+
+@Test
+public void testGetDayOfYear_DecemberLast_2000() throws Exception {
+    LocalDate date = new LocalDate(2000, 12, 31);
+    assertEquals(366, date.getDayOfYear());
+}
+
+@Test
+public void testGetDayOfYear_JanuaryFirst_2100() throws Exception {
+    LocalDate date = new LocalDate(2100, 1, 1);
+    assertEquals(1, date.getDayOfYear());
+}
+
+@Test
+public void testGetDayOfYear_FebruaryLast_2100() throws Exception {
+    LocalDate date = new LocalDate(2100, 2, 28);
+    assertEquals(59, date.getDayOfYear());
+}
+
+@Test
+public void testGetDayOfYear_DecemberLast_2100() throws Exception {
+    LocalDate date = new LocalDate(2100, 12, 31);
+    assertEquals(365, date.getDayOfYear());
+}
+
+@Test
+public void testGetDayOfYear_MarchFirst_2000() throws Exception {
+    LocalDate date = new LocalDate(2000, 3, 1);
+    assertEquals(61, date.getDayOfYear());
+}
+
+@Test
+public void testGetDayOfYear_NovemberLast_2000() throws Exception {
+    LocalDate date = new LocalDate(2000, 11, 30);
+    assertEquals(304, date.getDayOfYear());
+}
+```

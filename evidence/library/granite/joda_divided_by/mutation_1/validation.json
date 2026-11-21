@@ -1,0 +1,91 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "bef00e6fde2b8a3132ed88967263134708f49fdca21dff5946c86ae2f4204031",
+      "source": "@Test\npublic void testDividedByOne() {\n    Duration duration = new Duration(86400000000000L);\n    Duration result = duration.dividedBy(1);\n    assertEquals(duration.getMillis(), result.getMillis());\n}",
+      "class_name": "entry.Case_bef00e6fde2b8a3132ed8896",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "4d37c1c440de1342e6568823729ce48cc4bd3afbe6da7b3abc5aee0dd1108a91",
+      "index": 0
+    },
+    {
+      "index": 1,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 2,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    },
+    {
+      "index": 7,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "field or constant outside allowlist"
+    },
+    {
+      "index": 2,
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    },
+    {
+      "index": 3,
+      "diagnostic": "object equality requires component queries; use assertArrayEquals for arrays"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+```java
+@Test
+public void testDecodeNullInput() throws Exception {
+    Assert.assertNull(decode(null, "UTF-8"));
+}
+
+@Test
+public void testDecodeEmptyInput() throws Exception {
+    Assert.assertEquals("", decode("", "UTF-8"));
+}
+
+@Test
+public void testDecodeSingleCharacterInput() throws Exception {
+    Assert.assertEquals("a", decode("%61", "UTF-8"));
+}
+
+@Test
+public void testDecodeMultipleCharactersInput() throws Exception {
+    Assert.assertEquals("hello", decode("hello", "UTF-8"));
+}
+
+@Test
+public void testDecodeEscapedCharactersInput() throws Exception {
+    Assert.assertEquals("hello world", decode("hello%20world", "UTF-8"));
+}
+
+@Test
+public void testDecodeSpecialCharactersInput() throws Exception {
+    Assert.assertEquals("!@#$%^&*()", decode("%21%40%23%24%25%5E%26%2A%28%29", "UTF-8"));
+}
+
+@Test
+public void testDecodeUnicodeInput() throws Exception {
+    Assert.assertEquals("🌎", decode("%F0%9F%8C%8E", "UTF-8"));
+}
+
+@Test
+public void testDecodeLongUnicodeInput() throws Exception {
+    Assert.assertEquals("😀", decode("%F0%9F%98%8A", "UTF-8"));
+}
+```

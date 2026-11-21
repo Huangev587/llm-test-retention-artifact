@@ -1,0 +1,43 @@
+```java
+@Test
+public void testStandardDaysZero() throws Exception {
+    Duration result = Duration.standardDays(0);
+    assertEquals("PT0S", result.toString());
+}
+
+@Test
+public void testStandardDaysPositiveOneDay() throws Exception {
+    Duration result = Duration.standardDays(1);
+    assertEquals("P1D", result.toString());
+}
+
+@Test
+public void testStandardDaysNegativeOneDay() throws Exception {
+    Duration result = Duration.standardDays(-1);
+    assertEquals("-P1D", result.toString());
+}
+
+@Test
+public void testStandardDaysMaxValue() throws Exception {
+    Duration result = Duration.standardDays(1000000);
+    assertEquals("P1000000D", result.toString());
+}
+
+@Test
+public void testStandardDaysMinValue() throws Exception {
+    Duration result = Duration.standardDays(-1000000);
+    assertEquals("-P1000000D", result.toString());
+}
+
+@Test
+public void testStandardDaysPositiveTenDays() throws Exception {
+    Duration result = Duration.standardDays(10);
+    assertEquals("P10D", result.toString());
+}
+
+@Test
+public void testStandardDaysNegativeTenDays() throws Exception {
+    Duration result = Duration.standardDays(-10);
+    assertEquals("-P10D", result.toString());
+}
+```

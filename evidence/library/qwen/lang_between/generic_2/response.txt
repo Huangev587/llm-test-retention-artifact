@@ -1,0 +1,36 @@
+```java
+@Test
+public void testMatchingDelimiters() throws Exception {
+    assertEquals("def", StringUtils.substringBetween("abc[def]ghi", "[", "]"));
+}
+
+@Test
+public void testNestedDelimiters() throws Exception {
+    assertNull(StringUtils.substringBetween("abc[def[ghi]]jkl", "[", "]"));
+}
+
+@Test
+public void testMultipleMatchesFirstOnly() throws Exception {
+    assertNull(StringUtils.substringBetween("abc[def]ghi[jkl]", "[", "]"));
+}
+
+@Test
+public void testLeadingAndTrailingWhitespace() throws Exception {
+    assertEquals("def", StringUtils.substringBetween(" abc [ def ] ghi ", " [ ", " ] "));
+}
+
+@Test
+public void testAdjacentDelimiters() throws Exception {
+    assertNull(StringUtils.substringBetween("abc[]def", "[]", "[]"));
+}
+
+@Test
+public void testSingleCharacterDelimiters() throws Exception {
+    assertEquals("b", StringUtils.substringBetween("a[b]c", "a", "c"));
+}
+
+@Test
+public void testLongerStrings() throws Exception {
+    assertEquals("substringBetween", StringUtils.substringBetween("This is a longer string with substringBetween inside it.", "with ", " inside it."));
+}
+```

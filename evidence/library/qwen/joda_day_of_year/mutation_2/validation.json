@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "c5725d430a14153235e9becdc7aa8b7c17e3e1ac490d762b1d2dee00060b5557",
+      "source": "@Test\npublic void testGetDayOfYear_MarchFirst_1900() throws Exception {\n    LocalDate date = new LocalDate(1900, 3, 1);\n    assertEquals(60, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_c5725d430a14153235e9becd",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "99bf0961a4d86e31458f0eb103bf05a0f43c0ef433dca0ad67eb42c49e87020c",
+      "index": 0
+    },
+    {
+      "compile_key": "af499fb33885057fa52952684443460d5123e6734ee5ab084fedda0f592165ab",
+      "source": "@Test\npublic void testGetDayOfYear_MarchFirst_2000() throws Exception {\n    LocalDate date = new LocalDate(2000, 3, 1);\n    assertEquals(61, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_af499fb33885057fa5295268",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "14fa9c395ca96735070e05796024f48b131e12951f780c1f059b27039c7fd88c",
+      "index": 1
+    },
+    {
+      "compile_key": "349c729c83ab6078c4d838b7767233a8b5b3a868a5fca85e23f5a6d1974688aa",
+      "source": "@Test\npublic void testGetDayOfYear_MarchFirst_2100() throws Exception {\n    LocalDate date = new LocalDate(2100, 3, 1);\n    assertEquals(61, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_349c729c83ab6078c4d838b7",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<61> but was:<60>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_349c729c83ab6078c4d838b7.testGetDayOfYear_MarchFirst_2100(Case_349c729c83ab6078c4d838b7.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.I",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "71f14b86aadd39fc1e37f606832689c338d63f05f4b95faf27fba15835c8b1c1",
+      "index": 2
+    },
+    {
+      "compile_key": "66064879a8f25e84599f2ac13417660dc8b773aa28c1ffeca06b7f4702e1d715",
+      "source": "@Test\npublic void testGetDayOfYear_NovemberLast_1900() throws Exception {\n    LocalDate date = new LocalDate(1900, 11, 30);\n    assertEquals(304, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_66064879a8f25e84599f2ac1",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<304> but was:<334>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_66064879a8f25e84599f2ac1.testGetDayOfYear_NovemberLast_1900(Case_66064879a8f25e84599f2ac1.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statemen",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "c07fa9005bc9744cde8d9e0528560363e41257444863e7cfda9a1b3eec3a4ba5",
+      "index": 3
+    },
+    {
+      "compile_key": "75e322a002ccfdf47c3d2e5f03bde29f65c00a16959a147643912f901c8d6b6b",
+      "source": "@Test\npublic void testGetDayOfYear_NovemberLast_2000() throws Exception {\n    LocalDate date = new LocalDate(2000, 11, 30);\n    assertEquals(305, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_75e322a002ccfdf47c3d2e5f",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<305> but was:<335>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_75e322a002ccfdf47c3d2e5f.testGetDayOfYear_NovemberLast_2000(Case_75e322a002ccfdf47c3d2e5f.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statemen",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "e90a7eded4d7575b72ee69187cbb4e4265aacd6ec97df973584b5a1d18867ecb",
+      "index": 4
+    },
+    {
+      "compile_key": "59d7148549de9c80c4ebb8e04c730f66988e82715eb31ea2db79e4f0e5090519",
+      "source": "@Test\npublic void testGetDayOfYear_NovemberLast_2100() throws Exception {\n    LocalDate date = new LocalDate(2100, 11, 30);\n    assertEquals(305, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_59d7148549de9c80c4ebb8e0",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: expected:<305> but was:<334>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_59d7148549de9c80c4ebb8e0.testGetDayOfYear_NovemberLast_2100(Case_59d7148549de9c80c4ebb8e0.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statemen",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "89049a312128a982f1f2275b7e86bad80434771eef6f9ba7c9906aa455941b0c",
+      "index": 5
+    },
+    {
+      "compile_key": "8da667fed7a4709150016965aef068d267405c0d7c5da30cfff7fdbf1409ac15",
+      "source": "@Test\npublic void testGetDayOfYear_SeptemberFirst_1900() throws Exception {\n    LocalDate date = new LocalDate(1900, 9, 1);\n    assertEquals(244, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_8da667fed7a4709150016965",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "388ec4aec6b7c5b55667cdea7e58e58c4486ad93bbfa0cf945dda113d7a79b95",
+      "index": 6
+    },
+    {
+      "compile_key": "d6b6d8ac2ff44e8d97e8b927ff8c792b5f3eb4defbd3f90ddfd04fabacc610b5",
+      "source": "@Test\npublic void testGetDayOfYear_SeptemberFirst_2000() throws Exception {\n    LocalDate date = new LocalDate(2000, 9, 1);\n    assertEquals(245, date.getDayOfYear());\n}",
+      "class_name": "entry.Case_d6b6d8ac2ff44e8d97e8b927",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "5a6f50ef8a8847d63480edf6070988b9027c118172550f568f7a113e00a48ed3",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "java.lang.AssertionError: expected:<61> but was:<60>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_349c729c83ab6078c4d838b7.testGetDayOfYear_MarchFirst_2100(Case_349c729c83ab6078c4d838b7.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.I"
+    },
+    {
+      "index": 3,
+      "diagnostic": "java.lang.AssertionError: expected:<304> but was:<334>\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat entry.Case_66064879a8f25e84599f2ac1.testGetDayOfYear_NovemberLast_1900(Case_66064879a8f25e84599f2ac1.java:11)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statemen"
+    }
+  ]
+}

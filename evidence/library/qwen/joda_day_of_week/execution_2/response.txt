@@ -1,0 +1,49 @@
+```java
+@Test
+public void testGetDayOfWeekNonLeapYearMonday() throws Exception {
+    LocalDate date = new LocalDate(2021, 2, 22); // Monday
+    assertEquals(1, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekJanuaryFirst() throws Exception {
+    LocalDate date = new LocalDate(2023, 1, 1); // Friday
+    assertEquals(5, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekDecemberThirtyOne() throws Exception {
+    LocalDate date = new LocalDate(2023, 12, 31); // Thursday
+    assertEquals(4, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekFebruaryTwentieth() throws Exception {
+    LocalDate date = new LocalDate(2023, 2, 20); // Wednesday
+    assertEquals(3, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekAprilFools() throws Exception {
+    LocalDate date = new LocalDate(2023, 4, 1); // Friday
+    assertEquals(5, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekJulyFourth() throws Exception {
+    LocalDate date = new LocalDate(2023, 7, 4); // Monday
+    assertEquals(1, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekOctoberThirteenth() throws Exception {
+    LocalDate date = new LocalDate(2023, 10, 13); // Friday
+    assertEquals(5, date.getDayOfWeek());
+}
+
+@Test
+public void testGetDayOfWeekNovemberEleventh() throws Exception {
+    LocalDate date = new LocalDate(2023, 11, 11); // Thursday
+    assertEquals(4, date.getDayOfWeek());
+}
+```

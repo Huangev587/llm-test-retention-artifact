@@ -1,0 +1,41 @@
+```java
+@Test
+public void testCountMatchesOverlappingCharacters() throws Exception {
+    assertEquals(1, StringUtils.countMatches("aaa", "aa"));
+}
+
+@Test
+public void testCountMatchesLargeText() throws Exception {
+    assertEquals(5, StringUtils.countMatches("aaaaaabbbbbbccccccdddddd", "abcd"));
+}
+
+@Test
+public void testCountMatchesSingleCharacterInLongString() throws Exception {
+    assertEquals(100, StringUtils.countMatches(StringUtils.repeat('a', 100), "a"));
+}
+
+@Test
+public void testCountMatchesLongNeedleInShortText() throws Exception {
+    assertEquals(0, StringUtils.countMatches("abc", StringUtils.repeat('a', 100)));
+}
+
+@Test
+public void testCountMatchesEmptyTextWithNonEmptyNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches("", "abc"));
+}
+
+@Test
+public void testCountMatchesNonEmptyTextWithEmptyNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches("abc", ""));
+}
+
+@Test
+public void testCountMatchesWhitespaceText() throws Exception {
+    assertEquals(0, StringUtils.countMatches("   ", " "));
+}
+
+@Test
+public void testCountMatchesWhitespaceNeedle() throws Exception {
+    assertEquals(0, StringUtils.countMatches("abc", "   "));
+}
+```

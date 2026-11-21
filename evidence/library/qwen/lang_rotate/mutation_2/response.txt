@@ -1,0 +1,36 @@
+```java
+@Test
+public void testRotateNegativeShift() throws Exception {
+    assertEquals("cdefgab", StringUtils.rotate("abcdefg", -2));
+}
+
+@Test
+public void testRotateLargePositiveShift() throws Exception {
+    assertEquals("fgabcde", StringUtils.rotate("abcdefg", 9));
+}
+
+@Test
+public void testRotateLargeNegativeShift() throws Exception {
+    assertEquals("cdefgab", StringUtils.rotate("abcdefg", -9));
+}
+
+@Test
+public void testRotateMaxPositiveShift() throws Exception {
+    assertEquals("abcdefg", StringUtils.rotate("abcdefg", 1024));
+}
+
+@Test
+public void testRotateMaxNegativeShift() throws Exception {
+    assertEquals("abcdefg", StringUtils.rotate("abcdefg", -1024));
+}
+
+@Test
+public void testRotateNonAsciiString() throws Exception {
+    assertEquals("\u00e4bcd\u00f6", StringUtils.rotate("\u00e4bcd\u00f6", 1));
+}
+
+@Test
+public void testRotateNonAsciiStringNegativeShift() throws Exception {
+    assertEquals("\u00f6bcd\u00e4", StringUtils.rotate("\u00e4bcd\u00f6", -1));
+}
+```

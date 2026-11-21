@@ -1,0 +1,49 @@
+```java
+@Test
+public void testNullInput() {
+    String[] result = StringUtils.splitPreserveAllTokens(null, '.');
+    Assert.assertNull(result);
+}
+
+@Test
+public void testEmptyInput() {
+    String[] result = StringUtils.splitPreserveAllTokens("", '.');
+    Assert.assertArrayEquals(new String[0], result);
+}
+
+@Test
+public void testSingleToken() {
+    String[] result = StringUtils.splitPreserveAllTokens("a.b.c", '.');
+    Assert.assertArrayEquals(new String[]{"a", "b", "c"}, result);
+}
+
+@Test
+public void testAdjacentSeparators() {
+    String[] result = StringUtils.splitPreserveAllTokens("a..b.c", '.');
+    Assert.assertArrayEquals(new String[]{"a", "", "b", "c"}, result);
+}
+
+@Test
+public void testNoSplitOnWhitespace() {
+    String[] result = StringUtils.splitPreserveAllTokens("a:b:c", '.');
+    Assert.assertArrayEquals(new String[]{"a:b:c"}, result);
+}
+
+@Test
+public void testWhitespaceSeparator() {
+    String[] result = StringUtils.splitPreserveAllTokens("a\tb\nc", null);
+    Assert.assertArrayEquals(new String[]{"a", "b", "c"}, result);
+}
+
+@Test
+public void testWhitespaceSingleToken() {
+    String[] result = StringUtils.splitPreserveAllTokens("a b c",'');
+    Assert.assertArrayEquals(new String[]{"a", "b", "c"}, result);
+}
+
+@Test
+public void testWhitespaceMultipleTokens() {
+    String[] result = StringUtils.splitPreserveAllTokens("a b c ",'');
+    Assert.assertArrayEquals(new String[]{"a", "b", "c", ""}, result);
+}
+```

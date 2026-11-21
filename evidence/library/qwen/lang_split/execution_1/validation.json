@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "f67c96ff4e92a147d2509e0ad0fe676f9beb9deb6e225e4886076dbbb8595ab8",
+      "source": "@Test\npublic void testAdjacentSeparators() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a..b.c\", '.'));\n}",
+      "class_name": "entry.Case_f67c96ff4e92a147d2509e0a",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "60d3ef7e4358ce33e3d7b61390a97e30932ffa17664cfda854f83db134d2d2be",
+      "index": 0
+    },
+    {
+      "compile_key": "86e760c34baaa10f59d186199c2622a14fff600384de5a7f0c340b765284f636",
+      "source": "@Test\npublic void testNoSeparator() throws Exception {\n    assertArrayEquals(new String[]{\"a:b:c\"}, StringUtils.splitPreserveAllTokens(\"a:b:c\", '.'));\n}",
+      "class_name": "entry.Case_86e760c34baaa10f59d18619",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d11f9fda85049a4a378d54fd30f1ab1115322b858b0919e0a7863ca93b4fa13b",
+      "index": 1
+    },
+    {
+      "compile_key": "20e572c8901064d8f927c693be238ef64205f457744f64610a60863a7544e30a",
+      "source": "@Test\npublic void testWhitespaceSeparator() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a b c\", ' '));\n}",
+      "class_name": "entry.Case_20e572c8901064d8f927c693",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "b43dc55920e80a70b2a3c5ebfa674e70eae92c90592392fbf20faf907f8c3afe",
+      "index": 2
+    },
+    {
+      "compile_key": "1a5ea9ffe42add11fef67ec44734d64f316f177968810f4d15ca14dbc9c1698b",
+      "source": "@Test\npublic void testLeadingSpace() throws Exception {\n    assertArrayEquals(new String[]{\"\", \"a\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\" a b c\", ' '));\n}",
+      "class_name": "entry.Case_1a5ea9ffe42add11fef67ec4",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "c654ad7bedce6978a61a994a868a8b760dae806f6d98a34d963bc154e42a19ef",
+      "index": 3
+    },
+    {
+      "compile_key": "7ac4559a368f5ebae4377871671ea77a53221e1e982811f9dd068002fdd287e0",
+      "source": "@Test\npublic void testTrailingSpace() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"b\", \"c\", \"\"}, StringUtils.splitPreserveAllTokens(\"a b c \", ' '));\n}",
+      "class_name": "entry.Case_7ac4559a368f5ebae4377871",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8e4016a40b77b8f69974dca0b8c586d89dfd8f1e14bb2ffaf091a33dc6001ddd",
+      "index": 4
+    },
+    {
+      "compile_key": "40741cfe29bbe2319aeac4e9e65b51c2b970505122405515cdd7f895e61df76b",
+      "source": "@Test\npublic void testMultipleConsecutiveSpaces() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"b\", \"c\", \"\", \"\"}, StringUtils.splitPreserveAllTokens(\"a b c  \", ' '));\n}",
+      "class_name": "entry.Case_40741cfe29bbe2319aeac4e9",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "eaecf2efae8847c63c908490d2f0340682c95947c3b6b3ef0a39bcd25ad4ab50",
+      "index": 5
+    },
+    {
+      "compile_key": "441af23c4c1452e97ddc204910891f4ac5c94d497f1e2ea75ce238913927a0c9",
+      "source": "@Test\npublic void testNullSeparatorChar() throws Exception {\n    assertArrayEquals(new String[]{\"a\", \"b\", \"c\"}, StringUtils.splitPreserveAllTokens(\"a b c\", (char) 0));\n}",
+      "class_name": "entry.Case_441af23c4c1452e97ddc2049",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "java.lang.AssertionError: array lengths differed, expected.length=3 actual.length=1\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.internal.ComparisonCriteria.assertArraysAreSameLength(ComparisonCriteria.java:76)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:37)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:283)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:298)\n\tat entry.Case_441af23c4c1452e97ddc2049.testNullSeparatorChar(Case_441af23c4c1452e97ddc2049.java:10)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat ",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "31aefde9aec66dd241264a3c51547b4551df2bd8cfa035b43b2a6e7444ded4c8",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

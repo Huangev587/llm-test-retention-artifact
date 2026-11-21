@@ -1,0 +1,226 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "06757c2c9c01191234c14742c0282bac4b13f9192aff77e2286fd7811b7c1a2b",
+      "source": "@Test\npublic void testRemoveNullArray() {\n    int[] input = null;\n    int index = 0;\n    int[] expected = null;\n    int[] result = ArrayUtils.remove(input, index);\n    Assert.assertArrayEquals(expected, result);\n}",
+      "class_name": "entry.Case_06757c2c9c01191234c14742",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.IndexOutOfBoundsException: Index: 0, Length: 0\n\tat org.apache.commons.lang3.ArrayUtils.remove(ArrayUtils.java:4903)\n\tat org.apache.commons.lang3.ArrayUtils.remove(ArrayUtils.java:4841)\n\tat entry.Case_06757c2c9c01191234c14742.testRemoveNullArray(Case_06757c2c9c01191234c14742.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.Pa",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "a156930c734aad522e6f332f9dc39bf62484fbd4034d9e2d9adb2668329cd988",
+      "index": 0
+    },
+    {
+      "compile_key": "a65b35528bff2f0dce4c11c8283b73544d85e6df8bc810fd525bc399972bcb91",
+      "source": "@Test\npublic void testRemoveEmptyArray() {\n    int[] input = {};\n    int index = 0;\n    int[] expected = {};\n    int[] result = ArrayUtils.remove(input, index);\n    Assert.assertArrayEquals(expected, result);\n}",
+      "class_name": "entry.Case_a65b35528bff2f0dce4c11c8",
+      "original_pass": false,
+      "status": "OUT_OF_DOMAIN",
+      "original_feedback": "java.lang.IndexOutOfBoundsException: Index: 0, Length: 0\n\tat org.apache.commons.lang3.ArrayUtils.remove(ArrayUtils.java:4903)\n\tat org.apache.commons.lang3.ArrayUtils.remove(ArrayUtils.java:4841)\n\tat entry.Case_a65b35528bff2f0dce4c11c8.testRemoveEmptyArray(Case_a65b35528bff2f0dce4c11c8.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.P",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": true,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "OUT_OF_DOMAIN",
+          "returncode": 1
+        }
+      },
+      "id": "3ba2ae900f98ddaefd1131ea019e0f6f3b20e8e61a9d914ce016b8850ffc5828",
+      "index": 1
+    },
+    {
+      "compile_key": "2f195eaf4c032058204852ed40c55224b8562a8c9db59e7a7fdaa7625870b271",
+      "source": "@Test\npublic void testRemoveSingleElementArray() {\n    int[] input = {1};\n    int index = 0;\n    int[] expected = {};\n    int[] result = ArrayUtils.remove(input, index);\n    Assert.assertArrayEquals(expected, result);\n}",
+      "class_name": "entry.Case_2f195eaf4c032058204852ed",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "dcb63a3fc9c3fb51575a42486a69d33838271c6a48cd117d82d8ce472ed2e796",
+      "index": 2
+    },
+    {
+      "compile_key": "ab05e125e1def611ab31211d026625e3b00c88dd543cc1b2fa6e9c80019ffaec",
+      "source": "@Test\npublic void testRemoveMiddleElementArray() {\n    int[] input = {2, 6};\n    int index = 0;\n    int[] expected = {6};\n    int[] result = ArrayUtils.remove(input, index);\n    Assert.assertArrayEquals(expected, result);\n}",
+      "class_name": "entry.Case_ab05e125e1def611ab31211d",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "14893cbe12b51b366116630c3d3a2b60d8b4f023615f2ce4de7d57b831c8e186",
+      "index": 3
+    },
+    {
+      "compile_key": "c732f84153528e81805d81bac2140923b42ba11b6adb1f6a82e03f133993c7be",
+      "source": "@Test\npublic void testRemoveLastElementArray() {\n    int[] input = {2, 6};\n    int index = 1;\n    int[] expected = {2};\n    int[] result = ArrayUtils.remove(input, index);\n    Assert.assertArrayEquals(expected, result);\n}",
+      "class_name": "entry.Case_c732f84153528e81805d81ba",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "2f89a7a21c0ff430f669287f5fc1dd59da10867270b834d2ddf3d829f008d9d8",
+      "index": 4
+    },
+    {
+      "compile_key": "fc7f29dcb5a31eef41f633c5bf5bebadf14506877f7254ad9aa0e0d1a41a1a9f",
+      "source": "@Test\npublic void testRemoveMiddleElementLargeArray() {\n    int[] input = {2, 6, 3};\n    int index = 1;\n    int[] expected = {2, 3};\n    int[] result = ArrayUtils.remove(input, index);\n    Assert.assertArrayEquals(expected, result);\n}",
+      "class_name": "entry.Case_fc7f29dcb5a31eef41f633c5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "9b06f1a2ec3626a482936ce58146b13af4bb2f21a31aa9c57a7a04efa9bb01af",
+      "index": 5
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "statement is not straight-line: TRY"
+    },
+    {
+      "index": 7,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "statement is not straight-line: TRY"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "java.lang.IndexOutOfBoundsException: Index: 0, Length: 0\n\tat org.apache.commons.lang3.ArrayUtils.remove(ArrayUtils.java:4903)\n\tat org.apache.commons.lang3.ArrayUtils.remove(ArrayUtils.java:4841)\n\tat entry.Case_06757c2c9c01191234c14742.testRemoveNullArray(Case_06757c2c9c01191234c14742.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.Pa"
+    },
+    {
+      "index": 1,
+      "diagnostic": "java.lang.IndexOutOfBoundsException: Index: 0, Length: 0\n\tat org.apache.commons.lang3.ArrayUtils.remove(ArrayUtils.java:4903)\n\tat org.apache.commons.lang3.ArrayUtils.remove(ArrayUtils.java:4841)\n\tat entry.Case_a65b35528bff2f0dce4c11c8.testRemoveEmptyArray(Case_a65b35528bff2f0dce4c11c8.java:13)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.P"
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

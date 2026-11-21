@@ -1,0 +1,37 @@
+```java
+@Test
+public void testReverseLongString() throws Exception {
+    assertEquals("gnirts ylluf", StringUtils.reverse("full swing"));
+}
+
+@Test
+public void testReverseMixedCase() throws Exception {
+    assertEquals("eH dlroW olleH", StringUtils.reverse("Hello World!"));
+}
+
+@Test
+public void testReverseWithSpaces() throws Exception {
+    assertEquals(" si emaniforp", StringUtils.reverse("programmers "));
+}
+
+@Test
+public void testReverseWithNumbers() throws Exception {
+    assertEquals("987654321", StringUtils.reverse("123456789"));
+}
+
+@Test
+public void testReverseWithSpecialChars() throws Exception {
+    assertEquals("!dlrow ,olleH", StringUtils.reverse("Hello, world!"));
+}
+
+@Test
+public void testReverseWithUnicodeControlChars() throws Exception {
+    assertEquals("\u0001\u0002\u0003", StringUtils.reverse("\u0003\u0002\u0001"));
+}
+
+@Test
+public void testReverseWithAllAsciiCharacters() throws Exception {
+    String allAscii = StringUtils.repeat(" ", 128);
+    assertEquals(allAscii, StringUtils.reverse(allAscii));
+}
+```

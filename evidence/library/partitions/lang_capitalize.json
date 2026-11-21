@@ -1,0 +1,22 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "63f19ac4b3f95a90ce22a01bd0b89610c1e698b63e4aeef24c2f36585c928d10",
+  "sites": 10,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[61]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator\",[49]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator\",[72]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[9]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[61]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[94]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.MathMutator\",[80]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[30]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[13]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"capitalize\",\"(Ljava/lang/String;)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[34]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"length\",\"(Ljava/lang/CharSequence;)I\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[4]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"length\",\"(Ljava/lang/CharSequence;)I\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator\",[13]]"
+  ]
+}

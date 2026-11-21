@@ -1,0 +1,79 @@
+1. ```java
+@Test
+public void testIndexOfNullArray() throws Exception {
+    int[] array = null;
+    int valueToFind = 5;
+    int expected = INDEX_NOT_FOUND;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+2. ```java
+@Test
+public void testIndexOfEmptyArray() throws Exception {
+    int[] array = {};
+    int valueToFind = 5;
+    int expected = INDEX_NOT_FOUND;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+3. ```java
+@Test
+public void testIndexOfWithValueInArray() throws Exception {
+    int[] array = {1, 2, 3, 4, 5};
+    int valueToFind = 3;
+    int expected = 2;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+4. ```java
+@Test
+public void testIndexOfValueNotInArray() throws Exception {
+    int[] array = {1, 2, 3, 4, 5};
+    int valueToFind = 6;
+    int expected = INDEX_NOT_FOUND;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+5. ```java
+@Test
+public void testIndexOfArrayWithMaxValue() throws Exception {
+    int[] array = {Integer.MAX_VALUE};
+    int valueToFind = Integer.MAX_VALUE;
+    int expected = 0;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+6. ```java
+@Test
+public void testIndexOfArrayWithMinValue() throws Exception {
+    int[] array = {Integer.MIN_VALUE};
+    int valueToFind = Integer.MIN_VALUE;
+    int expected = 0;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+7. ```java
+@Test
+public void testIndexOfArrayWithMultipleMatches() throws Exception {
+    int[] array = {5, 5, 5, 5, 5};
+    int valueToFind = 5;
+    int expected = 0;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+8. ```java
+@Test
+public void testIndexOfArrayWithLargeValues() throws Exception {
+    int[] array = {999999, -999999};
+    int valueToFind = 999999;
+    int expected = 0;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```

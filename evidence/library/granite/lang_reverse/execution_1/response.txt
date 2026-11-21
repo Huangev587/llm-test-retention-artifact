@@ -1,0 +1,41 @@
+```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(reverse(null));
+}
+
+@Test
+public void testEmptyString() {
+    Assert.assertEquals("", reverse(""));
+}
+
+@Test
+public void testSingleCharacterString() {
+    Assert.assertEquals("a", reverse("a"));
+}
+
+@Test
+public void testMultipleCharactersString() {
+    Assert.assertEquals("tab", reverse("bat"));
+}
+
+@Test
+public void testStringWithSpaces() {
+    Assert.assertEquals("s e t", reverse("set"));
+}
+
+@Test
+public void testStringWithPunctuation() {
+    Assert.assertEquals("!,olleH", reverse("Hello, world!"));
+}
+
+@Test
+public void testStringWithSpecialCharacters() {
+    Assert.assertEquals("!\@#$%^&*()", reverse("()*&^%$#@!"));
+}
+
+@Test
+public void testStringWithControlCharacters() {
+    Assert.assertEquals("\b\b\b", reverse("\b\b\b"));
+}
+```

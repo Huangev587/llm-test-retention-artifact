@@ -1,0 +1,42 @@
+```java
+@Test
+public void testNullInput() throws UnsupportedEncodingException {
+    Assert.assertNull(encode(null, "UTF-8"));
+}
+
+@Test
+public void testEmptyString() throws UnsupportedEncodingException {
+    Assert.assertEquals("", encode("", "UTF-8"));
+}
+
+@Test
+public void testSingleCharacter() throws UnsupportedEncodingException {
+    Assert.assertEquals("a", encode("a", "UTF-8"));
+}
+
+@Test
+public void testMultipleCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("hello", encode("hello", "UTF-8"));
+}
+
+@Test
+public void testSpaces() throws UnsupportedEncodingException {
+    Assert.assertEquals("hello+world", encode("hello world", "UTF-8"));
+}
+
+@Test
+public void testSpecialCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("hello%20world", encode("hello world", "UTF-8"));
+}
+
+@Test
+public void testUnicodeCharacters() throws UnsupportedEncodingException {
+    Assert.assertEquals("hello_world", encode("hello_world", "UTF-8"));
+}
+
+@Test
+public void testLongString() throws UnsupportedEncodingException {
+    String longString = "a".repeat(256);
+    Assert.assertEquals(longString, encode(longString, "UTF-8"));
+}
+```

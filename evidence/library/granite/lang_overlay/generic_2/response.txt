@@ -1,0 +1,52 @@
+1. ```java
+@Test
+public void testNullStr() {
+    Assert.assertNull(overlay(null, "abc", 0, 0));
+}
+```
+
+2. ```java
+@Test
+public void testEmptyOverlay() {
+    Assert.assertEquals("", overlay("", "abc", 0, 0));
+    Assert.assertEquals("", overlay("abc", null, 2, 4));
+    Assert.assertEquals("", overlay("abc", "", 4, 2));
+}
+
+3. ```java
+@Test
+public void testOverlay() {
+    Assert.assertEquals("abzzzzef", overlay("abcdef", "zzzz", 2, 4));
+    Assert.assertEquals("abzzzzef", overlay("abcdef", "zzzz", 4, 2));
+}
+
+4. ```java
+@Test
+public void testNegativeStart() {
+    Assert.assertEquals("zzzzef", overlay("abcdef", "zzzz", -1, 4));
+}
+
+5. ```java
+@Test
+public void testEndGreaterThanLength() {
+    Assert.assertEquals("abzzzz", overlay("abcdef", "zzzz", 2, 8));
+}
+
+6. ```java
+@Test
+public void testStartGreaterThanEnd() {
+    Assert.assertEquals("zzzzabcdef", overlay("abcdef", "zzzz", -2, -3));
+}
+
+7. ```java
+@Test
+public void testEndBeyondLength() {
+    Assert.assertEquals("abcdefzzzz", overlay("abcdef", "zzzz", 8, 10));
+}
+
+8. ```java
+@Test
+public void testAllIndices() {
+    Assert.assertEquals("abczzzzdef", overlay("abcdefghi", "zzzz", 1, 4));
+}
+```

@@ -1,0 +1,24 @@
+{
+  "seed": "java-selection-breadth-20261115-v1",
+  "universe_sha256": "089cd8d57d81ae9963972ece7828681a48a824053c90e33e36fce6cb20e7a81d",
+  "sites": 9,
+  "status": "PARTITIONED",
+  "feedback_ids": [
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[37]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[46]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[37]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[46]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[101]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator\",[8]]"
+  ],
+  "evaluation_ids": [
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[27]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[56]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator\",[66]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[13]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE\",[4]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[27]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[56]]",
+    "[\"org.apache.commons.lang3.StringUtils\",\"overlay\",\"(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;\",\"org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE\",[66]]"
+  ]
+}

@@ -1,0 +1,61 @@
+```java
+@Test
+public void testDividedByOne() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(1);
+    assertEquals(original, result);
+}
+
+@Test
+public void testDividedByPositiveNumber() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(2);
+    assertEquals(new Duration(43200000), result);
+}
+
+@Test
+public void testDividedByNegativeNumber() throws Exception {
+    Duration original = new Duration(-86400000);
+    Duration result = original.dividedBy(-2);
+    assertEquals(new Duration(43200000), result);
+}
+
+@Test
+public void testDividedByMaxValue() throws Exception {
+    Duration original = new Duration(Long.MAX_VALUE);
+    Duration result = original.dividedBy(2);
+    assertEquals(new Duration(Long.MAX_VALUE / 2), result);
+}
+
+@Test
+public void testDividedByMinValue() throws Exception {
+    Duration original = new Duration(Long.MIN_VALUE);
+    Duration result = original.dividedBy(-2);
+    assertEquals(new Duration(Long.MIN_VALUE / 2), result);
+}
+
+@Test
+public void testDividedByLargeNumber() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(1000000);
+    assertEquals(new Duration(86400), result);
+}
+
+@Test
+public void testDividedBySmallNumber() throws Exception {
+    Duration original = new Duration(86400000);
+    Duration result = original.dividedBy(100);
+    assertEquals(new Duration(864000), result);
+}
+
+@Test
+public void testDividedByZeroThrowsArithmeticException() throws Exception {
+    Duration original = new Duration(86400000);
+    try {
+        original.dividedBy(0);
+        fail("Expected ArithmeticException");
+    } catch (ArithmeticException e) {
+        // Expected exception
+    }
+}
+```

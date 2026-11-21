@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "a04ff08fbe6c583a94673f07c9977d436e7163c0bce747d083d51bca81591c10",
+      "source": "@Test\npublic void testGetDayOfWeek_1999_12_31() {\n    LocalDate date = new LocalDate(1999, 12, 31);\n    int expected = 5; // Friday\n    assertEquals(expected, date.getDayOfWeek());\n}",
+      "class_name": "entry.Case_a04ff08fbe6c583a94673f07",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "9aeab246fa43c43035fff43e074f377a3184d006e4e26b849be71da7ceab4ac5",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

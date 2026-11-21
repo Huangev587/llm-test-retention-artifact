@@ -1,0 +1,49 @@
+```java
+@Test
+public void testGetDayOfWeek_1900_01_01() {
+    LocalDate date = new LocalDate(1900, 1, 1);
+    assertArrayEquals(new int[]{1}, new int[]{date.getDayOfWeek()});
+}
+
+@Test
+public void testGetDayOfWeek_1950_06_01() {
+    LocalDate date = new LocalDate(1950, 6, 1);
+    assertArrayEquals(new int[]{4}, new int[]{date.getDayOfWeek()});
+}
+
+@Test
+public void testGetDayOfWeek_2000_12_31() {
+    LocalDate date = new LocalDate(2000, 12, 31);
+    assertArrayEquals(new int[]{7}, new int[]{date.getDayOfWeek()});
+}
+
+@Test
+public void testGetDayOfWeek_2100_02_28() {
+    LocalDate date = new LocalDate(2100, 2, 28);
+    assertArrayEquals(new int[]{6}, new int[]{date.getDayOfWeek()});
+}
+
+@Test
+public void testGetDayOfWeek_1900_02_28() {
+    LocalDate date = new LocalDate(1900, 2, 28);
+    assertArrayEquals(new int[]{5}, new int[]{date.getDayOfWeek()});
+}
+
+@Test
+public void testGetDayOfWeek_1900_04_30() {
+    LocalDate date = new LocalDate(1900, 4, 30);
+    assertArrayEquals(new int[]{3}, new int[]{date.getDayOfWeek()});
+}
+
+@Test
+public void testGetDayOfWeek_1900_06_31() {
+    LocalDate date = new LocalDate(1900, 6, 31);
+    assertArrayEquals(new int[]{5}, new int[]{date.getDayOfWeek()});
+}
+
+@Test
+public void testGetDayOfWeek_1900_12_31() {
+    LocalDate date = new LocalDate(1900, 12, 31);
+    assertArrayEquals(new int[]{6}, new int[]{date.getDayOfWeek()});
+}
+```

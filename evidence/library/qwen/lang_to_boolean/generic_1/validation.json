@@ -1,0 +1,248 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "3730ecf014c463507b8a5879c920114d343096d6d296a0854bde152b8ce1e5ef",
+      "source": "@Test\npublic void testToBooleantRUe() throws Exception {\n    assertTrue(BooleanUtils.toBoolean(\"tRUe\"));\n}",
+      "class_name": "entry.Case_3730ecf014c463507b8a5879",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "500fe9e5cbfdc89aca0b573d1100e7f7c7904df15bf01eaa8b364b4b18d779ef",
+      "index": 0
+    },
+    {
+      "compile_key": "f590c97daa6436aa30801e77018d8bc89957d90403f42c5367153d4e569c6f9e",
+      "source": "@Test\npublic void testToBooleanOn() throws Exception {\n    assertTrue(BooleanUtils.toBoolean(\"on\"));\n}",
+      "class_name": "entry.Case_f590c97daa6436aa30801e77",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6d2558523f634777db82fd2331ea3e16bd03dcb3c09008f184d816319eb3d186",
+      "index": 1
+    },
+    {
+      "compile_key": "705dc770b218030eb058950e64599436990a7d47bcf3690ceceaced7c2d21eda",
+      "source": "@Test\npublic void testToBooleanyes() throws Exception {\n    assertTrue(BooleanUtils.toBoolean(\"yes\"));\n}",
+      "class_name": "entry.Case_705dc770b218030eb058950e",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3b2c46df2e9f56e5efd69827ca31df3c54c45decff74949a292185f896bd5d7a",
+      "index": 2
+    },
+    {
+      "compile_key": "c5086c4dcb9dab6b748f8e9eb614df82ac77f0a07430d1550f2b162838b9e639",
+      "source": "@Test\npublic void testToBooleany() throws Exception {\n    assertTrue(BooleanUtils.toBoolean(\"y\"));\n}",
+      "class_name": "entry.Case_c5086c4dcb9dab6b748f8e9e",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "119a04b60506dade15081b4c451074e644b5f5b38e003be489066d258a0b38a8",
+      "index": 3
+    },
+    {
+      "compile_key": "642b57db7e2c7b2125339716100b7c59165f547af09c06b12c1e697333d5f971",
+      "source": "@Test\npublic void testToBooleann() throws Exception {\n    assertFalse(BooleanUtils.toBoolean(\"n\"));\n}",
+      "class_name": "entry.Case_642b57db7e2c7b2125339716",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "9ad6a3e27dfd1c4f3d5dff73de9fdd4bbdc82195cbec36fdbb185a6c3296a077",
+      "index": 4
+    },
+    {
+      "compile_key": "bda502ccf865d5c50794762a61c92c635679098492f538a2cc33dd407ceeea3f",
+      "source": "@Test\npublic void testToBooleant() throws Exception {\n    assertTrue(BooleanUtils.toBoolean(\"t\"));\n}",
+      "class_name": "entry.Case_bda502ccf865d5c50794762a",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "78768a840fea56e8aefaf5239fbb51b13719cca06704ab7aa4bb3b974ca986aa",
+      "index": 5
+    },
+    {
+      "compile_key": "048f8407e42dbb2661462bd22c7b3c603ba00f60886ad51a5c2793020c0bc334",
+      "source": "@Test\npublic void testToBooleanf() throws Exception {\n    assertFalse(BooleanUtils.toBoolean(\"f\"));\n}",
+      "class_name": "entry.Case_048f8407e42dbb2661462bd2",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "31e6f1cf5f43609a8a4946b9ddb7fda1b93b151854b855de3c5b0e744556d59b",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

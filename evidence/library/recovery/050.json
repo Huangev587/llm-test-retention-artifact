@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "c141b761fa5a4fbabed3964f96ae2c8ae6599e323dcf7bf19fbb6ff459af7563",
+      "source": "@Test\npublic void testGetDayOfYearMidYear() throws Exception {\n    LocalDate date = new LocalDate(2000, 6, 30);\n    int dayOfYear = date.getDayOfYear();\n    assertArrayEquals(new int[]{158}, new int[]{dayOfYear});\n}",
+      "class_name": "entry.Case_c141b761fa5a4fbabed3964f",
+      "original_pass": false,
+      "status": "ORIGINAL_FAILURE",
+      "original_feedback": "arrays first differed at element [0]; expected:<158> but was:<182>\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:55)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:416)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:427)\n\tat entry.Case_c141b761fa5a4fbabed3964f.testGetDayOfYearMidYear(Case_c141b761fa5a4fbabed3964f.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(Framewo",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 1,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "JUNIT_FAILURE",
+          "returncode": 1
+        }
+      },
+      "id": "5c512bb8d5920fba3df11ec77cfc5c4cd9f3961637a5419e1b57ae2a5fad726a",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "arrays first differed at element [0]; expected:<158> but was:<182>\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:55)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:532)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:416)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:427)\n\tat entry.Case_c141b761fa5a4fbabed3964f.testGetDayOfYearMidYear(Case_c141b761fa5a4fbabed3964f.java:12)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(Framewo"
+    }
+  ]
+}

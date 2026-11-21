@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "a2a9e60e2753fd45718bf6104a74f087c47e794ac333db6a8be1f07cae323835",
+      "source": "@Test\npublic void testNullStr() {\n    Assert.assertNull(StringUtils.substringBetween(null, \"[\", \"]\"));\n}",
+      "class_name": "entry.Case_a2a9e60e2753fd45718bf610",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "2176eb22429b17fd6a8e67920d383db17db97a3e23a60d8a18c8c2ed96e431fc",
+      "index": 0
+    },
+    {
+      "compile_key": "ba95428ccc776c287333a5e8b03472478979a958f79822b165ee39c2acc371ee",
+      "source": "@Test\npublic void testNullOpen() {\n    Assert.assertNull(StringUtils.substringBetween(\"wx[b]yz\", null, \"]\"));\n}",
+      "class_name": "entry.Case_ba95428ccc776c287333a5e8",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8886513222a3af57f65093cacdd1ec0a315fee4bc36628dad4c8a28b1aaf28ab",
+      "index": 1
+    },
+    {
+      "compile_key": "f0470e8c9ef6e5c188000436c4f7581b70f2496f10eaeaf20277d681d3ea6b27",
+      "source": "@Test\npublic void testNullClose() {\n    Assert.assertNull(StringUtils.substringBetween(\"wx[b]yz\", \"[\", null));\n}",
+      "class_name": "entry.Case_f0470e8c9ef6e5c188000436",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "91f88396eac4aad7907d3b8145a93d2bbfadd11cc38d27611d262a6c11062637",
+      "index": 2
+    },
+    {
+      "compile_key": "d972a071cc76fa75faa61c732550ca2f03dd7b970142689604cd6385233cba21",
+      "source": "@Test\npublic void testEmptyDelimiters() {\n    Assert.assertEquals(\"\", StringUtils.substringBetween(\"\", \"\", \"\"));\n}",
+      "class_name": "entry.Case_d972a071cc76fa75faa61c73",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "16a19707fc2634df9946ed2989decf32b1d523c9e41747380c84c68d15d30e9a",
+      "index": 3
+    },
+    {
+      "compile_key": "65fdb4349631f49b2a639e56854263cd326fced0d6ec11d77a50a38da210bcd9",
+      "source": "@Test\npublic void testNoMatch() {\n    Assert.assertNull(StringUtils.substringBetween(\"\", \"\", \"]\"));\n}",
+      "class_name": "entry.Case_65fdb4349631f49b2a639e56",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "f9acead7d71ef7510b290840213d4c548f7afecf318bea1d70054a029c6dde7a",
+      "index": 4
+    },
+    {
+      "compile_key": "ff87b333b04f23d1da75d5492c639d7e366340ad202a95a70b7d438a837373d5",
+      "source": "@Test\npublic void testNoMatch2() {\n    Assert.assertNull(StringUtils.substringBetween(\"\", \"[\", \"]\"));\n}",
+      "class_name": "entry.Case_ff87b333b04f23d1da75d549",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "2a4600eef1ca7c3b868ce8250d492bdf651724263570e7a161050d6ee8265fde",
+      "index": 5
+    },
+    {
+      "compile_key": "7e7da3ec8343ce59f2881fdfad709dd0ebafb60c3a43bbd076901901f586bf2c",
+      "source": "@Test\npublic void testSingleMatch() {\n    Assert.assertEquals(\"abc\", StringUtils.substringBetween(\"yabczyabcz\", \"y\", \"z\"));\n}",
+      "class_name": "entry.Case_7e7da3ec8343ce59f2881fdf",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "041050f26c32444faa726e2d3ef2e083747332b04f6a58d8a5b2cd09dfbbb252",
+      "index": 6
+    },
+    {
+      "compile_key": "e79b9c5d0fbfd6697636c4f0906db07063579a86e8d037e18d7475db033effff",
+      "source": "@Test\npublic void testSingleMatch2() {\n    Assert.assertEquals(\"abc\", StringUtils.substringBetween(\"yabcz\", \"y\", \"z\"));\n}",
+      "class_name": "entry.Case_e79b9c5d0fbfd6697636c4f0",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "31c318ffe215f60c955e1066f1679b0b600883b4f308673a4210c009ad8c20cb",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

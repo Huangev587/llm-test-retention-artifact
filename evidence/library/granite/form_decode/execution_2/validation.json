@@ -1,0 +1,59 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "index": 0,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "unqualified call outside assertion allowlist"
+    },
+    {
+      "index": 1,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "unqualified call outside assertion allowlist"
+    },
+    {
+      "index": 2,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "unqualified call outside assertion allowlist"
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "unqualified call outside assertion allowlist"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "unqualified call outside assertion allowlist"
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "unqualified call outside assertion allowlist"
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "method outside API allowlist"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "unqualified call outside assertion allowlist"
+    },
+    {
+      "index": 1,
+      "diagnostic": "unqualified call outside assertion allowlist"
+    },
+    {
+      "index": 2,
+      "diagnostic": "unqualified call outside assertion allowlist"
+    },
+    {
+      "index": 3,
+      "diagnostic": "unqualified call outside assertion allowlist"
+    }
+  ]
+}

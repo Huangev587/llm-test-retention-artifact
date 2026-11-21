@@ -1,0 +1,80 @@
+1. ```java
+@Test
+public void testIndexOfNullArray() throws Exception {
+    int[] array = null;
+    int valueToFind = 5;
+    int expected = INDEX_NOT_FOUND;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+2. ```java
+@Test
+public void testIndexOfEmptyArray() throws Exception {
+    int[] array = {};
+    int valueToFind = 5;
+    int expected = INDEX_NOT_FOUND;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+3. ```java
+@Test
+public void testIndexOfWithValueInArray() throws Exception {
+    int[] array = {1, 2, 3, 4, 5};
+    int valueToFind = 3;
+    int expected = 2;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+4. ```java
+@Test
+public void testIndexOfWithValueNotInArray() throws Exception {
+    int[] array = {1, 2, 3, 4, 5};
+    int valueToFind = 6;
+    int expected = INDEX_NOT_FOUND;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+5. ```java
+@Test
+public void testIndexOfWithLargeArray() throws Exception {
+    int[] array = new int[64];
+    Arrays.fill(array, 500000);
+    int valueToFind = 500000;
+    int expected = 0;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+6. ```java
+@Test
+public void testIndexOfWithNegativeValues() throws Exception {
+    int[] array = {-500000, -400000, -300000};
+    int valueToFind = -300000;
+    int expected = 1;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+7. ```java
+@Test
+public void testIndexOfWithMixedValues() throws Exception {
+    int[] array = {-500000, 0, 500000};
+    int valueToFind = 0;
+    int expected = 1;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```
+
+8. ```java
+@Test
+public void testIndexOfWithDuplicateValues() throws Exception {
+    int[] array = {1, 2, 2, 3, 4};
+    int valueToFind = 2;
+    int expected = 1;
+    Assert.assertEquals(expected, indexOf(array, valueToFind));
+}
+```

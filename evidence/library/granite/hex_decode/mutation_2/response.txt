@@ -1,0 +1,45 @@
+```java
+@Test
+public void testDecodeHexEmptyString() throws Exception {
+    Assert.assertArrayEquals(new byte[0], Hex.decodeHex(""));
+}
+
+@Test
+public void testDecodeHexTwoChars() throws Exception {
+    Assert.assertArrayEquals(new byte[]{0}, Hex.decodeHex("0"));
+    Assert.assertArrayEquals(new byte[]{15}, Hex.decodeHex("a"));
+}
+
+@Test
+public void testDecodeHexFourChars() throws Exception {
+    Assert.assertArrayEquals(new byte[]{0, 0}, Hex.decodeHex("00"));
+    Assert.assertArrayEquals(new byte[]{15, 15}, Hex.decodeHex("aa"));
+}
+
+@Test
+public void testDecodeHexMaxLength() throws Exception {
+    byte[] input = new byte[512];
+    Arrays.fill(input, (byte)0);
+    Assert.assertArrayEquals(input, Hex.decodeHex(Hex.encodeHex(input)));
+}
+
+@Test
+public void testDecodeHexIllegalChar() throws Exception {
+    assertThrows(DecoderException.class, () -> Hex.decodeHex("a0z"));
+}
+
+@Test
+public void testDecodeHexOddLength() throws Exception {
+    assertThrows(DecoderException.class, () -> Hex.decodeHex("a"));
+}
+
+@Test
+public void testDecodeHexNull() throws Exception {
+    assertThrows(NullPointerException.class, () -> Hex.decodeHex(null));
+}
+
+@Test
+public void testDecodeHexEmptyAfterNull() throws Exception {
+    assertThrows(DecoderException.class, () -> Hex.decodeHex(null + ""));
+}
+```

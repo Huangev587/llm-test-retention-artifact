@@ -1,0 +1,65 @@
+1. ```java
+@Test
+public void testCountMatchesNullStr() {
+    Assert.assertEquals(0, StringUtils.countMatches(null, "a"));
+    Assert.assertEquals(0, StringUtils.countMatches(null, ""));
+}
+```
+
+2. ```java
+@Test
+public void testCountMatchesNullSub() {
+    Assert.assertEquals(0, StringUtils.countMatches("a", null));
+    Assert.assertEquals(0, StringUtils.countMatches("", null));
+}
+
+```
+
+3. ```java
+@Test
+public void testCountMatchesEmptyStr() {
+    Assert.assertEquals(0, StringUtils.countMatches("", "a"));
+    Assert.assertEquals(0, StringUtils.countMatches("", ""));
+}
+
+```
+
+4. ```java
+@Test
+public void testCountMatchesEmptySub() {
+    Assert.assertEquals(0, StringUtils.countMatches("a", ""));
+    Assert.assertEquals(0, StringUtils.countMatches("", "a"));
+}
+
+```
+
+5. ```java
+@Test
+public void testCountMatchesSingleChar() {
+    Assert.assertEquals(2, StringUtils.countMatches("aa", "a"));
+}
+
+```
+
+6. ```java
+@Test
+public void testCountMatchesMultiChar() {
+    Assert.assertEquals(1, StringUtils.countMatches("abba", "bb"));
+}
+
+```
+
+7. ```java
+@Test
+public void testCountMatchesNoMatch() {
+    Assert.assertEquals(0, StringUtils.countMatches("abba", "xxx"));
+}
+
+```
+
+8. ```java
+@Test
+public void testCountMatchesOverlap() {
+    Assert.assertEquals(1, StringUtils.countMatches("ababa", "aba"));
+}
+```

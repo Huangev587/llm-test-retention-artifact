@@ -1,0 +1,172 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "efe59a530969da4768c11b68556926ca3b9d63f72efae4109703b634d4ae2a20",
+      "source": "@Test\npublic void testNullArray() throws Exception {\n    assertEquals(-1, ArrayUtils.indexOf(null, 5));\n}",
+      "class_name": "entry.Case_efe59a530969da4768c11b68",
+      "original_pass": false,
+      "status": "COMPILE_FAILURE",
+      "original_feedback": "<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_index_of/efe59a530969da4768c11b68556926ca3b9d63f72efae4109703b634d4ae2a20/Case_efe59a530969da4768c11b68.java:10: 错误: 对indexOf的引用不明确\n    assertEquals(-1, ArrayUtils.indexOf(null, 5));\n                               ^\n  ArrayUtils 中的方法 indexOf(int[],int) 和 ArrayUtils 中的方法 indexOf(long[],long) 都匹配\n1 个错误\n",
+      "id": "114fcbc57967060b6f8f4d247c7928b777d5e77926db7db6355b7e6af531392a",
+      "index": 0
+    },
+    {
+      "compile_key": "2078830a2e28c1efc50bded16a42f4a3c79a6d1762f4ec5100023ea64b950094",
+      "source": "@Test\npublic void testSingleElementMatch() throws Exception {\n    assertEquals(0, ArrayUtils.indexOf(new int[]{5}, 5));\n}",
+      "class_name": "entry.Case_2078830a2e28c1efc50bded1",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "f63c6069b89f3fd9cbe0af38c3937cb1e71871490ee588d3967428c3451a65d7",
+      "index": 1
+    },
+    {
+      "compile_key": "2bb3b89e5e67393a11d6c4e671d777e68481099359b07ad006e62cb3d3b5d4a3",
+      "source": "@Test\npublic void testSingleElementNoMatch() throws Exception {\n    assertEquals(-1, ArrayUtils.indexOf(new int[]{5}, 4));\n}",
+      "class_name": "entry.Case_2bb3b89e5e67393a11d6c4e6",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3a4f6131a9e94ff6b79c9af3ef57aa8688041e0dbeac601db370dd68c198ce19",
+      "index": 2
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized arrays are accepted"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized arrays are accepted"
+    },
+    {
+      "compile_key": "c270f416e8e0c8e7deac984aa3eb918d0a14c966e1ebca18fa38abe6cff86dfe",
+      "source": "@Test\npublic void testNegativeValues() throws Exception {\n    assertEquals(1, ArrayUtils.indexOf(new int[]{-1, -2, -3}, -2));\n}",
+      "class_name": "entry.Case_c270f416e8e0c8e7deac984a",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "1498cd45c39c3dcd352e5cf088bdf3a87782b2c79c7c20f0c896b5b853ea7336",
+      "index": 5
+    },
+    {
+      "compile_key": "f357bb0e9cec0e97706433376aa84225b471b3902de04dcbaa6603a0cd021814",
+      "source": "@Test\npublic void testPositiveValues() throws Exception {\n    assertEquals(1, ArrayUtils.indexOf(new int[]{1, 2, 3}, 2));\n}",
+      "class_name": "entry.Case_f357bb0e9cec0e9770643337",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "d80cec65c32fb68ef5a86a298569f3dcac6f63ad4761f0d9138918ed002b95d7",
+      "index": 6
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "<WORKSPACE>/mutgen_budget_pilot_20261111/revision/breadth_expansion/batch/outputs/run/qwen/methods/lang_index_of/efe59a530969da4768c11b68556926ca3b9d63f72efae4109703b634d4ae2a20/Case_efe59a530969da4768c11b68.java:10: 错误: 对indexOf的引用不明确\n    assertEquals(-1, ArrayUtils.indexOf(null, 5));\n                               ^\n  ArrayUtils 中的方法 indexOf(int[],int) 和 ArrayUtils 中的方法 indexOf(long[],long) 都匹配\n1 个错误\n"
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "only inline initialized arrays are accepted"
+    }
+  ]
+}

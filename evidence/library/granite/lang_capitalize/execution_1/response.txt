@@ -1,0 +1,48 @@
+```java
+@Test
+public void testNullInput() {
+    Assert.assertNull(capitalize(null));
+}
+
+@Test
+public void testEmptyString() {
+    Assert.assertEquals("", capitalize(""));
+}
+
+@Test
+public void testSingleCharacter() {
+    Assert.assertEquals("A", capitalize("a"));
+    Assert.assertEquals("B", capitalize("b"));
+    Assert.assertEquals("C", capitalize("c"));
+    //... similarly for other lowercase letters
+}
+
+@Test
+public void testMultipleCharacters() {
+    Assert.assertEquals("Hello", capitalize("hello"));
+    Assert.assertEquals("World", capitalize("world"));
+    //... similarly for other all-lowercase words
+}
+
+@Test
+public void testMixedCase() {
+    Assert.assertEquals("HeLLo", capitalize("hELLO"));
+    Assert.assertEquals("WoRlD", capitalize("WoRlD"));
+    //... similarly for other mixed-case strings
+}
+
+@Test
+public void testSpecialCharacters() {
+    Assert.assertEquals("'cat'", capitalize("'cat'"));
+    Assert.assertEquals("!dog", capitalize("!dog"));
+    Assert.assertEquals("?elephant", capitalize("?elephant"));
+    //... similarly for other strings with special characters
+}
+
+@Test
+public void testUnicodeCharacters() {
+    Assert.assertEquals("Éléphant", capitalize("Éléphant"));
+    Assert.assertEquals("Müller", capitalize("Müller"));
+    //... similarly for other Unicode strings
+}
+```

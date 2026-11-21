@@ -1,0 +1,39 @@
+@Test
+public void testToBooleanNull() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean(null));
+}
+
+@Test
+public void testToBooleanFalse() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean("false"));
+}
+
+@Test
+public void testToBooleanOne() throws Exception {
+    Assert.assertTrue(BooleanUtils.toBoolean("1"));
+}
+
+@Test
+public void testToBooleanInvalid() throws Exception {
+    Assert.assertFalse(BooleanUtils.toBoolean("x gti"));
+}
+
+@Test
+public void testToBooleanUppercase() throws Exception {
+    Assert.assertTrue(BooleanUtils.toBoolean("ON"));
+    Assert.assertTrue(BooleanUtils.toBoolean("YES"));
+    Assert.assertTrue(BooleanUtils.toBoolean("Y"));
+}
+
+@Test
+public void testToBooleanLowercase() throws Exception {
+    Assert.assertTrue(BooleanUtils.toBoolean("on"));
+    Assert.assertTrue(BooleanUtils.toBoolean("yes"));
+    Assert.assertTrue(BooleanUtils.toBoolean("y"));
+}
+
+@Test
+public void testToBooleanMixed() throws Exception {
+    Assert.assertTrue(BooleanUtils.toBoolean("TrUe"));
+    Assert.assertTrue(BooleanUtils.toBoolean("FaLsE"));
+}

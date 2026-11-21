@@ -1,0 +1,74 @@
+1. ```java
+@Test
+public void testGetMillisOfDay() throws Exception {
+    LocalTime time = LocalTime.of(0, 0, 0, 123);
+    int expected = 123 * 60 * 1000;
+    int actual = time.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+2. ```java
+@Test
+public void testGetMillisOfDayMax() throws Exception {
+    LocalTime time = LocalTime.MAX;
+    int expected = 86399999;
+    int actual = time.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+3. ```java
+@Test
+public void testGetMillisOfDayMin() throws Exception {
+    LocalTime time = LocalTime.of(0, 0, 0, 123);
+    int expected = 123 * 60 * 1000;
+    int actual = time.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+4. ```java
+@Test
+public void testGetMillisOfDayZero() throws Exception {
+    LocalTime time = LocalTime.of(0, 0, 0, 0);
+    int expected = 0;
+    int actual = time.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+5. ```java
+@Test
+public void testGetMillisOfDayWithNegativeTime() throws Exception {
+    LocalTime time = LocalTime.of(-1, 0, 0, 123);
+    Assert.assertEquals(0, time.getMillisOfDay());
+}
+```
+
+6. ```java
+@Test
+public void testGetMillisOfDayWithInvalidTime() throws Exception {
+    Assert.assertEquals(0, LocalTime.INVALID.getMillisOfDay());
+}
+```
+
+7. ```java
+@Test
+public void testGetMillisOfDayWithTimeAndOffset() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 45, 123);
+    int expected = 12 * 3600 * 1000 + 30 * 60 * 1000 + 45 * 1000 + 123;
+    int actual = time.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```
+
+8. ```java
+@Test
+public void testGetMillisOfDayWithTimeAndZone() throws Exception {
+    LocalTime time = LocalTime.of(12, 30, 45, 123);
+    int expected = 12 * 3600 * 1000 + 30 * 60 * 1000 + 45 * 1000 + 123;
+    int actual = time.getMillisOfDay();
+    Assert.assertEquals(expected, actual);
+}
+```

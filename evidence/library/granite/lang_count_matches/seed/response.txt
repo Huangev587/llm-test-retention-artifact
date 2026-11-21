@@ -1,0 +1,41 @@
+```java
+@Test
+public void testCountMatchesNullStr() {
+    assertEqual(0, StringUtils.countMatches(null, "a"));
+}
+
+@Test
+public void testCountMatchesNullSub() {
+    assertEqual(0, StringUtils.countMatches("abc", null));
+}
+
+@Test
+public void testCountMatchesEmptyStr() {
+    assertEqual(0, StringUtils.countMatches("", "a"));
+}
+
+@Test
+public void testCountMatchesEmptySub() {
+    assertEqual(0, StringUtils.countMatches("abc", ""));
+}
+
+@Test
+public void testCountMatchesOneMatch() {
+    assertEqual(2, StringUtils.countMatches("aaaa", "aa"));
+}
+
+@Test
+public void testCountMatchesMultipleMatches() {
+    assertEqual(3, StringUtils.countMatches("ababa", "aba"));
+}
+
+@Test
+public void testCountMatchesNoMatches() {
+    assertEqual(0, StringUtils.countMatches("abc", "xyz"));
+}
+
+@Test
+public void testCountMatchesLongerSub() {
+    assertEqual(1, StringUtils.countMatches("abcabcabc", "bc"));
+}
+```

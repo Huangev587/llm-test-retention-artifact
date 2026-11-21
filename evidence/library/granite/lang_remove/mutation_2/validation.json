@@ -1,0 +1,113 @@
+{
+  "structure_pass": true,
+  "total_methods": 7,
+  "methods": [
+    {
+      "compile_key": "c732f84153528e81805d81bac2140923b42ba11b6adb1f6a82e03f133993c7be",
+      "source": "@Test\npublic void testRemoveLastElementArray() {\n    int[] input = {2, 6};\n    int index = 1;\n    int[] expected = {2};\n    int[] result = ArrayUtils.remove(input, index);\n    Assert.assertArrayEquals(expected, result);\n}",
+      "class_name": "entry.Case_c732f84153528e81805d81ba",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "2f89a7a21c0ff430f669287f5fc1dd59da10867270b834d2ddf3d829f008d9d8",
+      "index": 0
+    },
+    {
+      "compile_key": "7856f49f3826324ef69d1498ed7ec9966dad76ef219ba8aac6e071e5b894c1cc",
+      "source": "@Test\npublic void testRemoveElementFromLongArray() {\n    int[] input = {1, 2, 3, 4, 5};\n    int index = 2;\n    int[] expected = {1, 2, 4, 5};\n    int[] result = ArrayUtils.remove(input, index);\n    Assert.assertArrayEquals(expected, result);\n}",
+      "class_name": "entry.Case_7856f49f3826324ef69d1498",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "2f0704f859293dda4850f87da18599f702fde1cc120d1ba8e131bb7168b7aaf6",
+      "index": 1
+    },
+    {
+      "index": 2,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "only inline initialized arrays are accepted"
+    },
+    {
+      "index": 3,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "statement is not straight-line: TRY"
+    },
+    {
+      "index": 4,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "statement is not straight-line: TRY"
+    },
+    {
+      "index": 5,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "statement is not straight-line: TRY"
+    },
+    {
+      "index": 6,
+      "status": "GUARD_REJECTED",
+      "diagnostic": "statement is not straight-line: TRY"
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "only inline initialized arrays are accepted"
+    },
+    {
+      "index": 3,
+      "diagnostic": "statement is not straight-line: TRY"
+    }
+  ]
+}

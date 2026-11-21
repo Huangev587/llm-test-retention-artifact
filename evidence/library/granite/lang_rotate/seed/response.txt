@@ -1,0 +1,46 @@
+```java
+@Test
+public void testRotateNullInput() throws Exception {
+    Assert.assertNull(rotate(null, 2));
+}
+
+@Test
+public void testRotateEmptyString() throws Exception {
+    Assert.assertEquals("", rotate("", 2));
+}
+
+@Test
+public void testRotateZeroShift() throws Exception {
+    Assert.assertEquals("abcdefg", rotate("abcdefg", 0));
+}
+
+@Test
+public void testRotateRightShift() throws Exception {
+    Assert.assertEquals("fgabcde", rotate("abcdefg", 2));
+}
+
+@Test
+public void testRotateLeftShift() throws Exception {
+    Assert.assertEquals("cdefgab", rotate("abcdefg", -2));
+}
+
+@Test
+public void testRotateFullCircleRightShift() throws Exception {
+    Assert.assertEquals("abcdefg", rotate("abcdefg", 7));
+}
+
+@Test
+public void testRotateFullCircleLeftShift() throws Exception {
+    Assert.assertEquals("abcdefg", rotate("abcdefg", -7));
+}
+
+@Test
+public void testRotateBeyondFullCircleRightShift() throws Exception {
+    Assert.assertEquals("fgabcde", rotate("abcdefg", 9));
+}
+
+@Test
+public void testRotateBeyondFullCircleLeftShift() throws Exception {
+    Assert.assertEquals("cdefgab", rotate("abcdefg", -9));
+}
+```

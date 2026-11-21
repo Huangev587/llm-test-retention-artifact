@@ -1,0 +1,280 @@
+{
+  "structure_pass": true,
+  "total_methods": 8,
+  "methods": [
+    {
+      "compile_key": "b4f14c0b32c8e29bf155a8def0e83a321b1d6f819ff6e937e3a705f07ad614b0",
+      "source": "@Test\npublic void testOverlayNullString() throws Exception {\n    assertEquals(null, StringUtils.overlay(null, \"abc\", 2, 4));\n}",
+      "class_name": "entry.Case_b4f14c0b32c8e29bf155a8de",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "a9b20d5e47eacdbee6783be7d62d093dc49871e0b20de8c139f3abc5b21e104d",
+      "index": 0
+    },
+    {
+      "compile_key": "d00f199c79fb456d0b1356694686047b6d8d2ac1c47770161a54b26f4ce6cd79",
+      "source": "@Test\npublic void testOverlayEmptyString() throws Exception {\n    assertEquals(\"abc\", StringUtils.overlay(\"\", \"abc\", 0, 0));\n}",
+      "class_name": "entry.Case_d00f199c79fb456d0b135669",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "8c124c272f87ac4d166b89e6a714517b9ff0a867fd0aa55314f1f83ac3130298",
+      "index": 1
+    },
+    {
+      "compile_key": "e316fb2443251bc33b6ed417ecad3c57f1a0fd84c2d31573b0970ff646147a70",
+      "source": "@Test\npublic void testOverlayNullOverlay() throws Exception {\n    assertEquals(\"abef\", StringUtils.overlay(\"abcdef\", null, 2, 4));\n}",
+      "class_name": "entry.Case_e316fb2443251bc33b6ed417",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "371ed780475c43c73a26f957735acde1c2d79a7857b79d41e8dc426a9ab4b529",
+      "index": 2
+    },
+    {
+      "compile_key": "d48aa434889df5a95a33f27a2e6e101595a771a0994cf05826c971ab1af634c6",
+      "source": "@Test\npublic void testOverlayEmptyOverlay() throws Exception {\n    assertEquals(\"abef\", StringUtils.overlay(\"abcdef\", \"\", 2, 4));\n}",
+      "class_name": "entry.Case_d48aa434889df5a95a33f27a",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "e88b39e5b4ffa7f1adc5c262faad74ae6db3ad6759bdb0ba5f679c778146e6bd",
+      "index": 3
+    },
+    {
+      "compile_key": "08902b6a956085228a4a35f5bde2d5bebff9ec3f6730456ced9e286f306fb1fa",
+      "source": "@Test\npublic void testOverlayStartGreaterThanEnd() throws Exception {\n    assertEquals(\"abzzzzef\", StringUtils.overlay(\"abcdef\", \"zzzz\", 2, 4));\n}",
+      "class_name": "entry.Case_08902b6a956085228a4a35f5",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "636e63080998bac6b63c0256420acfbcbfb966d53bcc8d809bbdd6934bb8a839",
+      "index": 4
+    },
+    {
+      "compile_key": "c01c862b8d241671280a2fc6e44074bf2e7114f8bff72c860ff654c3e51c72f6",
+      "source": "@Test\npublic void testOverlayNegativeIndices() throws Exception {\n    assertEquals(\"zzzzef\", StringUtils.overlay(\"abcdef\", \"zzzz\", -1, 4));\n}",
+      "class_name": "entry.Case_c01c862b8d241671280a2fc6",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "61ec117da87f28d1a03580bd5c71e2d127f8ab8d764e4936ef8335edfb55dd89",
+      "index": 5
+    },
+    {
+      "compile_key": "95fb6580311ddde3d5506e450bf75c59113089dc50ee6624cf967e15aadacf5a",
+      "source": "@Test\npublic void testOverlayExceedingLengths() throws Exception {\n    assertEquals(\"abzzzz\", StringUtils.overlay(\"abcdef\", \"zzzz\", 2, 8));\n}",
+      "class_name": "entry.Case_95fb6580311ddde3d5506e45",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "960253fa7ac55eb2c230bb3ad8f7f56cfe96dfb0bcd28d386e5f4a1101c6cb37",
+      "index": 6
+    },
+    {
+      "compile_key": "f5a2cab373057174c23fb287c4cdebbb5124efe68b22e7d962845911bc08108c",
+      "source": "@Test\npublic void testOverlayClampIndices() throws Exception {\n    assertEquals(\"zzzzabcdef\", StringUtils.overlay(\"abcdef\", \"zzzz\", -2, -3));\n}",
+      "class_name": "entry.Case_f5a2cab373057174c23fb287",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "6fbfc77995c2ab8ac6f8a5d77b57d42c9265201057d010c9a3ff5384bb6bbaf4",
+      "index": 7
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 1,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 2,
+      "diagnostic": "Original program passed."
+    },
+    {
+      "index": 3,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

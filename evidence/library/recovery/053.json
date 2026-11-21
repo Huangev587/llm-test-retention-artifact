@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "103f90dac8881c5528f1770c6d84ac9c25b625cb10b1f30cd5d6fa24bf69b01f",
+      "source": "@Test\npublic void testGetDayOfYearMidMillennium() throws Exception {\n    LocalDate date = new LocalDate(2100, 1, 1);\n    int dayOfYear = date.getDayOfYear();\n    assertArrayEquals(new int[]{1}, new int[]{dayOfYear});\n}",
+      "class_name": "entry.Case_103f90dac8881c5528f1770c",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "ce6338fc2aa4f433fa9272f85c55b5ef5a56afad47c4b81c7dc2f44e025578cb",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}

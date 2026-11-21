@@ -1,0 +1,44 @@
+{
+  "structure_pass": true,
+  "total_methods": 1,
+  "methods": [
+    {
+      "compile_key": "fe29a1be2539af1b88c86a82a289c3a07bf588f600c0b158d4b24568b4004728",
+      "source": "@Test\npublic void testGetDayOfYearStartOfYear() {\n    LocalDate date = new LocalDate(1900, 1, 1);\n    int expected = 1;\n    int actual = date.getDayOfYear();\n    assertEquals(expected, actual);\n}",
+      "class_name": "entry.Case_fe29a1be2539af1b88c86a82",
+      "original_pass": true,
+      "status": "PASS",
+      "original_feedback": "Original program passed.",
+      "junit": {
+        "original": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 0,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        },
+        "reference": {
+          "run_count": 1,
+          "failures": 0,
+          "calls": 1,
+          "out_of_domain": false,
+          "ignored_count": 0,
+          "assumption_failures": 0,
+          "status": "PASS",
+          "returncode": 0
+        }
+      },
+      "id": "3b2284603aa6102c465078153d457d5b14b4ca53b7837d23ee2f6982faf6e37f",
+      "index": 0
+    }
+  ],
+  "original_feedback": [
+    {
+      "index": 0,
+      "diagnostic": "Original program passed."
+    }
+  ]
+}
