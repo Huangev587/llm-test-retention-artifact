@@ -2,10 +2,12 @@
 
 Reproduction evidence for **Test Retention in Evaluating LLM-Generated Unit Tests: Local Effects and Limits**.
 
-**Authors:** Shuhuan Lv and Wei Zheng (corresponding author: zhengwei@nchu.edu.cn), School of Software, Nanchang Hangkong University, China.
+**Provisional authors:** Shuhuan Lv and Wei Zheng (corresponding author: zhengwei@nchu.edu.cn), School of Software, Nanchang Hangkong University, China.
 
 **Version:** `v1.0.0` (21 November 2026); evidence version `20261121-rewrite-v6-github`.
 The study is a manuscript in preparation; this repository does not imply journal acceptance.
+
+**Current access status:** PRIVATE, at the author's request. The author list and CRediT contributions may expand after supervisor discussion. The v1.0.0 evidence below is a historical snapshot; its earlier public-access wording does not describe current visibility. Reviewer access and any later public release await explicit author confirmation. Updated local manuscript metadata do not change the saved experimental results.
 
 ## Reproduce the saved results
 
