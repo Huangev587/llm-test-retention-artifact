@@ -1,0 +1,28 @@
+def build_messages(source, suite, arm, errors=None, rows=None, split=None, *,
+                   target='HasCloseElements.hasCloseElements'):
+    if arm not in ('seed', *ARMS) or not isinstance(source, str) or not source:
+        raise ValueError('Invalid generation arm or source')
+    if not isinstance(suite, list) or any(not isinstance(m, str) for m in suite):
+        raise ValueError('Suite must contain retained method source strings only')
+    system = (
+        'Generate complete JUnit 4 test methods for the supplied Java class. Return only 1 to 4 '
+        '@Test public void name() methods, with no imports, class wrapper, fields, helpers, throws, '
+        'or explanations. The wrapper supplies package original, java.util.*, org.junit.Test, org.junit.Assert, '
+        'and static org.junit.Assert.*. Use straight-line local variables, finite explicit inputs, '
+        f'JUnit assertions, {target}, Arrays.asList, List.of/copyOf, '
+        'Collections.emptyList/singletonList, new ArrayList<>(), collection add/get/size/isEmpty/clear/set, '
+        'or Math.abs/min/max. Primitive/wrapper/String/List/ArrayList types and inline initialized '
+        'arrays are allowed. No control flow, exceptions, reflection, I/O, threads, or process APIs. '
+        'Double/Float NaN, infinities, MAX_VALUE, MIN_VALUE and Math.PI/E constants are permitted. '
+        'The methods must compile and pass on the original implementation. '
+        'Add complementary checks without repeating retained methods.'
+    )
+    user = 'Original source (unchanged):\n' + source + '\nRetained methods:\n' + '\n'.join(suite)
+    user += '\nGenerate the initial tests.' if arm == 'seed' else '\nGenerate additional complementary tests.'
+    if arm in ('execution', 'mutation'):
+        user += '\nPrevious original-program validation feedback:\n' + json.dumps(errors or {}, ensure_ascii=False)
+    if arm == 'mutation':
+        if rows is None or split is None:
+            raise ValueError('Mutation arm needs a validated frozen feedback partition')
+        user += '\nAvailable mutation feedback:\n' + json.dumps(feedback_payload(rows, split), ensure_ascii=False)
+    return [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]

@@ -1,0 +1,485 @@
+{
+  "status": "AUDIT_PASS",
+  "blocks": 9,
+  "model_calls": 81,
+  "scored_cells": 72,
+  "unique_pit_reports_checked": 51,
+  "unresolved": 0,
+  "transitions": {
+    "native_transition:tie_to_lead": 2,
+    "seeded_replay_transition:tie_to_lead": 1,
+    "matched_scoring_cap_transition:same_order": 8,
+    "native_transition:same_order": 6,
+    "seeded_replay_transition:same_order": 7,
+    "native_transition:lead_to_tie": 1,
+    "seeded_replay_transition:lead_to_tie": 1,
+    "matched_scoring_cap_transition:tie_to_lead": 1
+  },
+  "empty_cells": [
+    [
+      "form_decode",
+      231101,
+      "mutation_8_4"
+    ],
+    [
+      "hex_decode",
+      231103,
+      "mutation_4_4"
+    ],
+    [
+      "hex_decode",
+      231103,
+      "mutation_4_8"
+    ],
+    [
+      "hex_decode",
+      231103,
+      "mutation_8_4"
+    ],
+    [
+      "hex_decode",
+      231103,
+      "mutation_8_8"
+    ],
+    [
+      "base64_urlsafe",
+      231103,
+      "mutation_4_4"
+    ],
+    [
+      "base64_urlsafe",
+      231103,
+      "mutation_4_8"
+    ],
+    [
+      "base64_urlsafe",
+      231103,
+      "mutation_8_4"
+    ],
+    [
+      "base64_urlsafe",
+      231103,
+      "mutation_8_8"
+    ]
+  ],
+  "validation_statuses": {
+    "OUT_OF_DOMAIN": 77,
+    "ORIGINAL_FAILURE": 107,
+    "PASS": 133,
+    "GUARD_REJECTED": 167,
+    "COMPILE_FAILURE": 7
+  },
+  "structure_pass": 66,
+  "structure_failure": 15,
+  "late_context_requests": 8,
+  "late_context_blocks": 3,
+  "rows": [
+    {
+      "api": "form_decode",
+      "seed": 231101,
+      "catalog": 27,
+      "scores": {
+        "generic_4_4": {
+          "valid": 4,
+          "killed": 9
+        },
+        "generic_4_8": {
+          "valid": 7,
+          "killed": 11
+        },
+        "mutation_4_4": {
+          "valid": 3,
+          "killed": 9
+        },
+        "mutation_4_8": {
+          "valid": 5,
+          "killed": 9
+        },
+        "generic_8_4": {
+          "valid": 5,
+          "killed": 9
+        },
+        "generic_8_8": {
+          "valid": 7,
+          "killed": 11
+        },
+        "mutation_8_4": {
+          "valid": 0,
+          "killed": 0
+        },
+        "mutation_8_8": {
+          "valid": 1,
+          "killed": 2
+        }
+      },
+      "gaps": {
+        "4_4": 0,
+        "4_8": 2,
+        "8_4": 9,
+        "8_8": 9
+      }
+    },
+    {
+      "api": "form_decode",
+      "seed": 231102,
+      "catalog": 27,
+      "scores": {
+        "generic_4_4": {
+          "valid": 6,
+          "killed": 11
+        },
+        "generic_4_8": {
+          "valid": 11,
+          "killed": 11
+        },
+        "mutation_4_4": {
+          "valid": 8,
+          "killed": 11
+        },
+        "mutation_4_8": {
+          "valid": 13,
+          "killed": 11
+        },
+        "generic_8_4": {
+          "valid": 6,
+          "killed": 11
+        },
+        "generic_8_8": {
+          "valid": 9,
+          "killed": 11
+        },
+        "mutation_8_4": {
+          "valid": 5,
+          "killed": 11
+        },
+        "mutation_8_8": {
+          "valid": 8,
+          "killed": 11
+        }
+      },
+      "gaps": {
+        "4_4": 0,
+        "4_8": 0,
+        "8_4": 0,
+        "8_8": 0
+      }
+    },
+    {
+      "api": "form_decode",
+      "seed": 231103,
+      "catalog": 27,
+      "scores": {
+        "generic_4_4": {
+          "valid": 3,
+          "killed": 6
+        },
+        "generic_4_8": {
+          "valid": 4,
+          "killed": 11
+        },
+        "mutation_4_4": {
+          "valid": 4,
+          "killed": 11
+        },
+        "mutation_4_8": {
+          "valid": 8,
+          "killed": 11
+        },
+        "generic_8_4": {
+          "valid": 3,
+          "killed": 6
+        },
+        "generic_8_8": {
+          "valid": 4,
+          "killed": 11
+        },
+        "mutation_8_4": {
+          "valid": 9,
+          "killed": 11
+        },
+        "mutation_8_8": {
+          "valid": 12,
+          "killed": 11
+        }
+      },
+      "gaps": {
+        "4_4": -5,
+        "4_8": 0,
+        "8_4": -5,
+        "8_8": 0
+      }
+    },
+    {
+      "api": "hex_decode",
+      "seed": 231101,
+      "catalog": 33,
+      "scores": {
+        "generic_4_4": {
+          "valid": 2,
+          "killed": 4
+        },
+        "generic_4_8": {
+          "valid": 2,
+          "killed": 4
+        },
+        "mutation_4_4": {
+          "valid": 5,
+          "killed": 4
+        },
+        "mutation_4_8": {
+          "valid": 7,
+          "killed": 4
+        },
+        "generic_8_4": {
+          "valid": 2,
+          "killed": 4
+        },
+        "generic_8_8": {
+          "valid": 2,
+          "killed": 4
+        },
+        "mutation_8_4": {
+          "valid": 4,
+          "killed": 4
+        },
+        "mutation_8_8": {
+          "valid": 4,
+          "killed": 4
+        }
+      },
+      "gaps": {
+        "4_4": 0,
+        "4_8": 0,
+        "8_4": 0,
+        "8_8": 0
+      }
+    },
+    {
+      "api": "hex_decode",
+      "seed": 231102,
+      "catalog": 33,
+      "scores": {
+        "generic_4_4": {
+          "valid": 4,
+          "killed": 4
+        },
+        "generic_4_8": {
+          "valid": 8,
+          "killed": 4
+        },
+        "mutation_4_4": {
+          "valid": 7,
+          "killed": 4
+        },
+        "mutation_4_8": {
+          "valid": 9,
+          "killed": 4
+        },
+        "generic_8_4": {
+          "valid": 4,
+          "killed": 4
+        },
+        "generic_8_8": {
+          "valid": 5,
+          "killed": 4
+        },
+        "mutation_8_4": {
+          "valid": 5,
+          "killed": 4
+        },
+        "mutation_8_8": {
+          "valid": 5,
+          "killed": 4
+        }
+      },
+      "gaps": {
+        "4_4": 0,
+        "4_8": 0,
+        "8_4": 0,
+        "8_8": 0
+      }
+    },
+    {
+      "api": "hex_decode",
+      "seed": 231103,
+      "catalog": 33,
+      "scores": {
+        "generic_4_4": {
+          "valid": 4,
+          "killed": 4
+        },
+        "generic_4_8": {
+          "valid": 4,
+          "killed": 4
+        },
+        "mutation_4_4": {
+          "valid": 0,
+          "killed": 0
+        },
+        "mutation_4_8": {
+          "valid": 0,
+          "killed": 0
+        },
+        "generic_8_4": {
+          "valid": 4,
+          "killed": 4
+        },
+        "generic_8_8": {
+          "valid": 4,
+          "killed": 4
+        },
+        "mutation_8_4": {
+          "valid": 0,
+          "killed": 0
+        },
+        "mutation_8_8": {
+          "valid": 0,
+          "killed": 0
+        }
+      },
+      "gaps": {
+        "4_4": 4,
+        "4_8": 4,
+        "8_4": 4,
+        "8_8": 4
+      }
+    },
+    {
+      "api": "base64_urlsafe",
+      "seed": 231101,
+      "catalog": 86,
+      "scores": {
+        "generic_4_4": {
+          "valid": 3,
+          "killed": 12
+        },
+        "generic_4_8": {
+          "valid": 3,
+          "killed": 12
+        },
+        "mutation_4_4": {
+          "valid": 1,
+          "killed": 7
+        },
+        "mutation_4_8": {
+          "valid": 1,
+          "killed": 7
+        },
+        "generic_8_4": {
+          "valid": 3,
+          "killed": 12
+        },
+        "generic_8_8": {
+          "valid": 3,
+          "killed": 12
+        },
+        "mutation_8_4": {
+          "valid": 1,
+          "killed": 7
+        },
+        "mutation_8_8": {
+          "valid": 1,
+          "killed": 7
+        }
+      },
+      "gaps": {
+        "4_4": 5,
+        "4_8": 5,
+        "8_4": 5,
+        "8_8": 5
+      }
+    },
+    {
+      "api": "base64_urlsafe",
+      "seed": 231102,
+      "catalog": 86,
+      "scores": {
+        "generic_4_4": {
+          "valid": 2,
+          "killed": 7
+        },
+        "generic_4_8": {
+          "valid": 2,
+          "killed": 7
+        },
+        "mutation_4_4": {
+          "valid": 2,
+          "killed": 7
+        },
+        "mutation_4_8": {
+          "valid": 2,
+          "killed": 7
+        },
+        "generic_8_4": {
+          "valid": 2,
+          "killed": 7
+        },
+        "generic_8_8": {
+          "valid": 2,
+          "killed": 7
+        },
+        "mutation_8_4": {
+          "valid": 1,
+          "killed": 0
+        },
+        "mutation_8_8": {
+          "valid": 1,
+          "killed": 0
+        }
+      },
+      "gaps": {
+        "4_4": 0,
+        "4_8": 0,
+        "8_4": 7,
+        "8_8": 7
+      }
+    },
+    {
+      "api": "base64_urlsafe",
+      "seed": 231103,
+      "catalog": 86,
+      "scores": {
+        "generic_4_4": {
+          "valid": 1,
+          "killed": 12
+        },
+        "generic_4_8": {
+          "valid": 1,
+          "killed": 12
+        },
+        "mutation_4_4": {
+          "valid": 0,
+          "killed": 0
+        },
+        "mutation_4_8": {
+          "valid": 0,
+          "killed": 0
+        },
+        "generic_8_4": {
+          "valid": 1,
+          "killed": 12
+        },
+        "generic_8_8": {
+          "valid": 1,
+          "killed": 12
+        },
+        "mutation_8_4": {
+          "valid": 0,
+          "killed": 0
+        },
+        "mutation_8_8": {
+          "valid": 0,
+          "killed": 0
+        }
+      },
+      "gaps": {
+        "4_4": 12,
+        "4_8": 12,
+        "8_4": 12,
+        "8_8": 12
+      }
+    }
+  ],
+  "result_sha256": "298300d348b3ea1991238dabd096644aa2bcddf349afb3257a46028c09f772b4",
+  "evidence_sha256": "f20b7573f3307634d054dd7974172a396ce8f066aff33e7fa939b5308533e2fa"
+}

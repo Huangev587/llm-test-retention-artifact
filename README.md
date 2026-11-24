@@ -2,46 +2,58 @@
 
 Reproduction evidence for **Test Retention in Evaluating LLM-Generated Unit Tests: Local Effects and Limits**.
 
-**Provisional authors:** Shuhuan Lv and Wei Zheng (corresponding author: zhengwei@nchu.edu.cn), School of Software, Nanchang Hangkong University, China.
+**Authors:** Wei Zheng, Shuhuan Lv, Xin Fan, Hao Pan, Fengyu Yang, Peng Xiao. School of Software, Nanchang Hangkong University, China. Corresponding author: Shuhuan Lv (ShuhuanLv@Outlook.com).
 
-**Version:** `v1.0.0` (21 November 2026); evidence version `20261121-rewrite-v6-github`.
-The study is a manuscript in preparation; this repository does not imply journal acceptance.
+**Current release:** `v1.1.0` (24 November 2026); evidence snapshot `20261124-esm2-r8-em64`. Prepared for submission to *Empirical Software Engineering*. Publication here does not imply journal acceptance.
 
-**Current access status:** PRIVATE, at the author's request. The author list and CRediT contributions may expand after supervisor discussion. The v1.0.0 evidence below is a historical snapshot; its earlier public-access wording does not describe current visibility. Reviewer access and any later public release await explicit author confirmation. Updated local manuscript metadata do not change the saved experimental results.
+## Download the fixed replication package
 
-## Reproduce the saved results
+Download [ESM_2.zip from v1.1.0](https://github.com/Huangev587/llm-test-retention-artifact/releases/download/v1.1.0/ESM_2.zip). The archive is publicly accessible without a GitHub account. Its SHA-256 is:
 
-Use Python 3.12. No third-party Python packages, model API, GPU, Maven or Java installation are needed for this offline check.
+```
+74633866b6c37b37f5c29596843f165bc11d1770c68c6dc76c22661cf953642b
+```
+
+The ZIP preserves the previously verified evidence exactly. This public download replaces the earlier plan to deliver the ZIP through the submission portal. Older delivery wording within the frozen files is historical. See [release notes](RELEASE_NOTES.md).
+
+## Recompute the stored results
+
+Extract the ZIP into a fresh directory. With Python 3.12, run:
 
 ```sh
-git clone https://github.com/Huangev587/llm-test-retention-artifact.git
-cd llm-test-retention-artifact
-git checkout v1.0.0
-cd evidence
 python -I -S -B verify.py
 python -I -S -B archives/core_evidence.zip
 ```
 
-The first command verifies checksums, reconstructs main Tables 6, 8 and 10, checks 52 test-mutant matrices against 413 executed subsets, and repeats 300 deterministic draws. The second reconstructs the earlier case attribution and external-prefix analyses. For the historical and initial six-API evidence, extract `evidence/archives/historical_replication.zip` to a separate directory and run its `verify.py` there.
+For the historical and initial six-API evidence, extract `archives/historical_replication.zip` into another fresh directory and run its `verify.py` with Python 3.12.
 
-An equivalent ZIP is available under [Releases](https://github.com/Huangev587/llm-test-retention-artifact/releases/tag/v1.0.0). Its checksums and instructions are included. File bytes in `evidence/` are preserved exactly; adding files inside that directory can invalidate its integrity check.
+Alternatively, clone this repository, check out tag `v1.1.0`, and run the commands from `evidence/`.
+
+The main verifier checks file hashes, reconstructs Tables 6, 8, 10, and 12, validates 52 test-mutant matrices against 413 executed subsets, and repeats 300 deterministic conditional draws. It also checks the fresh-generation experiment's 72 scoring cells against 51 distinct PIT reports for nine blocks and 81 recorded model calls.
+
+These checks use the Python standard library, run offline, and need no GPU or paid model calls. They do not rerun model inference, Java validation, or original timing measurements.
 
 ## Contents and scope
 
-- [Evidence instructions](evidence/README.md): table mappings and deterministic seed construction.
-- [Checksums](evidence/checksums.json) and [evidence manifest](evidence/evidence.json).
-- `evidence/library/`: 378 saved responses and validation records, partitions and recovery records.
-- `evidence/reports/`: PIT execution reports and stripped JUnit outcomes; matrix and subset reports are keyed by their SHA-256.
-- `evidence/external/`: pair-selection plan and inclusion/exclusion records (78 planned pairs across the two panels).
-- `evidence/code/` and `evidence/verify.py`: offline reconstruction and checking.
-- `evidence/archives/`: self-contained earlier evidence and verification entries.
-- [Associated manuscript text](evidence/manuscript.md): the table version checked by the verifier.
+- [Evidence README](evidence/README.md): instructions and table mappings.
+- [Manifest](evidence/evidence.json) and [checksums](evidence/checksums.json).
+- `evidence/library/`: original responses, validation and recovery records.
+- `evidence/reports/`: PIT and JUnit evidence for matrix and subset checks.
+- `evidence/external/`: frozen pair-selection and exclusion records.
+- `evidence/generation/`: fresh-generation prompts, responses, validation and PIT evidence, with Apache source notices.
+- `evidence/prompt_templates/`: historical message-building functions and local prompt constructors.
+- `evidence/code/` and `evidence/verify.py`: offline analysis and checking.
+- `evidence/archives/`: historical evidence and independent verification entries.
+- `evidence/manuscript.md`: manuscript snapshot containing the checked tables.
 
-This package recomputes **stored outcomes**. It does not regenerate LLM responses, rerun Java correctness checks or reproduce original wall-clock timings. Full production source trees, source-containing prompts, model weights and runtime binaries are excluded. The third-party Java suite archive is cited at [Zenodo](https://doi.org/10.5281/zenodo.21230015); its declaration order is not claimed to recover original response order.
+The third-party Java test-suite archive remains at [its original Zenodo record](https://doi.org/10.5281/zenodo.21230015). Declaration order is not claimed to recover response order. Full production source trees, earlier full source-containing prompts, model weights, and runtimes are excluded. The fresh-generation archive contains actual prompts with focal Commons Codec excerpts and their licence and notice.
 
-The 300 draws describe selection variability within fixed saved pools; they are neither independent generation replicates nor an equal-effectiveness null distribution.
+The 300 draws describe within-pool selection variation, not independent generation repeats or an equal-effectiveness null distribution.
 
-## Attribution and rights
+## Citation, rights, and preservation
+
+See [CITATION.cff](CITATION.cff) for six-author metadata and [RIGHTS.md](RIGHTS.md) for the current reuse terms. Public access is authorized; no blanket MIT or Creative Commons licence is assigned. Existing third-party licences remain applicable.
 
 Funding: National Natural Science Foundation of China (Grant No. 62467005).
-See [CITATION.cff](CITATION.cff) for citation metadata and [MATERIALS.md](evidence/MATERIALS.md) for provenance, exclusions and existing third-party notices. Public access does not assign a new blanket MIT or Creative Commons licence. No new licence is granted to third-party material.
+
+A Zenodo preservation record is being prepared. No Zenodo DOI is currently assigned to this version. Use the fixed release URL and version above in the meantime; the original third-party archive DOI is not the DOI of this replication package.

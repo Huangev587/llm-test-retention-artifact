@@ -1,0 +1,44 @@
+import json
+from config import catalog
+from protocol_boundary import feedback_payload
+
+
+def compact_feedback(rows,split):
+    allowed=feedback_payload(rows,split)
+    classes=sorted({r['mutated_class'] for r in allowed})
+    methods=sorted({(r['mutated_class'],r['method'],r['descriptor']) for r in allowed})
+    operators=sorted({r['mutator'] for r in allowed})
+    return {'classes':classes,'methods':methods,'operators':operators,
+            'columns':['method_index','source_line','operator_index','instruction_indexes','status'],
+            'entries':[[methods.index((r['mutated_class'],r['method'],r['descriptor'])),r['line'],operators.index(r['mutator']),r['indexes'],r['status']] for r in allowed]}
+
+
+def build(api,context,suite,arm,errors=None,rows=None,split=None):
+    spec=catalog()[api]
+    if spec['project']=='codec':
+        from codec_messages import build as historical_build
+        return historical_build(api,context,suite,arm,errors,rows,split)
+    system=('Generate exactly 8 complete JUnit 4 @Test public void testName() methods. '
+            'Return methods only, optionally one java code fence; no imports, class, fields or helpers. '
+            'Methods may declare throws Exception. The wrapper imports Test, Assert and static Assert.*, '
+            'Hex, Base64, URLCodec, StandardCharsets, StringUtils, ArrayUtils, BooleanUtils, LocalDate, LocalTime, Days, Duration. '
+            'Use only the specified target API, JUnit assertions, straight-line initialized local variables, '
+            'literal strings/numbers and explicit int[], byte[] or String[] array initializers. '
+            'Allowed Joda constructors are LocalDate(year,month,day), LocalTime(hour,minute,second,millis), Duration(millis). '
+            'Observe dates/times via toString or numeric components, Days via getDays and Duration via getMillis. '
+            'Compare functional values only; no assertSame/assertNotSame, object identity or hashes. '
+            'Do not compare date/time/duration objects directly; use their string/numeric observations. '
+            'String equals/length/isEmpty, array length/indexing and explicit byte casts are allowed. '
+            'No loops, branching, try/catch, expected exceptions, reference APIs, reflection, I/O, process, environment or threads. '
+            'All inputs must satisfy the declared domain. Use fixed expected values. '
+            'Do not repeat retained test bodies or add explanations.')
+    user=context+'\nPermitted target API: '+spec['signature']
+    user+='\nRetained tests:\n'+'\n'.join(m['source'] for m in suite)
+    user+='\nGenerate initial tests.' if arm=='seed' else '\nGenerate complementary tests.'
+    if arm in ('execution','mutation'):
+        if isinstance(errors,list):errors=[{'index':r['index'],'diagnostic':r['diagnostic'][:256]} for r in errors[:4]]
+        elif isinstance(errors,str):errors=errors[:1024]
+        user+='\nOriginal-program feedback:\n'+json.dumps(errors or [],ensure_ascii=False,separators=(',',':'))
+    if arm=='mutation':
+        user+='\nAvailable mutation metadata (indexed tables preserve all visible entries):\n'+json.dumps(compact_feedback(rows,split),separators=(',',':'))
+    return [{'role':'system','content':system},{'role':'user','content':user}]

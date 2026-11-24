@@ -17,6 +17,7 @@ sys.path.insert(0, str(ROOT / "code"))
 
 from scoring import score_api, suite_hash
 from selection import ARMS, matched
+from generation_audit import audit as audit_generation, table as generation_table
 
 
 def require(condition, message):
@@ -33,7 +34,9 @@ def sha(data):
 
 
 def xml(digest):
-    return ET.parse(ROOT / "reports" / f"{digest}.xml").getroot()
+    data = (ROOT / "reports" / f"{digest[:32]}.xml").read_bytes()
+    require(sha(data) == digest, "Report content differs from its full SHA-256 identity")
+    return ET.fromstring(data)
 
 
 def mutant(row):
@@ -159,7 +162,7 @@ def external_prefix(exclusion):
         fixed = {target: set(ids) for target, ids in data["catalogs"].items()}
 
         def report(digest, target):
-            raw = core.read(f"pit/{digest}.xml")
+            raw = core.read(f"pit/{digest[:32]}.xml")
             require(sha(raw) == digest, "Core report digest differs")
             return states(ET.fromstring(raw), fixed[target])
 
@@ -298,7 +301,23 @@ def table4(suites, gaps, fixed, archived):
         random_row.extend(summary[k]["median"] for k in keys)
         short_events = [transition(*g, margin) for g in short]
         short_row.extend((sum(e != "same_order" for e in short_events), short_events.count("strict_reversal")))
-    return [prefix_row, random_row, short_row], subset_count
+    # Index 0 is declaration order. Each later index is one matched draw
+    # across the same suites, using the archived seed and source identifiers.
+    profile = {}
+    for metric in ("mean_killed", "suites_at_catalog_ceiling"):
+        values = []
+        for draw_index in range(301):
+            totals = [runs[draw_index][0] for runs in scores.values()]
+            if metric == "mean_killed":
+                value = statistics.mean(totals)
+            else:
+                value = sum(runs[draw_index][0] == len(fixed[classes[pair]])
+                            for (pair, prompt), runs in scores.items())
+            values.append(value)
+        ordered = sorted(values[1:])
+        profile[metric] = dict(prefix=values[0], random_median=statistics.median(ordered),
+                               central_95_pct_draw_interval=[ordered[7], ordered[292]])
+    return [prefix_row, random_row, short_row], subset_count, profile
 
 
 def main():
@@ -309,10 +328,13 @@ def main():
         require(sha((ROOT / path).read_bytes()) == expected, f"Digest differs for {path}")
     manifest = read("evidence.json")
     primary, gaps, fixed = external_prefix(manifest["primary_exclusion"])
-    randomized, subset_count = table4(manifest["matrices"], gaps, fixed, read("results/matrix_batch.json"))
+    randomized, subset_count, profile = table4(manifest["matrices"], gaps, fixed, read("results/matrix_batch.json"))
     tables = {"6": table2(manifest["library"]), "8": primary, "10": randomized}
     require(tables == manifest["manuscript_tables"], "Recomputed values differ from the manuscript")
     source = (ROOT / "manuscript.md").read_text(encoding="utf-8")
+    generation = audit_generation(ROOT / 'generation/evidence_remote.zip')
+    require(generation == read('generation/audit.json'), 'Fresh generation reconstruction differs')
+    require(generation_table(generation) in source, 'Printed Table 12 differs from generation evidence')
     require(sha((ROOT / "manuscript.md").read_bytes()) == manifest["manuscript_sha256"], "Manuscript hash differs")
     for number, expected in tables.items():
         body = source.split(f"**Table {number}.", 1)[1]
@@ -320,7 +342,7 @@ def main():
         rows = [[int(v) for cell in line.strip('|').split('|')[1:] for v in cell.split('/')]
                 for line in lines]
         require(rows == expected, f"Printed Table {number} differs from reanalysis")
-    return dict(status="PASS", tables=tables, files=len(hashes), matrices=len(manifest["matrices"]),
+    return dict(status="PASS", tables=tables, generation_followup={k:generation[k] for k in ('status','blocks','model_calls','scored_cells','unique_pit_reports_checked','unresolved')}, cap4_profile=profile, files=len(hashes), matrices=len(manifest["matrices"]),
                 archived_subsets=subset_count, draws=300,
                 library_responses=sum(len(row["responses"]) for row in manifest["library"]),
                 paired_records=sum(row[0] for row in primary))

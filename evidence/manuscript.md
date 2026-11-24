@@ -1,18 +1,20 @@
 # Test Retention in Evaluating LLM-Generated Unit Tests: Local Effects and Limits
 
-**Authors:** Shuhuan Lv; Wei Zheng (corresponding author)
+**Authors:** Wei Zheng; Shuhuan Lv (corresponding author); Xin Fan; Hao Pan; Fengyu Yang; Peng Xiao
 
 **Affiliation:** School of Software, Nanchang Hangkong University, Nanchang 330063, China
 
-**Correspondence:** Wei Zheng; zhengwei@nchu.edu.cn
+**Correspondence:** Shuhuan Lv; ShuhuanLv@Outlook.com
 
 **ORCID (Wei Zheng):** https://orcid.org/0000-0002-1890-8186
 
+**ORCID (Shuhuan Lv):** https://orcid.org/0009-0004-3873-6520
+
 ## Abstract
 
-Evaluations of large language model (LLM) test generators often retain only part of each generated response. The resulting comparison depends on which tests reach execution, yet changing this decision is easily conflated with changing the generator. We study retention through paired post-generation replay: responses and generation histories remain fixed while admission limits or selected subsets change. Our Java evidence comprises 14 functions, 30 library interfaces, and an independent archive of zero-shot and few-shot suites. For form URL decoding, generic continuation moved from trailing mutation feedback at four eligible positions to leading at eight; two later tests explained all seven added mutant detections. The effect was localized: detection remained unchanged on 18 of 24 interfaces in the Qwen extension. The external archive yielded no strict reversal under declaration-order prefixes. Nine transitions among 26 four-to-eight pairs lay within the central 95% interval of 6–16 transitions from 300 nested random selections. All 15 shorter-suite transitions disappeared under a one-mutant tie margin. These results distinguish attributable local reversals from small-catalog ceiling effects and ordinary saved-pool selection variation. They support reporting selection units, admitted counts, paired scores, and tie rules together. The study does not estimate recurrence across independent generations or the effect of changing retention during feedback-guided generation.
+Evaluations of large language model (LLM) test generators often retain only part of each response. We examine this evaluation decision through paired post-generation replay, holding responses fixed while changing admission limits or selected subsets. Our Java replay evidence comprises 14 functions, 30 library interfaces, and an independent archive of zero-shot and few-shot suites. For form URL decoding, generic continuation moved from trailing mutation feedback at four eligible positions to leading at eight; two later tests explained all seven added mutant detections. Detection remained unchanged on 18 of 24 Qwen-extension interfaces. The external archive yielded no strict reversal under declaration-order prefixes: nine transitions among 26 pairs lay within the 6–16 central 95% draw interval from 300 nested random selections. All 15 shorter-suite transitions disappeared under a one-mutant tie margin. A separate fresh-generation experiment crossed generation-time and replay caps on three selected interfaces with three stochastic repeats, totaling 81 model calls. Native four-to-eight comparisons changed tie status in three of nine blocks without a strict reversal; replay alone captured two of those changes. These results distinguish local attributable reversals, ceiling-induced ties, and generation-trajectory effects. They support reporting retention units, actual test counts, paired scores, and tie rules together, while leaving population recurrence and cross-language transfer unestablished.
 
-**Keywords:** large language models, unit test generation, test retention, mutation testing, paired replay, empirical software engineering
+**Keywords:** large language models, unit test generation, test retention, mutation testing, paired replay, Java
 
 ## 1 Introduction
 
@@ -20,24 +22,25 @@ Large language models can generate a complete test class, several test methods, 
 
 Retention is one concrete decision in that process. An evaluation may keep the first method from each response, inspect the first four positions, or retain the first four methods that pass validation. These policies have different units. Under a position cap, an invalid early method consumes a position; under a valid-test quota, the evaluator may continue searching later output. Even when two policies admit the same number of tests, they can retain different assertions. A shared numerical cap is consequently insufficient to reconstruct the comparison unless the unit and admission procedure are also specified.
 
-This issue arises in realistic comparisons of LLM-based test generators. A recent fine-tuning evaluation retained the first test from a response when comparing against a model that produced one test per focal method [3]. Other systems use execution or mutation feedback to produce additional candidates [1, 19, 20, 21]. Such choices can be appropriate for a study's budget and purpose. The question addressed here is what an observed comparison says about the saved generated output when its retention policy changes. We examine that question after generation, keeping the responses and the history that produced them fixed.
+This issue arises in realistic comparisons of LLM-based test generators. A recent fine-tuning evaluation retained the first test from a response when comparing against a model that produced one test per focal method [3]. Other systems use execution or mutation feedback to produce additional candidates [1, 19, 20, 21]. Such choices can be appropriate for a study's budget and purpose. The question addressed here is what an observed comparison says about the saved generated output when its retention policy changes. Our main replay holds responses and their generation histories fixed. A separate, targeted follow-up changes retention during fresh generation to examine the boundary of that control.
 
 The general relationship between suite size and test effectiveness is already established. Inozemtseva and Holmes show why suite size must be considered when interpreting coverage and effectiveness [18]. Mutation testing also depends on the chosen mutant population, its redundancy, and potentially equivalent mutants [22]. Our contribution is more specific than observing that additional tests may kill additional mutants. We trace how a retention decision changes a *paired comparison*, identify the saved methods responsible, and test the limits of that observation using equal-count controls and an independent archive.
 
 A local example motivates the analysis. For form URL decoding, generic continuation killed four held-out mutants and mutation feedback killed nine under a four-position cap. Replaying the same responses with an eight-position cap yielded eleven and nine kills, respectively. Two generic tests at positions six and seven accounted for all seven additional detections. However, an isolated reversal cannot establish that retention broadly destabilizes comparisons. Most interfaces in our extension gained no detections, and the external archive produced tie transitions rather than strict reversals. The paper examines these observations together.
 
-We organize the study around four research questions:
+We organize the study around five research questions:
 
 - **RQ1: How do retained-test limits affect detection across the saved local targets?** We report all evaluable historical functions, all six initial library interfaces, and all 24 Qwen extension interfaces, including unchanged and empty-pool cases.
 - **RQ2: Which tests explain local changes, and does selection still matter at an equal valid-test count?** We connect response positions to test bodies and killed-mutant identities, then compare fixed-count prefixes with saved-pool draws.
 - **RQ3: What changes occur under declaration-order retention in an independent archive?** We reproduce published full suites before comparing equal-size prefixes and retain exclusions in the accounting.
 - **RQ4: How do the external transitions compare with conditional random selection and alternative tie rules?** We use checked test–mutant matrices to extend the executed subset controls to 300 deterministic draws.
+- **RQ5: Does changing the cap during generation yield the same comparison as post-generation replay?** A follow-up uses fresh paired stochastic trajectories at both generation caps on three selected targets.
 
-The contributions are threefold. First, the paired replay protocol makes the path from a retention decision to admitted tests and mutant detections inspectable. Second, the empirical results establish attributable local reversals alongside clear limits: unchanged targets, admission failures, and ceiling-induced ties. Third, a conditional random-selection comparison and a reporting checklist make explicit what can be learned from a saved pool and what requires new generation. We do not present G, E, and M as reproductions of complete published tools, nor claim that any of them is generally superior.
+The contributions are threefold. First, the paired replay protocol makes the path from a retention decision to admitted tests and mutant detections inspectable. Second, the empirical results establish attributable local reversals alongside clear limits: unchanged targets, admission failures, and ceiling-induced ties. Third, conditional random selection and a fresh generation-cap follow-up distinguish saved-pool sensitivity from trajectory changes, supporting an explicit reporting procedure. We do not present G, E, and M as reproductions of complete published tools, nor claim that any of them is generally superior.
 
 The research problem is not intrinsically tied to Java. A multi-test response in another language also requires an admission policy. Java supplies the implementation and evidence in this study through JUnit execution, PIT mutation reports, and compatible public archives. Porting the protocol to another language would require a corresponding extraction and execution adapter; the frequency and direction of its effects would need separate validation. Throughout the paper, the results refer to the Java corpora studied here.
 
-Section 2 relates the study to test generation and evaluation research. Section 3 defines the replay protocol and evidence units. Section 4 answers RQ1–RQ4 with the main experimental results. Sections 5 and 6 discuss practical interpretation and validity, and Section 7 concludes. Online Resource 1 provides extended protocols and detailed evidence not needed to follow the main comparisons.
+Section 2 relates the study to test generation and evaluation research. Section 3 defines the replay protocol and evidence units. Section 4 answers RQ1–RQ5 with the main experimental results. Sections 5 and 6 discuss practical interpretation and validity, and Section 7 concludes. Online Resource 1 provides extended protocols and detailed evidence not needed to follow the main comparisons.
 
 ## 2 Background and Related Work
 
@@ -47,7 +50,7 @@ Execution feedback can help an LLM repair or extend tests, but systems differ in
 
 The G, E, and M response groups in our local study isolate three feedback descriptions within a shared experimental scaffold. They are generic continuation, execution feedback, and mutation feedback. All receive the source and retained tests, so G is not a condition without any execution-derived information: retained tests already reflect admission outcomes. The study compares replays of those response groups. It does not compare the end-to-end implementations of TestPilot, ChatUniTest, CoverUp, and MutGen, and their published effectiveness numbers are not used as baselines.
 
-Practical test generation also involves context and selection. CATGen investigates contextual support and post-processing for reliable generation [5]. Work on heterogeneous prompting and execution feedback selects issue tests using additional signals [6]. Studies of fine-tuning and newer model versions further show that the generator itself is a moving experimental component [3, 4]. We hold that component fixed by reusing saved responses. This enables attribution to downstream selection while excluding conclusions about how a different feedback trajectory would have changed the responses.
+Practical test generation also involves context and selection. CATGen investigates contextual support and post-processing for reliable generation [5]. Work on heterogeneous prompting and execution feedback selects issue tests using additional signals [6]. Studies of fine-tuning and newer model versions further show that the generator itself is a moving experimental component [3, 4]. We hold that component fixed by reusing saved responses. This enables attribution to downstream selection while the separate generation-cap follow-up in Section 3.9 directly tests selected alternative trajectories.
 
 ### 2.2 Suite size, composition, and mutation-based assessment
 
@@ -69,9 +72,9 @@ Our external evidence comes from a public archive of zero-shot and few-shot Java
 
 ### 3.1 Overview and units of evidence
 
-The design combines a local response-level replay with an archive-level replay. Both keep the underlying saved tests fixed while changing the admitted subset. The local study can trace a method to its position in a model response; the external study can trace a method only to its declaration in an archived suite. Table 1 describes the evidence stages without treating them as interchangeable replications.
+The design combines a local response-level replay with an archive-level replay. Both keep the underlying saved tests fixed while changing the admitted subset. A separate follow-up crosses generation-time and replay caps using fresh stochastic responses. The local study can trace a method to its position in a model response; the external study can trace a method only to its declaration in an archived suite. Table 1 describes the evidence stages without treating them as interchangeable replications.
 
-**Table 1. Corpora, retention units, and analytical roles.** The six Codec APIs are part of the 30 distinct library APIs. The Granite extension revisits those six and includes the other 24; it does not add 30 new interfaces.
+**Table 1. Corpora, retention units, and analytical roles.** The six original Codec APIs are part of the 30 replayed library APIs. The fresh-generation follow-up adds one focal API within the previously studied Base64 class, bringing the total to 31. The Granite extension revisits those six and includes the other 24; it does not add 30 new interfaces.
 
 | Stage | Saved material | Compared retention | Main role |
 | --- | --- | --- | --- |
@@ -82,6 +85,7 @@ The design combines a local response-level replay with an archive-level replay. 
 | External primary panel | 27 frozen suite pairs; 26 evaluable | First four and first eight declarations per suite | Independent archive under equal counts |
 | External shorter suites | 51 frozen pairs; 34 evaluable | First four and first five, six, or seven declarations | Describe the short-suite boundary |
 | Conditional selection | The same 26 evaluable primary pairs | 300 nested random four/eight subsets | Locate prefix results within saved-pool variation |
+| Fresh generation | Three Codec targets, three repeats; 81 new responses | Generation caps 4/8 crossed with replay caps 4/8 | Separate trajectory change from post-generation admission |
 
 A logical response slot is a scheduled response in a trajectory, including a cached response reused in that slot. A target is a historical function or a library API with a declared mutation scope. A suite pair in the external archive matches one class, model, and generation round across two prompts. These units must not be summed into a single sample size. In particular, 300 draws from 26 saved pairs are not 7,800 independent generation experiments.
 
@@ -91,7 +95,7 @@ The historical and initial Codec material uses Qwen2.5-Coder-7B-Instruct [7]. Th
 
 Each local trajectory contains a shared seed response and two continuation slots for each of G, E, and M. G receives source and retained tests. E additionally receives compilation and original-program execution information. M additionally receives results from the feedback mutation partition. These are response-source definitions within this study. They do not imply that G has no feedback, because its retained tests have already passed the admission procedure.
 
-In the library generation loop, the first four original positions were processed before each continuation, and jointly validated tests were retained. The later eight-position replay does not rewrite those continuation prompts. Thus, it asks which additional tests were already present in the saved trajectories and what they detect. It does not measure the generator that would have resulted from using eight positions throughout the feedback loop. That alternative would require a new generation experiment.
+In the original library generation loop, the first four original positions were processed before each continuation, and jointly validated tests were retained. The later eight-position replay does not rewrite those continuation prompts. Thus, it asks which additional tests were already present in the saved trajectories and what they detect. It does not measure the generator that would have resulted from using eight positions throughout the feedback loop. Section 3.9 defines a separate fresh-generation experiment that changes the cap during the feedback loop; its results are kept distinct from this replay.
 
 Greedy decoding fixes the decoding policy for the recorded runs; it does not establish that another model version, prompt, or repeated generation would produce the same responses. We make conditional statements about these saved outputs. The common responses across retention conditions are an experimental control for replay, not a substitute for independent generation replication.
 
@@ -124,7 +128,7 @@ The union is over responses, while the position test applies separately within e
 
 ### 3.4 Mutation scoring and comparison outcomes
 
-PIT supplies the mutant execution states [8]. For the local study, we group mutation sites by class, method, descriptor, and source line before assigning sites to feedback and evaluation partitions. The evaluation partition is held out from mutation feedback, although program source remains visible to the model. This separates the mutation evidence used for continuation from the evidence used to score the resulting suite.
+We used PIT 1.14.4 for the historical functions and local library studies, and PIT 1.20.1 for the external test–mutant matrices [8]. For the local study, we group mutation sites by class, method, descriptor, and source line before assigning sites to feedback and evaluation partitions. The evaluation partition is held out from mutation feedback, although program source remains visible to the model. This separates the mutation evidence used for continuation from the evidence used to score the resulting suite.
 
 The historical evaluation excludes two functions from held-out comparison: function 0 has an unresolved contract, and function 2 has only one usable mutation site. All 14 remain in the response and validation accounting. The six Codec interfaces use three class-level mutant universes, so encoding and decoding within a family share a catalog containing overloads and code outside the focal direction. The extension narrows mutation scope to the declared methods and listed direct helpers. These protocols support comparisons within a target but not a pooled mutation score across stages.
 
@@ -160,9 +164,21 @@ The primary comparisons use exact integer ties. Post hoc sensitivity checks trea
 
 ### 3.8 Reproducibility and recorded work
 
-The evidence records preserve response text, extracted methods, validation states, suite membership, mutation catalogs, raw PIT reports, and deterministic subset selections. SHA256 checks bind the analysis to the frozen inputs. The review artifact can recompute core comparisons from these records without loading an LLM. Its role is to make the reported evidence inspectable; the main article contains the results needed to assess the argument.
+The evidence records preserve response text, extracted methods, validation states, suite membership, mutation catalogs, raw PIT reports, and deterministic subset selections. SHA256 checks bind the analysis to the frozen inputs. Online Resource 2 provides the records and code for recomputing the core comparisons offline, along with the local prompt-construction templates. Per-call prompts containing project source are excluded. Its role is to make the reported evidence inspectable; the main article contains the results needed to assess the argument.
 
 We account separately for extraction, per-method validation, final-suite compilation, and PIT commands. When work is cached, each logical comparison is attributed the measured operations it uses. The recorded timings are single command measurements and attribution totals. They are not repeated end-to-end latency estimates. Generation cost has already been incurred and is common to the replayed retention conditions, so the replay costs cannot establish which complete generation system is cheaper.
+
+We used OpenAI Codex to draft, restructure, and revise the English manuscript based on the recorded experimental results.
+
+### 3.9 Fresh generation-time cap comparison
+
+To examine the replay boundary directly, we froze a targeted follow-up before collecting new responses. It uses form URL decoding, the earlier reversal case; Hex decoding, an unchanged case; and URL-safe Base64 encoding, a new focal API in the previously studied Base64 class. The third target adds an entry point, not an independent project or mutation catalog.
+
+For each target and each seed (231101, 231102, 231103), one fresh initial response is shared across G and M and generation caps c=4 and c=8. Each of the four branches then receives two continuations, giving nine calls per block and 81 calls across nine blocks. Qwen2.5-Coder-7B-Instruct uses temperature 0.7, top_p=0.95, top_k=0, and the same 8192/2048 input/output limits as the library study. A seed derived from target, repeat, and round supplies matched random streams across branches. These are fresh stochastic repetitions, distinct from the original greedy trajectories. Section S4 specifies the derivation and runtime.
+
+Before each continuation, the generation cap admits valid methods from the first c original positions of every earlier response, followed by body deduplication. G receives the retained test source. M additionally receives original-program diagnostics for up to c positions of the latest response and mutation feedback restricted to the frozen feedback partition. Changing c therefore changes permitted context and diagnostic feedback together; it does not isolate these two components. Every completed trajectory is scored at both replay caps k=4 and k=8 against the same held-out sites, producing eight G/M scoring cells per block.
+
+The primary comparison is the signed G-minus-M kill gap at native settings (c,k)=(4,4) and (8,8). We also compare (4,4) with (4,8), which changes replay on a fixed trajectory, and (4,8) with (8,8), which changes generation at a common scoring cap. The fourth setting, (8,4), is retained in the results. Targets, seeds, caps, and the 81-call limit were fixed before these calls. We report every block, including empty suites, and use no replacement responses or added seeds. This follow-up was motivated by earlier observations; it is not a preregistered representative study or a new-model comparison.
 
 ## 4 Results
 
@@ -266,7 +282,7 @@ The format replay raises the number of Granite APIs with a positive common count
 
 For form URL decoding, the G suite kills four mutants at four positions and eleven at eight. M remains at nine. The additional G method at position six tests that plus signs decode to spaces, accounting for two newly killed mutants. Position seven tests that encoding `%25` decodes to the percent character, accounting for five others. The union of those sets accounts for all seven extra detections. Both methods pass the original and reference checks; no assertion repair is used to obtain the result.
 
-Valid suite size also changes: G moves from one to four tests, whereas M moves from four to five. This position-cap experiment therefore cannot isolate test quantity from test composition. Its stronger claim is the traceable one: specific late methods already present in the saved output explain the observed score movement and local reversal. The equal-count control addresses a complementary question.
+The four- and eight-position rules admitted two and four distinct valid tests for G, and four and five for M. The common valid-test quota for this API was one, the minimum across all three arms at the four-position cap. Thus the two additional G tests explain the reversal under the position rule; the equal-count control asks how scores vary when suite sizes are matched.
 
 **Fixed-count comparisons.** Figure 2 compares prefixes with five same-sized saved-pool draws for two historical functions and the two form URL interfaces. A dot represents a subset draw, not a new model generation. The spread shows which detection counts are attainable under those particular subsets; five draws do not characterize the entire subset space.
 
@@ -295,7 +311,7 @@ The toBoolean control makes another distinction visible. At k = 11, the prefix p
 
 ### 4.3 RQ3: Declaration-order prefixes in the external archive
 
-The independent archive yields no strict reversal in either prefix panel. Table 8 gives the full planned and evaluated denominators. The primary panel's 26 evaluable pairs span ten target classes. Of the nine transitions, eight are leads that become ties and one is a tie that becomes a lead. Seventeen pairs retain the same ordering. Five of the eight disappearing leads end with both suites killing the complete fixed catalog.
+The independent archive yields no strict reversal in either prefix panel. Table 8 gives the full planned and evaluated denominators. The primary panel's 26 evaluable pairs span ten target classes. Of the nine transitions, eight are leads that become ties and one is a tie that becomes a lead. Seventeen pairs retain the same ordering. Five of the eight disappearing leads end with both suites killing the complete fixed catalog. The one emerging lead was substantial within its catalog. For primes, Llama round 3, the zero-shot and few-shot suites each killed 6 of 20 mutants at four declarations. At eight they killed 16 and 9, respectively, opening a gap of 7 mutants (35 percentage points).
 
 **Table 8. Complete accounting for the external prefix panels.** Caps five, six, and seven are separate sets of shorter suites, not repeated observations of the same panel. A transition can involve a tie; all rows have zero strict reversals.
 
@@ -352,13 +368,37 @@ These outcomes demonstrate small-catalog ceiling effects in this archive. They d
 | 1 mutant(s) | Transitions | 5 | 6 | 2 to 10 | 192/300 |
 | 1 mutant(s) | Reversals | 0 | 0 | 0 to 2 | 109/300 |
 
-The prefix is therefore not unusually transition-prone relative to the selection variation represented by this conditional benchmark. This does not show that prompt effectiveness is identical, quantify the share of transitions caused by generation noise, or establish that composition matters more than capacity. Both prefix expansion and the random comparison enlarge a nested subset from four to eight methods; they differ in how the subset is chosen. The random benchmark describes attainable variation in the fixed suites under that specified selection process.
+Total transitions and strict reversals tell different stories. With exact ties, 252 of 300 draws produced at least one strict reversal, compared with none in declaration order. To check whether the first four declarations were unusually effective, we averaged their kill counts across the 52 suites, weighting each suite equally. The prefix mean was 8.63 mutants, compared with a median mean of 9.02 across random draws (central 95% draw interval 8.60 to 9.40). At four declarations 14 of 52 suites already reached their catalog ceiling, compared with a random median of 11 (interval 7 to 15). More prefix suites reached the ceiling than in the median draw, but their average kill count was lower. Neither aggregate identifies the cause of an individual pair's reversal.
 
 **Catalog size and weighting.** A one-mutant margin has different relative meanings across catalogs. For the short-suite classes with disappearing leads, one mutant represents 9.1%, 11.1%, or 33.3% of the catalog. Relative margins probe this dependence: at five percentage points, the primary and short-suite panels retain nine and fifteen transitions; at ten percentage points, each retains six. Neither margin produces a strict reversal. No threshold is presented as a universally meaningful minimum effect.
 
 Unequal numbers of model/round pairs per class also affect descriptive aggregation. Giving the ten primary classes equal weight yields a prefix transition rate of 33.5%; the corresponding random-selection median is 42.3%, with a central draw interval of 18.3–63.5%. This weighting changes the summary but does not remove dependence between rounds or make the selected classes a random sample. Additional target-weight and catalog diagnostics remain in Online Resource 1 as post hoc analyses.
 
-**Answer to RQ4.** The saved-pool random benchmark supplies context for the prefix transitions, not evidence that ordered retention has an exceptional general effect. The shorter-suite transitions depend entirely on one-mutant differences, while part of the primary-panel effect remains under that margin. These qualifications are part of the finding rather than reasons to remove unchanged or small-effect cases from the presentation.
+**Answer to RQ4.** The primary panel's total prefix transitions fell inside the random-selection interval. Strict reversals were absent from the observed prefixes and present in most exact-tie random draws. The one-mutant margin removed every shorter-suite transition and left five on the primary panel.
+
+### 4.5 RQ5: Generation-time changes versus replay on fixed trajectories
+
+Changing the cap during generation and widening admission after generation did not always yield the same comparison. All nine fresh blocks completed, with 81 responses and 72 scored cells. Table 12 gives every held-out result. Native comparisons from (4,4) to (8,8) yielded two tie-to-G-lead transitions, one M-lead-to-tie transition, and six unchanged orderings. None was a strict reversal. Replay alone on the c=4 trajectories yielded two tie transitions; at common scoring cap k=8, changing c yielded one additional tie-to-G-lead transition.
+
+**Table 12. All fresh generation-cap comparisons.** Entries are G / M held-out kills. (c,k) denotes generation cap and replay cap, each in original positions per response. N is the fixed class-level evaluation catalog. Seeds are paired repeat identifiers; the nine rows are not nine independent targets.
+
+| Target | Seed | N | (4,4) G / M | (4,8) G / M | (8,4) G / M | (8,8) G / M |
+| --- | ---: | ---: | --- | --- | --- | --- |
+| Form decode | 231101 | 27 | 9 / 9 | 11 / 9 | 9 / 0 | 11 / 2 |
+| Form decode | 231102 | 27 | 11 / 11 | 11 / 11 | 11 / 11 | 11 / 11 |
+| Form decode | 231103 | 27 | 6 / 11 | 11 / 11 | 6 / 11 | 11 / 11 |
+| Hex decode | 231101 | 33 | 4 / 4 | 4 / 4 | 4 / 4 | 4 / 4 |
+| Hex decode | 231102 | 33 | 4 / 4 | 4 / 4 | 4 / 4 | 4 / 4 |
+| Hex decode | 231103 | 33 | 4 / 0 | 4 / 0 | 4 / 0 | 4 / 0 |
+| URL-safe Base64 | 231101 | 86 | 12 / 7 | 12 / 7 | 12 / 7 | 12 / 7 |
+| URL-safe Base64 | 231102 | 86 | 7 / 7 | 7 / 7 | 7 / 0 | 7 / 0 |
+| URL-safe Base64 | 231103 | 86 | 12 / 0 | 12 / 0 | 12 / 0 | 12 / 0 |
+
+For form decoding at seed 231101, replay alone changed the gap from 0 to +2; the native eight-position workflow produced +9, because M killed only two held-out mutants. At seed 231103, G caught up with M under both comparisons, while seed 231102 remained tied. Thus the earlier greedy-decoding strict reversal did not recur in these three sampled blocks. For URL-safe Base64 at seed 231102, replay left G and M tied at seven kills, but the native eight-position workflow produced 7 versus 0. That M suite contained one valid test with zero held-out detections, rather than an empty suite. The other two Base64 blocks and all three Hex blocks kept their ordering.
+
+Distinct valid tests available only beyond the first four positions entered eight continuation contexts, all within the three form-decoding blocks. The Base64 transition had no such extra valid-source exposure; M could still receive diagnostics for additional rejected positions. It therefore demonstrates a difference between the combined generation-cap workflows, not a proven benefit of admitting later valid tests. Nine of the 72 scored cells were empty, all in three blocks. Table S15 reports all valid counts, including these zeros. No held-out mutant status was unresolved.
+
+**Answer to RQ5.** This small experiment establishes that post-generation replay can miss a comparison change produced by a different generation-cap workflow. It did not reproduce a strict reversal or establish that wider feedback improves effectiveness. The three repeats expose target-specific variation; they do not estimate its frequency across projects or models.
 
 ## 5 Discussion
 
@@ -370,9 +410,11 @@ For form URL decoding and SortNumbers, the trace connects a comparison change to
 
 A comparison at one retention policy remains a valid description of that policy if its unit and execution rules are stated. The difficulty arises when a policy-specific lead is treated as a property of the generator irrespective of output admission. Our results make that distinction observable in concrete cases. They do not estimate how common the mistake is in published research, and they do not imply that all evaluations must discard a practical cap.
 
+The fresh-generation follow-up provides a concrete boundary check. For URL-safe Base64 seed 231102, widening replay alone retained a tie, whereas changing the generation workflow produced a seven-mutant G lead. Form decoding also showed a larger gap under the native workflow than under replay. These differences justify keeping the generation cap and replay cap distinct in reported configurations. The sampled runs did not reproduce the original strict reversal, so that case remains an attributable saved-trajectory observation rather than a recurring effect established by the follow-up.
+
 ### 5.2 A reporting procedure for retained multi-test outputs
 
-The following procedure follows from the evidence without presuming that wider retention is always preferable. First, state whether the cap applies to original positions per response, validated methods per suite, or execution attempts. Include what happens when a method fails validation. Second, report the resulting unique valid-test counts and major exclusion categories. This makes clear whether nominally equal caps produced comparable suites.
+The following procedure follows from the evidence without presuming that wider retention is always preferable. First, distinguish the cap used during feedback-guided generation from the cap used for final replay. State whether the cap applies to original positions per response, validated methods per suite, or execution attempts. Include what happens when a method fails validation. Second, report the resulting unique valid-test counts and major exclusion categories. This makes clear whether nominally equal caps produced comparable suites.
 
 Third, report paired detection counts and fixed catalog sizes at the chosen policy. Where a second replay is feasible, select its cap using available test counts and execution resources before inspecting its score. Report all eligible targets, including no-change and empty-pool cases. Separate strict reversals from tie transitions and identify whether both suites reach the catalog ceiling. These steps prevent a single aggregate from hiding the kind of change being observed.
 
@@ -382,9 +424,9 @@ Finally, distinguish the article's explanatory evidence from the replication fil
 
 ### 5.3 Retention and recorded execution work
 
-Table 12 gives the measured work for selected historical comparisons. Wider retention can improve detection, leave detection unchanged, or reach a ceiling while still requiring additional validation. On SortNumbers, M already kills all thirteen held-out mutants at four positions; its attributed work increases from 31.29 to 36.60 seconds when all eligible methods are considered. On MatchParens, G's score increases from four to nine kills, while attributed work changes from 17.38 to 37.30 seconds.
+Table 13 gives the measured work for selected historical comparisons. Wider retention can improve detection, leave detection unchanged, or reach a ceiling while still requiring additional validation. On SortNumbers, M already kills all thirteen held-out mutants at four positions; its attributed work increases from 31.29 to 36.60 seconds when all eligible methods are considered. On MatchParens, G's score increases from four to nine kills, while attributed work changes from 17.38 to 37.30 seconds.
 
-**Table 12. Detection and attributed work in the historical replay.** Times are single command measurements attributed through shared caches. They describe recorded workload, not replicated speed measurements or full generation-system cost.
+**Table 13. Detection and attributed work in the historical replay.** Times are single command measurements attributed through shared caches. They describe recorded workload, not replicated speed measurements or full generation-system cost.
 
 | Function and source | First-four detection | All-method detection | First-four work (s) | All-method work (s) |
 | --- | ---: | ---: | ---: | ---: |
@@ -412,13 +454,13 @@ Choosing Java permits continuity across the local responses, the executable libr
 
 Our response-position cap and the archive's declaration-order prefix are different constructs. The archive cannot recover where a method originally appeared in a model response. Its results therefore provide a related but distinct external check, not a direct replication of response-position attribution. Similarly, a cap per response and a quota per validated suite differ in both unit and admission behavior. We report those policies separately and do not interpret their difference as a pure count effect.
 
-Mutation detection is a proxy for test effectiveness. Fixed catalogs and original/reference checks improve interpretability but do not turn artificial faults into real defects or guarantee the absence of equivalent mutants. Small catalogs make one additional kill a large percentage change, and class-level Codec catalogs include behavior outside an individual entry point. The paper reports denominators, exact counts, and sensitivity margins so these effects are visible. It does not claim an improvement in real-fault detection.
+Mutation detection is a proxy for test effectiveness. Fixed catalogs and original/reference checks improve interpretability but do not turn artificial faults into real defects or guarantee the absence of equivalent mutants. Small catalogs make one additional kill a large percentage change, and class-level Codec catalogs include behavior outside an individual entry point. The paper reports denominators, exact counts, and sensitivity margins so these effects are visible. The present analysis makes no claim about naturally occurring defect detection.
 
 A strict reversal is an operational comparison of integer counts. It is not automatically a practically significant effect. Likewise, disappearance under a tie margin does not prove equivalence. The absolute and relative margins are post hoc diagnostic thresholds, and the paper does not select a favorable one as a final definition of success.
 
 ### 6.2 Internal validity
 
-Replay retains the responses and their generation histories, which controls generation differences between replay conditions. However, those histories may already depend on the four-position admission policy. Our eight-position result therefore concerns admitting more of an existing output, not a trajectory generated using eight-position feedback. A generation-time intervention could change later responses and requires a different experiment.
+Replay retains the responses and their generation histories, which controls generation differences between replay conditions. However, those histories may already depend on the four-position admission policy. Our eight-position result therefore concerns admitting more of an existing output, not a trajectory generated using eight-position feedback. The separate experiment in Section 4.5 changes the cap during generation and confirms that the two interventions can yield different comparisons in the selected cases. It changes retained context and permitted diagnostics together, so it cannot isolate their individual causal contributions.
 
 Extraction, reference bindings, and input-domain checks can affect which tests are admitted. These checks are preserved in the artifacts, and rejection states remain distinguishable. They still represent the contracts we implemented rather than exhaustive correctness proofs. Granite's later format recovery was prompted by the observed failures; it remains an explicitly post hoc sensitivity check and cannot replace the unfavorable original admission results.
 
@@ -426,7 +468,7 @@ Test–mutant matrix scoring assumes that the outcome attributable to a retained
 
 ### 6.3 External validity
 
-The local sample contains small functions and selected library APIs, two local model families, and single saved greedy-decoding trajectories. It lacks independent generation repetitions, a cross-language replication, and broad repository-level sampling. The external archive expands provenance and model/prompt combinations, but eligibility and timeout exclusions restrict its scope. The primary requirement of eight methods per side selects longer suites, while the shorter panel has a different class/model composition.
+The local sample contains small functions and selected library APIs, two local model families, original saved greedy-decoding trajectories, and a targeted three-repeat stochastic follow-up with Qwen. HumanEval-Java and the library code are public. Prior exposure during model training could affect which tests were generated and where they appeared. We did not measure training-set overlap. Replay holds any such exposure fixed within a trajectory, but cannot show how retention would behave on previously unseen code. The follow-up provides fresh generation repetitions on only three deliberately chosen targets. It adds neither a newer model, a cross-language replication, nor broad repository-level sampling. The external archive expands provenance and model/prompt combinations, but eligibility and timeout exclusions restrict its scope. The primary requirement of eight methods per side selects longer suites, while the shorter panel has a different class/model composition.
 
 Targets, response groups, and rounds are not independent observations. Codec interfaces share catalogs; local response groups share seed responses; external rounds sometimes contain identical normalized source. The 26 primary pairs come from ten classes rather than 26 unrelated systems. Class weighting offers a descriptive alternative but does not resolve those dependencies or turn the sample into a representative population.
 
@@ -434,7 +476,7 @@ Targets, response groups, and rounds are not independent observations. Codec int
 
 The study emphasizes exact within-pool comparisons and traceability. The 300 draws describe subset selection, not uncertainty over independently generated outputs. We therefore avoid significance claims about general generator superiority and do not interpret draw percentiles as confidence intervals for recurrence. Lack of a strict reversal in these panels is a descriptive result, not proof that a reversal is impossible elsewhere.
 
-Several checks followed inspection of earlier results: format recovery, tie margins, the 300-draw extension, and alternative weighting and catalog diagnostics. Their post hoc status is retained rather than presenting them as one preregistered factorial experiment. The four RQs organize the accumulated evidence; they do not imply that every stage and threshold was specified before the original exploratory observations. Complete target tables and exclusions reduce selective presentation, but cannot remove the need for future independent confirmation of broader claims.
+Several checks followed inspection of earlier results: format recovery, tie margins, the 300-draw extension, and alternative weighting and catalog diagnostics. Their post hoc status is retained rather than presenting them as one preregistered factorial experiment. The five RQs organize the accumulated evidence; they do not imply that every stage and threshold was specified before the original exploratory observations. The fresh-generation protocol was fixed before its own calls but was motivated by the earlier findings. Complete target tables and exclusions reduce selective presentation, but cannot remove the need for future independent confirmation of broader claims.
 
 ## 7 Conclusion
 
@@ -442,7 +484,7 @@ Paired post-generation replay makes it possible to determine which saved tests c
 
 The broader evidence limits that conclusion. Most Qwen extension interfaces gain no detections at the wider cap. The external declaration-order panels contain no strict reversal, and their smaller-suite transitions vanish under a one-mutant margin. The primary prefix count lies within the conditional random-selection distribution. These outcomes support reporting retention as an explicit part of the evaluated workflow, with admitted counts, fixed denominators, and separate treatment of strict reversals and ties. They do not support a general claim that ordered retention is unusually unstable or that one feedback source is universally better.
 
-Future independent generation and cross-language studies could test recurrence and transfer. The present contribution is the attributable evidence and its boundaries: what changed in these fixed pools, which methods account for it, and which apparent comparison changes are too small or too conditional to carry a broader conclusion.
+The fresh-generation follow-up adds three repeats on selected targets: native cap changes produced three tie transitions and no strict reversal, while fixed-trajectory replay produced two. Wider independent-generation and cross-language studies would still be needed to estimate recurrence and transfer. The present contribution is the attributable evidence and its boundaries: what changed in these fixed pools, which methods account for it, and which apparent comparison changes are too small or too conditional to carry a broader conclusion.
 
 ## Statements and Declarations
 
@@ -450,11 +492,15 @@ Future independent generation and cross-language studies could test recurrence a
 
 **Competing interests.** The authors declare no competing interests.
 
-**CRediT authorship contribution statement.** **Shuhuan Lv:** Methodology, Investigation, Formal analysis, Writing – original draft. **Wei Zheng:** Funding acquisition, Resources, Supervision, Writing – review & editing.
+**Ethics approval and consent.** The study involved no human participants. Ethics approval and participant consent were not applicable.
+
+**AI-assisted manuscript preparation.** As described in Section 3.8, the authors used OpenAI Codex to draft, restructure, and revise the English manuscript based on the recorded experimental results. The authors take responsibility for the full text.
+
+**CRediT authorship contribution statement.** **Wei Zheng:** Funding acquisition, Resources, Supervision, Writing – review & editing. **Shuhuan Lv:** Methodology, Investigation, Formal analysis, Writing – original draft. **Xin Fan:** Data curation, Software, Validation. **Hao Pan:** Data curation, Software, Supervision, Validation. **Fengyu Yang:** Data curation, Software, Validation. **Peng Xiao:** Software, Validation.
 
 ## Data Availability
 
-The saved responses, validation outcomes, mutant catalogs, PIT reports, pair-inclusion and exclusion records, checked test–mutant matrices, and offline reanalysis code are available in the [GitHub repository](https://github.com/Huangev587/llm-test-retention-artifact) at fixed release [v1.0.0](https://github.com/Huangev587/llm-test-retention-artifact/tree/v1.0.0) and are supplied with this manuscript as Online Resource 2 (ESM_2.zip), version 20261121-rewrite-v6-github. The package reconstructs Tables 6, 8, and 10 from saved execution records and includes separate verification entry points for the historical and initial six-API results. It does not rerun model inference or Java correctness validation. Production source trees, full source-containing prompts, model weights, and runtime binaries are not included; the provenance records identify the corresponding source materials. The third-party Java test archive remains available through its cited Zenodo record [16].
+Online Resource 2 (ESM_2.zip) is available to reviewers in the submission files and is intended for publication with the article upon acceptance. It contains saved responses, validation records, mutant catalogs, PIT reports, pair inclusions and exclusions, test–mutant matrices, and offline reanalysis code. The package reconstructs Tables 6, 8, 10, and 12 from recorded outcomes and includes historical and six-API verification entries. It does not rerun model inference or Java validation. The fresh-generation evidence additionally includes the actual prompts and their focal Commons Codec source excerpts, with the source license and notice. Full production source trees, earlier full source-containing prompts, model weights, and runtime binaries are excluded; provenance is documented. The third-party Java archive remains available via its Zenodo record [16].
 
 **Online Resource 1.** Extended protocols, detailed supporting results, and sensitivity analyses (ESM_1.pdf).
 

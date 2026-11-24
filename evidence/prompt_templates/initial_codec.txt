@@ -1,0 +1,41 @@
+import json
+from config import APIS
+from protocol_boundary import feedback_payload
+
+
+def compact_feedback(rows, split):
+    visible = {r['id'] for r in feedback_payload(rows, split)}
+    allowed = [r for r in sorted(rows, key=lambda r: r['id']) if r['id'] in visible]
+    methods = sorted({(r['method'], r['descriptor']) for r in allowed})
+    operators = sorted({r['mutator'] for r in allowed})
+    return {'class': rows[0]['mutated_class'], 'methods': methods, 'operators': operators,
+            'columns': ['method_index', 'source_line', 'operator_index', 'instruction_indexes', 'status'],
+            'entries': [[methods.index((r['method'], r['descriptor'])), r['line'], operators.index(r['mutator']),
+                         r['indexes'], r['status']] for r in allowed]}
+
+
+def build(api, context, suite, arm, errors=None, rows=None, split=None):
+    system = ('Generate exactly 8 complete JUnit 4 @Test public void testName() methods. '
+      'Return methods only, optionally one java code fence; no imports, class, fields or helpers. '
+      'Methods may declare throws Exception. The wrapper imports org.junit.Test, Assert and static Assert.*, '
+      'Hex, Base64, URLCodec, and java.nio.charset.StandardCharsets. '
+      'Use only the specified target API, JUnit assertions, straight-line local variables, literal strings, '
+      'explicit byte array initializers and necessary byte casts or string construction. '
+      'String.getBytes(StandardCharsets.UTF_8) is available. No loops, branching, try/catch, '
+      'expected exceptions, reference APIs, reflection, I/O, process, environment or thread access. '
+      'All inputs must satisfy the declared domain. Use fixed expected values in assertions. '
+      'Do not repeat retained test bodies. Do not add explanations.')
+    user = context + '\nPermitted target API: ' + APIS[api]['call']
+    user += '\nRetained tests:\n' + '\n'.join(m['source'] for m in suite)
+    user += '\nGenerate initial tests.' if arm == 'seed' else '\nGenerate complementary tests.'
+    if arm in ('execution', 'mutation'):
+        # Fixed, identical E/M diagnostic cap; complete logs remain in evidence.
+        if isinstance(errors, list):
+            errors = [{'index': r['index'], 'diagnostic': r['diagnostic'][:256]} for r in errors[:4]]
+        elif isinstance(errors, str):
+            errors = errors[:1024]
+        user += '\nOriginal-program feedback:\n' + json.dumps(errors or [], ensure_ascii=False, separators=(',', ':'))
+    if arm == 'mutation':
+        user += '\nAvailable mutation metadata (indexed tables preserve complete visible entries):\n'
+        user += json.dumps(compact_feedback(rows, split), separators=(',', ':'))
+    return [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]
